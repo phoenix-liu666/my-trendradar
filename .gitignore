@@ -1,0 +1,13 @@
+# Python 字节码缓存（本地运行 / 跑测试时自动生成，不应进仓库）
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 本地虚拟环境
+.venv/
+venv/
+
+# GitHub Daily Radar 的本地报告产物
+# （每日 HTML/TXT 日报，邮件已经发出去了，不需要占仓库体积；
+#   Star 快照在 data/github_radar/ 下，那个是要提交的）
+output/github_radar/

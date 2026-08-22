@@ -1,0 +1,4 @@
+# GitHub Daily Radar 每日 Star 快照目录
+#
+# 由 .github/workflows/github-radar.yml 自动写入 YYYY-MM-DD.json，
+# 默认保留最近 90 天。此文件仅用于让空目录能被 git 跟踪。
