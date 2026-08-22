@@ -70,6 +70,159 @@
 
 <br>
 
+## 🛰️ GitHub Daily Radar
+
+> 本 Fork 在 TrendRadar 之外新增的独立功能，与原有的新闻 / RSS 推送互不影响。
+
+每天早上把 GitHub 上「正在变热」的项目送到邮箱：自动收集候选仓库、维护每日 Star 快照，
+用快照差值算出真实的 24h / 7d 增长，再按 Heat Score 排出 Top20。
+
+### 功能
+
+- 🔥 **Hot Today Top20**：当天综合热度最高的 20 个仓库
+- 🌱 **New & Rising Top10**：30 天内创建、正在快速涨星的新项目
+- 📈 **Star 历史快照**：每天一份 JSON 提交回仓库，天然积累出增长曲线数据
+- 📧 **HTML 邮件日报**：移动端友好，安卓 QQ 邮箱可直接阅读，附纯文本 fallback
+- ☁️ **全部跑在 GitHub Actions**：电脑关机也照常工作，不需要服务器、数据库或任何付费服务
+
+### 数据源
+
+| 来源 | 说明 | 数量 |
+| --- | --- | --- |
+| GitHub Trending | 抓取 `https://github.com/trending?since=daily` | 以页面实际为准（约 15~25） |
+| GitHub Search API（新项目） | `created:>=<30天前> stars:>50`，按 Star 排序 | 50 |
+| GitHub Search API（活跃热门） | `pushed:>=<2天前> stars:>1000`，按 Star 排序 | 25 |
+
+去重后每天约 50~100 个候选仓库，整个流程只消耗几次 API 请求。
+Trending 页面上的 `stars today` 只作为辅助信息记录，**不会**被当成 24h 增长使用。
+若 Trending 改版导致解析失败，会记 warning 并继续用 API 候选生成日报。
+
+### Top20 / New & Rising 的含义
+
+**🔥 Hot Today Top20** = Heat Score 最高的 20 个仓库。Heat Score 是 0~100 的可解释分数：
+
+| 维度 | 权重 | 说明 |
+| --- | --- | --- |
+| 24h Star 增长 | 45% | 来自快照差值，最能代表「今天很火」 |
+| 7 日平均日增 | 20% | 代表「持续在涨」而不是一日游 |
+| Trending 排名 | 15% | 当天 Trending 榜位置 |
+| 项目新鲜度 | 10% | 按创建时间指数衰减 |
+| 总 Star 规模 | 10% | 辅助项，log 压缩，避免巨无霸碾压小项目 |
+
+Star 类指标先做 `log1p()` 压缩，再在当日候选池内做 min-max 归一化。
+**某项指标缺失时不会按 0 惩罚**，而是把它的权重从分母剔除、对剩余指标重新归一化 ——
+这也是首日没有增量数据时仍能公平排序的原因。
+
+**🌱 New & Rising Top10** = 创建时间 ≤ 30 天、Star ≥ 50 的项目，按成长速度（★/天）排序。
+有历史数据时用真实 24h 增量；没有时用 `总 Star / 项目年龄` 估算，报告中会标注「估算」。
+
+### Star 增量怎么算
+
+```text
+delta_stars_24h         = 今天的 stars − 昨天那份快照里的 stars
+delta_stars_7d          = 今天的 stars − 7 天前那份快照里的 stars
+average_daily_growth_7d = delta_stars_7d / 7
+```
+
+只用**精确日期**的快照。如果某天 workflow 没跑成功，第二天的 24h 增量会显示 `—`，
+而不是拿前天的数据冒充 24 小时增长。缺数据就显示 `—`，绝不用总 Star 假装成增量。
+
+- **第 1 天**：还没有任何历史快照，24h / 7d 都显示 `—`，日报会写明「首次运行，24h/7d Star 增长将在积累历史数据后启用。」
+- **第 2 天**：开始有 24h 增长
+- **第 8 天起**：开始有完整的 7d 增长与 7 日平均日增
+
+### 自动运行时间
+
+每天 **北京时间 08:10**，故意比原 TrendRadar 的 08:00 晚 10 分钟错峰。
+
+对应 `.github/workflows/github-radar.yml` 里的 `cron: "10 0 * * *"`（GitHub Actions 的 schedule
+只认 UTC，00:10 UTC = 08:10 北京时间）。定时任务只在**默认分支**上触发；GitHub 高峰期可能
+延迟几分钟到几十分钟，属正常现象。
+
+### 如何手动运行
+
+**在 GitHub 上**：Actions → 左侧选 **GitHub Daily Radar** → **Run workflow**。
+可勾选 `只跑数据、不发邮件` / `不把快照提交回仓库` 用于调试。
+
+**在本地**（只需要 `requests`，不需要配置邮箱）：
+
+```bash
+python -m github_radar --no-email
+```
+
+报告会写到 `output/github_radar/YYYY-MM-DD.html` 与 `.txt`，用浏览器打开即可预览。
+其它常用参数：
+
+```bash
+python -m github_radar --help
+python -m github_radar --no-email --no-snapshot            # 纯预览，不写快照
+python -m github_radar --date 2026-08-22 --no-email        # 指定日期
+python -m github_radar --top 30 --new-top 15 --no-email    # 调整榜单长度
+```
+
+跑测试（不访问网络）：
+
+```bash
+python -m unittest discover -s tests -t .
+```
+
+### 用到哪些 Secrets
+
+复用你已经为 TrendRadar 配好的邮箱 Secrets，**不需要新建任何 Secret，也不需要 GitHub PAT**：
+
+| Secret | 是否必需 | 说明 |
+| --- | --- | --- |
+| `EMAIL_FROM` | 必需 | 发件邮箱 |
+| `EMAIL_PASSWORD` | 必需 | 邮箱**授权码**（不是登录密码） |
+| `EMAIL_TO` | 必需 | 收件邮箱，多个用逗号分隔 |
+| `EMAIL_SMTP_SERVER` | 可选 | 留空自动识别（QQ 邮箱 → `smtp.qq.com`） |
+| `EMAIL_SMTP_PORT` | 可选 | 留空自动识别（QQ 邮箱 → `465` / SSL） |
+| `GITHUB_TOKEN` | 自动提供 | Actions 内置，无需手动配置 |
+
+授权码绝不会出现在日志里，收件邮箱也会脱敏成 `a****@qq.com` 之后才打印。
+
+### 数据保存在哪里
+
+```text
+data/github_radar/YYYY-MM-DD.json     每日 Star 快照（自动提交回仓库，默认保留 90 天）
+data/github_radar/latest.json         最新一天的副本，便于快速查看
+output/github_radar/YYYY-MM-DD.html   当天 HTML 日报（不提交，仅本地/Actions 产物）
+output/github_radar/YYYY-MM-DD.txt    纯文本版
+```
+
+超过 90 天的每日快照会在每次运行时自动删除。要改保留天数，在 workflow 的运行命令后加
+`--retention-days 180`（`0` = 永久保留）；加 `--no-latest` 可以不写 `latest.json`。
+
+### 如何禁用 GitHub Radar
+
+任选其一：
+
+1. GitHub 网页：Actions → **GitHub Daily Radar** → 右上角 `···` → **Disable workflow**
+2. 注释掉 `.github/workflows/github-radar.yml` 里的 `schedule:` 段（保留 `workflow_dispatch` 仍可手动运行）
+3. 删除 `.github/workflows/github-radar.yml`
+
+禁用它不会影响原来的新闻推送（`crawler.yml`）。
+
+### 目录结构
+
+```text
+github_radar/            独立模块（与 trendradar/ 解耦，运行只依赖 requests）
+├── collector.py         候选池构建与去重
+├── github_api.py        GitHub REST API 客户端（重试 / 限流 / 容错）
+├── trending.py          Trending 页面抓取与解析
+├── history.py           每日快照读写、保留策略、Star 增量
+├── ranking.py           Heat Score 与榜单筛选
+├── report.py            HTML 邮件日报 + 纯文本 fallback
+├── mailer.py            SMTP 适配器（复用 TrendRadar 的服务商识别表）
+└── cli.py               命令行入口
+tests/github_radar/      单元测试（全部使用 mock，不访问网络）
+```
+
+> 第二阶段预留：DeepSeek / AI 分类 / 中文解释 / 「为什么突然火」/ 🎯 For You，
+> 当前版本刻意不接任何 LLM，先把数据链路跑稳。
+
+<br>
+
 - 感谢**为项目点 star** 的观众们，**fork** 你所欲也，**star** 我所欲也，两者得兼😍是对开源精神最好的支持
 
 <details>

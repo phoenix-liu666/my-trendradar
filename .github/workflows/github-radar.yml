@@ -1,0 +1,167 @@
+name: GitHub Daily Radar
+
+# ════════════════════════════════════════════════════════════════════════
+# 每天自动发现 GitHub 热门 / 快速增长项目，维护 Star 历史快照，
+# 生成 Top20 日报并推送到邮箱。
+#
+# 与 TrendRadar 原有的 "Get Hot News" (crawler.yml) 完全独立：
+# 互不影响，单独启用/停用。
+# ════════════════════════════════════════════════════════════════════════
+
+on:
+  schedule:
+    # ────────────────────────────────────────────────────────────────────
+    # ⏰ 每天北京时间 08:10 运行（故意比 crawler.yml 的 08:00 晚 10 分钟）
+    #
+    # GitHub Actions 的 schedule 官方只支持 **UTC** cron，
+    # 因此这里直接写 UTC 时间：00:10 UTC = 08:10 Asia/Shanghai。
+    # （crawler.yml 里的 `timezone:` 字段并非 GitHub 官方 schema，
+    #   为避免它被忽略导致实际运行时间偏移，本 workflow 采用 UTC 换算。）
+    #
+    # 换算表：北京时间 = UTC + 8
+    #   北京 08:10 → UTC 00:10 → "10 0 * * *"
+    #   北京 21:00 → UTC 13:00 → "0 13 * * *"
+    #
+    # 注意：定时任务只会在**默认分支（master）**上触发；
+    # 在其它分支上只能用下面的 "Run workflow" 手动运行。
+    # GitHub 在整点前后负载高时可能延迟几分钟到几十分钟，属正常现象。
+    # ────────────────────────────────────────────────────────────────────
+    - cron: "10 0 * * *"
+
+  # 手动运行（用于首次验证）
+  workflow_dispatch:
+    inputs:
+      skip_email:
+        description: "只跑数据、不发邮件（调试用）"
+        type: boolean
+        default: false
+      skip_commit:
+        description: "不把快照提交回仓库（调试用）"
+        type: boolean
+        default: false
+
+# 只申请必要权限：写回每日快照
+permissions:
+  contents: write
+
+# 防止上一次还没跑完就被下一次覆盖（不取消正在进行的运行，避免提交中途被打断）
+concurrency:
+  group: github-radar-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+          clean: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install dependencies
+        run: uv sync --frozen --no-dev
+
+      - name: Run GitHub Daily Radar
+        id: radar
+        env:
+          # Actions 自动提供的 token，无需用户额外创建 PAT
+          GITHUB_TOKEN: ${{ github.token }}
+          # 邮件配置全部来自 Repository Secrets，绝不写在代码里
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER }}
+          EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
+          PYTHONIOENCODING: "utf-8"
+          # github_radar 是仓库根目录下的独立包（同 mcp_server），
+          # 显式加上 PYTHONPATH，避免依赖「-m 会把当前目录加入 sys.path」这一隐式行为
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          if [ "${{ inputs.skip_email }}" = "true" ]; then
+            echo "::notice::本次手动运行不发送邮件"
+            uv run python -m github_radar --no-email
+          else
+            uv run python -m github_radar
+          fi
+
+      # 报告文件（HTML/TXT）留作调试用，7 天后自动过期；不会提交进仓库
+      - name: Upload report artifact
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-radar-report
+          path: output/github_radar/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      # ────────────────────────────────────────────────────────────────
+      # 提交快照
+      #
+      # 用 !cancelled() 而不是 success()：即使邮件发送失败（上一步退出码 1），
+      # 当天的 Star 快照也必须提交，否则明天算不出 24h 增量。
+      # 上一步的失败仍会让整个 job 显示为 failed。
+      # ────────────────────────────────────────────────────────────────
+      - name: Commit snapshot
+        if: ${{ !cancelled() && inputs.skip_commit != true }}
+        env:
+          SNAPSHOT_DATE: ${{ steps.radar.outputs.snapshot_date }}
+        run: |
+          set -e
+
+          if [ ! -d data/github_radar ]; then
+            echo "没有生成快照目录，跳过提交"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # -A 让过期快照的删除也一并入库（保留策略生效）
+          git add -A data/github_radar
+
+          if git diff --cached --quiet; then
+            echo "nothing to commit（快照没有变化）"
+            exit 0
+          fi
+
+          DATE="${SNAPSHOT_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          git commit -m "chore(github-radar): snapshot ${DATE}"
+
+          BRANCH="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${BRANCH}"; then
+              echo "push 成功"
+              exit 0
+            fi
+            echo "push 失败（第 ${attempt} 次），尝试 rebase 后重试（绝不 force push）"
+            git pull --rebase --autostash origin "${BRANCH}" || true
+            sleep $((attempt * 5))
+          done
+
+          echo "::error::快照提交失败：远端可能有冲突，请手动检查"
+          exit 1
+
+      - name: Summary
+        if: ${{ !cancelled() }}
+        run: |
+          {
+            echo "### 🛰️ GitHub Daily Radar"
+            echo ""
+            echo "| 项目 | 值 |"
+            echo "| --- | --- |"
+            echo "| 状态 | ${{ steps.radar.outputs.status || 'unknown' }} |"
+            echo "| 快照日期 | ${{ steps.radar.outputs.snapshot_date || '-' }} |"
+            echo "| 候选仓库数 | ${{ steps.radar.outputs.repo_count || '-' }} |"
+            echo "| 邮件 | ${{ steps.radar.outputs.email || '-' }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
