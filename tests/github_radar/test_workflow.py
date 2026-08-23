@@ -10,6 +10,7 @@ github-radar.yml 里有三条属性正是「定时可靠性」这次修复的核
 3. force_run 默认关闭 —— 手动运行同样遵守每日幂等，避免误发重复邮件
 """
 
+import re
 import unittest
 from pathlib import Path
 
@@ -82,7 +83,12 @@ class WorkflowDispatchTest(unittest.TestCase):
 
 
 class AiEnvironmentTest(unittest.TestCase):
-    """AI 相关环境变量必须接进 workflow，且都能不配置"""
+    """AI 相关环境变量必须接进 workflow，且都能不配置
+
+    Repository Variable 名称不能以 GITHUB_ 开头（GitHub 保留前缀，UI 里
+    创建不出来），所以仓库侧叫 RADAR_AI_*，workflow 里映射成 Python
+    内部使用的 GITHUB_RADAR_AI_*：env 的**键**是内部名，**值**取仓库变量。
+    """
 
     def setUp(self):
         with WORKFLOW_PATH.open("r", encoding="utf-8") as handle:
@@ -94,7 +100,7 @@ class AiEnvironmentTest(unittest.TestCase):
 
     def test_ai_switch_comes_from_repository_variables(self):
         self.assertEqual(
-            self.env["GITHUB_RADAR_AI_ENABLED"], "${{ vars.GITHUB_RADAR_AI_ENABLED }}"
+            self.env["GITHUB_RADAR_AI_ENABLED"], "${{ vars.RADAR_AI_ENABLED }}"
         )
 
     def test_api_key_comes_from_secrets(self):
@@ -104,8 +110,18 @@ class AiEnvironmentTest(unittest.TestCase):
     def test_model_and_limit_come_from_variables(self):
         self.assertEqual(self.env["DEEPSEEK_MODEL"], "${{ vars.DEEPSEEK_MODEL }}")
         self.assertEqual(
-            self.env["GITHUB_RADAR_AI_REPO_LIMIT"], "${{ vars.GITHUB_RADAR_AI_REPO_LIMIT }}"
+            self.env["GITHUB_RADAR_AI_REPO_LIMIT"], "${{ vars.RADAR_AI_REPO_LIMIT }}"
         )
+
+    def test_no_repository_variable_uses_the_reserved_github_prefix(self):
+        """GITHUB_ 是 GitHub 的保留前缀：这种仓库变量根本创建不出来
+
+        写成 ``vars.GITHUB_*`` 不会报错，只会永远取到空字符串 ——
+        AI 静默关闭、日报静默退回基础版，所以在这里钉住。
+        """
+        text = WORKFLOW_PATH.read_text(encoding="utf-8")
+        offenders = re.findall(r"vars\.(GITHUB_\w+)", text)
+        self.assertEqual(offenders, [])
 
     def test_skip_ai_input_is_wired_to_the_cli_flag(self):
         self.assertIn("inputs.skip_ai", self.script)
