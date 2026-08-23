@@ -6,10 +6,15 @@ GitHub Daily Radar 命令行入口
 
     python -m github_radar                 # 完整流程（采集 → 快照 → 报告 → 邮件）
     python -m github_radar --no-email      # 本地测试：不发邮件
+    python -m github_radar --force-run     # 忽略当天状态，强制重跑一遍
     python -m github_radar --date 2026-08-22 --no-email --no-snapshot
 
+每日幂等（配合 workflow 的 4 次兜底 cron，见 ``state.py``）：
+    - 当天「快照完成 + 邮件已发」 → 直接正常退出，退出码 0，status=skipped
+    - 当天「快照完成但邮件失败」 → 继续重试邮件，且**不覆盖**当天已有的正式快照
+
 退出码：
-    0  成功
+    0  成功（含「当天已完成，本次跳过」）
     1  失败（无任何候选数据 / 邮件发送失败）
 """
 
@@ -52,6 +57,7 @@ from .report import (
     render_html,
     render_text,
 )
+from .state import DEFAULT_STATE_DIRNAME, DailyState, StateStore
 from .timeutils import DEFAULT_TIMEZONE, now, today_str
 
 DEFAULT_OUTPUT_DIR = "output/github_radar"
@@ -118,6 +124,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--data-dir", default="", help=f"快照目录（默认 {DEFAULT_DATA_DIR}）")
     parser.add_argument("--output-dir", default="", help=f"报告输出目录（默认 {DEFAULT_OUTPUT_DIR}）")
     parser.add_argument(
+        "--state-dir",
+        default="",
+        help=f"每日状态目录（默认 <data-dir>/{DEFAULT_STATE_DIRNAME}）",
+    )
+    parser.add_argument(
         "--retention-days",
         type=int,
         default=DEFAULT_RETENTION_DAYS,
@@ -143,6 +154,16 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--trending-since", default="daily", choices=["daily", "weekly", "monthly"])
     parser.add_argument("--no-email", action="store_true", help="不发送邮件（本地测试用）")
     parser.add_argument("--no-snapshot", action="store_true", help="不写入每日快照")
+    parser.add_argument(
+        "--force-run",
+        action="store_true",
+        help="忽略当天状态：即使今天已完成也重跑一遍（会覆盖当天快照并重复发信）",
+    )
+    parser.add_argument(
+        "--no-state",
+        action="store_true",
+        help="完全不读写每日状态文件（关闭幂等，仅用于本地调试）",
+    )
     parser.add_argument(
         "--no-latest",
         action="store_true",
@@ -198,6 +219,57 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     log(f"GitHub Daily Radar v{__version__} starting | date={date} | timezone={timezone}")
 
+    # ---------- 0. 每日幂等检查（必须在任何网络请求之前） ----------
+    #
+    # workflow 每天排了 4 次兜底 cron（GitHub 的 schedule 会延迟甚至丢弃），
+    # 这里保证「日报每天最多一封、快照每天只有一个正式版本」。
+    data_dir = _resolve_path(args.data_dir, DEFAULT_DATA_DIR)
+    store = SnapshotStore(data_dir)
+    state_store = StateStore(
+        Path(args.state_dir) if args.state_dir else data_dir / DEFAULT_STATE_DIRNAME
+    )
+    use_state = not args.no_state
+    state = state_store.load(date) if use_state else DailyState(date=date)
+    state.timezone = timezone
+    wants_email = not args.no_email
+
+    if use_state:
+        log(state.describe())
+    else:
+        log("daily state disabled (--no-state)")
+
+    if use_state and not args.force_run and state.should_skip(needs_email=wants_email):
+        log(f"{date} 今日任务已完成（快照 + 邮件），本次触发正常退出，不重复发送。")
+        log("需要重跑：手动运行 workflow 并勾选 force_run，或本地加 --force-run。")
+        _write_github_output(
+            {
+                "status": "skipped",
+                "snapshot_date": date,
+                "snapshot": "kept",
+                "email": "already_sent" if state.email_sent else "skipped",
+                "completed_at": state.completed_at or "",
+            }
+        )
+        return EXIT_OK
+
+    timestamp = generated_at.isoformat(timespec="seconds")
+    state.mark_run_started(timestamp)
+
+    def finish(run_status: str, exit_code: int, outputs: Dict[str, str]) -> int:
+        """统一收尾：落状态 → 写 GITHUB_OUTPUT → 返回退出码
+
+        每条返回路径都要经过这里，尤其是「快照成功但邮件失败」——
+        那次运行必须把 snapshot_completed=True 落盘，
+        否则下一次兜底触发会重新覆盖当天快照。
+        """
+        state.last_status = run_status
+        if use_state:
+            state_store.save(state)
+        payload = {"status": run_status, "snapshot_date": date}
+        payload.update(outputs)
+        _write_github_output(payload)
+        return exit_code
+
     token = _resolve_token(args.token, env)
     if not token:
         warn("未检测到 GITHUB_TOKEN，将以匿名方式访问 GitHub API（限流更严格）")
@@ -218,30 +290,42 @@ def main(argv: Optional[List[str]] = None) -> int:
     if not records:
         error("No GitHub repository data could be collected.")
         error("所有候选来源（Trending / GitHub Search API）均失败，本次不生成也不发送日报。")
-        _write_github_output({"status": "failed", "repo_count": "0"})
-        return EXIT_FAILED
+        return finish("failed", EXIT_FAILED, {"repo_count": "0"})
 
     log(f"source breakdown: {summarize_sources(records)}")
 
     # ---------- 2. 写入快照（先落盘，保证即使后续失败也不丢当天数据） ----------
-    store = SnapshotStore(_resolve_path(args.data_dir, DEFAULT_DATA_DIR))
     snapshot_path: Optional[Path] = None
+    snapshot_status = "skipped"
     if args.no_snapshot:
         log("snapshot skipped (--no-snapshot)")
+    elif state.snapshot_completed and store.exists(date) and not args.force_run:
+        # 今天已经有正式快照了：这次是来补发邮件的，不能覆盖它。
+        # 一天只保留一个正式版本，既是数据口径要求（明天的 24h 增量必须对着
+        # 同一个基准算），也避免 4 次兜底触发把同一个文件改 4 遍。
+        snapshot_path = store.path_for(date)
+        snapshot_status = "kept"
+        log(f"snapshot already completed for {date}: keeping {snapshot_path.name}（不覆盖当天正式版本）")
+        store.prune(args.retention_days, date)
     else:
         try:
             snapshot_path = store.save(
                 date,
                 records,
-                generated_at=generated_at.isoformat(timespec="seconds"),
+                generated_at=timestamp,
                 timezone=timezone,
                 write_latest=not args.no_latest,
             )
             log(f"snapshot saved: {snapshot_path} ({len(records)} repositories)")
+            snapshot_status = "written"
+            state.mark_snapshot_completed(timestamp)
             store.prune(args.retention_days, date)
         except OSError as exc:
             # 快照写失败不阻断日报，但要显著告警（明天的 24h 增量会缺失）
             warn(f"快照写入失败：{exc}（今日日报仍会生成，但明天的 24h 增量会缺失）")
+
+    if use_state:
+        state_store.prune(args.retention_days, date)
 
     # ---------- 3. 历史与增量 ----------
     yesterday_repos, week_ago_repos, status = load_history(store, date, records)
@@ -301,6 +385,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     email_status = "skipped"
     if args.no_email:
         log("email skipped (--no-email)")
+    elif state.email_sent and not args.force_run:
+        # 同一天日报最多发送一次：只认状态里的 email_sent，不看快照是否存在
+        email_status = "already_sent"
+        log(f"email already sent for {date}, skipping（同一天日报最多发送一次）")
     else:
         config, missing = load_email_config(env)
         if config is None:
@@ -308,39 +396,35 @@ def main(argv: Optional[List[str]] = None) -> int:
                 "邮件配置缺失：" + ", ".join(missing) +
                 "。请在 GitHub Secrets 中配置，或本地测试时加 --no-email。"
             )
-            _write_github_output(
-                {
-                    "status": "email_not_configured",
-                    "repo_count": str(len(records)),
-                    "snapshot_date": date,
-                }
+            return finish(
+                "email_not_configured",
+                EXIT_FAILED,
+                {"repo_count": str(len(records)), "snapshot": snapshot_status},
             )
-            return EXIT_FAILED
 
         if not _send(config, subject, html_body, text_body):
-            _write_github_output(
-                {
-                    "status": "email_failed",
-                    "repo_count": str(len(records)),
-                    "snapshot_date": date,
-                }
+            return finish(
+                "email_failed",
+                EXIT_FAILED,
+                {"repo_count": str(len(records)), "snapshot": snapshot_status},
             )
-            return EXIT_FAILED
         email_status = "sent"
+        state.mark_email_sent(timestamp)
         log("email sent.")
 
-    _write_github_output(
-        {
-            "status": "ok",
-            "repo_count": str(len(records)),
-            "snapshot_date": date,
-            "snapshot_path": str(snapshot_path) if snapshot_path else "",
-            "email": email_status,
-        }
-    )
     log(client.describe())
     log("done.")
-    return EXIT_OK
+    return finish(
+        "ok",
+        EXIT_OK,
+        {
+            "repo_count": str(len(records)),
+            "snapshot_path": str(snapshot_path) if snapshot_path else "",
+            "snapshot": snapshot_status,
+            "email": email_status,
+            "completed_at": state.completed_at or "",
+        },
+    )
 
 
 def _send(config: EmailConfig, subject: str, html_body: str, text_body: str) -> bool:

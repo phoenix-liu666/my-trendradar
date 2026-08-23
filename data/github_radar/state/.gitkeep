@@ -1,0 +1,7 @@
+# GitHub Daily Radar 每日运行状态目录
+#
+# 由 .github/workflows/github-radar.yml 自动写入 YYYY-MM-DD.json，记录当天
+# snapshot_completed / email_sent / completed_at，用于让一天 4 次兜底 cron
+# 保持幂等（一天最多一封日报、一个正式快照）。保留天数与快照一致（默认 90 天）。
+#
+# 详见 github_radar/state.py。此文件仅用于让空目录能被 git 跟踪。

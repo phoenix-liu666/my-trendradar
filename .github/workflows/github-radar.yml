@@ -11,26 +11,43 @@ name: GitHub Daily Radar
 on:
   schedule:
     # ────────────────────────────────────────────────────────────────────
-    # ⏰ 每天北京时间 08:10 运行（故意比 crawler.yml 的 08:00 晚 10 分钟）
+    # ⏰ 每天北京时间 4 次「兜底触发」：08:17 / 08:37 / 08:57 / 09:17
     #
-    # GitHub Actions 的 schedule 官方只支持 **UTC** cron，
-    # 因此这里直接写 UTC 时间：00:10 UTC = 08:10 Asia/Shanghai。
-    # （crawler.yml 里的 `timezone:` 字段并非 GitHub 官方 schema，
-    #   为避免它被忽略导致实际运行时间偏移，本 workflow 采用 UTC 换算。）
+    # 为什么要 4 次？
+    # GitHub 官方文档明确说明：schedule 事件在平台高负载时**可能被延迟，
+    # 甚至直接丢弃**（"may be delayed or dropped"）。
+    # 2026-08-23 08:10 那次就完全没有产生 workflow run。
+    # 一天只有一个触发机会 = 那天的日报直接没了，所以改成 4 次。
     #
-    # 换算表：北京时间 = UTC + 8
-    #   北京 08:10 → UTC 00:10 → "10 0 * * *"
-    #   北京 21:00 → UTC 13:00 → "0 13 * * *"
+    # 重复触发不会重复发信：github_radar 有每日幂等状态
+    # （data/github_radar/state/YYYY-MM-DD.json，见 github_radar/state.py）
+    #   - 快照 + 邮件都成功 → 后面 3 次直接正常退出（status=skipped）
+    #   - 快照成功但邮件失败 → 后面几次继续补发邮件，且不覆盖当天快照
+    #
+    # timezone 是 GitHub Actions 现已支持的官方字段（IANA 时区名），
+    # 因此这里直接写北京时间，不再手工换算 UTC。
+    # Asia/Shanghai 不实行夏令时，全年偏移恒为 UTC+8。
     #
     # 注意：定时任务只会在**默认分支（master）**上触发；
-    # 在其它分支上只能用下面的 "Run workflow" 手动运行。
-    # GitHub 在整点前后负载高时可能延迟几分钟到几十分钟，属正常现象。
+    # 在其它分支上只能用下面的 "Run workflow" 手动运行
+    # （手动运行同样默认遵守幂等，除非勾选 force_run）。
     # ────────────────────────────────────────────────────────────────────
-    - cron: "10 0 * * *"
+    - cron: "17 8 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "37 8 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "57 8 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "17 9 * * *"
+      timezone: "Asia/Shanghai"
 
-  # 手动运行（用于首次验证）
+  # 手动运行（用于首次验证 / 排查问题）
   workflow_dispatch:
     inputs:
+      force_run:
+        description: "强制运行：忽略当天已完成状态，重跑并**重复发送**邮件（不勾选则同样遵守每日幂等）"
+        type: boolean
+        default: false
       skip_email:
         description: "只跑数据、不发邮件（调试用）"
         type: boolean
@@ -88,12 +105,25 @@ jobs:
           # 显式加上 PYTHONPATH，避免依赖「-m 会把当前目录加入 sys.path」这一隐式行为
           PYTHONPATH: ${{ github.workspace }}
         run: |
+          set -e
+
+          # schedule 触发时 inputs.* 全部为空字符串，三个开关都不会生效；
+          # 手动运行时 force_run 也默认为 false。
+          # 也就是说无论怎么触发，默认都是「按当天状态决定跑还是跳过」，
+          # 只有明确勾选 force_run 才会绕过幂等重复发信。
+          ARGS=""
+
           if [ "${{ inputs.skip_email }}" = "true" ]; then
             echo "::notice::本次手动运行不发送邮件"
-            uv run python -m github_radar --no-email
-          else
-            uv run python -m github_radar
+            ARGS="${ARGS} --no-email"
           fi
+
+          if [ "${{ inputs.force_run }}" = "true" ]; then
+            echo "::notice::force_run：忽略当天状态，强制完整运行"
+            ARGS="${ARGS} --force-run"
+          fi
+
+          uv run python -m github_radar ${ARGS}
 
       # 报告文件（HTML/TXT）留作调试用，7 天后自动过期；不会提交进仓库
       - name: Upload report artifact
@@ -106,16 +136,22 @@ jobs:
           if-no-files-found: ignore
 
       # ────────────────────────────────────────────────────────────────
-      # 提交快照
+      # 提交快照 + 每日状态
       #
       # 用 !cancelled() 而不是 success()：即使邮件发送失败（上一步退出码 1），
-      # 当天的 Star 快照也必须提交，否则明天算不出 24h 增量。
+      # 当天的 Star 快照和状态文件也必须提交——
+      #   - 快照不提交 → 明天算不出 24h 增量
+      #   - 状态不提交 → 下一次兜底触发读不到 snapshot_completed，
+      #                  会重新覆盖当天快照，「一天一个正式版本」就失效了
       # 上一步的失败仍会让整个 job 显示为 failed。
+      #
+      # 被跳过的触发（status=skipped）什么都不写，这里自然是 nothing to commit。
       # ────────────────────────────────────────────────────────────────
       - name: Commit snapshot
         if: ${{ !cancelled() && inputs.skip_commit != true }}
         env:
           SNAPSHOT_DATE: ${{ steps.radar.outputs.snapshot_date }}
+          SNAPSHOT_STATUS: ${{ steps.radar.outputs.snapshot }}
         run: |
           set -e
 
@@ -136,7 +172,13 @@ jobs:
           fi
 
           DATE="${SNAPSHOT_DATE:-$(TZ=Asia/Shanghai date +%F)}"
-          git commit -m "chore(github-radar): snapshot ${DATE}"
+
+          # 补发邮件的那次运行不会重写快照，只更新状态文件——提交信息如实反映
+          if [ "${SNAPSHOT_STATUS}" = "written" ]; then
+            git commit -m "chore(github-radar): snapshot ${DATE}"
+          else
+            git commit -m "chore(github-radar): radar state ${DATE}"
+          fi
 
           BRANCH="${GITHUB_REF_NAME}"
           for attempt in 1 2 3; do
@@ -163,5 +205,10 @@ jobs:
             echo "| 状态 | ${{ steps.radar.outputs.status || 'unknown' }} |"
             echo "| 快照日期 | ${{ steps.radar.outputs.snapshot_date || '-' }} |"
             echo "| 候选仓库数 | ${{ steps.radar.outputs.repo_count || '-' }} |"
+            echo "| 快照 | ${{ steps.radar.outputs.snapshot || '-' }} |"
             echo "| 邮件 | ${{ steps.radar.outputs.email || '-' }} |"
+            echo "| 当日完成时间 | ${{ steps.radar.outputs.completed_at || '-' }} |"
+            echo ""
+            echo "状态含义：\`ok\` 本次完成 · \`skipped\` 当天已完成、兜底触发正常退出 ·"
+            echo "\`email_failed\` 快照已存、邮件待下次兜底补发 · \`failed\` 采集失败"
           } >> "$GITHUB_STEP_SUMMARY"
