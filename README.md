@@ -220,16 +220,20 @@ workflow 也不会因为 AI 失败而变红。
 #### 怎么开启
 
 1. 在仓库加一个 Secret：`DEEPSEEK_API_KEY`（**只需要这一个**，不需要 PAT、数据库或云存储）
-2. 在仓库 Variables 里加：`GITHUB_RADAR_AI_ENABLED = true`
+2. 在仓库 Variables 里加：`RADAR_AI_ENABLED = true`
 
-只有 `GITHUB_RADAR_AI_ENABLED=true` 才会启用。开了但没有 Key 时只会打一条 warning、
+只有 `RADAR_AI_ENABLED=true` 才会启用。开了但没有 Key 时只会打一条 warning、
 本次禁用 AI，**不会让 workflow 失败**。
+
+> 仓库变量名不能以 `GITHUB_` 开头（GitHub 保留前缀，UI 里创建不出来），
+> 所以仓库侧叫 `RADAR_AI_ENABLED`；workflow 会把它映射成代码内部使用的
+> `GITHUB_RADAR_AI_ENABLED` 环境变量。本地跑用后者。
 
 它与 TrendRadar 新闻侧的 `AI_ANALYSIS_ENABLED` 完全独立，互不影响。
 
 #### 怎么关闭
 
-- 永久关闭：把 `GITHUB_RADAR_AI_ENABLED` 删掉或设成 `false`
+- 永久关闭：把仓库变量 `RADAR_AI_ENABLED` 删掉或设成 `false`
 - 单次关闭：手动运行时勾选 **`skip_ai`**（完全跳过 DeepSeek，用来验证旧功能）
 - 本地：`python -m github_radar --no-email --skip-ai`
 
@@ -239,7 +243,7 @@ workflow 也不会因为 AI 失败而变红。
 
 | 限制 | 默认值 | 说明 |
 | --- | --- | --- |
-| AI repo limit | **30** | 每天最多分析 30 个 unique repositories（`GITHUB_RADAR_AI_REPO_LIMIT` 可调） |
+| AI repo limit | **30** | 每天最多分析 30 个 unique repositories（仓库变量 `RADAR_AI_REPO_LIMIT` 可调） |
 | README 长度 | 6000 字符 | 超出截断；且**只给最终 AI 候选**读 README，不会给 100 个候选全读 |
 | batch 大小 | 6（≤8） | 30 个仓库 = 5 次请求，不是 30 次 |
 | 每日请求数 | 通常 ≤7 | 5 次仓库分析 + 1 次趋势总结 |
@@ -401,13 +405,21 @@ python -m unittest discover -s tests -t .
 
 不是 Secret，可以放在仓库的 **Settings → Secrets and variables → Actions → Variables**：
 
-| 变量 | 默认值 | 说明 |
-| --- | --- | --- |
-| `GITHUB_RADAR_AI_ENABLED` | 未设置 = 关 | 设为 `true` 才启用 AI |
-| `DEEPSEEK_MODEL` | `deepseek-v4-flash` | 换模型时改这里 |
-| `GITHUB_RADAR_AI_REPO_LIMIT` | `30` | 每天最多分析多少个仓库 |
+| 变量 | 默认值 | 说明 | 映射到的环境变量 |
+| --- | --- | --- | --- |
+| `RADAR_AI_ENABLED` | 未设置 = 关 | 设为 `true` 才启用 AI | `GITHUB_RADAR_AI_ENABLED` |
+| `DEEPSEEK_MODEL` | `deepseek-v4-flash` | 换模型时改这里 | `DEEPSEEK_MODEL` |
+| `RADAR_AI_REPO_LIMIT` | `30` | 每天最多分析多少个仓库 | `GITHUB_RADAR_AI_REPO_LIMIT` |
 
 全部不配置也能正常跑（代码内部有默认值）。
+
+> ⚠️ **为什么仓库变量不叫 `GITHUB_RADAR_AI_*`**
+> `GITHUB_` 是 GitHub 的保留前缀，以它开头的 Repository Variable **创建不出来**。
+> 所以仓库侧统一用 `RADAR_AI_*`，由 `.github/workflows/github-radar.yml` 映射成
+> 代码内部的 `GITHUB_RADAR_AI_*` 环境变量 —— **Python 侧的名字没有变**，
+> 本地运行、Docker、`.env` 依然用 `GITHUB_RADAR_AI_ENABLED` /
+> `GITHUB_RADAR_AI_REPO_LIMIT`。
+> `DEEPSEEK_API_KEY` 是 **Secret**（不是 Variable），不受这条限制，也不要改。
 
 授权码与 API Key 绝不会出现在日志里，收件邮箱也会脱敏成 `a****@qq.com` 之后才打印；
 第三方异常信息在打印前会先抹掉可能出现的敏感值。

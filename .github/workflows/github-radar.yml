@@ -106,16 +106,22 @@ jobs:
           EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
           # ── AI Intelligence（DeepSeek V4 Flash）──────────────────────
           # 全部可以不配置：
-          #   GITHUB_RADAR_AI_ENABLED 未设为 true → AI 关闭，基础日报照常发送
+          #   RADAR_AI_ENABLED 未设为 true → AI 关闭，基础日报照常发送
           #   设了 true 但没有 DEEPSEEK_API_KEY  → 只 warning，AI 本次禁用，
           #                                        workflow **不会失败**
           #   其余变量未配置                     → 代码内部使用默认值
           #                                        （模型 deepseek-v4-flash / 每天最多 30 个仓库）
           # 这套开关与 TrendRadar 的 AI_ANALYSIS_ENABLED 完全独立，互不影响。
-          GITHUB_RADAR_AI_ENABLED: ${{ vars.GITHUB_RADAR_AI_ENABLED }}
+          #
+          # ⚠️ Repository Variable 名称不能以 GITHUB_ 开头 —— 那是 GitHub 的保留
+          #    前缀，这种名字在 Settings → Variables 里根本创建不出来。
+          #    所以仓库侧一律叫 RADAR_AI_*，在这里映射成 Python 内部使用的
+          #    GITHUB_RADAR_AI_* 环境变量（代码侧的名字保持不变）。
+          #    DEEPSEEK_API_KEY 是 Secret，不受这条命名限制影响。
+          GITHUB_RADAR_AI_ENABLED: ${{ vars.RADAR_AI_ENABLED }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
-          GITHUB_RADAR_AI_REPO_LIMIT: ${{ vars.GITHUB_RADAR_AI_REPO_LIMIT }}
+          GITHUB_RADAR_AI_REPO_LIMIT: ${{ vars.RADAR_AI_REPO_LIMIT }}
           PYTHONIOENCODING: "utf-8"
           # github_radar 是仓库根目录下的独立包（同 mcp_server），
           # 显式加上 PYTHONPATH，避免依赖「-m 会把当前目录加入 sys.path」这一隐式行为
