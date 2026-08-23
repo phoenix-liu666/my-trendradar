@@ -233,11 +233,56 @@ class UsageSectionTest(unittest.TestCase):
         self.assertIn("93,714", html)
         self.assertIn("缓存命中：9", html)
 
+    def test_input_tokens_are_split_into_cache_hit_and_miss(self):
+        usage = AIUsage(
+            prompt_tokens=82_431,
+            prompt_cache_hit_tokens=60_000,
+            prompt_cache_miss_tokens=22_431,
+            completion_tokens=11_283,
+            total_tokens=93_714,
+            requests=5,
+            cache_hits=9,
+            repositories_analyzed=28,
+        )
+        ai = build_ai(
+            analyses={"owner/project": analysis()}, scored=self.scored, usage=usage
+        )
+        html = render_html(build_context(ai))
+
+        self.assertIn("输入 Tokens：82,431", html)
+        self.assertIn("├─ 缓存命中：60,000", html)
+        self.assertIn("└─ 缓存未命中：22,431", html)
+        self.assertIn("输出 Tokens：11,283", html)
+        self.assertIn("总 Tokens：93,714", html)
+
+    def test_repository_cache_row_is_distinct_from_token_cache(self):
+        html = render_html(build_context(self.ai))
+        self.assertIn("仓库缓存命中：9", html)
+
+    def test_missing_cache_detail_shows_everything_as_miss(self):
+        usage = AIUsage(prompt_tokens=50_000, completion_tokens=1_000, total_tokens=51_000)
+        ai = build_ai(analyses={"owner/project": analysis()}, scored=self.scored, usage=usage)
+        html = render_html(build_context(ai))
+
+        self.assertIn("├─ 缓存命中：0", html)
+        self.assertIn("└─ 缓存未命中：50,000", html)
+
+    def test_cache_rows_appear_in_the_text_version(self):
+        usage = AIUsage(
+            prompt_tokens=1000, prompt_cache_hit_tokens=600, prompt_cache_miss_tokens=400
+        )
+        ai = build_ai(analyses={"owner/project": analysis()}, scored=self.scored, usage=usage)
+        text = render_text(build_context(ai))
+
+        self.assertIn("├─ 缓存命中：600", text)
+        self.assertIn("└─ 缓存未命中：400", text)
+
     def test_cost_is_marked_as_estimated(self):
         html = render_html(build_context(self.ai))
         self.assertIn("预估今日费用", html)
         self.assertIn("约 ¥", html)
-        self.assertIn("非实际账单", html)
+        self.assertIn("不代表最终账单", html)
+        self.assertIn("DeepSeek 当前官方定价", html)
 
     def test_reused_result_is_disclosed(self):
         ai = build_ai(analyses={"owner/project": analysis()}, scored=self.scored, reused=True)

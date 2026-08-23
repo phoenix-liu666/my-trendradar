@@ -42,27 +42,39 @@ def chat_response(
     completion_tokens: int = 200,
     total_tokens: Optional[int] = None,
     status_code: int = 200,
+    prompt_cache_hit_tokens: Optional[int] = None,
+    prompt_cache_miss_tokens: Optional[int] = None,
 ) -> FakeChatResponse:
     """
     构造一个成功的 chat/completions 响应
 
     Args:
         content: 字符串直接用作 content；dict/list 会被 json.dumps
+        prompt_cache_hit_tokens: 命中前缀缓存的输入 token；
+            ``None`` 表示**服务端根本没返回这个字段**（用于测试安全降级）
+        prompt_cache_miss_tokens: 未命中的输入 token，同上
     """
     if not isinstance(content, str):
         content = json.dumps(content, ensure_ascii=False)
+
+    usage: Dict[str, Any] = {
+        "prompt_tokens": prompt_tokens,
+        "completion_tokens": completion_tokens,
+        "total_tokens": (
+            total_tokens if total_tokens is not None else prompt_tokens + completion_tokens
+        ),
+    }
+    if prompt_cache_hit_tokens is not None:
+        usage["prompt_cache_hit_tokens"] = prompt_cache_hit_tokens
+    if prompt_cache_miss_tokens is not None:
+        usage["prompt_cache_miss_tokens"] = prompt_cache_miss_tokens
+
     return FakeChatResponse(
         status_code=status_code,
         json_data={
             "id": "fake",
             "choices": [{"index": 0, "message": {"role": "assistant", "content": content}}],
-            "usage": {
-                "prompt_tokens": prompt_tokens,
-                "completion_tokens": completion_tokens,
-                "total_tokens": (
-                    total_tokens if total_tokens is not None else prompt_tokens + completion_tokens
-                ),
-            },
+            "usage": usage,
         },
     )
 

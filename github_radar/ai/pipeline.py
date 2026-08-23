@@ -309,7 +309,15 @@ def _finish(
 ) -> AIReportData:
     """统一收尾：估算费用 → 打日志 → 返回结果"""
     pricing = get_pricing(config.model, env)
-    cost = estimate_cost(usage.prompt_tokens, usage.completion_tokens, pricing)
+    # cache_split() 已经把「缺明细」的情况归到未命中那一档
+    cache_hit_tokens, cache_miss_tokens = usage.cache_split()
+    cost = estimate_cost(
+        usage.prompt_tokens,
+        usage.completion_tokens,
+        pricing,
+        cache_hit_tokens=cache_hit_tokens,
+        cache_miss_tokens=cache_miss_tokens,
+    )
 
     result = AIReportData(
         enabled=True,
@@ -326,7 +334,8 @@ def _finish(
     )
 
     log(
-        f"[AI] prompt tokens: {usage.prompt_tokens} | "
+        f"[AI] prompt tokens: {usage.prompt_tokens} "
+        f"(cache hit {cache_hit_tokens} / miss {cache_miss_tokens}) | "
         f"completion tokens: {usage.completion_tokens} | "
         f"total tokens: {usage.total_tokens}"
     )

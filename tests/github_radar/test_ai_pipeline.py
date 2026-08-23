@@ -231,6 +231,52 @@ class MockEndToEndTest(PipelineBaseTest):
         self.assertEqual(len(github.requests), 22)
         self.assertEqual(result.usage.repositories_analyzed, 30)
 
+    def test_cache_tokens_flow_into_usage_and_cost(self):
+        """服务端返回缓存明细时：逐批累计，并按三档价格估算费用"""
+        def handler(url, payload):
+            text = "\n".join(str(m.get("content") or "") for m in payload.get("messages", []))
+            if "hot_today" in text:
+                return chat_response(
+                    synthesis_payload(),
+                    prompt_tokens=800, completion_tokens=120,
+                    prompt_cache_hit_tokens=600, prompt_cache_miss_tokens=200,
+                )
+            names = [line.split("full_name: ", 1)[1].strip()
+                     for line in text.splitlines() if line.startswith("full_name: ")]
+            return chat_response(
+                {"repositories": [analysis_payload(name) for name in names]},
+                prompt_tokens=5000, completion_tokens=600,
+                prompt_cache_hit_tokens=4000, prompt_cache_miss_tokens=1000,
+            )
+
+        result = self.run_pipeline(FakeChatSession(handler))
+
+        # 5 批分析 + 1 次 synthesis
+        self.assertEqual(result.usage.prompt_cache_hit_tokens, 5 * 4000 + 600)
+        self.assertEqual(result.usage.prompt_cache_miss_tokens, 5 * 1000 + 200)
+        self.assertEqual(
+            result.usage.prompt_cache_hit_tokens + result.usage.prompt_cache_miss_tokens,
+            result.usage.prompt_tokens,
+        )
+
+        expected = (
+            20_600 / 1e6 * 0.02 + 5_200 / 1e6 * 1.00 + result.usage.completion_tokens / 1e6 * 2.00
+        )
+        self.assertAlmostEqual(result.cost.total_cost, round(expected, 6))
+        self.assertGreater(result.cost.cache_miss_cost, result.cost.cache_hit_cost)
+
+    def test_missing_cache_fields_are_priced_as_miss(self):
+        """服务端不返回缓存字段：全部按 cache miss 估算，绝不报错"""
+        result = self.run_pipeline(FakeChatSession(responder()))
+
+        self.assertEqual(result.usage.prompt_cache_hit_tokens, 0)
+        self.assertEqual(result.usage.prompt_cache_miss_tokens, result.usage.prompt_tokens)
+        expected = (
+            result.usage.prompt_tokens / 1e6 * 1.00
+            + result.usage.completion_tokens / 1e6 * 2.00
+        )
+        self.assertAlmostEqual(result.cost.total_cost, round(expected, 6))
+
     def test_daily_result_is_reused_by_the_next_trigger(self):
         first = FakeChatSession(responder())
         self.run_pipeline(first)

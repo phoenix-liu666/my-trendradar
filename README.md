@@ -159,7 +159,7 @@ average_daily_growth_7d = delta_stars_7d / 7
 | 📡 今日 GitHub 技术信号 | 一句话主线判断 + 最多 5 条信号 + 升温方向 + 明日关注 |
 | 🎯 For You Top10 | 按 Personal Score 排序的个性化推荐，含「为什么与你相关」「推荐动作」 |
 | 🔥 Hot20 / 🌱 Rising10 | 每个项目追加：中文一句话、分类、为什么值得关注、推荐动作 |
-| 📊 AI 使用情况 | 模型、分析仓库数、缓存命中、请求数、Token、预估费用 |
+| 📊 AI 使用情况 | 模型、分析仓库数、仓库缓存命中、请求数、Token（含缓存命中/未命中）、预估费用 |
 
 **基础数据一个字都没变**：Stars、24h / 7d 增量、Heat Score、榜单顺序全部由原来的
 客观算法决定，AI 只是在卡片上追加解读。
@@ -247,16 +247,54 @@ workflow 也不会因为 AI 失败而变红。
 | 输入总字符 | 120,000 | `GITHUB_RADAR_AI_MAX_INPUT_CHARS`，达到上限就停止后续批次 |
 | Thinking | **明确关闭** | 请求体固定带 `"thinking": {"type": "disabled"}`，不依赖模型默认行为 |
 
-Token 用量从 API 响应的 `usage` 里累计，费用按下面的公式估算并显示在邮件底部：
+#### Token 与费用统计
+
+Token 用量从 API 响应的 `usage` 里累计。DeepSeek 的输入分两档计价 ——
+命中前缀缓存的输入便宜得多，所以 `prompt_cache_hit_tokens` /
+`prompt_cache_miss_tokens` 会分别统计：
+
+| 档位 | deepseek-v4-flash 当前价格 |
+| --- | --- |
+| 输入（缓存命中） | ¥0.02 / 1M tokens |
+| 输入（缓存未命中） | ¥1.00 / 1M tokens |
+| 输出 | ¥2.00 / 1M tokens |
 
 ```text
-input_cost  = prompt_tokens     / 1,000,000 × input_price
-output_cost = completion_tokens / 1,000,000 × output_price
+estimated_cost = cache_hit_tokens   / 1,000,000 × 0.02
+               + cache_miss_tokens  / 1,000,000 × 1.00
+               + completion_tokens  / 1,000,000 × 2.00
 ```
 
-价格集中维护在 `github_radar/ai/pricing.py`，可用 `DEEPSEEK_INPUT_PRICE_PER_1M` /
-`DEEPSEEK_OUTPUT_PRICE_PER_1M` 覆盖成你的实际价格。
-邮件里显示的永远是「**约 ¥x.xxxx（预估）**」——它是按 Token 估算的结果，**不是真实账单**。
+如果 API 没有返回缓存明细（旧接口、其它服务商、字段缺失），会**安全降级**：
+把全部 `prompt_tokens` 按更贵的「缓存未命中 ¥1/1M」估算 —— 宁可高估，也绝不报错、绝不少算。
+
+邮件底部会把这几档拆开显示：
+
+```text
+输入 Tokens：82,431
+├─ 缓存命中：60,000
+└─ 缓存未命中：22,431
+输出 Tokens：11,283
+总 Tokens：93,714
+预估今日费用：约 ¥0.0462（预估）
+```
+
+> ⚠️ **关于价格**
+> - 上表来自 **DeepSeek 当前公布的 V4 Flash 官方定价**（人民币 / 每百万 token）；
+> - 算出来的只是**本地估算**，用于日常感知量级，**不代表最终账单** ——
+>   实际扣费以 DeepSeek 账单为准（可能涉及赠送额度、阶梯价、折扣时段、税费等）；
+> - **DeepSeek 未来可能调整价格**，届时邮件里的估算就会偏离真实费用。
+
+价格集中维护在 `github_radar/ai/pricing.py`，不散落在业务代码里。
+价格变了不用改代码，配环境变量即可：
+
+```text
+DEEPSEEK_CACHE_HIT_INPUT_PRICE_PER_1M=0.02
+DEEPSEEK_INPUT_PRICE_PER_1M=1.00
+DEEPSEEK_OUTPUT_PRICE_PER_1M=2.00
+```
+
+邮件里显示的永远是「**约 ¥x.xxxx（预估）**」，绝不会声称是实际花费。
 
 #### 缓存
 

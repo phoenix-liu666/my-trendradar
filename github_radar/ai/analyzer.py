@@ -216,6 +216,8 @@ def analyze_repositories(
                 prompt_tokens=chat.prompt_tokens,
                 completion_tokens=chat.completion_tokens,
                 total_tokens=chat.total_tokens,
+                prompt_cache_hit_tokens=chat.prompt_cache_hit_tokens,
+                prompt_cache_miss_tokens=chat.prompt_cache_miss_tokens,
             )
 
         if not result.ok:

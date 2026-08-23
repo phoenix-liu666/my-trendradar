@@ -303,6 +303,86 @@ class UsageTest(unittest.TestCase):
         self.assertEqual(client.usage.total_tokens, 0)
 
 
+class CacheTokenParsingTest(unittest.TestCase):
+    """cache hit / miss usage parsing"""
+
+    def test_cache_fields_are_parsed(self):
+        session = FakeChatSession([
+            chat_response(
+                {"a": 1},
+                prompt_tokens=1000,
+                completion_tokens=100,
+                prompt_cache_hit_tokens=700,
+                prompt_cache_miss_tokens=300,
+            )
+        ])
+        client = make_client(session)
+        result = client.chat([{"role": "user", "content": "x"}])
+
+        self.assertEqual(result.prompt_cache_hit_tokens, 700)
+        self.assertEqual(result.prompt_cache_miss_tokens, 300)
+        self.assertEqual(client.usage.prompt_cache_hit_tokens, 700)
+        self.assertEqual(client.usage.prompt_cache_miss_tokens, 300)
+        self.assertEqual(client.usage.prompt_tokens, 1000)
+
+    def test_missing_cache_fields_fall_back_to_all_miss(self):
+        """服务端不返回缓存明细 → 全部按更贵的 cache miss 记账，绝不报错"""
+        session = FakeChatSession([chat_response({"a": 1}, prompt_tokens=1000, completion_tokens=100)])
+        client = make_client(session)
+        result = client.chat([{"role": "user", "content": "x"}])
+
+        self.assertEqual(result.prompt_cache_hit_tokens, 0)
+        self.assertEqual(result.prompt_cache_miss_tokens, 0)   # 响应里确实没有
+        self.assertEqual(client.usage.prompt_cache_hit_tokens, 0)
+        self.assertEqual(client.usage.prompt_cache_miss_tokens, 1000)  # 统计侧已降级
+        self.assertEqual(client.usage.prompt_tokens, 1000)
+
+    def test_only_hit_field_leaves_the_rest_as_miss(self):
+        session = FakeChatSession([
+            chat_response({"a": 1}, prompt_tokens=1000, prompt_cache_hit_tokens=400)
+        ])
+        client = make_client(session)
+        client.chat([{"role": "user", "content": "x"}])
+
+        self.assertEqual(client.usage.prompt_cache_hit_tokens, 400)
+        self.assertEqual(client.usage.prompt_cache_miss_tokens, 600)
+
+    def test_garbage_cache_fields_are_ignored(self):
+        session = FakeChatSession([
+            FakeChatResponse(
+                status_code=200,
+                json_data={
+                    "choices": [{"message": {"content": '{"a": 1}'}}],
+                    "usage": {
+                        "prompt_tokens": 500,
+                        "prompt_cache_hit_tokens": "abc",
+                        "prompt_cache_miss_tokens": None,
+                    },
+                },
+            )
+        ])
+        client = make_client(session)
+        client.chat([{"role": "user", "content": "x"}])
+
+        self.assertEqual(client.usage.prompt_cache_hit_tokens, 0)
+        self.assertEqual(client.usage.prompt_cache_miss_tokens, 500)
+
+    def test_cache_tokens_accumulate_across_requests(self):
+        session = FakeChatSession([
+            chat_response({"a": 1}, prompt_tokens=1000, prompt_cache_hit_tokens=800,
+                          prompt_cache_miss_tokens=200),
+            chat_response({"a": 2}, prompt_tokens=2000, prompt_cache_hit_tokens=1500,
+                          prompt_cache_miss_tokens=500),
+        ])
+        client = make_client(session)
+        client.chat([{"role": "user", "content": "x"}])
+        client.chat([{"role": "user", "content": "y"}])
+
+        self.assertEqual(client.usage.prompt_cache_hit_tokens, 2300)
+        self.assertEqual(client.usage.prompt_cache_miss_tokens, 700)
+        self.assertEqual(client.usage.prompt_tokens, 3000)
+
+
 class SecretSafetyTest(unittest.TestCase):
     """35. Secret 不出日志"""
 

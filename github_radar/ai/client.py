@@ -56,6 +56,9 @@ class ChatResult:
     error: str = ""
     status_code: Optional[int] = None
     prompt_tokens: int = 0
+    # 命中 / 未命中前缀缓存的输入 token（服务端不返回时为 0，费用按未命中估算）
+    prompt_cache_hit_tokens: int = 0
+    prompt_cache_miss_tokens: int = 0
     completion_tokens: int = 0
     total_tokens: int = 0
     # 本次调用实际发生的 HTTP 请求次数（含重试）
@@ -353,6 +356,10 @@ class DeepSeekClient:
 
         usage = data.get("usage")
         result.prompt_tokens = _int_field(usage, "prompt_tokens")
+        # DeepSeek 的前缀缓存明细；老接口 / 其它服务商没有这两个字段时保持 0，
+        # 由 AIUsage 统一按「全部未命中」安全降级
+        result.prompt_cache_hit_tokens = _int_field(usage, "prompt_cache_hit_tokens")
+        result.prompt_cache_miss_tokens = _int_field(usage, "prompt_cache_miss_tokens")
         result.completion_tokens = _int_field(usage, "completion_tokens")
         result.total_tokens = _int_field(usage, "total_tokens")
 
@@ -400,6 +407,8 @@ class DeepSeekClient:
             prompt_tokens=result.prompt_tokens,
             completion_tokens=result.completion_tokens,
             total_tokens=result.total_tokens,
+            prompt_cache_hit_tokens=result.prompt_cache_hit_tokens,
+            prompt_cache_miss_tokens=result.prompt_cache_miss_tokens,
         )
         if not result.ok and result.error:
             self.last_error = result.error

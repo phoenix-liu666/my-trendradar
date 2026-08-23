@@ -344,5 +344,93 @@ class UsageAggregationTest(unittest.TestCase):
         self.assertEqual(usage.cache_hits, 3)
 
 
+class CacheTokenUsageTest(unittest.TestCase):
+    """cache hit / miss token 的聚合与降级"""
+
+    def test_cache_tokens_accumulate(self):
+        usage = AIUsage()
+        usage.add_request(
+            success=True, prompt_tokens=1000, completion_tokens=100,
+            prompt_cache_hit_tokens=700, prompt_cache_miss_tokens=300,
+        )
+        usage.add_request(
+            success=True, prompt_tokens=2000, completion_tokens=200,
+            prompt_cache_hit_tokens=1200, prompt_cache_miss_tokens=800,
+        )
+        self.assertEqual(usage.prompt_cache_hit_tokens, 1900)
+        self.assertEqual(usage.prompt_cache_miss_tokens, 1100)
+        self.assertEqual(usage.prompt_tokens, 3000)
+        self.assertEqual(
+            usage.prompt_cache_hit_tokens + usage.prompt_cache_miss_tokens,
+            usage.prompt_tokens,
+        )
+
+    def test_missing_detail_counts_everything_as_miss(self):
+        usage = AIUsage()
+        usage.add_request(success=True, prompt_tokens=1000, completion_tokens=50)
+        self.assertEqual(usage.prompt_cache_hit_tokens, 0)
+        self.assertEqual(usage.prompt_cache_miss_tokens, 1000)
+
+    def test_partial_detail_puts_remainder_in_miss(self):
+        usage = AIUsage()
+        usage.add_request(success=True, prompt_tokens=1000, prompt_cache_hit_tokens=250)
+        self.assertEqual(usage.prompt_cache_hit_tokens, 250)
+        self.assertEqual(usage.prompt_cache_miss_tokens, 750)
+
+    def test_detail_without_total_fills_prompt_tokens(self):
+        usage = AIUsage()
+        usage.add_request(
+            success=True, prompt_cache_hit_tokens=400, prompt_cache_miss_tokens=600
+        )
+        self.assertEqual(usage.prompt_tokens, 1000)
+
+    def test_garbage_detail_is_safe(self):
+        usage = AIUsage()
+        usage.add_request(
+            success=True, prompt_tokens=500,
+            prompt_cache_hit_tokens=None, prompt_cache_miss_tokens="abc",
+        )
+        self.assertEqual(usage.prompt_cache_hit_tokens, 0)
+        self.assertEqual(usage.prompt_cache_miss_tokens, 500)
+
+    def test_failed_request_adds_no_cache_tokens(self):
+        usage = AIUsage()
+        usage.add_request(success=False)
+        self.assertEqual(usage.prompt_cache_hit_tokens, 0)
+        self.assertEqual(usage.prompt_cache_miss_tokens, 0)
+
+    def test_merge_includes_cache_tokens(self):
+        a = AIUsage(prompt_cache_hit_tokens=10, prompt_cache_miss_tokens=20)
+        a.merge(AIUsage(prompt_cache_hit_tokens=5, prompt_cache_miss_tokens=7))
+        self.assertEqual(a.prompt_cache_hit_tokens, 15)
+        self.assertEqual(a.prompt_cache_miss_tokens, 27)
+
+    def test_round_trip_keeps_cache_tokens(self):
+        usage = AIUsage(prompt_tokens=100, prompt_cache_hit_tokens=60, prompt_cache_miss_tokens=40)
+        restored = AIUsage.from_dict(usage.to_dict())
+        self.assertEqual(restored.prompt_cache_hit_tokens, 60)
+        self.assertEqual(restored.prompt_cache_miss_tokens, 40)
+
+    def test_cache_split_matches_reported_detail(self):
+        usage = AIUsage(prompt_tokens=1000, prompt_cache_hit_tokens=700, prompt_cache_miss_tokens=300)
+        self.assertEqual(usage.cache_split(), (700, 300))
+
+    def test_cache_split_falls_back_for_legacy_records(self):
+        """旧版本写下的当日结果没有缓存字段：显示与计价都按未命中"""
+        usage = AIUsage(prompt_tokens=1000)
+        self.assertEqual(usage.cache_split(), (0, 1000))
+
+    def test_cache_split_always_sums_to_prompt_tokens(self):
+        for hit, miss, prompt in ((0, 0, 500), (200, 0, 500), (100, 400, 500)):
+            with self.subTest(hit=hit, miss=miss):
+                usage = AIUsage(
+                    prompt_tokens=prompt,
+                    prompt_cache_hit_tokens=hit,
+                    prompt_cache_miss_tokens=miss,
+                )
+                split = usage.cache_split()
+                self.assertEqual(sum(split), prompt)
+
+
 if __name__ == "__main__":
     unittest.main()

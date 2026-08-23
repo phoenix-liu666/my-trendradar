@@ -519,14 +519,25 @@ def _render_for_you_section(ai: Optional[AIReportData]) -> str:
 
 
 def _usage_rows(ai: AIReportData) -> List[tuple]:
-    """📊 AI 使用情况 的条目（HTML 与纯文本共用）"""
+    """
+    📊 AI 使用情况 的条目（HTML 与纯文本共用）
+
+    输入 Tokens 下面挂两档缓存明细：命中前缀缓存的输入便宜得多，
+    分开列出来才能看懂费用是怎么来的。服务端没返回明细时，
+    会全部落在「缓存未命中」那一档（费用同样按更贵的一档估算）。
+    """
     usage = ai.usage
+    # 用与计价完全相同的口径展示，保证「输入 = 命中 + 未命中」
+    cache_hit_tokens, cache_miss_tokens = usage.cache_split()
     rows = [
         ("模型", ai.model or "—"),
         ("分析仓库", str(usage.repositories_analyzed)),
-        ("缓存命中", str(usage.cache_hits)),
+        # 这是**仓库级**的静态分析缓存，和下面 token 级的前缀缓存不是一回事
+        ("仓库缓存命中", str(usage.cache_hits)),
         ("API 请求", str(usage.requests)),
         ("输入 Tokens", fmt_int(usage.prompt_tokens)),
+        ("├─ 缓存命中", fmt_int(cache_hit_tokens)),
+        ("└─ 缓存未命中", fmt_int(cache_miss_tokens)),
         ("输出 Tokens", fmt_int(usage.completion_tokens)),
         ("总 Tokens", fmt_int(usage.total_tokens)),
     ]
@@ -563,7 +574,8 @@ def _render_ai_usage_section(ai: Optional[AIReportData]) -> str:
                        color:{COLOR_TEXT};line-height:1.6;">
               <ul style="margin:0;padding-left:18px;">{items}</ul>
               <div style="margin-top:8px;color:{COLOR_MUTED};">
-                费用为按 Token 用量估算的结果，非实际账单。
+                费用按 DeepSeek 当前官方定价本地估算（缓存命中的输入更便宜），
+                仅供参考，不代表最终账单；服务商价格也可能调整。
               </div>
             </td>
           </tr>
@@ -824,7 +836,7 @@ def render_text(context: ReportContext) -> str:
     if ai is not None:
         lines.extend(["📊 AI 使用情况", "-" * 40])
         lines.extend(f"{label}：{value}" for label, value in _usage_rows(ai))
-        lines.append("费用为按 Token 用量估算的结果，非实际账单。")
+        lines.append("费用按 DeepSeek 当前官方定价本地估算，仅供参考，不代表最终账单。")
         lines.append("")
 
     lines.extend(

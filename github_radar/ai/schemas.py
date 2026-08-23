@@ -362,11 +362,35 @@ class DailySynthesis:
         }
 
 
+def _non_negative(value: Any) -> int:
+    """把任意输入转成 >= 0 的整数（非法值 → 0）"""
+    if value is None or isinstance(value, bool):
+        return 0
+    try:
+        return max(0, int(value))
+    except (TypeError, ValueError):
+        return 0
+
+
 @dataclass
 class AIUsage:
-    """Token / 请求 / 缓存统计（规格 §25）"""
+    """
+    Token / 请求 / 缓存统计（规格 §25）
+
+    Prompt 侧分成两档
+    ------------------
+    DeepSeek 会在 ``usage`` 里返回 ``prompt_cache_hit_tokens`` /
+    ``prompt_cache_miss_tokens``：命中前缀缓存的输入极其便宜，
+    分开统计才能算出接近真实的费用。
+
+    服务端**没有**返回这两个字段时安全降级：
+    把全部 ``prompt_tokens`` 记为 cache miss（更贵的那一档），
+    宁可高估费用，也绝不因为缺字段而报错或少算。
+    """
 
     prompt_tokens: int = 0
+    prompt_cache_hit_tokens: int = 0
+    prompt_cache_miss_tokens: int = 0
     completion_tokens: int = 0
     total_tokens: int = 0
     requests: int = 0
@@ -382,25 +406,64 @@ class AIUsage:
         prompt_tokens: int = 0,
         completion_tokens: int = 0,
         total_tokens: int = 0,
+        prompt_cache_hit_tokens: int = 0,
+        prompt_cache_miss_tokens: int = 0,
     ) -> None:
-        """累加一次 API 请求的用量"""
+        """
+        累加一次 API 请求的用量
+
+        缓存明细与 ``prompt_tokens`` 对不上时一律偏保守：
+        - 明细缺失或不完整 → 差额记入 **cache miss**
+        - 只给了明细没给总数 → ``prompt_tokens`` 取明细之和
+        """
         self.requests += 1
         if success:
             self.successful_requests += 1
         else:
             self.failed_requests += 1
-        self.prompt_tokens += max(0, int(prompt_tokens or 0))
-        self.completion_tokens += max(0, int(completion_tokens or 0))
-        counted = int(total_tokens or 0)
+
+        prompt = _non_negative(prompt_tokens)
+        hit = _non_negative(prompt_cache_hit_tokens)
+        miss = _non_negative(prompt_cache_miss_tokens)
+
+        if hit + miss < prompt:
+            # 含「服务端完全没返回缓存字段」的情况：全部按未命中估算
+            miss += prompt - hit - miss
+        elif prompt <= 0:
+            prompt = hit + miss
+
+        self.prompt_tokens += prompt
+        self.prompt_cache_hit_tokens += hit
+        self.prompt_cache_miss_tokens += miss
+
+        completion = _non_negative(completion_tokens)
+        self.completion_tokens += completion
+        counted = _non_negative(total_tokens)
         if counted <= 0:
-            counted = max(0, int(prompt_tokens or 0)) + max(0, int(completion_tokens or 0))
-        self.total_tokens += max(0, counted)
+            counted = prompt + completion
+        self.total_tokens += counted
+
+    def cache_split(self) -> tuple:
+        """
+        实际参与计价的 ``(命中, 未命中)`` 输入 token
+
+        与费用口径完全一致：明细缺失或不完整时，差额一律算作 **未命中**。
+        这样「输入 Tokens = 命中 + 未命中」在报告里永远成立 ——
+        包括读取旧版本写下的、没有缓存字段的当日结果文件。
+        """
+        hit = max(0, self.prompt_cache_hit_tokens)
+        miss = max(0, self.prompt_cache_miss_tokens)
+        if hit + miss < self.prompt_tokens:
+            miss = max(0, self.prompt_tokens - hit)
+        return hit, miss
 
     def merge(self, other: Optional["AIUsage"]) -> None:
         """合并另一份统计"""
         if other is None:
             return
         self.prompt_tokens += other.prompt_tokens
+        self.prompt_cache_hit_tokens += other.prompt_cache_hit_tokens
+        self.prompt_cache_miss_tokens += other.prompt_cache_miss_tokens
         self.completion_tokens += other.completion_tokens
         self.total_tokens += other.total_tokens
         self.requests += other.requests
@@ -412,6 +475,8 @@ class AIUsage:
     def to_dict(self) -> Dict[str, Any]:
         return {
             "prompt_tokens": self.prompt_tokens,
+            "prompt_cache_hit_tokens": self.prompt_cache_hit_tokens,
+            "prompt_cache_miss_tokens": self.prompt_cache_miss_tokens,
             "completion_tokens": self.completion_tokens,
             "total_tokens": self.total_tokens,
             "requests": self.requests,
