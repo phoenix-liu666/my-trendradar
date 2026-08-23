@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "affaan-m/ECC",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-21T03:02:03Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "提升编码 Agent 的性能与安全性，通过技能、记忆和防护机制优化 Agent 行为。",
+    "summary_zh": "面向 Claude Code、Codex 等编码 Agent 的性能优化系统，提供技能、记忆与安全能力。",
+    "tech_stack": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Go",
+      "Java",
+      "Shell"
+    ],
+    "use_cases": [
+      "优化 Claude Code 性能",
+      "增强 Agent 记忆与技能",
+      "提供安全防护"
+    ]
+  }
+}

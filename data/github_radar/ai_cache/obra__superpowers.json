@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "obra/superpowers",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-19T17:33:23Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决coding agent开发流程不规范、缺乏方法论的问题，提供结构化技能和流程。",
+    "summary_zh": "面向coding agent的软件开发方法论和技能框架，强调子代理驱动开发。",
+    "tech_stack": [
+      "Shell",
+      "Claude Code",
+      "Codex",
+      "OpenCode"
+    ],
+    "use_cases": [
+      "软件开发流程管理",
+      "需求分析",
+      "测试驱动开发",
+      "子代理协作"
+    ]
+  }
+}

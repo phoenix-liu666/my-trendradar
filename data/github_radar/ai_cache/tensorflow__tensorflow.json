@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "tensorflow/tensorflow",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T03:04:48Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Deep Learning",
+    "maturity": "mature",
+    "problem": "提供全面的机器学习框架，支持研究和部署。",
+    "summary_zh": "端到端开源机器学习平台，支持多种语言和工具。",
+    "tech_stack": [
+      "C++",
+      "Python",
+      "CUDA"
+    ],
+    "use_cases": [
+      "机器学习模型开发",
+      "深度学习研究",
+      "生产部署"
+    ]
+  }
+}

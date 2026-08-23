@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "n8n-io/n8n",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T06:45:45Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "mature",
+    "problem": "简化工作流自动化，集成 AI 能力，支持自托管。",
+    "summary_zh": "可自托管的 AI 代理和工作流自动化平台，支持可视化构建。",
+    "tech_stack": [
+      "TypeScript",
+      "Docker",
+      "Node.js"
+    ],
+    "use_cases": [
+      "工作流自动化",
+      "AI 代理构建",
+      "系统集成"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "QwenAudio/qwen-audio-agent",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-21T08:44:36Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决 Agent 在后台任务时对话中断的问题，提供实时语音交互与任务并行。",
+    "summary_zh": "实时语音运行时，让 AI Agent 保持对话、工作与在场，支持多后端 Agent。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "ACP",
+      "MCP",
+      "WebUI",
+      "TUI"
+    ],
+    "use_cases": [
+      "实时语音对话",
+      "后台任务并行",
+      "多 Agent 后端集成",
+      "桌面浮球交互"
+    ]
+  }
+}

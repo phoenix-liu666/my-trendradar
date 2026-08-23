@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "Wei-Shaw/sub2api",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T05:50:16Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "降低 AI 订阅成本，通过订阅配额分配实现多用户共享。",
+    "summary_zh": "开源中转服务，将 Claude、OpenAI、Gemini 订阅统一接入 API，支持拼车共享。",
+    "tech_stack": [
+      "Go",
+      "Vue",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "use_cases": [
+      "订阅共享",
+      "API 网关",
+      "成本分摊"
+    ]
+  }
+}

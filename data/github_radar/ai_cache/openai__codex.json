@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "openai/codex",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T06:12:32Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "帮助开发者在终端中通过自然语言完成编码任务，提高开发效率。",
+    "summary_zh": "OpenAI 出品的轻量级终端编码代理，可本地运行。",
+    "tech_stack": [
+      "Rust"
+    ],
+    "use_cases": [
+      "终端内代码生成",
+      "代码修改",
+      "自动化编码任务"
+    ]
+  }
+}

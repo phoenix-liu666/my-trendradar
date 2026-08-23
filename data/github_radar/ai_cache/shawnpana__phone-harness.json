@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "ShawnPana/phone-harness",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-21T20:42:59Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决AI agent无法直接操作真实手机的问题，提供轻量、可编辑的harness连接agent与手机。",
+    "summary_zh": "让AI agent控制真实手机的工具，支持iPhone和Android，无需越狱或额外应用。",
+    "tech_stack": [
+      "Python",
+      "adb",
+      "Vision framework",
+      "CGEvent"
+    ],
+    "use_cases": [
+      "手机自动化测试",
+      "AI助手控制手机",
+      "远程手机操作",
+      "应用自动化"
+    ]
+  }
+}

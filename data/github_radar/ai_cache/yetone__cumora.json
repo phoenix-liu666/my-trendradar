@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "yetone/cumora",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-22T19:23:08Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "experimental",
+    "problem": "让 AI 代理与人类在团队聊天中协作，支持自带代理。",
+    "summary_zh": "跨平台团队聊天工具，AI 代理作为一等参与者。",
+    "tech_stack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "use_cases": [
+      "团队协作",
+      "AI 代理管理",
+      "多代理协调"
+    ]
+  }
+}

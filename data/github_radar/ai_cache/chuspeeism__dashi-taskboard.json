@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "chuspeeism/dashi-taskboard",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T06:45:41Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "experimental",
+    "problem": "为 Codex 提供本地问题跟踪与任务管理能力。",
+    "summary_zh": "本地优先的问题看板，可嵌入 Codex，支持 CLI 与技能集成。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "React",
+      "SQLite",
+      "Tauri"
+    ],
+    "use_cases": [
+      "问题跟踪",
+      "任务管理",
+      "Codex 集成"
+    ]
+  }
+}

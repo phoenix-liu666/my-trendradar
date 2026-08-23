@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "mattpocock/skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-21T10:56:48Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决coding agent常见失败模式，如需求理解偏差、过度冗长，提供对齐和文档技能。",
+    "summary_zh": "面向真实工程师的agent skills集合，强调可组合、可适应，支持多种agent。",
+    "tech_stack": [
+      "Shell",
+      "Claude Code",
+      "Codex"
+    ],
+    "use_cases": [
+      "需求对齐",
+      "代码审查",
+      "文档生成",
+      "工程流程改进"
+    ]
+  }
+}

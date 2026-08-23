@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "anywhere-labs/deepseek-harness-desktop",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T03:33:47Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "为DeepSeek Harness提供桌面封装，简化安装和使用，增强插件生态。",
+    "summary_zh": "DeepSeek Harness的桌面客户端，支持Windows和macOS，集成插件生态。",
+    "tech_stack": [
+      "TypeScript",
+      "Electron",
+      "Cordis"
+    ],
+    "use_cases": [
+      "桌面端agent管理",
+      "插件安装与管理",
+      "本地服务管理"
+    ]
+  }
+}

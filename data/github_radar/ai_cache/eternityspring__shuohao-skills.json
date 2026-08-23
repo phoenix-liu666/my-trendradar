@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "eternityspring/shuohao-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-22T04:14:07Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决AI短剧制作流程中从小说到可投产素材的自动化问题，提供结构化、可检查的skill集合。",
+    "summary_zh": "AI短剧制作skill集合，覆盖角色、大纲、美术、剧本、分镜，支持Claude Code和Codex。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "Claude Code",
+      "Codex"
+    ],
+    "use_cases": [
+      "短剧剧本生成",
+      "角色设定",
+      "分镜制作",
+      "美术设定",
+      "AI辅助创作"
+    ]
+  }
+}

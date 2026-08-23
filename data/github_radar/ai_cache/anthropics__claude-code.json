@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-08-23T14:48:11+08:00",
+  "full_name": "anthropics/claude-code",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T00:52:16Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "帮助开发者通过自然语言在终端中执行编码任务，理解代码库。",
+    "summary_zh": "Anthropic 的终端代理编码工具，支持自然语言操作。",
+    "tech_stack": [
+      "Python"
+    ],
+    "use_cases": [
+      "代码解释",
+      "自动化任务",
+      "Git 工作流处理"
+    ]
+  }
+}
