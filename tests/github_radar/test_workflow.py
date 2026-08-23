@@ -67,14 +67,58 @@ class WorkflowDispatchTest(unittest.TestCase):
         self.assertIs(self.inputs["force_run"]["default"], False)
 
     def test_debug_switches_default_to_off(self):
-        for name in ("skip_email", "skip_commit"):
+        for name in ("skip_email", "skip_commit", "skip_ai"):
             with self.subTest(input=name):
                 self.assertIs(self.inputs[name]["default"], False)
 
     def test_all_switches_are_boolean(self):
-        for name in ("force_run", "skip_email", "skip_commit"):
+        for name in ("force_run", "skip_email", "skip_commit", "skip_ai"):
             with self.subTest(input=name):
                 self.assertEqual(self.inputs[name]["type"], "boolean")
+
+    def test_skip_ai_exists(self):
+        """30. skip_ai：手动运行时可以完全跳过 DeepSeek，用来验证旧功能"""
+        self.assertIn("skip_ai", self.inputs)
+
+
+class AiEnvironmentTest(unittest.TestCase):
+    """AI 相关环境变量必须接进 workflow，且都能不配置"""
+
+    def setUp(self):
+        with WORKFLOW_PATH.open("r", encoding="utf-8") as handle:
+            workflow = yaml.safe_load(handle)
+        steps = workflow["jobs"]["radar"]["steps"]
+        self.step = next(step for step in steps if step.get("id") == "radar")
+        self.env = self.step["env"]
+        self.script = self.step["run"]
+
+    def test_ai_switch_comes_from_repository_variables(self):
+        self.assertEqual(
+            self.env["GITHUB_RADAR_AI_ENABLED"], "${{ vars.GITHUB_RADAR_AI_ENABLED }}"
+        )
+
+    def test_api_key_comes_from_secrets(self):
+        """API Key 只能来自 Secrets，绝不能写成 vars 或硬编码"""
+        self.assertEqual(self.env["DEEPSEEK_API_KEY"], "${{ secrets.DEEPSEEK_API_KEY }}")
+
+    def test_model_and_limit_come_from_variables(self):
+        self.assertEqual(self.env["DEEPSEEK_MODEL"], "${{ vars.DEEPSEEK_MODEL }}")
+        self.assertEqual(
+            self.env["GITHUB_RADAR_AI_REPO_LIMIT"], "${{ vars.GITHUB_RADAR_AI_REPO_LIMIT }}"
+        )
+
+    def test_skip_ai_input_is_wired_to_the_cli_flag(self):
+        self.assertIn("inputs.skip_ai", self.script)
+        self.assertIn("--skip-ai", self.script)
+
+    def test_no_secret_is_hardcoded(self):
+        text = WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertNotIn("sk-", text)
+        self.assertNotIn("Bearer ", text)
+
+    def test_ai_status_is_reported_in_the_summary(self):
+        text = WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn("steps.radar.outputs.ai", text)
 
 
 if __name__ == "__main__":
