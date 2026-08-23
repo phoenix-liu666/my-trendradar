@@ -24,6 +24,7 @@ GitHub Daily Radar
 - ``trending``       GitHub Trending 页面抓取与 HTML 解析
 - ``collector``      候选仓库池构建与去重
 - ``history``        每日快照读写、保留策略、Star 增量计算
+- ``state``          每日运行状态（幂等：一天最多一封日报、一个正式快照）
 - ``ranking``        GitHub Heat Score 与榜单筛选
 - ``report``         HTML 邮件日报 + 纯文本 fallback
 - ``mailer``         轻量 SMTP 适配器

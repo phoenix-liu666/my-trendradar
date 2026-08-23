@@ -133,16 +133,39 @@ average_daily_growth_7d = delta_stars_7d / 7
 
 ### 自动运行时间
 
-每天 **北京时间 08:10**，故意比原 TrendRadar 的 08:00 晚 10 分钟错峰。
+每天 **北京时间 08:17 / 08:37 / 08:57 / 09:17** 各触发一次，共 4 次。
 
-对应 `.github/workflows/github-radar.yml` 里的 `cron: "10 0 * * *"`（GitHub Actions 的 schedule
-只认 UTC，00:10 UTC = 08:10 北京时间）。定时任务只在**默认分支**上触发；GitHub 高峰期可能
-延迟几分钟到几十分钟，属正常现象。
+为什么要 4 次？GitHub 官方明确说明 `schedule` 在平台高负载时**可能被延迟、甚至直接丢弃**
+（2026-08-23 08:10 那次就完全没有产生 workflow run）。一天只留一个触发机会，
+意味着平台一抖动当天的日报就彻底没了，所以排了 4 次兜底。
+
+重复触发**不会**重复发信 —— 每天有一份幂等状态文件
+`data/github_radar/state/YYYY-MM-DD.json`，记录 `snapshot_completed` / `email_sent` /
+`completed_at`：
+
+| 当天已有状态 | 后续触发的行为 |
+| --- | --- |
+| 快照 ✅ + 邮件 ✅ | 直接正常退出（`status=skipped`），不重复发送、不重复采集 |
+| 快照 ✅ + 邮件 ❌ | 继续补发邮件，且**不覆盖**当天已有的正式快照 |
+| 快照 ❌ | 完整重跑 |
+
+判断「今天是否已经发过信」只看状态里的 `email_sent`，**不会**用「快照文件是否存在」推断 ——
+否则邮件失败的那天永远补不上。状态文件缺失或损坏时一律按「今天什么都没做」处理：
+宁可多发一封，也不要因为一个坏掉的小文件让当天彻底收不到日报。
+
+对应 `.github/workflows/github-radar.yml` 里的 4 条 `cron` + `timezone: "Asia/Shanghai"`。
+`timezone` 是 GitHub Actions 现已支持的官方字段，可以直接写北京时间、不必手工换算 UTC；
+Asia/Shanghai 不实行夏令时，全年恒为 UTC+8。定时任务只在**默认分支**上触发。
 
 ### 如何手动运行
 
-**在 GitHub 上**：Actions → 左侧选 **GitHub Daily Radar** → **Run workflow**。
-可勾选 `只跑数据、不发邮件` / `不把快照提交回仓库` 用于调试。
+**在 GitHub 上**：Actions → 左侧选 **GitHub Daily Radar** → **Run workflow**。三个可选开关：
+
+| 开关 | 默认 | 说明 |
+| --- | --- | --- |
+| `强制运行`（`force_run`） | 关 | 保持关闭时，手动运行同样遵守每日幂等（当天已发过就跳过）；确实要重跑并**重复发一封**时才勾选 |
+| `只跑数据、不发邮件` | 关 | 调试用 |
+| `不把快照提交回仓库` | 关 | 调试用 |
 
 **在本地**（只需要 `requests`，不需要配置邮箱）：
 
@@ -158,6 +181,8 @@ python -m github_radar --help
 python -m github_radar --no-email --no-snapshot            # 纯预览，不写快照
 python -m github_radar --date 2026-08-22 --no-email        # 指定日期
 python -m github_radar --top 30 --new-top 15 --no-email    # 调整榜单长度
+python -m github_radar --force-run                         # 忽略当天状态，强制重跑一遍
+python -m github_radar --no-state --no-email               # 完全不读写状态文件（关闭幂等）
 ```
 
 跑测试（不访问网络）：
@@ -184,13 +209,17 @@ python -m unittest discover -s tests -t .
 ### 数据保存在哪里
 
 ```text
-data/github_radar/YYYY-MM-DD.json     每日 Star 快照（自动提交回仓库，默认保留 90 天）
-data/github_radar/latest.json         最新一天的副本，便于快速查看
-output/github_radar/YYYY-MM-DD.html   当天 HTML 日报（不提交，仅本地/Actions 产物）
-output/github_radar/YYYY-MM-DD.txt    纯文本版
+data/github_radar/YYYY-MM-DD.json         每日 Star 快照（自动提交回仓库，默认保留 90 天）
+data/github_radar/latest.json             最新一天的副本，便于快速查看
+data/github_radar/state/YYYY-MM-DD.json   当天运行状态（幂等用，几百字节，同样提交回仓库）
+output/github_radar/YYYY-MM-DD.html       当天 HTML 日报（不提交，仅本地/Actions 产物）
+output/github_radar/YYYY-MM-DD.txt        纯文本版
 ```
 
-超过 90 天的每日快照会在每次运行时自动删除。要改保留天数，在 workflow 的运行命令后加
+一天最终**只保留一个正式快照**：补发邮件的那次运行不会覆盖它，
+这样明天的 24h 增量始终对着同一个基准计算。
+
+超过 90 天的每日快照与状态文件会在每次运行时自动删除。要改保留天数，在 workflow 的运行命令后加
 `--retention-days 180`（`0` = 永久保留）；加 `--no-latest` 可以不写 `latest.json`。
 
 ### 如何禁用 GitHub Radar
@@ -211,6 +240,7 @@ github_radar/            独立模块（与 trendradar/ 解耦，运行只依赖
 ├── github_api.py        GitHub REST API 客户端（重试 / 限流 / 容错）
 ├── trending.py          Trending 页面抓取与解析
 ├── history.py           每日快照读写、保留策略、Star 增量
+├── state.py             每日运行状态（幂等：一天最多一封日报、一个正式快照）
 ├── ranking.py           Heat Score 与榜单筛选
 ├── report.py            HTML 邮件日报 + 纯文本 fallback
 ├── mailer.py            SMTP 适配器（复用 TrendRadar 的服务商识别表）
