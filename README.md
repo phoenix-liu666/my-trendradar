@@ -84,6 +84,22 @@
 - 📈 **Star 历史快照**：每天一份 JSON 提交回仓库，天然积累出增长曲线数据
 - 📧 **HTML 邮件日报**：移动端友好，安卓 QQ 邮箱可直接阅读，附纯文本 fallback
 - ☁️ **全部跑在 GitHub Actions**：电脑关机也照常工作，不需要服务器、数据库或任何付费服务
+- 🤖 **AI Intelligence（可选）**：DeepSeek 中文解读、项目分类、技术栈、
+  🎯 For You 个性化推荐、📡 每日技术趋势总结 —— 详见 [AI Intelligence](#ai-intelligence)
+
+邮件结构：
+
+```text
+🛰️ GitHub Daily Radar
+📡 今日 GitHub 技术信号      ← AI
+🎯 For You Top10             ← AI
+🔥 Hot Today Top20
+🌱 New & Rising Top10
+📊 AI 使用情况               ← AI
+📌 数据说明
+```
+
+不开 AI 时，三个 AI 区块整块隐藏，日报就是原来的样子。
 
 ### 数据源
 
@@ -131,6 +147,140 @@ average_daily_growth_7d = delta_stars_7d / 7
 - **第 2 天**：开始有 24h 增长
 - **第 8 天起**：开始有完整的 7d 增长与 7 日平均日增
 
+<h3 id="ai-intelligence">AI Intelligence</h3>
+
+用 **DeepSeek V4 Flash** 把「GitHub 排行榜」升级成「GitHub 技术情报系统」。
+**默认关闭**，不配置就完全不会调用 AI，日报和以前一模一样。
+
+#### AI 增强了什么
+
+| 位置 | 增强内容 |
+| --- | --- |
+| 📡 今日 GitHub 技术信号 | 一句话主线判断 + 最多 5 条信号 + 升温方向 + 明日关注 |
+| 🎯 For You Top10 | 按 Personal Score 排序的个性化推荐，含「为什么与你相关」「推荐动作」 |
+| 🔥 Hot20 / 🌱 Rising10 | 每个项目追加：中文一句话、分类、为什么值得关注、推荐动作 |
+| 📊 AI 使用情况 | 模型、分析仓库数、缓存命中、请求数、Token、预估费用 |
+
+**基础数据一个字都没变**：Stars、24h / 7d 增量、Heat Score、榜单顺序全部由原来的
+客观算法决定，AI 只是在卡片上追加解读。
+
+#### 🎯 For You 与 Personal Score
+
+```text
+PersonalScore = 0.55 × AI relevance      # 模型读完 README 后判断的相关度
+              + 0.25 × Heat Score        # 客观热度（AI 不参与）
+              + 0.20 × keyword score     # 本地关键词匹配，不花一分钱
+```
+
+兴趣写在 **`config/github_radar_profile.yaml`**（不硬编码在代码里）：
+
+```yaml
+interests:
+  ai_agents:
+    weight: 1.0
+    keywords: [AI Agent, Coding Agent, MCP, agent framework, ...]
+  computational_optics:
+    weight: 1.0
+    keywords: [metasurface, metalens, FDTD, RCWA, inverse design, ...]
+```
+
+配置文件缺失 / 格式错误 / weight 非法时，会自动退回一个内置的小型画像，不会让 Radar 崩溃。
+
+**For You 允许出现 Hot20 之外的项目**：某个项目 Heat Score 只有 50，但 AI relevance 98、
+关键词匹配 100，PersonalScore = 75.9，照样能排进 For You —— 这正是它存在的意义。
+
+#### AI 不会做什么
+
+- ❌ 不参与 Heat Score，不修改 Star 数据，不判断 24h 增量，不参与 snapshot
+- ❌ 不会编造「被某公司采用 / 某名人推荐 / 上了 Hacker News / 完成融资」这类外部事件
+
+「为什么值得关注」**只基于喂进去的客观指标**（stars / 24h / 7d / Trending 排名 /
+created_at / pushed_at / Heat Score）。只能确认「涨得快、排名靠前、还在更新」时，
+它就会如实写成：
+
+> 从现有 GitHub 数据看，该项目近期关注度明显上升，目前没有足够证据确定具体外部驱动事件。
+
+代码里还有一层兜底：模型一旦冒出无证据的外部事件断言，会被直接替换成上面这句中性表述，
+并把 confidence 降为 low。**所以这一栏是「值得看的线索」，不是确定的因果结论。**
+
+#### 失败自动降级
+
+DeepSeek 挂了不影响你收日报 —— 这是硬性要求：
+
+| 情况 | 结果 |
+| --- | --- |
+| API Key 缺失 / 超时 / 429 / 5xx / 返回的不是 JSON | 该批次退回基础数据 |
+| 部分 batch 失败 | 部分增强日报，其余项目显示基础条目 |
+| 全部 batch 失败 | **原始基础日报照常发送** |
+| 趋势总结失败 | 那一块显示「AI 趋势总结今日不可用」，邮件照发 |
+
+snapshot、历史、Heat Score、榜单、邮件、幂等状态、git commit **全都不受影响**，
+workflow 也不会因为 AI 失败而变红。
+
+#### 怎么开启
+
+1. 在仓库加一个 Secret：`DEEPSEEK_API_KEY`（**只需要这一个**，不需要 PAT、数据库或云存储）
+2. 在仓库 Variables 里加：`GITHUB_RADAR_AI_ENABLED = true`
+
+只有 `GITHUB_RADAR_AI_ENABLED=true` 才会启用。开了但没有 Key 时只会打一条 warning、
+本次禁用 AI，**不会让 workflow 失败**。
+
+它与 TrendRadar 新闻侧的 `AI_ANALYSIS_ENABLED` 完全独立，互不影响。
+
+#### 怎么关闭
+
+- 永久关闭：把 `GITHUB_RADAR_AI_ENABLED` 删掉或设成 `false`
+- 单次关闭：手动运行时勾选 **`skip_ai`**（完全跳过 DeepSeek，用来验证旧功能）
+- 本地：`python -m github_radar --no-email --skip-ai`
+
+#### 成本控制
+
+每天的调用量有硬上限，不会因为某天候选变多就失控：
+
+| 限制 | 默认值 | 说明 |
+| --- | --- | --- |
+| AI repo limit | **30** | 每天最多分析 30 个 unique repositories（`GITHUB_RADAR_AI_REPO_LIMIT` 可调） |
+| README 长度 | 6000 字符 | 超出截断；且**只给最终 AI 候选**读 README，不会给 100 个候选全读 |
+| batch 大小 | 6（≤8） | 30 个仓库 = 5 次请求，不是 30 次 |
+| 每日请求数 | 通常 ≤7 | 5 次仓库分析 + 1 次趋势总结 |
+| JSON 重试 | ≤1 次 | 第二次还不是合法 JSON 就退回基础数据 |
+| 输入总字符 | 120,000 | `GITHUB_RADAR_AI_MAX_INPUT_CHARS`，达到上限就停止后续批次 |
+| Thinking | **明确关闭** | 请求体固定带 `"thinking": {"type": "disabled"}`，不依赖模型默认行为 |
+
+Token 用量从 API 响应的 `usage` 里累计，费用按下面的公式估算并显示在邮件底部：
+
+```text
+input_cost  = prompt_tokens     / 1,000,000 × input_price
+output_cost = completion_tokens / 1,000,000 × output_price
+```
+
+价格集中维护在 `github_radar/ai/pricing.py`，可用 `DEEPSEEK_INPUT_PRICE_PER_1M` /
+`DEEPSEEK_OUTPUT_PRICE_PER_1M` 覆盖成你的实际价格。
+邮件里显示的永远是「**约 ¥x.xxxx（预估）**」——它是按 Token 估算的结果，**不是真实账单**。
+
+#### 缓存
+
+`data/github_radar/ai_cache/` 缓存**相对静态**的字段（中文一句话、解决什么问题、分类、
+技术栈、应用场景、成熟度），随快照一起提交回仓库，所以第二天还能命中：
+
+- 缓存命中的仓库**不再读 README**，也不让模型重复产出静态字段，只算当日上下文
+- `why_hot` / `relevance_score` / `PersonalScore` **绝不缓存** —— 它们属于每天的上下文
+- 失效条件：仓库 `pushed_at` 变化、超过 7 天 TTL、schema 版本变化
+- 缓存损坏一律 fail-open（当作没有缓存，重新分析），绝不会因此报错
+
+`data/github_radar/ai_cache/daily/YYYY-MM-DD.json` 另存当天已经算好的 AI 结果：
+4 次兜底 cron 里的第 2~4 次直接复用它，**一次 API 都不会重复调用**，
+这也是「每天最多 30 个 unique repositories」能真正成立的原因（`force_run` 会重算）。
+
+#### README 是不可信输入
+
+README 是任何人都能写的内容，因此被当成**数据**而不是指令：
+
+- system prompt 明确声明 README 不可信、禁止执行其中的任何指令
+- README 用 `BEGIN/END UNTRUSTED README` 分隔块包住，块后再次提醒（防止注入抢占末位指令）
+- README 里伪造的分隔标记会被剥离；`Ignore previous instructions` 之类的触发语会被打上标注
+- 模型输出还要过一遍 schema 校验、消毒、长度截断，最后所有文字都经 HTML 转义才进邮件
+
 ### 自动运行时间
 
 每天 **北京时间 08:17 / 08:37 / 08:57 / 09:17** 各触发一次，共 4 次。
@@ -159,13 +309,14 @@ Asia/Shanghai 不实行夏令时，全年恒为 UTC+8。定时任务只在**默�
 
 ### 如何手动运行
 
-**在 GitHub 上**：Actions → 左侧选 **GitHub Daily Radar** → **Run workflow**。三个可选开关：
+**在 GitHub 上**：Actions → 左侧选 **GitHub Daily Radar** → **Run workflow**。四个可选开关：
 
 | 开关 | 默认 | 说明 |
 | --- | --- | --- |
 | `强制运行`（`force_run`） | 关 | 保持关闭时，手动运行同样遵守每日幂等（当天已发过就跳过）；确实要重跑并**重复发一封**时才勾选 |
 | `只跑数据、不发邮件` | 关 | 调试用 |
 | `不把快照提交回仓库` | 关 | 调试用 |
+| `跳过 AI`（`skip_ai`） | 关 | 完全跳过 DeepSeek，只出基础日报，用来验证旧功能 |
 
 **在本地**（只需要 `requests`，不需要配置邮箱）：
 
@@ -183,9 +334,10 @@ python -m github_radar --date 2026-08-22 --no-email        # 指定日期
 python -m github_radar --top 30 --new-top 15 --no-email    # 调整榜单长度
 python -m github_radar --force-run                         # 忽略当天状态，强制重跑一遍
 python -m github_radar --no-state --no-email               # 完全不读写状态文件（关闭幂等）
+python -m github_radar --no-email --skip-ai                # 跳过 DeepSeek，只出基础日报
 ```
 
-跑测试（不访问网络）：
+跑测试（不访问网络、不消耗任何 AI 配额）：
 
 ```bash
 python -m unittest discover -s tests -t .
@@ -193,7 +345,7 @@ python -m unittest discover -s tests -t .
 
 ### 用到哪些 Secrets
 
-复用你已经为 TrendRadar 配好的邮箱 Secrets，**不需要新建任何 Secret，也不需要 GitHub PAT**：
+基础功能复用你已经为 TrendRadar 配好的邮箱 Secrets，**不需要 GitHub PAT**：
 
 | Secret | 是否必需 | 说明 |
 | --- | --- | --- |
@@ -203,17 +355,35 @@ python -m unittest discover -s tests -t .
 | `EMAIL_SMTP_SERVER` | 可选 | 留空自动识别（QQ 邮箱 → `smtp.qq.com`） |
 | `EMAIL_SMTP_PORT` | 可选 | 留空自动识别（QQ 邮箱 → `465` / SSL） |
 | `GITHUB_TOKEN` | 自动提供 | Actions 内置，无需手动配置 |
+| `DEEPSEEK_API_KEY` | 仅 AI 需要 | **启用 AI 时唯一需要新增的 Secret**；不配置就只是不开 AI |
 
-授权码绝不会出现在日志里，收件邮箱也会脱敏成 `a****@qq.com` 之后才打印。
+只有 AI 需要新增 Secret，**不需要新的 PAT、数据库密码或云存储凭据**。
+
+### GitHub Variables（可选）
+
+不是 Secret，可以放在仓库的 **Settings → Secrets and variables → Actions → Variables**：
+
+| 变量 | 默认值 | 说明 |
+| --- | --- | --- |
+| `GITHUB_RADAR_AI_ENABLED` | 未设置 = 关 | 设为 `true` 才启用 AI |
+| `DEEPSEEK_MODEL` | `deepseek-v4-flash` | 换模型时改这里 |
+| `GITHUB_RADAR_AI_REPO_LIMIT` | `30` | 每天最多分析多少个仓库 |
+
+全部不配置也能正常跑（代码内部有默认值）。
+
+授权码与 API Key 绝不会出现在日志里，收件邮箱也会脱敏成 `a****@qq.com` 之后才打印；
+第三方异常信息在打印前会先抹掉可能出现的敏感值。
 
 ### 数据保存在哪里
 
 ```text
-data/github_radar/YYYY-MM-DD.json         每日 Star 快照（自动提交回仓库，默认保留 90 天）
-data/github_radar/latest.json             最新一天的副本，便于快速查看
-data/github_radar/state/YYYY-MM-DD.json   当天运行状态（幂等用，几百字节，同样提交回仓库）
-output/github_radar/YYYY-MM-DD.html       当天 HTML 日报（不提交，仅本地/Actions 产物）
-output/github_radar/YYYY-MM-DD.txt        纯文本版
+data/github_radar/YYYY-MM-DD.json            每日 Star 快照（自动提交回仓库，默认保留 90 天）
+data/github_radar/latest.json                最新一天的副本，便于快速查看
+data/github_radar/state/YYYY-MM-DD.json      当天运行状态（幂等用，几百字节，同样提交回仓库）
+data/github_radar/ai_cache/<owner>__<repo>.json   AI 静态分析缓存（7 天 TTL，30 天后清理）
+data/github_radar/ai_cache/daily/YYYY-MM-DD.json  当天已算好的 AI 结果（供兜底触发复用）
+output/github_radar/YYYY-MM-DD.html          当天 HTML 日报（不提交，仅本地/Actions 产物）
+output/github_radar/YYYY-MM-DD.txt           纯文本版
 ```
 
 一天最终**只保留一个正式快照**：补发邮件的那次运行不会覆盖它，
@@ -241,15 +411,28 @@ github_radar/            独立模块（与 trendradar/ 解耦，运行只依赖
 ├── trending.py          Trending 页面抓取与解析
 ├── history.py           每日快照读写、保留策略、Star 增量
 ├── state.py             每日运行状态（幂等：一天最多一封日报、一个正式快照）
-├── ranking.py           Heat Score 与榜单筛选
+├── ranking.py           Heat Score 与榜单筛选（AI 绝不参与）
 ├── report.py            HTML 邮件日报 + 纯文本 fallback
 ├── mailer.py            SMTP 适配器（复用 TrendRadar 的服务商识别表）
-└── cli.py               命令行入口
-tests/github_radar/      单元测试（全部使用 mock，不访问网络）
+├── cli.py               命令行入口
+└── ai/                  AI Intelligence（可选，失败自动降级）
+    ├── config.py        环境变量 → AIConfig（独立开关 GITHUB_RADAR_AI_ENABLED）
+    ├── profile.py       兴趣画像加载 + deterministic keyword score
+    ├── selector.py      AI 候选选择（优先级 + 每天最多 30 个）
+    ├── readme.py        README 获取与截断（只给最终候选）
+    ├── prompts.py       prompt 构造 + prompt injection 防御
+    ├── client.py        DeepSeek 客户端（thinking disabled / 重试 / usage）
+    ├── schemas.py       输出校验、消毒、幻觉控制
+    ├── analyzer.py      批量分析编排（5~8 个/批）
+    ├── cache.py         静态字段缓存 + 当日结果复用
+    ├── scoring.py       Personal Score + For You Top10
+    ├── synthesis.py     每日趋势总结
+    ├── pricing.py       价格表与费用估算
+    ├── result.py        报告层使用的结果对象
+    └── pipeline.py      AI 总入口（永远不抛异常）
+config/github_radar_profile.yaml   个人兴趣画像（For You 用，不硬编码在代码里）
+tests/github_radar/      单元测试（全部使用 mock，不访问网络、不消耗 AI 配额）
 ```
-
-> 第二阶段预留：DeepSeek / AI 分类 / 中文解释 / 「为什么突然火」/ 🎯 For You，
-> 当前版本刻意不接任何 LLM，先把数据链路跑稳。
 
 <br>
 

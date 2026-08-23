@@ -7,6 +7,7 @@ GitHub Daily Radar 命令行入口
     python -m github_radar                 # 完整流程（采集 → 快照 → 报告 → 邮件）
     python -m github_radar --no-email      # 本地测试：不发邮件
     python -m github_radar --force-run     # 忽略当天状态，强制重跑一遍
+    python -m github_radar --skip-ai       # 跳过 DeepSeek 增强，只出基础日报
     python -m github_radar --date 2026-08-22 --no-email --no-snapshot
 
 每日幂等（配合 workflow 的 4 次兜底 cron，见 ``state.py``）：
@@ -25,6 +26,7 @@ from pathlib import Path
 from typing import Dict, List, Mapping, Optional
 
 from . import __version__
+from .ai import AIReportData, disabled_result, load_ai_config, run_ai_enhancement
 from .collector import (
     DEFAULT_MAX_DETAIL_REQUESTS,
     DEFAULT_NEW_MIN_STARS,
@@ -45,6 +47,7 @@ from .mailer import EmailConfig, load_email_config, send_report_email
 from .ranking import (
     HOT_TODAY_TOP_N,
     NEW_RISING_TOP_N,
+    ScoredRepo,
     rank_repositories,
     select_hot_today,
     select_new_and_rising,
@@ -170,6 +173,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="不写 latest.json（它是当天快照的副本，关闭可减少一半 git 体积增长）",
     )
     parser.add_argument("--no-report-files", action="store_true", help="不写出 HTML/TXT 报告文件")
+    parser.add_argument(
+        "--skip-ai",
+        action="store_true",
+        help="完全跳过 DeepSeek AI 增强（只出基础日报，便于验证旧功能）",
+    )
     parser.add_argument(
         "--token",
         default="",
@@ -344,6 +352,23 @@ def main(argv: Optional[List[str]] = None) -> int:
     )
     log(f"hot today: {len(hot)} | new & rising: {len(new_rising)}")
 
+    # ---------- 4.5 AI 增强（可选，失败必须降级） ----------
+    #
+    # 位置很关键：快照已经落盘、排名已经算完，所以 AI 这一步无论怎么炸，
+    # 都不可能影响 snapshot / Heat Score / Star 数据。
+    ai_data = _run_ai(
+        scored,
+        hot,
+        new_rising,
+        env=env,
+        skip_ai=args.skip_ai,
+        data_dir=data_dir,
+        date=date,
+        github_client=client,
+        force=args.force_run,
+        now_iso=timestamp,
+    )
+
     # ---------- 5. 报告 ----------
     notes: List[str] = []
     if status.is_first_run:
@@ -371,7 +396,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         history_days=status.available_days,
         notes=notes,
     )
-    context = ReportContext(summary=summary, hot=hot, new_rising=new_rising)
+    context = ReportContext(summary=summary, hot=hot, new_rising=new_rising, ai=ai_data)
 
     html_body = render_html(context)
     text_body = render_text(context)
@@ -399,14 +424,22 @@ def main(argv: Optional[List[str]] = None) -> int:
             return finish(
                 "email_not_configured",
                 EXIT_FAILED,
-                {"repo_count": str(len(records)), "snapshot": snapshot_status},
+                {
+                    "repo_count": str(len(records)),
+                    "snapshot": snapshot_status,
+                    "ai": ai_data.status,
+                },
             )
 
         if not _send(config, subject, html_body, text_body):
             return finish(
                 "email_failed",
                 EXIT_FAILED,
-                {"repo_count": str(len(records)), "snapshot": snapshot_status},
+                {
+                    "repo_count": str(len(records)),
+                    "snapshot": snapshot_status,
+                    "ai": ai_data.status,
+                },
             )
         email_status = "sent"
         state.mark_email_sent(timestamp)
@@ -422,9 +455,54 @@ def main(argv: Optional[List[str]] = None) -> int:
             "snapshot_path": str(snapshot_path) if snapshot_path else "",
             "snapshot": snapshot_status,
             "email": email_status,
+            "ai": ai_data.status,
+            "ai_tokens": str(ai_data.usage.total_tokens),
             "completed_at": state.completed_at or "",
         },
     )
+
+
+def _run_ai(
+    scored: List[ScoredRepo],
+    hot: List[ScoredRepo],
+    new_rising: List[ScoredRepo],
+    *,
+    env: Mapping[str, str],
+    skip_ai: bool,
+    data_dir: Path,
+    date: str,
+    github_client: GitHubAPIClient,
+    force: bool,
+    now_iso: str,
+) -> AIReportData:
+    """
+    执行 AI 增强，并保证它**永远不会让日报失败**
+
+    ``run_ai_enhancement`` 内部已经把每一步都做了降级，这里再包一层
+    ``try/except`` 是最后一道防线：哪怕 AI 子系统出现完全预期之外的异常
+    （import 失败、配置对象被改坏……），基础日报也照常生成、照常发送。
+    """
+    try:
+        config = load_ai_config(env, skip_ai=skip_ai)
+        if not config.enabled:
+            log(config.describe())
+            return disabled_result(config.disabled_reason, config.model)
+
+        return run_ai_enhancement(
+            scored,
+            hot,
+            new_rising,
+            config=config,
+            data_dir=data_dir,
+            date=date,
+            github_client=github_client,
+            env=env,
+            force=force,
+            now_iso=now_iso,
+        )
+    except Exception as exc:  # 绝不让 AI 影响日报
+        warn(f"[AI] AI 增强意外失败（{type(exc).__name__}: {exc}），本次退回基础日报")
+        return disabled_result("AI 运行异常")
 
 
 def _send(config: EmailConfig, subject: str, html_body: str, text_body: str) -> bool:

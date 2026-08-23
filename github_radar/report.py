@@ -14,6 +14,9 @@ import html as html_module
 from dataclasses import dataclass, field
 from typing import List, Optional
 
+from .ai.result import SYNTHESIS_UNAVAILABLE_TEXT, AIReportData
+from .ai.schemas import RepoAnalysis
+from .ai.scoring import ForYouEntry
 from .ranking import ScoredRepo
 from .timeutils import format_created_display
 
@@ -27,6 +30,18 @@ COLOR_LINK = "#0969da"
 COLOR_UP = "#1a7f37"
 COLOR_DOWN = "#cf222e"
 COLOR_ACCENT_BG = "#ddf4ff"
+# AI 增强内容的底色（与客观数据在视觉上区分开）
+COLOR_AI_BG = "#f6f0ff"
+COLOR_FORYOU_BG = "#fff8e6"
+
+# AI 枚举值的中文展示
+CONFIDENCE_LABELS = {"low": "低", "medium": "中", "high": "高"}
+MATURITY_LABELS = {
+    "experimental": "实验阶段",
+    "growing": "成长期",
+    "mature": "成熟",
+    "unknown": "",
+}
 
 FONT_STACK = (
     "-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',"
@@ -65,6 +80,19 @@ class ReportContext:
     summary: ReportSummary
     hot: List[ScoredRepo] = field(default_factory=list)
     new_rising: List[ScoredRepo] = field(default_factory=list)
+    # AI 增强数据；None 或 enabled=False 时整份日报退回基础版本
+    ai: Optional[AIReportData] = None
+
+    @property
+    def ai_enabled(self) -> bool:
+        """是否需要渲染 AI 区块（AI 未启用时整块隐藏）"""
+        return bool(self.ai and self.ai.should_render)
+
+    def analysis_for(self, item: ScoredRepo) -> Optional[RepoAnalysis]:
+        """取某个仓库的 AI 分析（没有就返回 None，卡片自动退回基础样式）"""
+        if not self.ai:
+            return None
+        return self.ai.analysis_for(item.record.full_name)
 
 
 # ----------------------------------------------------------------------
@@ -161,7 +189,58 @@ def _overview_rows(summary: ReportSummary) -> List[str]:
     ]
 
 
-def _render_repo_card(item: ScoredRepo, rank: int, *, show_speed: bool = False) -> str:
+def _ai_lines(analysis: Optional[RepoAnalysis]) -> List[tuple]:
+    """
+    榜单卡片上的 AI 增强行（``(标签, 内容)`` 列表）
+
+    AI 数据缺失时返回空列表 —— 卡片就是原来的基础条目，
+    这正是「AI 失败时直接显示旧版基础条目」的实现方式。
+    """
+    if analysis is None:
+        return []
+
+    lines: List[tuple] = []
+    if analysis.summary_zh:
+        lines.append(("一句话", analysis.summary_zh))
+    if analysis.category:
+        maturity = MATURITY_LABELS.get(analysis.maturity)
+        category = analysis.category + (f" · {maturity}" if maturity else "")
+        lines.append(("分类", category))
+    if analysis.why_hot.summary:
+        confidence = CONFIDENCE_LABELS.get(analysis.why_hot.confidence, "")
+        text = analysis.why_hot.summary + (f"（可信度：{confidence}）" if confidence else "")
+        lines.append(("为什么值得关注", text))
+    if analysis.recommended_action:
+        lines.append(
+            ("推荐", f"{analysis.action_icon} {analysis.action_label}")
+        )
+    return lines
+
+
+def _render_ai_block(analysis: Optional[RepoAnalysis]) -> str:
+    """把 AI 增强行渲染成卡片里的一小块（全部经过 HTML 转义）"""
+    lines = _ai_lines(analysis)
+    if not lines:
+        return ""
+    rows = "".join(
+        f'<div style="margin-top:6px;font-size:13px;color:{COLOR_TEXT};'
+        f'font-family:{FONT_STACK};line-height:1.6;word-break:break-word;">'
+        f'<span style="color:{COLOR_MUTED};">{esc(label)}：</span>{esc(value)}</div>'
+        for label, value in lines
+    )
+    return (
+        f'<div style="margin-top:10px;padding:10px 12px;background-color:{COLOR_AI_BG};'
+        f'border-radius:6px;">{rows}</div>'
+    )
+
+
+def _render_repo_card(
+    item: ScoredRepo,
+    rank: int,
+    *,
+    show_speed: bool = False,
+    analysis: Optional[RepoAnalysis] = None,
+) -> str:
     """渲染单个仓库卡片（表格实现，邮件客户端兼容）"""
     record = item.record
     delta_24h = item.delta.delta_stars_24h
@@ -221,6 +300,7 @@ def _render_repo_card(item: ScoredRepo, rank: int, *, show_speed: bool = False) 
                             font-family:{FONT_STACK};line-height:1.6;word-break:break-word;">
                   {esc(record.display_description)}
                 </div>
+                {_render_ai_block(analysis)}
                 <div style="margin-top:8px;font-size:12px;font-family:{FONT_STACK};">
                   <a href="{esc(record.html_url)}"
                      style="color:{COLOR_LINK};text-decoration:none;word-break:break-all;">{esc(record.html_url)}</a>
@@ -233,12 +313,22 @@ def _render_repo_card(item: ScoredRepo, rank: int, *, show_speed: bool = False) 
 
 
 def _render_section(
-    title: str, items: List[ScoredRepo], *, empty_text: str, show_speed: bool = False
+    title: str,
+    items: List[ScoredRepo],
+    *,
+    empty_text: str,
+    show_speed: bool = False,
+    context: Optional["ReportContext"] = None,
 ) -> str:
     """渲染一个榜单区块"""
     if items:
         body = "".join(
-            _render_repo_card(item, index, show_speed=show_speed)
+            _render_repo_card(
+                item,
+                index,
+                show_speed=show_speed,
+                analysis=context.analysis_for(item) if context else None,
+            )
             for index, item in enumerate(items, 1)
         )
     else:
@@ -263,6 +353,237 @@ def _render_section(
         </table>
       </td>
     </tr>"""
+
+
+def _signal_lines(ai: AIReportData) -> List[str]:
+    """📡 今日 GitHub 技术信号 的条目（HTML 与纯文本共用）"""
+    if not ai.synthesis_available:
+        return []
+    synthesis = ai.synthesis
+    lines = list(synthesis.signals)
+    if synthesis.rising_categories:
+        lines.append("升温方向：" + "、".join(synthesis.rising_categories))
+    if synthesis.watch_tomorrow:
+        lines.append("明日关注：" + "、".join(synthesis.watch_tomorrow))
+    return lines
+
+
+def _render_signals_section(ai: Optional[AIReportData]) -> str:
+    """📡 今日 GitHub 技术信号（synthesis 失败时显示「不可用」，绝不阻断邮件）"""
+    if ai is None or not ai.should_render:
+        return ""
+
+    if ai.synthesis_available:
+        headline = ai.synthesis.headline or "今日趋势总结"
+        items = "".join(
+            f'<li style="margin:4px 0;">{esc(line)}</li>' for line in _signal_lines(ai)
+        )
+        body = (
+            f'<div style="font-size:15px;font-weight:600;color:{COLOR_TEXT};'
+            f'line-height:1.6;">今日主线：{esc(headline)}</div>'
+            + (
+                f'<ul style="margin:10px 0 0 0;padding-left:18px;font-size:14px;'
+                f'color:{COLOR_TEXT};line-height:1.7;">{items}</ul>'
+                if items
+                else ""
+            )
+        )
+    else:
+        body = (
+            f'<div style="font-size:14px;color:{COLOR_MUTED};line-height:1.6;">'
+            f"{esc(SYNTHESIS_UNAVAILABLE_TEXT)}</div>"
+        )
+
+    return f"""
+    <tr>
+      <td style="padding:24px 0 12px 0;font-size:18px;font-weight:600;color:{COLOR_TEXT};
+                 font-family:{FONT_STACK};">📡 今日 GitHub 技术信号</td>
+    </tr>
+    <tr>
+      <td>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+               style="background-color:{COLOR_CARD_BG};border:1px solid {COLOR_BORDER};
+                      border-radius:8px;width:100%;">
+          <tr>
+            <td style="padding:14px 16px;font-family:{FONT_STACK};">{body}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>"""
+
+
+def _for_you_rows(entry: ForYouEntry) -> List[tuple]:
+    """🎯 For You 卡片的正文行（HTML 与纯文本共用）"""
+    analysis = entry.analysis
+    rows: List[tuple] = []
+    if analysis.summary_zh:
+        rows.append(("一句话", analysis.summary_zh))
+    if analysis.problem:
+        rows.append(("它解决什么问题", analysis.problem))
+    rows.append(("为什么与你相关", entry.relevance_explanation))
+    if analysis.tech_stack:
+        rows.append(("技术栈", "、".join(analysis.tech_stack)))
+    if analysis.use_cases:
+        rows.append(("应用场景", "、".join(analysis.use_cases)))
+    rows.append(("推荐", f"{analysis.action_icon} {analysis.action_label}"))
+    if analysis.recommendation_reason:
+        rows.append(("推荐原因", analysis.recommendation_reason))
+    return rows
+
+
+def _render_for_you_card(entry: ForYouEntry, rank: int) -> str:
+    """渲染一张 🎯 For You 卡片"""
+    record = entry.record
+    metrics = [
+        ("Personal Score", fmt_float(entry.personal_score)),
+        ("Heat Score", fmt_float(entry.heat_score)),
+        ("相关度", f"{entry.relevance_score}/100"),
+        ("关键词匹配", f"{fmt_float(entry.keyword_score, 0)}/100"),
+    ]
+    metric_cells = "".join(
+        f'<td style="padding:0 14px 0 0;white-space:nowrap;font-size:13px;'
+        f'color:{COLOR_MUTED};font-family:{FONT_STACK};">{esc(label)} '
+        f'<span style="color:{COLOR_TEXT};font-weight:600;">{esc(value)}</span></td>'
+        for label, value in metrics
+    )
+    rows = "".join(
+        f'<div style="margin-top:6px;font-size:14px;color:{COLOR_TEXT};'
+        f'font-family:{FONT_STACK};line-height:1.6;word-break:break-word;">'
+        f'<span style="color:{COLOR_MUTED};">{esc(label)}：</span>{esc(value)}</div>'
+        for label, value in _for_you_rows(entry)
+    )
+
+    return f"""
+      <tr>
+        <td style="padding:0 0 12px 0;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                 style="background-color:{COLOR_FORYOU_BG};border:1px solid {COLOR_BORDER};
+                        border-radius:8px;width:100%;">
+            <tr>
+              <td style="padding:14px 16px;">
+                <div style="font-size:16px;font-weight:600;font-family:{FONT_STACK};
+                            color:{COLOR_TEXT};line-height:1.4;">
+                  🎯 #{rank}
+                  <a href="{esc(record.html_url)}"
+                     style="color:{COLOR_LINK};text-decoration:none;word-break:break-all;">{esc(record.full_name)}</a>
+                </div>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                       style="margin:8px 0 0 0;">
+                  <tr>{metric_cells}</tr>
+                </table>
+                {rows}
+                <div style="margin-top:8px;font-size:12px;font-family:{FONT_STACK};">
+                  <a href="{esc(record.html_url)}"
+                     style="color:{COLOR_LINK};text-decoration:none;word-break:break-all;">{esc(record.html_url)}</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>"""
+
+
+def _render_for_you_section(ai: Optional[AIReportData]) -> str:
+    """🎯 For You Top10"""
+    if ai is None or not ai.should_render:
+        return ""
+
+    if ai.has_for_you:
+        body = "".join(
+            _render_for_you_card(entry, index)
+            for index, entry in enumerate(ai.for_you, 1)
+        )
+    else:
+        body = f"""
+      <tr>
+        <td style="padding:0 0 12px 0;">
+          <div style="background-color:{COLOR_CARD_BG};border:1px dashed {COLOR_BORDER};
+                      border-radius:8px;padding:16px;font-size:14px;color:{COLOR_MUTED};
+                      font-family:{FONT_STACK};">今日暂无 AI 个性化推荐（AI 分析不可用或没有匹配项目）。</div>
+        </td>
+      </tr>"""
+
+    title = f"🎯 For You Top{len(ai.for_you) or 10}"
+    return f"""
+    <tr>
+      <td style="padding:24px 0 12px 0;font-size:18px;font-weight:600;color:{COLOR_TEXT};
+                 font-family:{FONT_STACK};">{esc(title)}</td>
+    </tr>
+    <tr>
+      <td>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+          {body}
+        </table>
+      </td>
+    </tr>"""
+
+
+def _usage_rows(ai: AIReportData) -> List[tuple]:
+    """📊 AI 使用情况 的条目（HTML 与纯文本共用）"""
+    usage = ai.usage
+    rows = [
+        ("模型", ai.model or "—"),
+        ("分析仓库", str(usage.repositories_analyzed)),
+        ("缓存命中", str(usage.cache_hits)),
+        ("API 请求", str(usage.requests)),
+        ("输入 Tokens", fmt_int(usage.prompt_tokens)),
+        ("输出 Tokens", fmt_int(usage.completion_tokens)),
+        ("总 Tokens", fmt_int(usage.total_tokens)),
+    ]
+    if usage.failed_requests:
+        rows.append(("失败请求", str(usage.failed_requests)))
+    if ai.cost is not None:
+        rows.append(("预估今日费用", ai.cost.format_total()))
+    if ai.reused:
+        rows.append(("说明", "本次直接复用当天已生成的 AI 结果，未新增 API 调用"))
+    return rows
+
+
+def _render_ai_usage_section(ai: Optional[AIReportData]) -> str:
+    """📊 AI 使用情况"""
+    if ai is None or not ai.should_render:
+        return ""
+
+    items = "".join(
+        f'<li style="margin:4px 0;">{esc(label)}：{esc(value)}</li>'
+        for label, value in _usage_rows(ai)
+    )
+    return f"""
+    <tr>
+      <td style="padding:24px 0 12px 0;font-size:18px;font-weight:600;color:{COLOR_TEXT};
+                 font-family:{FONT_STACK};">📊 AI 使用情况</td>
+    </tr>
+    <tr>
+      <td>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+               style="background-color:{COLOR_CARD_BG};border:1px solid {COLOR_BORDER};
+                      border-radius:8px;width:100%;">
+          <tr>
+            <td style="padding:14px 16px;font-family:{FONT_STACK};font-size:13px;
+                       color:{COLOR_TEXT};line-height:1.6;">
+              <ul style="margin:0;padding-left:18px;">{items}</ul>
+              <div style="margin-top:8px;color:{COLOR_MUTED};">
+                费用为按 Token 用量估算的结果，非实际账单。
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>"""
+
+
+def _ai_explain_lines(ai: Optional[AIReportData]) -> List[str]:
+    """数据说明里与 AI 有关的条目"""
+    if ai is None or not ai.should_render:
+        return []
+    lines = [
+        f"AI 解读由 {ai.model} 生成，只做增强：不参与 Heat Score、不修改 Star 数据与 24h/7d 增量。",
+        "「为什么值得关注」只基于 Star / Trending / 更新时间等客观指标，"
+        "没有证据时不会声称具体外部原因，也不代表确定的因果关系。",
+        "Personal Score = 0.55×AI 相关度 + 0.25×Heat Score + 0.20×关键词匹配。",
+    ]
+    lines.extend(ai.notes)
+    return lines
 
 
 def render_html(context: ReportContext) -> str:
@@ -292,10 +613,13 @@ def render_html(context: ReportContext) -> str:
           <ul style="margin:0;padding-left:18px;">{note_items}</ul>
         </div>"""
 
+    signals_section = _render_signals_section(context.ai)
+    for_you_section = _render_for_you_section(context.ai)
     hot_section = _render_section(
         f"🔥 Hot Today Top{len(context.hot) or 20}",
         context.hot,
         empty_text="今日没有可用的候选仓库。",
+        context=context,
     )
     new_section = _render_section(
         f"🌱 New & Rising Top{len(context.new_rising) or 10}",
@@ -304,7 +628,9 @@ def render_html(context: ReportContext) -> str:
             f"今日没有符合条件的新项目（{summary.new_window_days} 天内创建且已有一定 Star）。"
         ),
         show_speed=True,
+        context=context,
     )
+    ai_usage_section = _render_ai_usage_section(context.ai)
 
     explain = [
         "24h / 7d Star 增长来自每日快照的差值（不是 GitHub 页面上的 stars today）。",
@@ -314,6 +640,7 @@ def render_html(context: ReportContext) -> str:
         "而是对可用指标重新归一化。",
         "数据来源：GitHub Trending 页面 + GitHub REST API 搜索。",
     ]
+    explain.extend(_ai_explain_lines(context.ai))
     explain_items = "".join(
         f'<li style="margin:4px 0;">{esc(line)}</li>' for line in explain
     )
@@ -357,8 +684,11 @@ def render_html(context: ReportContext) -> str:
             </table>
           </td>
         </tr>
+        {signals_section}
+        {for_you_section}
         {hot_section}
         {new_section}
+        {ai_usage_section}
         <tr>
           <td style="padding:24px 0 12px 0;font-size:18px;font-weight:600;color:{COLOR_TEXT};
                      font-family:{FONT_STACK};">📌 数据说明</td>
@@ -392,7 +722,13 @@ def render_html(context: ReportContext) -> str:
 # ----------------------------------------------------------------------
 # 纯文本渲染
 # ----------------------------------------------------------------------
-def _render_text_item(item: ScoredRepo, rank: int, *, show_speed: bool = False) -> str:
+def _render_text_item(
+    item: ScoredRepo,
+    rank: int,
+    *,
+    show_speed: bool = False,
+    analysis: Optional[RepoAnalysis] = None,
+) -> str:
     record = item.record
     lines = [
         f"#{rank} {record.full_name}",
@@ -405,7 +741,24 @@ def _render_text_item(item: ScoredRepo, rank: int, *, show_speed: bool = False) 
         suffix = "（估算）" if item.rising_speed_estimated else ""
         lines.append(f"    成长速度: {fmt_float(item.rising_speed)} ★/天{suffix}")
     lines.append(f"    {record.display_description}")
+    for label, value in _ai_lines(analysis):
+        lines.append(f"    {label}: {value}")
     lines.append(f"    {record.html_url}")
+    return "\n".join(lines)
+
+
+def _render_text_for_you(entry: ForYouEntry, rank: int) -> str:
+    """🎯 For You 的纯文本卡片"""
+    lines = [
+        f"🎯 #{rank} {entry.full_name}",
+        f"    Personal Score: {fmt_float(entry.personal_score)}"
+        f"   Heat Score: {fmt_float(entry.heat_score)}"
+        f"   相关度: {entry.relevance_score}/100"
+        f"   关键词匹配: {fmt_float(entry.keyword_score, 0)}/100",
+    ]
+    for label, value in _for_you_rows(entry):
+        lines.append(f"    {label}: {value}")
+    lines.append(f"    {entry.record.html_url}")
     return "\n".join(lines)
 
 
@@ -425,10 +778,28 @@ def render_text(context: ReportContext) -> str:
         lines.append("")
         lines.extend(f"* {note}" for note in summary.notes)
 
+    ai = context.ai if context.ai_enabled else None
+
+    if ai is not None:
+        lines.extend(["", "📡 今日 GitHub 技术信号", "-" * 40])
+        if ai.synthesis_available:
+            lines.append(f"今日主线：{ai.synthesis.headline}")
+            lines.extend(f"• {line}" for line in _signal_lines(ai))
+        else:
+            lines.append(SYNTHESIS_UNAVAILABLE_TEXT)
+
+        lines.extend(["", f"🎯 For You Top{len(ai.for_you) or 10}", "-" * 40])
+        if ai.has_for_you:
+            for index, entry in enumerate(ai.for_you, 1):
+                lines.append(_render_text_for_you(entry, index))
+                lines.append("")
+        else:
+            lines.extend(["今日暂无 AI 个性化推荐（AI 分析不可用或没有匹配项目）。", ""])
+
     lines.extend(["", f"🔥 Hot Today Top{len(context.hot) or 20}", "-" * 40])
     if context.hot:
         for index, item in enumerate(context.hot, 1):
-            lines.append(_render_text_item(item, index))
+            lines.append(_render_text_item(item, index, analysis=context.analysis_for(item)))
             lines.append("")
     else:
         lines.extend(["今日没有可用的候选仓库。", ""])
@@ -436,7 +807,11 @@ def render_text(context: ReportContext) -> str:
     lines.extend([f"🌱 New & Rising Top{len(context.new_rising) or 10}", "-" * 40])
     if context.new_rising:
         for index, item in enumerate(context.new_rising, 1):
-            lines.append(_render_text_item(item, index, show_speed=True))
+            lines.append(
+                _render_text_item(
+                    item, index, show_speed=True, analysis=context.analysis_for(item)
+                )
+            )
             lines.append("")
     else:
         lines.extend(
@@ -446,6 +821,12 @@ def render_text(context: ReportContext) -> str:
             ]
         )
 
+    if ai is not None:
+        lines.extend(["📊 AI 使用情况", "-" * 40])
+        lines.extend(f"{label}：{value}" for label, value in _usage_rows(ai))
+        lines.append("费用为按 Token 用量估算的结果，非实际账单。")
+        lines.append("")
+
     lines.extend(
         [
             "数据说明",
@@ -454,6 +835,11 @@ def render_text(context: ReportContext) -> str:
             "缺少对应日期快照时显示 —，不会用总 Star 冒充增量。",
             "Heat Score = 24h增长45% + 7日均增20% + Trending排名15% + 新鲜度10% + 总Star10%，",
             "缺失指标会对剩余指标重新归一化，而不是按 0 惩罚。",
+        ]
+    )
+    lines.extend(_ai_explain_lines(ai))
+    lines.extend(
+        [
             "",
             "由 GitHub Daily Radar 自动生成 · 基于 GitHub Actions 定时运行",
         ]

@@ -173,5 +173,67 @@ class BusinessMethodTest(unittest.TestCase):
         self.assertIsNone(client.get_repository("a/b"))
 
 
+class ReadmeTest(unittest.TestCase):
+    """README 获取（AI 增强阶段使用，失败一律降级为 None）"""
+
+    @staticmethod
+    def encoded(text: str) -> dict:
+        import base64
+
+        return {
+            "content": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+            "encoding": "base64",
+        }
+
+    def test_decodes_base64_content(self):
+        session = FakeSession([FakeResponse(200, json_data=self.encoded("# Hello\n中文说明"))])
+        client = make_client(session)
+        self.assertEqual(client.get_readme_text("a/b"), "# Hello\n中文说明")
+
+    def test_plain_content_is_returned_as_is(self):
+        session = FakeSession([FakeResponse(200, json_data={"content": "plain", "encoding": "none"})])
+        self.assertEqual(make_client(session).get_readme_text("a/b"), "plain")
+
+    def test_missing_readme_returns_none(self):
+        session = FakeSession([FakeResponse(404)])
+        self.assertIsNone(make_client(session).get_readme_text("a/b"))
+
+    def test_invalid_input_makes_no_request(self):
+        session = FakeSession([FakeResponse(200, json_data=self.encoded("x"))])
+        client = make_client(session)
+        self.assertIsNone(client.get_readme_text(""))
+        self.assertIsNone(client.get_readme_text("no-slash"))
+        self.assertEqual(len(session.calls), 0)
+
+    def test_broken_base64_returns_none(self):
+        session = FakeSession(
+            [FakeResponse(200, json_data={"content": "!!!not-base64!!!", "encoding": "base64"})]
+        )
+        self.assertIsNone(make_client(session).get_readme_text("a/b"))
+
+    def test_invalid_utf8_is_replaced_not_fatal(self):
+        import base64
+
+        payload = {
+            "content": base64.b64encode(b"caf\xe9 broken").decode("ascii"),
+            "encoding": "base64",
+        }
+        session = FakeSession([FakeResponse(200, json_data=payload)])
+        text = make_client(session).get_readme_text("a/b")
+        self.assertIsNotNone(text)
+        self.assertIn("caf", text)
+
+    def test_rate_limited_client_skips_readme(self):
+        session = FakeSession([FakeResponse(200, json_data=self.encoded("x"))])
+        client = make_client(session)
+        client.rate_limited = True
+        self.assertIsNone(client.get_readme_text("a/b"))
+        self.assertEqual(len(session.calls), 0)
+
+    def test_empty_content_returns_none(self):
+        session = FakeSession([FakeResponse(200, json_data={"content": "", "encoding": "base64"})])
+        self.assertIsNone(make_client(session).get_readme_text("a/b"))
+
+
 if __name__ == "__main__":
     unittest.main()

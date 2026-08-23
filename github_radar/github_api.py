@@ -12,6 +12,8 @@ GitHub REST API 客户端
 这是一个每天运行一次的轻量任务：串行请求 + 请求间隔，不做并发。
 """
 
+import base64
+import binascii
 import json
 import time
 from typing import Any, Callable, Dict, List, Optional
@@ -329,6 +331,48 @@ class GitHubAPIClient:
         if isinstance(data, dict) and data.get("full_name"):
             return data
         return None
+
+    def get_readme_text(self, full_name: str) -> Optional[str]:
+        """
+        获取仓库 README 的纯文本内容
+
+        只在 AI 增强阶段被调用，且只对最终 AI 候选调用（绝不给所有候选读 README）。
+
+        Args:
+            full_name: "owner/repo"
+
+        Returns:
+            README 文本；仓库没有 README（404）、编码异常、限流等一律返回 None
+            —— 调用方必须能在没有 README 的情况下继续工作。
+        """
+        if not full_name or "/" not in full_name:
+            return None
+        if self.rate_limited:
+            return None
+
+        data = self._request(f"{API_ROOT}/repos/{full_name}/readme")
+        if not isinstance(data, dict):
+            return None
+
+        content = data.get("content")
+        encoding = str(data.get("encoding") or "").lower()
+        if not isinstance(content, str) or not content:
+            return None
+
+        if encoding == "base64":
+            try:
+                raw = base64.b64decode(content, validate=False)
+            except (binascii.Error, ValueError) as exc:
+                warn(f"README 解码失败（{full_name}）：{type(exc).__name__}")
+                return None
+            # GitHub 上的 README 编码五花八门：UTF-8 解不出来就替换非法字节，
+            # 绝不因为一个字符让整个流程失败
+            text = raw.decode("utf-8", errors="replace")
+        else:
+            text = content
+
+        text = text.strip()
+        return text or None
 
     def describe(self) -> str:
         """返回一行可安全打印的客户端状态描述（不含 token）"""

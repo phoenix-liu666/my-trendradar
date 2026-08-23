@@ -1,0 +1,84 @@
+# ════════════════════════════════════════════════════════════════════════
+# GitHub Daily Radar - 个人兴趣画像
+#
+# 用途：
+#   1. deterministic keyword score（0~100，纯本地计算，不依赖 AI）
+#   2. 作为 AI relevance_score 的判断依据传给 DeepSeek
+#   3. 决定哪些 Hot20 之外的项目也值得送进 AI 分析（Priority 1 候选）
+#
+# 约定：
+#   - 兴趣**只写在这里**，不硬编码进 Python
+#   - 本文件缺失 / 字段缺失 / 关键词为空 / weight 非法时，
+#     Radar 会自动退回一个内置的小型 generic profile，绝不崩溃
+#   - weight 建议范围 0.1 ~ 2.0；非法值按 1.0 处理
+#   - keywords 大小写不敏感，多词关键词允许空格/下划线/连字符差异
+#     （"AI Agent" 能匹配 "ai-agent" / "AI_Agent"）
+# ════════════════════════════════════════════════════════════════════════
+
+profile:
+  name: personal-tech-radar
+
+interests:
+
+  ai_agents:
+    weight: 1.0
+    keywords:
+      - AI Agent
+      - Coding Agent
+      - autonomous agent
+      - MCP
+      - tool use
+      - computer use
+      - Claude Code
+      - Codex
+      - OpenCode
+      - agent framework
+      - agentic coding
+
+  research_ai:
+    weight: 1.0
+    keywords:
+      - research agent
+      - scientific AI
+      - AI for science
+      - scientific computing
+      - literature
+      - paper
+      - arxiv
+      - knowledge graph
+      - research automation
+
+  computational_optics:
+    weight: 1.0
+    keywords:
+      - metasurface
+      - metalens
+      - computational optics
+      - nanophotonics
+      - photonics
+      - FDTD
+      - RCWA
+      - electromagnetic
+      - electromagnetic simulation
+      - inverse design
+      - optical simulation
+
+  deep_learning:
+    weight: 0.8
+    keywords:
+      - deep learning
+      - neural network
+      - computer vision
+      - scientific machine learning
+      - physics informed
+      - PINN
+
+  productivity:
+    weight: 0.7
+    keywords:
+      - Obsidian
+      - knowledge management
+      - automation
+      - workflow
+      - developer tools
+      - productivity

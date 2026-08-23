@@ -56,6 +56,10 @@ on:
         description: "不把快照提交回仓库（调试用）"
         type: boolean
         default: false
+      skip_ai:
+        description: "完全跳过 DeepSeek AI 增强，只出基础日报（用于验证旧功能）"
+        type: boolean
+        default: false
 
 # 只申请必要权限：写回每日快照
 permissions:
@@ -100,6 +104,18 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER }}
           EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
+          # ── AI Intelligence（DeepSeek V4 Flash）──────────────────────
+          # 全部可以不配置：
+          #   GITHUB_RADAR_AI_ENABLED 未设为 true → AI 关闭，基础日报照常发送
+          #   设了 true 但没有 DEEPSEEK_API_KEY  → 只 warning，AI 本次禁用，
+          #                                        workflow **不会失败**
+          #   其余变量未配置                     → 代码内部使用默认值
+          #                                        （模型 deepseek-v4-flash / 每天最多 30 个仓库）
+          # 这套开关与 TrendRadar 的 AI_ANALYSIS_ENABLED 完全独立，互不影响。
+          GITHUB_RADAR_AI_ENABLED: ${{ vars.GITHUB_RADAR_AI_ENABLED }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          GITHUB_RADAR_AI_REPO_LIMIT: ${{ vars.GITHUB_RADAR_AI_REPO_LIMIT }}
           PYTHONIOENCODING: "utf-8"
           # github_radar 是仓库根目录下的独立包（同 mcp_server），
           # 显式加上 PYTHONPATH，避免依赖「-m 会把当前目录加入 sys.path」这一隐式行为
@@ -121,6 +137,12 @@ jobs:
           if [ "${{ inputs.force_run }}" = "true" ]; then
             echo "::notice::force_run：忽略当天状态，强制完整运行"
             ARGS="${ARGS} --force-run"
+          fi
+
+          # 手动勾选 skip_ai 才会跳过 AI；自动 schedule 一律按环境变量配置决定
+          if [ "${{ inputs.skip_ai }}" = "true" ]; then
+            echo "::notice::skip_ai：本次完全跳过 DeepSeek，只出基础日报"
+            ARGS="${ARGS} --skip-ai"
           fi
 
           uv run python -m github_radar ${ARGS}
@@ -207,8 +229,13 @@ jobs:
             echo "| 候选仓库数 | ${{ steps.radar.outputs.repo_count || '-' }} |"
             echo "| 快照 | ${{ steps.radar.outputs.snapshot || '-' }} |"
             echo "| 邮件 | ${{ steps.radar.outputs.email || '-' }} |"
+            echo "| AI | ${{ steps.radar.outputs.ai || '-' }} |"
+            echo "| AI Tokens | ${{ steps.radar.outputs.ai_tokens || '-' }} |"
             echo "| 当日完成时间 | ${{ steps.radar.outputs.completed_at || '-' }} |"
             echo ""
             echo "状态含义：\`ok\` 本次完成 · \`skipped\` 当天已完成、兜底触发正常退出 ·"
             echo "\`email_failed\` 快照已存、邮件待下次兜底补发 · \`failed\` 采集失败"
+            echo ""
+            echo "AI 含义：\`ok\` 全部成功 · \`partial\` 部分批次失败（其余项目显示基础数据）·"
+            echo "\`failed\` AI 全部失败（自动退回基础日报）· \`disabled\` 未启用或 skip_ai"
           } >> "$GITHUB_STEP_SUMMARY"
