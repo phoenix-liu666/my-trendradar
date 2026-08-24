@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-08-24T09:56:39+08:00",
+  "full_name": "apache/maka",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-24T01:47:51Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决 AI Agent 运行过程不可追溯、数据不本地化的问题，提供可恢复的执行记录。",
+    "summary_zh": "Apache 孵化的本地优先 AI Agent 工作区，记录模型消息与工具调用日志。",
+    "tech_stack": [
+      "TypeScript",
+      "Electron",
+      "React",
+      "CLI",
+      "event-sourcing"
+    ],
+    "use_cases": [
+      "本地运行 AI Agent",
+      "记录工具调用日志",
+      "会话恢复与分支",
+      "沙箱内执行工具",
+      "评估实验"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-08-24T09:56:39+08:00",
+  "full_name": "ruvnet/ruflo",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-22T16:40:30Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决单一编码代理能力有限、缺乏协作和记忆机制的问题，提供多智能体协调和自学习能力。",
+    "summary_zh": "为 Claude Code 和 Codex 设计的代理元框架，支持多智能体群、自适应记忆和 RAG 集成。",
+    "tech_stack": [
+      "TypeScript",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "npm",
+      "RAG",
+      "Swarm"
+    ],
+    "use_cases": [
+      "多智能体协作",
+      "自适应记忆",
+      "RAG 集成",
+      "自动化工作流",
+      "企业级安全"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-08-24T09:56:39+08:00",
+  "full_name": "langgenius/dify",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-24T01:56:18Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "mature",
+    "problem": "简化 LLM 应用开发，提供可视化工作流与模型管理。",
+    "summary_zh": "开源 LLM 应用开发平台，支持 AI 工作流与 RAG 管道。",
+    "tech_stack": [
+      "TypeScript",
+      "Python",
+      "Next.js",
+      "Docker",
+      "MCP"
+    ],
+    "use_cases": [
+      "构建 AI 工作流",
+      "RAG 管道",
+      "模型管理",
+      "自托管部署",
+      "团队协作"
+    ]
+  }
+}

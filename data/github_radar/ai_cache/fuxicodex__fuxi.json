@@ -1,0 +1,30 @@
+{
+  "cached_at": "2026-08-24T09:56:39+08:00",
+  "full_name": "fuxicodex/Fuxi",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T10:16:40Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决编码代理依赖特定模型、成本不可控、部署复杂的问题，提供轻量、可自托管的替代方案。",
+    "summary_zh": "用 Go 编写的终端 AI 编码代理，支持多模型路由、MCP 客户端和自动故障转移，单二进制分发。",
+    "tech_stack": [
+      "Go",
+      "MCP",
+      "TUI",
+      "OpenAI-compatible",
+      "Gemini",
+      "Bedrock",
+      "Jupyter",
+      "LSP"
+    ],
+    "use_cases": [
+      "终端内代码编辑",
+      "多模型路由",
+      "自动故障转移",
+      "MCP 工具调用",
+      "安全命令执行"
+    ]
+  }
+}

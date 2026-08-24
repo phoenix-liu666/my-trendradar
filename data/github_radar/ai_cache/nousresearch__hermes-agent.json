@@ -1,27 +1,30 @@
 {
-  "cached_at": "2026-08-23T14:48:11+08:00",
+  "cached_at": "2026-08-24T09:56:39+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-23T06:46:08Z",
+  "repo_pushed_at": "2026-08-24T01:51:59Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "growing",
-    "problem": "提供能自我改进、跨会话记忆的 AI Agent，支持多种模型与部署环境。",
-    "summary_zh": "Nous Research 推出的自我改进 AI Agent，具备学习循环、跨会话记忆与多平台接入能力。",
+    "maturity": "mature",
+    "problem": "解决 AI 代理缺乏持续学习和跨会话记忆、难以在云端或低配环境运行、无法跨平台使用的问题。",
+    "summary_zh": "Nous Research 推出的自我改进 AI 代理，具备学习循环、跨会话记忆和多平台接入能力。",
     "tech_stack": [
       "Python",
-      "Node.js",
+      "LLM",
+      "MCP",
+      "Telegram",
+      "Discord",
+      "Slack",
       "Docker",
-      "SSH",
-      "Modal",
-      "Daytona"
+      "SSH"
     ],
     "use_cases": [
-      "自我改进的 AI 助手",
-      "跨平台消息接入",
+      "个人 AI 助手",
       "自动化任务调度",
-      "研究轨迹生成"
+      "跨平台对话",
+      "研究轨迹生成",
+      "云端部署"
     ]
   }
 }
