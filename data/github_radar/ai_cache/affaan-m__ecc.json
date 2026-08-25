@@ -1,26 +1,28 @@
 {
-  "cached_at": "2026-08-23T14:48:11+08:00",
+  "cached_at": "2026-08-25T09:50:49+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-21T03:02:03Z",
+  "repo_pushed_at": "2026-08-25T01:38:08Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "提升编码 Agent 的性能与安全性，通过技能、记忆和防护机制优化 Agent 行为。",
-    "summary_zh": "面向 Claude Code、Codex 等编码 Agent 的性能优化系统，提供技能、记忆与安全能力。",
+    "problem": "解决编码代理在技能、记忆、安全等方面的不足，通过插件和技能系统提升代理性能和开发效率。",
+    "summary_zh": "代理性能优化系统，为 Claude Code、Codex 等提供技能、记忆和安全增强。",
     "tech_stack": [
       "JavaScript",
       "TypeScript",
       "Python",
       "Go",
       "Java",
+      "Perl",
       "Shell"
     ],
     "use_cases": [
-      "优化 Claude Code 性能",
-      "增强 Agent 记忆与技能",
-      "提供安全防护"
+      "增强 Claude Code",
+      "增强 Codex",
+      "技能管理",
+      "安全防护"
     ]
   }
 }

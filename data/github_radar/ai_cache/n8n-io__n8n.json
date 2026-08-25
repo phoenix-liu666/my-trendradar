@@ -1,27 +1,25 @@
 {
-  "cached_at": "2026-08-24T09:56:39+08:00",
+  "cached_at": "2026-08-25T09:50:49+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-24T00:36:28Z",
+  "repo_pushed_at": "2026-08-24T22:49:03Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "简化工作流自动化，结合 AI 能力，支持自托管与云部署。",
-    "summary_zh": "可自托管的 AI 工作流自动化平台，支持 1500+ 集成。",
+    "problem": "提供可视化工作流自动化平台，帮助用户连接不同服务和 AI 模型。",
+    "summary_zh": "公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云部署。",
     "tech_stack": [
       "TypeScript",
       "Docker",
-      "MCP",
-      "JavaScript",
-      "Python"
+      "npm",
+      "MCP"
     ],
     "use_cases": [
-      "构建 AI 工作流",
-      "自动化业务流程",
-      "集成多种服务",
-      "自托管部署",
-      "低代码开发"
+      "工作流自动化",
+      "AI Agent 构建",
+      "系统集成",
+      "自托管部署"
     ]
   }
 }

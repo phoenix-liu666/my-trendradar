@@ -1,28 +1,22 @@
 {
-  "cached_at": "2026-08-24T09:56:39+08:00",
+  "cached_at": "2026-08-25T09:50:49+08:00",
   "full_name": "VoltAgent/awesome-agent-skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-23T09:33:24Z",
+  "repo_pushed_at": "2026-08-24T06:19:36Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决 Agent Skills 分散、质量参差不齐、难以发现的问题，提供精选的官方和社区技能集合。",
-    "summary_zh": "精选 1000+ 个 Agent Skills 的列表，兼容 Claude Code、Codex、Gemini CLI 等，由官方和社区维护。",
+    "problem": "解决代理技能分散、质量参差不齐的问题，提供精选的、经过验证的代理技能集合，方便开发者使用。",
+    "summary_zh": "精选 1000+ 个代理技能，兼容 Claude Code、Codex 等，由官方和社区维护。",
     "tech_stack": [
-      "Claude Code",
-      "Codex",
-      "Gemini CLI",
-      "Cursor",
-      "OpenCode",
-      "GitHub Copilot"
+      "Markdown"
     ],
     "use_cases": [
-      "发现 Agent Skills",
-      "学习官方技能",
-      "社区技能分享",
-      "多工具兼容",
-      "技能质量筛选"
+      "查找代理技能",
+      "学习最佳实践",
+      "集成到 Claude Code",
+      "集成到 Codex"
     ]
   }
 }

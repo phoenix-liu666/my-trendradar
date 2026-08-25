@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-25T09:50:49+08:00",
+  "full_name": "rohitg00/ai-engineering-from-scratch",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-23T20:29:51Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Research Tool",
+    "maturity": "growing",
+    "problem": "提供系统性的 AI 工程学习路径，帮助学习者从基础到实践掌握 AI 技能。",
+    "summary_zh": "从零开始学习 AI 工程的免费课程，包含 511 节课和 20 个阶段。",
+    "tech_stack": [
+      "Python",
+      "TypeScript",
+      "Rust",
+      "Julia",
+      "MCP"
+    ],
+    "use_cases": [
+      "学习 AI 工程",
+      "构建 AI 应用",
+      "掌握 MCP 和 Agent 技能"
+    ]
+  }
+}

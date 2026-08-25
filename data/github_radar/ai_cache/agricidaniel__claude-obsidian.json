@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-08-25T09:50:49+08:00",
+  "full_name": "AgriciDaniel/claude-obsidian",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-01T12:03:27Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Knowledge Management",
+    "maturity": "growing",
+    "problem": "解决 AI 笔记工作流中知识难以沉淀和关联的问题，实现本地优先的知识管理。",
+    "summary_zh": "为 Obsidian 和 Claude Code 打造的自组织 AI 第二大脑，将资料转化为互联的知识图谱。",
+    "tech_stack": [
+      "Python",
+      "Obsidian",
+      "Claude Code",
+      "Markdown",
+      "Agent Skills"
+    ],
+    "use_cases": [
+      "AI 辅助笔记整理",
+      "知识图谱构建",
+      "个人知识管理",
+      "研究资料检索"
+    ]
+  }
+}
