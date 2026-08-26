@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-26T09:57:21+08:00",
   "full_name": "openai/codex",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T01:29:37Z",
+  "repo_pushed_at": "2026-08-26T01:23:02Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "mature",
-    "problem": "提供在终端中运行的 AI 编码助手，帮助开发者自动完成编码任务。",
-    "summary_zh": "OpenAI 推出的轻量级终端编码代理，支持本地运行和多种安装方式。",
+    "problem": "为开发者提供在终端中运行的 AI 编码助手，简化编码任务。",
+    "summary_zh": "OpenAI 推出的轻量级终端编码代理，本地运行，支持多种安装方式。",
     "tech_stack": [
       "Rust",
       "CLI",
@@ -16,9 +16,10 @@
       "Homebrew"
     ],
     "use_cases": [
-      "终端内 AI 辅助编程",
-      "代码生成与修改",
-      "与 ChatGPT 计划集成"
+      "终端内 AI 编程",
+      "代码生成",
+      "自动化编码任务",
+      "与 IDE 集成"
     ]
   }
 }

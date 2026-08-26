@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-26T09:57:21+08:00",
+  "full_name": "DietrichGebert/ponytail",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-07T21:44:01Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决 AI 编码代理过度构建、生成冗余代码的问题，提高代码简洁性和效率。",
+    "summary_zh": "让 AI 代理像最懒的高级开发一样思考，只写必要代码，减少代码量。",
+    "tech_stack": [
+      "JavaScript",
+      "Claude Code",
+      "Cursor",
+      "prompt-engineering"
+    ],
+    "use_cases": [
+      "减少 AI 生成代码量",
+      "提高编码效率",
+      "降低 token 消耗",
+      "作为 Claude Code 技能"
+    ]
+  }
+}

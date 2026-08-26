@@ -1,24 +1,28 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-26T09:57:21+08:00",
   "full_name": "apache/maka",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T01:47:16Z",
+  "repo_pushed_at": "2026-08-26T01:55:47Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "解决 AI 代理运行的可追溯性和数据本地化问题，通过事件溯源记录所有交互，确保数据安全。",
-    "summary_zh": "Apache 孵化中的本地优先 AI 代理工作区，记录模型消息和工具调用日志。",
+    "problem": "AI 代理执行过程缺乏可审计性和可恢复性，数据隐私难以保障。",
+    "summary_zh": "Apache 孵化项目，本地优先的 AI 代理工作区，以追加日志记录模型消息和工具调用。",
     "tech_stack": [
       "TypeScript",
       "Electron",
       "React",
-      "event-sourcing"
+      "CLI",
+      "TUI",
+      "事件溯源",
+      "沙箱"
     ],
     "use_cases": [
-      "本地 AI 代理",
-      "可审计的代理运行",
-      "桌面应用",
+      "本地代理工作区",
+      "执行记录审计",
+      "沙箱工具执行",
+      "会话恢复",
       "评估实验"
     ]
   }

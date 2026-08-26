@@ -1,25 +1,30 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-26T09:57:21+08:00",
   "full_name": "QwenAudio/qwen-audio-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-24T17:25:19Z",
+  "repo_pushed_at": "2026-08-25T16:08:01Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "experimental",
-    "problem": "解决 AI 代理在语音交互和持续任务中的体验问题，提供全双工语音交互和后台任务并行处理。",
-    "summary_zh": "实时语音运行时，让 AI 代理保持对话和任务执行，支持多种编码代理。",
+    "maturity": "growing",
+    "problem": "AI 代理在语音交互中缺乏实时性和持续性，任务执行时对话中断。",
+    "summary_zh": "实时语音运行时，让 AI 代理保持对话、工作和在场，支持多后端代理。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
       "ACP",
-      "MCP"
+      "MCP",
+      "TTS",
+      "STT",
+      "WebUI",
+      "TUI"
     ],
     "use_cases": [
-      "语音编码",
-      "实时对话",
-      "后台任务",
-      "多代理支持"
+      "实时语音对话",
+      "后台任务并行",
+      "多代理集成",
+      "语音唤醒",
+      "跨会话记忆"
     ]
   }
 }

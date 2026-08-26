@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-26T09:57:21+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T01:38:08Z",
+  "repo_pushed_at": "2026-08-25T21:27:27Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决编码代理在技能、记忆、安全等方面的不足，通过插件和技能系统提升代理性能和开发效率。",
-    "summary_zh": "代理性能优化系统，为 Claude Code、Codex 等提供技能、记忆和安全增强。",
+    "problem": "编码代理在复杂任务中性能不足，缺乏系统化的技能管理和安全机制。",
+    "summary_zh": "面向 Claude Code、Codex 等编码代理的性能优化系统，提供技能、记忆、安全等功能。",
     "tech_stack": [
       "JavaScript",
       "TypeScript",
@@ -16,13 +16,15 @@
       "Go",
       "Java",
       "Perl",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "use_cases": [
-      "增强 Claude Code",
-      "增强 Codex",
+      "代理性能优化",
       "技能管理",
-      "安全防护"
+      "记忆增强",
+      "安全防护",
+      "多代理支持"
     ]
   }
 }

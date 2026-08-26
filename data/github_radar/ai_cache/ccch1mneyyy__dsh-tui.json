@@ -1,26 +1,28 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-26T09:57:21+08:00",
   "full_name": "ccch1mneyyy/dsh-TUI",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T01:50:40Z",
+  "repo_pushed_at": "2026-08-26T01:33:41Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "experimental",
-    "problem": "为 DeepSeek Harness 提供美观实用的终端用户界面，增强交互体验和可观察性。",
-    "summary_zh": "DeepSeek Harness 的 Claude Code 风格终端界面插件，提供实时状态、流式思考与时间回溯等功能。",
+    "problem": "DeepSeek Harness 终端界面不够美观和实用，缺乏实时状态显示。",
+    "summary_zh": "DeepSeek Harness 的 TUI 插件，提供 Claude Code 风格界面，含鲸鱼顶栏和实时状态。",
     "tech_stack": [
       "TypeScript",
       "React",
       "Ink",
+      "Node.js",
       "npm",
       "TUI"
     ],
     "use_cases": [
-      "终端内使用 DeepSeek 模型",
-      "实时查看 Agent 工作状态",
-      "会话时间回溯与分支",
-      "长会话性能优化"
+      "终端美化",
+      "实时状态监控",
+      "流式思考展示",
+      "时间回溯",
+      "上下文进度显示"
     ]
   }
 }

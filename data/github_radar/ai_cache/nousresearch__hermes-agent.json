@@ -1,27 +1,30 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-26T09:57:21+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T01:15:06Z",
+  "repo_pushed_at": "2026-08-26T00:55:19Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "mature",
-    "problem": "解决 AI 代理缺乏持续学习和个性化记忆的问题，通过内置学习循环和用户建模，提升代理的适应性和效率。",
-    "summary_zh": "Nous Research 开发的自改进 AI 代理，具备学习循环、记忆和跨平台能力。",
+    "maturity": "growing",
+    "problem": "现有 AI 代理缺乏跨会话学习和记忆能力，难以适应用户需求，且部署受限。",
+    "summary_zh": "Nous Research 推出的自我改进 AI 代理，具备内置学习循环，可跨会话记忆并运行于多种基础设施。",
     "tech_stack": [
       "Python",
-      "Docker",
-      "SSH",
+      "LLM",
       "Telegram",
       "Discord",
-      "Slack"
+      "Slack",
+      "Docker",
+      "SSH",
+      "Modal"
     ],
     "use_cases": [
       "个人 AI 助手",
-      "自动化任务",
-      "跨平台聊天",
-      "研究辅助"
+      "自动化任务调度",
+      "跨平台对话",
+      "研究轨迹生成",
+      "技能自学习"
     ]
   }
 }
