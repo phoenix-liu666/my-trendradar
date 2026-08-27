@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-27T17:43:39+08:00",
+  "full_name": "K-Dense-AI/scientific-agent-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-24T09:22:55Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Scientific AI",
+    "maturity": "growing",
+    "problem": "解决 AI 代理在科学研究中缺乏专业工具和知识库的问题，提升科研效率。",
+    "summary_zh": "为 AI 代理提供 163 个科学技能和 100+ 数据库，覆盖生物、化学、医学等领域。",
+    "tech_stack": [
+      "Python",
+      "Agent Skills",
+      "生物信息学",
+      "化学信息学"
+    ],
+    "use_cases": [
+      "药物发现",
+      "基因组分析",
+      "临床研究",
+      "材料科学"
+    ]
+  }
+}

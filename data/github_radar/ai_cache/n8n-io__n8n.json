@@ -1,18 +1,20 @@
 {
-  "cached_at": "2026-08-26T09:57:21+08:00",
+  "cached_at": "2026-08-27T17:43:39+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T23:55:55Z",
+  "repo_pushed_at": "2026-08-27T09:42:38Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "简化工作流自动化，支持 AI 代理和 1500+ 集成，可自托管或云部署。",
-    "summary_zh": "公平代码的工作流自动化平台，原生 AI 能力，支持可视化构建和自定义代码。",
+    "problem": "提供可视化工作流自动化平台，结合 AI 能力，降低自动化流程构建门槛。",
+    "summary_zh": "公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云部署，集成 400+ 应用。",
     "tech_stack": [
       "TypeScript",
+      "Node.js",
       "Docker",
       "MCP",
+      "REST API",
       "JavaScript",
       "Python"
     ],
@@ -20,7 +22,8 @@
       "工作流自动化",
       "AI 代理构建",
       "数据集成",
-      "自托管自动化"
+      "业务流程自动化",
+      "自托管自动化平台"
     ]
   }
 }

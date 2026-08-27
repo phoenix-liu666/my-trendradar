@@ -1,24 +1,24 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-27T17:43:39+08:00",
   "full_name": "Alishahryar1/free-claude-code",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-24T21:33:07Z",
+  "repo_pushed_at": "2026-08-27T09:21:23Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决编码代理（如 Claude Code）需要付费或 API 额度的问题，通过聚合多个免费提供商，让用户免费使用多种编码代理。",
-    "summary_zh": "免费使用 Claude Code、Codex 等编码代理的终端工具，提供大量免费 token。",
+    "problem": "解决编码代理使用成本高、模型选择受限的问题，提供免费 token 和多代理支持。",
+    "summary_zh": "提供免费使用 Claude Code、Codex 等编码代理的解决方案，集成多个模型提供商。",
     "tech_stack": [
       "Python",
       "Whisper",
       "NVIDIA NIM"
     ],
     "use_cases": [
-      "免费使用 Claude Code",
-      "免费使用 Codex",
-      "语音编码",
-      "多代理切换"
+      "免费使用编码代理",
+      "模型切换",
+      "语音输入",
+      "多平台集成"
     ]
   }
 }

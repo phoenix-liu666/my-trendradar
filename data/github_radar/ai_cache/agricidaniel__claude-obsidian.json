@@ -1,27 +1,28 @@
 {
-  "cached_at": "2026-08-26T09:57:21+08:00",
+  "cached_at": "2026-08-27T17:43:39+08:00",
   "full_name": "AgriciDaniel/claude-obsidian",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T23:32:08Z",
+  "repo_pushed_at": "2026-08-26T11:43:21Z",
   "schema_version": 1,
   "static": {
     "category": "Knowledge Management",
     "maturity": "growing",
-    "problem": "解决 AI 笔记碎片化、缺乏关联和来源追溯的问题，帮助用户构建可持续积累的个人知识库。",
-    "summary_zh": "为 Obsidian 和 Claude Code 打造的自组织 AI 第二大脑，将任意来源整理为互联的知识图谱。",
+    "problem": "解决 AI 笔记工作流中知识碎片化问题，通过捕获、链接、检索形成可复用的知识网络。",
+    "summary_zh": "为 Obsidian 和 Claude Code 打造的自组织 AI 第二大脑，将资料转化为互联的知识图谱。",
     "tech_stack": [
       "Python",
       "Obsidian",
       "Claude Code",
       "Markdown",
-      "JSON"
+      "JSON",
+      "Agent Skills"
     ],
     "use_cases": [
       "AI 笔记整理",
       "个人知识管理",
       "知识图谱构建",
-      "研究资料归档",
-      "Obsidian 插件"
+      "研究资料检索",
+      "Notion 替代方案"
     ]
   }
 }

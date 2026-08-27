@@ -1,22 +1,24 @@
 {
-  "cached_at": "2026-08-25T09:50:49+08:00",
+  "cached_at": "2026-08-27T17:43:39+08:00",
   "full_name": "VoltAgent/awesome-agent-skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-24T06:19:36Z",
+  "repo_pushed_at": "2026-08-26T12:15:01Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决代理技能分散、质量参差不齐的问题，提供精选的、经过验证的代理技能集合，方便开发者使用。",
-    "summary_zh": "精选 1000+ 个代理技能，兼容 Claude Code、Codex 等，由官方和社区维护。",
+    "problem": "解决 Agent 技能分散、质量参差不齐的问题，提供精选列表。",
+    "summary_zh": "精选 1000+ 个 Agent 技能，来自官方团队和社区，兼容多种编码代理。",
     "tech_stack": [
-      "Markdown"
+      "Agent Skills",
+      "Claude Code",
+      "Codex",
+      "Gemini CLI"
     ],
     "use_cases": [
-      "查找代理技能",
-      "学习最佳实践",
-      "集成到 Claude Code",
-      "集成到 Codex"
+      "技能发现",
+      "技能集成",
+      "社区分享"
     ]
   }
 }

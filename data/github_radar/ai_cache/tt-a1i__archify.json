@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-08-27T17:43:39+08:00",
+  "full_name": "tt-a1i/archify",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-27T06:49:25Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决开发者在聊天中难以生成美观、可验证的架构图，以及架构变更难以审查的问题。",
+    "summary_zh": "将代码库或系统描述转化为可交互、可验证的架构图，支持多种图表类型和导出。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "HTML",
+      "SVG"
+    ],
+    "use_cases": [
+      "架构图生成",
+      "架构变更审查",
+      "系统设计可视化",
+      "文档分享"
+    ]
+  }
+}

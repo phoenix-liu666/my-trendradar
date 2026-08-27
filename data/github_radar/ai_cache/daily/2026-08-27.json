@@ -1,0 +1,451 @@
+{
+  "analyses": {
+    "agricidaniel/claude-obsidian": {
+      "category": "Knowledge Management",
+      "from_cache": false,
+      "full_name": "AgriciDaniel/claude-obsidian",
+      "maturity": "growing",
+      "problem": "解决 AI 笔记工作流中知识碎片化问题，通过捕获、链接、检索形成可复用的知识网络。",
+      "recommendation_reason": "与用户兴趣高度契合，值得深入学习其知识管理方法。",
+      "recommended_action": "study",
+      "relevance_reason": "与知识管理、Obsidian、Claude Code 高度相关，符合用户兴趣。",
+      "relevance_score": 92,
+      "summary_zh": "为 Obsidian 和 Claude Code 打造的自组织 AI 第二大脑，将资料转化为互联的知识图谱。",
+      "tech_stack": [
+        "Python",
+        "Obsidian",
+        "Claude Code",
+        "Markdown",
+        "JSON",
+        "Agent Skills"
+      ],
+      "use_cases": [
+        "AI 笔记整理",
+        "个人知识管理",
+        "知识图谱构建",
+        "研究资料检索",
+        "Notion 替代方案"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "delta_24h",
+          "stars",
+          "trending_rank"
+        ],
+        "summary": "Star 增长显著，24 小时增加 902，且进入 Trending 前 10，可能因 AI 知识管理需求增长。"
+      }
+    },
+    "alishahryar1/free-claude-code": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "Alishahryar1/free-claude-code",
+      "maturity": "growing",
+      "problem": "解决编码代理使用成本高、模型选择受限的问题，提供免费 token 和多代理支持。",
+      "recommendation_reason": "可尝试使用以降低编码代理成本，但需注意合规性。",
+      "recommended_action": "try",
+      "relevance_reason": "涉及 Claude Code、Codex、OpenCode，与 AI Agent 相关。",
+      "relevance_score": 90,
+      "summary_zh": "提供免费使用 Claude Code、Codex 等编码代理的解决方案，集成多个模型提供商。",
+      "tech_stack": [
+        "Python",
+        "Whisper",
+        "NVIDIA NIM"
+      ],
+      "use_cases": [
+        "免费使用编码代理",
+        "模型切换",
+        "语音输入",
+        "多平台集成"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 数高且 trending 排名靠前，可能因免费 token 和易用性吸引用户。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供开源的 AI 编码助手，支持代码生成、分析和规划，可本地运行。",
+      "recommendation_reason": "成熟的开源编码代理，值得尝试使用。",
+      "recommended_action": "try",
+      "relevance_reason": "与 Coding Agent、OpenCode 直接相关，符合用户兴趣。",
+      "relevance_score": 88,
+      "summary_zh": "开源 AI 编码代理，支持终端和桌面应用，提供构建和规划两种代理模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Desktop App"
+      ],
+      "use_cases": [
+        "代码生成",
+        "代码分析",
+        "项目规划",
+        "自动化开发任务",
+        "本地 AI 编码"
+      ],
+      "why_hot": {
+        "confidence": "high",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 数量庞大且持续增长，24 小时增加 450，作为知名开源编码代理持续受关注。"
+      }
+    },
+    "anthropics/claude-plugins-official": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "anthropics/claude-plugins-official",
+      "maturity": "growing",
+      "problem": "解决 Claude Code 插件发现和安装问题，提供官方审核的插件市场。",
+      "recommendation_reason": "作为官方插件目录，值得关注以扩展 Claude Code 功能。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 Claude Code 和 MCP 相关，符合 AI Agent 兴趣。",
+      "relevance_score": 90,
+      "summary_zh": "Anthropic 官方管理的 Claude Code 插件目录，包含内部和第三方插件。",
+      "tech_stack": [
+        "Claude Code",
+        "MCP",
+        "Python"
+      ],
+      "use_cases": [
+        "插件安装",
+        "插件开发",
+        "插件分发"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "delta_24h"
+        ],
+        "summary": "Star 数高且 trending 排名靠前，可能因官方背书和插件生态。"
+      }
+    },
+    "ccch1mneyyy/dsh-tui": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "ccch1mneyyy/dsh-TUI",
+      "maturity": "growing",
+      "problem": "为 DeepSeek Harness 提供美观实用的终端界面，增强交互体验，如实时状态显示、上下文进度、时间回溯等。",
+      "recommendation_reason": "与用户兴趣高度相关，但项目较新，建议关注其发展。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 Coding Agent、Claude Code 高度相关，符合用户兴趣画像。",
+      "relevance_score": 90,
+      "summary_zh": "DeepSeek Harness 的 Claude Code 风格 TUI 插件，提供鲸鱼顶栏、实时状态、流式思考等功能。",
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Ink",
+        "npm",
+        "Node.js",
+        "Claude Code",
+        "DeepSeek"
+      ],
+      "use_cases": [
+        "终端内使用 Claude Code 风格界面",
+        "实时监控工作状态与 TPS",
+        "流式思考展示",
+        "上下文进度追踪",
+        "历史会话回溯"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "delta_24h",
+          "stars"
+        ],
+        "summary": "Star 增长明显，24 小时增加 65，可能因被官方公众号收录及登上 GitHub Trending 日榜。"
+      }
+    },
+    "eternityspring/shuohao-skills": {
+      "category": "Other",
+      "from_cache": false,
+      "full_name": "eternityspring/shuohao-skills",
+      "maturity": "experimental",
+      "problem": "为 AI 短剧制作提供标准化流程，从小说到制作素材的自动化生成。",
+      "recommendation_reason": "与用户兴趣部分相关，项目较新，建议关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 Claude Code、Codex 相关，但领域为短剧制作，与用户兴趣部分相关。",
+      "relevance_score": 70,
+      "summary_zh": "AI 短剧制作的 skill 集合，涵盖角色拆解、大纲、场景设定、剧本和分镜。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Claude Code",
+        "Codex",
+        "Markdown",
+        "JSON"
+      ],
+      "use_cases": [
+        "AI 短剧剧本生成",
+        "角色设定",
+        "分镜制作",
+        "美术设定",
+        "内容创作自动化"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars"
+        ],
+        "summary": "Star 增长较快，24 小时增加 65，可能因 AI 内容创作需求增长。"
+      }
+    },
+    "k-dense-ai/scientific-agent-skills": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "maturity": "growing",
+      "problem": "解决 AI 代理在科学研究中缺乏专业工具和知识库的问题，提升科研效率。",
+      "recommendation_reason": "作为科学技能库，对科研自动化有重要价值。",
+      "recommended_action": "study",
+      "relevance_reason": "与科研 AI 和科学计算高度相关，符合用户兴趣。",
+      "relevance_score": 100,
+      "summary_zh": "为 AI 代理提供 163 个科学技能和 100+ 数据库，覆盖生物、化学、医学等领域。",
+      "tech_stack": [
+        "Python",
+        "Agent Skills",
+        "生物信息学",
+        "化学信息学"
+      ],
+      "use_cases": [
+        "药物发现",
+        "基因组分析",
+        "临床研究",
+        "材料科学"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 数高且 trending 排名靠前，可能因科研社区需求增长。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "提供可视化工作流自动化平台，结合 AI 能力，降低自动化流程构建门槛。",
+      "recommendation_reason": "成熟平台，值得研究其 AI 工作流设计。",
+      "recommended_action": "study",
+      "relevance_reason": "与自动化、工作流、MCP 相关，符合用户兴趣。",
+      "relevance_score": 80,
+      "summary_zh": "公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云部署，集成 400+ 应用。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "MCP",
+        "REST API",
+        "JavaScript",
+        "Python"
+      ],
+      "use_cases": [
+        "工作流自动化",
+        "AI 代理构建",
+        "数据集成",
+        "业务流程自动化",
+        "自托管自动化平台"
+      ],
+      "why_hot": {
+        "confidence": "high",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 数量巨大且稳定增长，24 小时增加 149，作为成熟平台持续受关注。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决 AI 代理缺乏持续学习和记忆能力，以及难以跨平台部署和自动化的问题。",
+      "recommendation_reason": "作为自改进 AI 代理的代表，对研究 AI Agent 有重要参考价值。",
+      "recommended_action": "study",
+      "relevance_reason": "核心为 AI Agent，与用户兴趣高度匹配。",
+      "relevance_score": 100,
+      "summary_zh": "自改进的 AI 代理，具备学习循环、记忆管理和多平台支持，可运行于多种环境。",
+      "tech_stack": [
+        "Python",
+        "LLM",
+        "FTS5",
+        "Docker"
+      ],
+      "use_cases": [
+        "个人助理",
+        "自动化任务",
+        "研究辅助",
+        "多平台聊天"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 数极高且 24 小时增长显著，可能因 Nous Research 背景和功能吸引大量关注。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Deep Learning",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "为机器学习和深度学习提供全面的框架，支持研究到生产部署。",
+      "recommendation_reason": "经典框架，与用户兴趣相关，但非直接相关，建议关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "与深度学习、神经网络相关，符合用户兴趣。",
+      "relevance_score": 72,
+      "summary_zh": "开源的端到端机器学习平台，提供全面的工具、库和社区资源。",
+      "tech_stack": [
+        "Python",
+        "C++",
+        "CUDA",
+        "TensorFlow",
+        "Keras",
+        "Docker"
+      ],
+      "use_cases": [
+        "深度学习模型训练",
+        "机器学习研究",
+        "生产部署",
+        "图像识别",
+        "自然语言处理"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 数量稳定，24 小时增加 85，作为经典框架持续更新。"
+      }
+    },
+    "tt-a1i/archify": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "tt-a1i/archify",
+      "maturity": "growing",
+      "problem": "解决开发者在聊天中难以生成美观、可验证的架构图，以及架构变更难以审查的问题。",
+      "recommendation_reason": "作为 Agent skill 用于架构可视化，对 AI 代理工作流有增强作用，值得研究。",
+      "recommended_action": "study",
+      "relevance_reason": "与 AI Agent 和开发者工具高度相关，支持 Claude Code、Codex、OpenCode。",
+      "relevance_score": 90,
+      "summary_zh": "将代码库或系统描述转化为可交互、可验证的架构图，支持多种图表类型和导出。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "HTML",
+        "SVG"
+      ],
+      "use_cases": [
+        "架构图生成",
+        "架构变更审查",
+        "系统设计可视化",
+        "文档分享"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 数高且 trending 排名第一，可能因近期更新和功能吸引关注。"
+      }
+    },
+    "voltagent/awesome-agent-skills": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "VoltAgent/awesome-agent-skills",
+      "maturity": "growing",
+      "problem": "解决 Agent 技能分散、质量参差不齐的问题，提供精选列表。",
+      "recommendation_reason": "作为技能列表，可关注以获取最新技能。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 AI Agent 和开发者工具相关。",
+      "relevance_score": 90,
+      "summary_zh": "精选 1000+ 个 Agent 技能，来自官方团队和社区，兼容多种编码代理。",
+      "tech_stack": [
+        "Agent Skills",
+        "Claude Code",
+        "Codex",
+        "Gemini CLI"
+      ],
+      "use_cases": [
+        "技能发现",
+        "技能集成",
+        "社区分享"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 数高且 trending 排名靠前，可能因技能生态发展。"
+      }
+    }
+  },
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T17:43:39+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "AI 编码代理与开发者工具热度持续，多项目聚集显示生态活跃。",
+    "rising_categories": [
+      "Coding Agent",
+      "Developer Tool",
+      "Knowledge Management",
+      "Scientific AI",
+      "Productivity"
+    ],
+    "signals": [
+      "Coding Agent 类项目在 for_you 中占比最高（3/10），且 hermes-agent 等热度与相关性双高。",
+      "Developer Tool 类项目数量最多（4/10），archify、claude-plugins-official 等进入热榜。",
+      "deepseek-harness 以 3753 的 24h 增量位居热榜首位，热度评分 95.19。",
+      "多个 dsh 相关项目（dsh-desktop、awesome-dsh-plugin、dataelement/dsh-desktop）同时出现，暗示该方向受关注。",
+      "知识管理类 claude-obsidian 与科学 AI 类 scientific-agent-skills 进入 for_you，显示垂直场景应用受关注。"
+    ],
+    "watch_tomorrow": [
+      "deepseek-ai/deepseek-harness：高增量与高热度，观察其后续走势。",
+      "dsh 系列（dsh-desktop、awesome-dsh-plugin）：多个相关项目聚集，可能形成新方向。",
+      "Coding Agent 生态（hermes-agent、free-claude-code、opencode）：持续关…",
+      "claude-obsidian：知识管理与 AI 结合，观察是否带动同类项目。",
+      "archify：架构可视化工具，关注开发者工具链的延伸。"
+    ]
+  },
+  "usage": {
+    "cache_hits": 5,
+    "completion_tokens": 3616,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 25405,
+    "prompt_tokens": 28093,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 31709
+  }
+}

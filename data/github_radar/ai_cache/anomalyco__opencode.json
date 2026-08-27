@@ -1,26 +1,27 @@
 {
-  "cached_at": "2026-08-26T09:57:21+08:00",
+  "cached_at": "2026-08-27T17:43:39+08:00",
   "full_name": "anomalyco/opencode",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-26T01:54:01Z",
+  "repo_pushed_at": "2026-08-27T09:02:01Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "mature",
-    "problem": "提供开源的 AI 编码代理，帮助开发者高效编码。",
-    "summary_zh": "开源 AI 编码代理，提供终端和桌面应用，支持多种安装方式。",
+    "problem": "为开发者提供开源的 AI 编码助手，支持代码生成、分析和规划，可本地运行。",
+    "summary_zh": "开源 AI 编码代理，支持终端和桌面应用，提供构建和规划两种代理模式。",
     "tech_stack": [
       "TypeScript",
+      "Node.js",
       "npm",
-      "Bun",
-      "Homebrew",
-      "Scoop"
+      "CLI",
+      "Desktop App"
     ],
     "use_cases": [
-      "AI 辅助编码",
-      "代码审查",
+      "代码生成",
+      "代码分析",
       "项目规划",
-      "桌面应用"
+      "自动化开发任务",
+      "本地 AI 编码"
     ]
   }
 }

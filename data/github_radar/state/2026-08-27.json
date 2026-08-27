@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-08-27T17:43:39+08:00",
+  "date": "2026-08-27",
+  "email_sent": true,
+  "email_sent_at": "2026-08-27T17:43:39+08:00",
+  "last_run_at": "2026-08-27T17:43:39+08:00",
+  "last_status": "ok",
+  "runs": 1,
+  "schema_version": 1,
+  "snapshot_completed": true,
+  "snapshot_completed_at": "2026-08-27T17:43:39+08:00",
+  "timezone": "Asia/Shanghai"
+}
