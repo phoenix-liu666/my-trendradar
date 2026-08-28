@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-08-28T19:20:28+08:00",
+  "full_name": "bilawalsidhu/gods-eye-view",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-28T00:46:30Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Data Tool",
+    "maturity": "growing",
+    "problem": "将分散的公共信号整合到可视化 3D 地球，提供实时态势感知。",
+    "summary_zh": "浏览器中的实时地理空间情报模拟器，基于真实公共数据。",
+    "tech_stack": [
+      "JavaScript",
+      "Cesium",
+      "WebGL"
+    ],
+    "use_cases": [
+      "实时追踪飞机船舶",
+      "卫星跟踪",
+      "地理空间分析"
+    ]
+  }
+}

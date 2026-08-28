@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-08-26T09:57:21+08:00",
+  "cached_at": "2026-08-28T19:20:28+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-25T21:27:27Z",
+  "repo_pushed_at": "2026-08-28T01:14:39Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
-    "maturity": "growing",
-    "problem": "编码代理在复杂任务中性能不足，缺乏系统化的技能管理和安全机制。",
-    "summary_zh": "面向 Claude Code、Codex 等编码代理的性能优化系统，提供技能、记忆、安全等功能。",
+    "maturity": "mature",
+    "problem": "解决编码代理在性能、记忆和安全方面的不足，提供统一的优化框架。",
+    "summary_zh": "ECC 是一个代理性能优化系统，提供技能、记忆、安全等功能，支持多种编码代理。",
     "tech_stack": [
       "JavaScript",
       "TypeScript",
@@ -16,15 +16,13 @@
       "Go",
       "Java",
       "Perl",
-      "Shell",
-      "MCP"
+      "Shell"
     ],
     "use_cases": [
-      "代理性能优化",
-      "技能管理",
-      "记忆增强",
-      "安全防护",
-      "多代理支持"
+      "优化代理性能",
+      "管理技能",
+      "增强记忆",
+      "安全防护"
     ]
   }
 }

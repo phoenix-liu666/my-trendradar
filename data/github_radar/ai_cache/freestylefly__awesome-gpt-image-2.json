@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-08-28T19:20:28+08:00",
+  "full_name": "freestylefly/awesome-gpt-image-2",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-28T10:25:04Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决 AI 图像生成中提示词不稳定、不可控、不可复用的问题，提供结构化提示词协议。",
+    "summary_zh": "GPT-Image2 工业级提示词引擎与模板库，包含 530+ 案例和 20+ 模板，支持 Prompt as Code。",
+    "tech_stack": [
+      "JavaScript",
+      "GPT-Image-2",
+      "Prompt Engineering"
+    ],
+    "use_cases": [
+      "图像生成提示词模板",
+      "批量图像生成",
+      "工作流自动化",
+      "提示词逆向工程"
+    ]
+  }
+}

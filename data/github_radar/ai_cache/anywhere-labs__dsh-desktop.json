@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-08-28T19:20:28+08:00",
+  "full_name": "anywhere-labs/dsh-desktop",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-28T09:47:01Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "为 DeepSeek Harness 提供原生桌面界面，简化使用和插件管理。",
+    "summary_zh": "基于 DeepSeek Harness 的桌面客户端，支持插件生态。",
+    "tech_stack": [
+      "TypeScript"
+    ],
+    "use_cases": [
+      "桌面使用 DeepSeek",
+      "插件管理",
+      "本地 AI 应用"
+    ]
+  }
+}

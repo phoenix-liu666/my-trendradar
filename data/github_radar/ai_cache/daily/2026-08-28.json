@@ -1,0 +1,609 @@
+{
+  "analyses": {
+    "affaan-m/ecc": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "affaan-m/ECC",
+      "maturity": "mature",
+      "problem": "解决编码代理在性能、记忆和安全方面的不足，提供统一的优化框架。",
+      "recommendation_reason": "成熟且功能全面，值得研究其优化机制。",
+      "recommended_action": "study",
+      "relevance_reason": "与 MCP、Claude Code、Codex、OpenCode 等关键词高度相关，且属于开发者工具。",
+      "relevance_score": 100,
+      "summary_zh": "ECC 是一个代理性能优化系统，提供技能、记忆、安全等功能，支持多种编码代理。",
+      "tech_stack": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Go",
+        "Java",
+        "Perl",
+        "Shell"
+      ],
+      "use_cases": [
+        "优化代理性能",
+        "管理技能",
+        "增强记忆",
+        "安全防护"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 数量高（243k），但24小时增长一般，可能因长期积累和社区认可。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "解决开发者需要开源、可定制的 AI 编码代理的问题。",
+      "recommendation_reason": "成熟的开源编码代理，值得研究其架构和功能。",
+      "recommended_action": "study",
+      "relevance_reason": "与 Coding Agent、OpenCode、workflow 相关，但缺少其他兴趣关键词。",
+      "relevance_score": 88,
+      "summary_zh": "OpenCode 是一个开源 AI 编码代理，提供终端 UI 和多种安装方式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "npm"
+      ],
+      "use_cases": [
+        "代码生成",
+        "代码审查",
+        "自动化开发任务"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 数量高（202k），但24小时增长一般，可能因长期积累和社区基础。"
+      }
+    },
+    "anthropics/claude-plugins-official": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "anthropics/claude-plugins-official",
+      "maturity": "growing",
+      "problem": "解决 Claude Code 插件发现和安装的问题，提供官方审核的插件市场。",
+      "recommendation_reason": "官方项目，值得关注其插件生态发展。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 MCP、Claude Code 相关，但缺少其他兴趣关键词。",
+      "relevance_score": 90,
+      "summary_zh": "Anthropic 官方维护的 Claude Code 插件目录，收录高质量插件。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Claude Code"
+      ],
+      "use_cases": [
+        "安装插件",
+        "发现插件",
+        "扩展 Claude Code 功能"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "delta_24h",
+          "trending_rank",
+          "stars"
+        ],
+        "summary": "Star 增长稳定，24小时增长354，趋势排名第3，可能因官方背书和生态发展。"
+      }
+    },
+    "anywhere-labs/dsh-desktop": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "anywhere-labs/dsh-desktop",
+      "maturity": "growing",
+      "problem": "为 DeepSeek Harness 提供原生桌面界面，简化使用和插件管理。",
+      "recommendation_reason": "与 AI 工具相关，但非核心，可关注其发展。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 ai_agents 和 productivity 相关，涉及 AI 工具和桌面应用。",
+      "relevance_score": 60,
+      "summary_zh": "基于 DeepSeek Harness 的桌面客户端，支持插件生态。",
+      "tech_stack": [
+        "TypeScript"
+      ],
+      "use_cases": [
+        "桌面使用 DeepSeek",
+        "插件管理",
+        "本地 AI 应用"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 增长迅速，可能与 DeepSeek 生态热度相关，但具体事件不确定。"
+      }
+    },
+    "bilawalsidhu/gods-eye-view": {
+      "category": "Data Tool",
+      "from_cache": false,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "maturity": "growing",
+      "problem": "将分散的公共信号整合到可视化 3D 地球，提供实时态势感知。",
+      "recommendation_reason": "涉及地理空间数据，可能对研究有参考价值。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 research_ai 和 computational_optics 部分相关，但非核心。",
+      "relevance_score": 40,
+      "summary_zh": "浏览器中的实时地理空间情报模拟器，基于真实公共数据。",
+      "tech_stack": [
+        "JavaScript",
+        "Cesium",
+        "WebGL"
+      ],
+      "use_cases": [
+        "实时追踪飞机船舶",
+        "卫星跟踪",
+        "地理空间分析"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "trending_rank",
+          "stars"
+        ],
+        "summary": "Trending 排名靠前，Star 增长，可能因 YouTube 视频和开源发布。"
+      }
+    },
+    "ccch1mneyyy/dsh-tui": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "ccch1mneyyy/dsh-TUI",
+      "maturity": "experimental",
+      "problem": "解决 DeepSeek Harness 终端界面简陋的问题，提供美观且功能丰富的 TUI。",
+      "recommendation_reason": "新兴项目，但被官方收录，值得关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 Coding Agent、Claude Code 相关，但缺少其他兴趣关键词。",
+      "relevance_score": 90,
+      "summary_zh": "dsh-TUI 是 DeepSeek Harness 的 TUI 插件，提供美观的终端界面和多种功能。",
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Ink",
+        "Node.js"
+      ],
+      "use_cases": [
+        "终端交互",
+        "会话管理",
+        "状态监控",
+        "插件扩展"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "delta_24h",
+          "stars"
+        ],
+        "summary": "Star 增长较慢，24小时增长39，但被官方收录，可能因特定社区推广。"
+      }
+    },
+    "deepseek-ai/deepseek-harness": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "maturity": "experimental",
+      "problem": "解决 AI 代理的灵活性和可扩展性问题，提供插件化架构和 Web UI。",
+      "recommendation_reason": "作为 DeepSeek 的代理 harness，值得关注，但当前兴趣相关性不高。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 ai_agents 兴趣相关，但 profile_keyword_hits 仅命中 arxiv，相关性较低。",
+      "relevance_score": 20,
+      "summary_zh": "DeepSeek Harness 是一个开源代理 harness，基于一切皆插件的架构，由 DeepSeek AI 开发。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Cordis"
+      ],
+      "use_cases": [
+        "AI 代理开发",
+        "插件化代理架构",
+        "Web UI 交互",
+        "本地运行代理"
+      ],
+      "why_hot": {
+        "confidence": "high",
+        "evidence": [
+          "stars: 201367",
+          "delta_24h: 2187",
+          "pushed_at: 2026-08-27T17:06:36Z"
+        ],
+        "summary": "Star 数量极高且增长迅速，24 小时增加 2187，可能因 DeepSeek 品牌和插件化架构而受到关注。"
+      }
+    },
+    "firecrawl/anydoc": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "firecrawl/anydoc",
+      "maturity": "growing",
+      "problem": "将办公文档快速转换为干净的 Markdown，便于 LLM 处理。",
+      "recommendation_reason": "对 Agent 工作流有用，可尝试使用。",
+      "recommended_action": "try",
+      "relevance_reason": "与 ai_agents 和 productivity 相关，支持 Agent 读取文档。",
+      "relevance_score": 70,
+      "summary_zh": "用 Rust 编写的文档转 Markdown 库，支持多种格式，提供多语言绑定。",
+      "tech_stack": [
+        "Rust",
+        "Node.js",
+        "Python",
+        "WebAssembly"
+      ],
+      "use_cases": [
+        "文档转换",
+        "LLM 数据准备",
+        "Agent 技能"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 增长，可能因 Agent 技能和文档转换需求。"
+      }
+    },
+    "freestylefly/awesome-gpt-image-2": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "maturity": "growing",
+      "problem": "解决 AI 图像生成中提示词不稳定、不可控、不可复用的问题，提供结构化提示词协议。",
+      "recommendation_reason": "作为提示词工程库，对图像生成工作流有参考价值，但非核心兴趣。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 productivity（workflow automation）相关，但与核心兴趣点（AI agents、research）关联较弱。",
+      "relevance_score": 63,
+      "summary_zh": "GPT-Image2 工业级提示词引擎与模板库，包含 530+ 案例和 20+ 模板，支持 Prompt as Code。",
+      "tech_stack": [
+        "JavaScript",
+        "GPT-Image-2",
+        "Prompt Engineering"
+      ],
+      "use_cases": [
+        "图像生成提示词模板",
+        "批量图像生成",
+        "工作流自动化",
+        "提示词逆向工程"
+      ],
+      "why_hot": {
+        "confidence": "high",
+        "evidence": [
+          "delta_24h: 1592",
+          "trending_rank: 10",
+          "stars: 23938"
+        ],
+        "summary": "Star 增长极快，24 小时增加 1592，且进入 Trending 排名，可能因 GPT-Image2 热度而受到关注。"
+      }
+    },
+    "guillaumemeyer/watermarks-remover": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "guillaumemeyer/watermarks-remover",
+      "maturity": "growing",
+      "problem": "帮助用户去除 AI 生成内容中的水印和元数据，保护隐私。",
+      "recommendation_reason": "涉及 AI 水印，可能对隐私保护有参考价值。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 ai_agents 和 productivity 相关，涉及 AI 内容处理。",
+      "relevance_score": 50,
+      "summary_zh": "去除多供应商 AI 水印和元数据的工具，支持多种格式。",
+      "tech_stack": [
+        "Python"
+      ],
+      "use_cases": [
+        "去除 C2PA 元数据",
+        "清理文本水印",
+        "隐私保护"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 增长，可能因 AI 水印话题热度，但具体事件不确定。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "解决工作流自动化中需要连接多个服务和 AI 能力的问题，提供可视化构建与自定义代码结合的方式。",
+      "recommendation_reason": "作为成熟的工作流自动化平台，值得研究其 AI 集成和 MCP 支持，可能对构建 agent 工作流有参考价值。",
+      "recommended_action": "study",
+      "relevance_reason": "与用户兴趣画像中的 ai_agents（MCP、tool use、agent）和 productivity（workflow automation）高度相关。",
+      "relevance_score": 85,
+      "summary_zh": "n8n 是一个公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云端使用，提供 400+ 集成。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "MCP"
+      ],
+      "use_cases": [
+        "自动化工作流",
+        "AI Agent 构建",
+        "集成多个 API",
+        "自托管自动化平台"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars: 202669",
+          "delta_24h: 97",
+          "pushed_at: 2026-08-28T11:19:54Z"
+        ],
+        "summary": "Star 数量高且持续增长，近期更新活跃，可能因 AI 自动化需求增加而受到关注。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "mature",
+      "problem": "解决 AI 代理缺乏长期记忆和自我改进能力的问题，提供跨会话学习和自动化。",
+      "recommendation_reason": "成熟且功能丰富，值得深入研究其学习循环和记忆机制。",
+      "recommended_action": "study",
+      "relevance_reason": "与 AI Agent、Claude Code、Codex 等关键词高度相关，且属于研究型 AI。",
+      "relevance_score": 100,
+      "summary_zh": "Hermes Agent 是一个自我改进的 AI 代理，具备学习循环、跨会话记忆和多平台支持。",
+      "tech_stack": [
+        "Python",
+        "LLM",
+        "Telegram",
+        "Docker"
+      ],
+      "use_cases": [
+        "自动化任务",
+        "跨平台交互",
+        "知识管理",
+        "研究辅助"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 数量巨大（237k），但24小时增长相对较小，可能因长期积累和社区基础。"
+      }
+    },
+    "pathwaycom/arc-task-gen": {
+      "category": "Research Tool",
+      "from_cache": false,
+      "full_name": "pathwaycom/arc-task-gen",
+      "maturity": "experimental",
+      "problem": "解决公开基准测试可能被模型记忆的问题，提供分布匹配的新任务以评估模型泛化能力。",
+      "recommendation_reason": "项目较新，但涉及 ARC-AGI 评估，值得关注其发展。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 research_ai 和 deep_learning 兴趣相关，涉及模型评估和科学 AI。",
+      "relevance_score": 70,
+      "summary_zh": "生成与公开评估集分布匹配的原创 ARC-AGI-1 风格任务，用于模型评估。",
+      "tech_stack": [
+        "Python"
+      ],
+      "use_cases": [
+        "生成私有评估集",
+        "评估模型泛化",
+        "基准测试补充"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "Star 增长显著，可能与 ARC-AGI 相关研究热度有关，但具体驱动事件不确定。"
+      }
+    },
+    "public-apis/public-apis": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "public-apis/public-apis",
+      "maturity": "mature",
+      "problem": "汇总可用的公共 API，方便开发者查找和使用。",
+      "recommendation_reason": "与用户兴趣画像相关度低，且项目成熟稳定，无需特别关注。",
+      "recommended_action": "skip",
+      "relevance_reason": "与 productivity 和 developer tools 相关，但非核心兴趣。",
+      "relevance_score": 30,
+      "summary_zh": "社区维护的免费公共 API 列表，涵盖多个领域。",
+      "tech_stack": [
+        "Python"
+      ],
+      "use_cases": [
+        "查找 API",
+        "开发参考",
+        "资源收集"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h"
+        ],
+        "summary": "长期热门项目，Star 持续增长，但近期增长可能因社区持续更新。"
+      }
+    },
+    "shawnpana/phone-harness": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "ShawnPana/phone-harness",
+      "maturity": "experimental",
+      "problem": "解决 AI 代理无法直接操作真实手机的问题，提供轻量级、可编辑的 harness 连接代理与手机。",
+      "recommendation_reason": "作为新兴的代理控制手机工具，值得关注，但成熟度低。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 ai_agents 兴趣高度相关，涉及 Claude Code、Codex 等代理控制手机。",
+      "relevance_score": 78,
+      "summary_zh": "Phone Harness 让 AI 代理控制真实手机，支持 iPhone 和 Android，无需越狱或额外应用。",
+      "tech_stack": [
+        "Python",
+        "adb",
+        "Vision framework",
+        "CGEvent"
+      ],
+      "use_cases": [
+        "AI 代理控制手机",
+        "自动化手机操作",
+        "iOS/Android 自动化测试",
+        "代理技能集成"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars: 2081",
+          "delta_24h: 8",
+          "pushed_at: 2026-08-26T06:47:04Z"
+        ],
+        "summary": "Star 增长平稳，可能因 AI 代理控制真实设备的需求而受到关注。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Deep Learning",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "解决机器学习和深度学习模型的开发、训练和部署问题，提供稳定 API 和跨语言支持。",
+      "recommendation_reason": "作为深度学习基础框架，对研究科学计算和神经网络有重要参考价值。",
+      "recommended_action": "study",
+      "relevance_reason": "与 deep_learning 兴趣高度相关，但与其他兴趣点（如 AI agents、computational optics）关联较弱。",
+      "relevance_score": 72,
+      "summary_zh": "TensorFlow 是一个端到端的开源机器学习平台，提供全面的工具、库和社区资源。",
+      "tech_stack": [
+        "Python",
+        "C++",
+        "CUDA",
+        "Docker"
+      ],
+      "use_cases": [
+        "深度学习模型训练",
+        "神经网络研究",
+        "ML 应用部署",
+        "科学计算"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars: 197759",
+          "delta_24h: 40",
+          "pushed_at: 2026-08-28T11:12:34Z"
+        ],
+        "summary": "Star 数量高且稳定，作为主流 ML 框架持续更新，热度可能源于其广泛使用和社区贡献。"
+      }
+    },
+    "tt-a1i/archify": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "tt-a1i/archify",
+      "maturity": "growing",
+      "problem": "解决开发者在聊天中难以生成美观、可验证的架构图的问题，提供从代码到图表的自动化流程。",
+      "recommendation_reason": "与用户兴趣高度相关，且处于快速增长期，值得尝试使用。",
+      "recommended_action": "try",
+      "relevance_reason": "与 AI Agent、Claude Code、Codex、OpenCode 等关键词高度相关，且属于开发者工具。",
+      "relevance_score": 100,
+      "summary_zh": "Archify 是一个 Agent 技能，可将代码库或系统描述转化为可交互的架构图，支持多种图表类型和导出。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "HTML",
+        "SVG"
+      ],
+      "use_cases": [
+        "生成架构图",
+        "审查架构变更",
+        "展示系统设计",
+        "文档分享"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "delta_24h",
+          "trending_rank",
+          "stars"
+        ],
+        "summary": "Star 增长迅速，24小时增长4949，趋势排名第1，可能因近期发布或社区推广。"
+      }
+    },
+    "yetone/cumora": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "yetone/cumora",
+      "maturity": "experimental",
+      "problem": "解决 AI 代理与人类协作的团队沟通问题，提供代理记忆、任务协调和真实邮件收发能力。",
+      "recommendation_reason": "作为新兴的 AI 代理协作平台，值得关注其发展，但尚不成熟。",
+      "recommended_action": "watch",
+      "relevance_reason": "与 ai_agents 兴趣高度相关，涉及 Claude Code、Codex 等代理集成。",
+      "relevance_score": 90,
+      "summary_zh": "Cumora 是一个跨平台团队聊天工具，AI 代理作为一等参与者，支持云端或自带 Claude Code/Codex 等大脑。",
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "Electron",
+        "OpenAI API"
+      ],
+      "use_cases": [
+        "AI 代理团队协作",
+        "代理与人类共同工作",
+        "跨平台聊天",
+        "任务协调"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars: 3193",
+          "delta_24h: 27",
+          "created_at: 2026-08-17T09:13:52Z"
+        ],
+        "summary": "新仓库，Star 增长迅速，可能因 AI 代理协作概念新颖而受到关注。"
+      }
+    }
+  },
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T19:20:28+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "开发者工具与编码代理热度领先，插件生态成焦点。",
+    "rising_categories": [
+      "Developer Tool",
+      "Coding Agent",
+      "Research Tool",
+      "Security",
+      "Data Tool"
+    ],
+    "signals": [
+      "Developer Tool 类目项目数量最多（8个），且 archify 以 4949 的 24 小时增量居首。",
+      "Coding Agent 类目有 5 个项目，其中 deepseek-harness 热度最高（88.73），且增量达 2187。",
+      "多个与 DeepSeek Harness 相关的项目（dsh-desktop、awesome-dsh-plugin）同时上榜，显示其插件生态正在形成。",
+      "Anthropic 官方维护的 claude-plugins-official 上榜，且 relevance 达 90，反映官方插件目录受关注。",
+      "文档处理工具（anydoc、firecrawl）和 AI 水印移除工具（watermarks-remover）等细分工具热度上升。"
+    ],
+    "watch_tomorrow": [
+      "DeepSeek Harness 及其插件生态（dsh-desktop、awesome-dsh-plugin）的后续发…",
+      "archify 能否延续高热度，以及架构图生成工具在开发者中的采用。",
+      "Claude 官方插件目录的更新与社区反响。",
+      "ARC-AGI 任务生成工具（arc-task-gen）在模型评估领域的应用。",
+      "AI 水印移除工具（watermarks-remover）引发的安全与伦理讨论。"
+    ]
+  },
+  "usage": {
+    "cache_hits": 5,
+    "completion_tokens": 5284,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 3712,
+    "prompt_cache_miss_tokens": 35677,
+    "prompt_tokens": 39389,
+    "repositories_analyzed": 18,
+    "requests": 4,
+    "successful_requests": 4,
+    "total_tokens": 44673
+  }
+}

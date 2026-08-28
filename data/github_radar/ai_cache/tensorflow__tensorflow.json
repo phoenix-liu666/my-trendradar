@@ -1,28 +1,25 @@
 {
-  "cached_at": "2026-08-27T17:43:39+08:00",
+  "cached_at": "2026-08-28T19:20:28+08:00",
   "full_name": "tensorflow/tensorflow",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-27T09:42:49Z",
+  "repo_pushed_at": "2026-08-28T11:12:34Z",
   "schema_version": 1,
   "static": {
     "category": "Deep Learning",
     "maturity": "mature",
-    "problem": "为机器学习和深度学习提供全面的框架，支持研究到生产部署。",
-    "summary_zh": "开源的端到端机器学习平台，提供全面的工具、库和社区资源。",
+    "problem": "解决机器学习和深度学习模型的开发、训练和部署问题，提供稳定 API 和跨语言支持。",
+    "summary_zh": "TensorFlow 是一个端到端的开源机器学习平台，提供全面的工具、库和社区资源。",
     "tech_stack": [
       "Python",
       "C++",
       "CUDA",
-      "TensorFlow",
-      "Keras",
       "Docker"
     ],
     "use_cases": [
       "深度学习模型训练",
-      "机器学习研究",
-      "生产部署",
-      "图像识别",
-      "自然语言处理"
+      "神经网络研究",
+      "ML 应用部署",
+      "科学计算"
     ]
   }
 }

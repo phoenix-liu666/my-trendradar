@@ -1,23 +1,23 @@
 {
-  "cached_at": "2026-08-27T17:43:39+08:00",
+  "cached_at": "2026-08-28T19:20:28+08:00",
   "full_name": "anthropics/claude-plugins-official",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-26T07:40:55Z",
+  "repo_pushed_at": "2026-08-28T11:07:33Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决 Claude Code 插件发现和安装问题，提供官方审核的插件市场。",
-    "summary_zh": "Anthropic 官方管理的 Claude Code 插件目录，包含内部和第三方插件。",
+    "problem": "解决 Claude Code 插件发现和安装的问题，提供官方审核的插件市场。",
+    "summary_zh": "Anthropic 官方维护的 Claude Code 插件目录，收录高质量插件。",
     "tech_stack": [
-      "Claude Code",
+      "Python",
       "MCP",
-      "Python"
+      "Claude Code"
     ],
     "use_cases": [
-      "插件安装",
-      "插件开发",
-      "插件分发"
+      "安装插件",
+      "发现插件",
+      "扩展 Claude Code 功能"
     ]
   }
 }

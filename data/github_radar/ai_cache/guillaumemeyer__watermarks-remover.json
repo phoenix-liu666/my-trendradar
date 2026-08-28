@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-08-28T19:20:28+08:00",
+  "full_name": "guillaumemeyer/watermarks-remover",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-28T06:23:26Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "帮助用户去除 AI 生成内容中的水印和元数据，保护隐私。",
+    "summary_zh": "去除多供应商 AI 水印和元数据的工具，支持多种格式。",
+    "tech_stack": [
+      "Python"
+    ],
+    "use_cases": [
+      "去除 C2PA 元数据",
+      "清理文本水印",
+      "隐私保护"
+    ]
+  }
+}

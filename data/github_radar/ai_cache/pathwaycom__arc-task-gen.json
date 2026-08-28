@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-08-28T19:20:28+08:00",
+  "full_name": "pathwaycom/arc-task-gen",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-11T09:52:10Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Research Tool",
+    "maturity": "experimental",
+    "problem": "解决公开基准测试可能被模型记忆的问题，提供分布匹配的新任务以评估模型泛化能力。",
+    "summary_zh": "生成与公开评估集分布匹配的原创 ARC-AGI-1 风格任务，用于模型评估。",
+    "tech_stack": [
+      "Python"
+    ],
+    "use_cases": [
+      "生成私有评估集",
+      "评估模型泛化",
+      "基准测试补充"
+    ]
+  }
+}

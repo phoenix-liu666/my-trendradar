@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-08-28T19:20:28+08:00",
+  "full_name": "firecrawl/anydoc",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-08-28T02:13:16Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "将办公文档快速转换为干净的 Markdown，便于 LLM 处理。",
+    "summary_zh": "用 Rust 编写的文档转 Markdown 库，支持多种格式，提供多语言绑定。",
+    "tech_stack": [
+      "Rust",
+      "Node.js",
+      "Python",
+      "WebAssembly"
+    ],
+    "use_cases": [
+      "文档转换",
+      "LLM 数据准备",
+      "Agent 技能"
+    ]
+  }
+}
