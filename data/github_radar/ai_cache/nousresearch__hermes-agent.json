@@ -1,25 +1,27 @@
 {
-  "cached_at": "2026-08-28T19:20:28+08:00",
+  "cached_at": "2026-09-17T12:49:10+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-28T11:13:12Z",
+  "repo_pushed_at": "2026-09-17T04:49:00Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "mature",
-    "problem": "解决 AI 代理缺乏长期记忆和自我改进能力的问题，提供跨会话学习和自动化。",
-    "summary_zh": "Hermes Agent 是一个自我改进的 AI 代理，具备学习循环、跨会话记忆和多平台支持。",
+    "maturity": "growing",
+    "problem": "通用 Agent 缺乏持续学习与跨会话记忆，且被绑定在本地设备上，难以长期低成本运行。",
+    "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自生成、跨会话记忆与多平台接入能力。",
     "tech_stack": [
       "Python",
-      "LLM",
+      "MCP",
+      "Docker",
+      "SSH",
       "Telegram",
-      "Docker"
+      "Discord",
+      "Slack"
     ],
     "use_cases": [
-      "自动化任务",
-      "跨平台交互",
-      "知识管理",
-      "研究辅助"
+      "在 VPS 或云沙箱上长期运行个人 Agent",
+      "通过 Telegram 等渠道远程指挥 Agent",
+      "批量生成轨迹用于工具调用模型训练"
     ]
   }
 }

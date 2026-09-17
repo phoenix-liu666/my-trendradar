@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-09-17T12:49:10+08:00",
+  "full_name": "rlaope/oh-my-hermes",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-17T04:25:14Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "Hermes Agent 原生能力缺少规划、研究与项目记忆的治理层，工作流与证据边界不清晰。",
+    "summary_zh": "Hermes Agent 的一体化插件，提供编码智能、长期记忆与模型优化工作流包。",
+    "tech_stack": [
+      "Python",
+      "Hermes Agent",
+      "Claude Code",
+      "Codex"
+    ],
+    "use_cases": [
+      "为 Hermes Agent 增加规划与研究工作流",
+      "管理跨会话的项目记忆",
+      "统一模型选择与编码交接流程"
+    ]
+  }
+}

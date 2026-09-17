@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-09-17T12:49:10+08:00",
+  "full_name": "duty1g/x64dbg-mcp-server",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-10T17:54:29Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "逆向工程调试操作依赖人工界面，难以让 AI 助手程序化控制调试器。",
+    "summary_zh": "x64dbg 的原生 MCP 插件，通过 HTTP 暴露调试器能力供 AI 助手控制。",
+    "tech_stack": [
+      "Zig",
+      "MCP",
+      "JSON-RPC",
+      "HTTP",
+      "SSE"
+    ],
+    "use_cases": [
+      "AI 辅助的二进制逆向与调试",
+      "恶意软件分析与内存检查",
+      "自动化断点、单步与寄存器读取"
+    ]
+  }
+}

@@ -1,23 +1,25 @@
 {
-  "cached_at": "2026-08-28T19:20:28+08:00",
+  "cached_at": "2026-09-17T12:49:10+08:00",
   "full_name": "anomalyco/opencode",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-28T11:15:10Z",
+  "repo_pushed_at": "2026-09-17T04:48:09Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "mature",
-    "problem": "解决开发者需要开源、可定制的 AI 编码代理的问题。",
-    "summary_zh": "OpenCode 是一个开源 AI 编码代理，提供终端 UI 和多种安装方式。",
+    "problem": "在终端中提供开源编码代理，理解代码库并执行开发任务与 git 工作流。",
+    "summary_zh": "开源 AI 编码代理，提供终端界面与桌面应用，含 build/plan 内置代理。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "npm"
+      "Bun",
+      "npm",
+      "Homebrew"
     ],
     "use_cases": [
-      "代码生成",
-      "代码审查",
-      "自动化开发任务"
+      "终端内 AI 编码",
+      "代码库探索与规划",
+      "多步开发任务自动化"
     ]
   }
 }

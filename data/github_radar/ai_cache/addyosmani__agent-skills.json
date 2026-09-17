@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-09-17T12:49:10+08:00",
+  "full_name": "addyosmani/agent-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-12T03:14:59Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "让 AI 编码代理按资深工程师的规范流程工作，覆盖需求、计划、构建、测试、评审、发布各阶段。",
+    "summary_zh": "面向 AI 编码代理的生产级工程技能集合，含 9 个斜杠命令与 25 项技能。",
+    "tech_stack": [
+      "JavaScript",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Gemini CLI"
+    ],
+    "use_cases": [
+      "为编码代理安装工程规范技能",
+      "用斜杠命令驱动开发流程",
+      "在 Claude Code/Cursor 中复用技能"
+    ]
+  }
+}

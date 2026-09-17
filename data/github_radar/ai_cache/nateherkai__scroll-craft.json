@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-09-17T12:49:10+08:00",
+  "full_name": "nateherkai/scroll-craft",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-04T23:33:30Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决 AI 生成网页要么平庸要么炫技失衡的问题，提供设计标准与验证流程。",
+    "summary_zh": "用于构建高端滚动驱动网站的代理技能，兼容 Codex 与 Claude Code。",
+    "tech_stack": [
+      "JavaScript",
+      "Claude Code",
+      "Codex"
+    ],
+    "use_cases": [
+      "生成滚动叙事型落地页",
+      "为编码代理提供网页设计规范",
+      "构建沉浸式品牌网站"
+    ]
+  }
+}

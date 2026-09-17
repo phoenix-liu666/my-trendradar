@@ -1,21 +1,25 @@
 {
-  "cached_at": "2026-08-23T14:48:11+08:00",
+  "cached_at": "2026-09-17T12:49:10+08:00",
   "full_name": "anthropics/claude-code",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-23T00:52:16Z",
+  "repo_pushed_at": "2026-09-17T00:12:02Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "growing",
-    "problem": "帮助开发者通过自然语言在终端中执行编码任务，理解代码库。",
-    "summary_zh": "Anthropic 的终端代理编码工具，支持自然语言操作。",
+    "maturity": "mature",
+    "problem": "让开发者在终端、IDE 或 GitHub 中用自然语言完成编码、解释与 git 工作流。",
+    "summary_zh": "Anthropic 官方终端代理式编码工具，支持自然语言执行编码与 git 任务。",
     "tech_stack": [
-      "Python"
+      "TypeScript",
+      "Node.js",
+      "npm",
+      "Homebrew",
+      "WinGet"
     ],
     "use_cases": [
-      "代码解释",
-      "自动化任务",
-      "Git 工作流处理"
+      "终端内自然语言编码",
+      "代码解释与 git 操作",
+      "通过插件扩展代理能力"
     ]
   }
 }

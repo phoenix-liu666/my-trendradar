@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-08-28T19:20:28+08:00",
+  "cached_at": "2026-09-17T12:49:10+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-28T11:19:54Z",
+  "repo_pushed_at": "2026-09-17T04:44:12Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "解决工作流自动化中需要连接多个服务和 AI 能力的问题，提供可视化构建与自定义代码结合的方式。",
-    "summary_zh": "n8n 是一个公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云端使用，提供 400+ 集成。",
+    "problem": "用可视化画布加代码连接 1500+ 集成，构建并部署 AI 代理与自动化工作流。",
+    "summary_zh": "带原生 AI 能力的公平代码工作流自动化平台，支持可视化与自定义代码。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
+      "LangChain",
       "MCP"
     ],
     "use_cases": [
-      "自动化工作流",
-      "AI Agent 构建",
-      "集成多个 API",
-      "自托管自动化平台"
+      "搭建 AI 代理工作流",
+      "系统集成与自动化",
+      "自托管或云端部署自动化"
     ]
   }
 }
