@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-17T12:49:10+08:00",
+  "cached_at": "2026-09-18T12:39:38+08:00",
   "full_name": "Nanako0129/sepia",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-16T22:13:01Z",
+  "repo_pushed_at": "2026-09-17T18:26:36Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "常见 humanizer 只改词句表层，AI 文本的叙事结构与文体特征仍可被检测出来。",
-    "summary_zh": "面向 Agent Skills 生态的「去 AI 味」写作技能，从叙事结构层面修复 AI 生成文本。",
+    "problem": "解决 AI 生成文本被轻易识别的问题，尤其是叙事结构与文体层面的机器痕迹。",
+    "summary_zh": "面向 Agent Skills 兼容代理的「去 AI 味」写作技能，从叙事结构层面修复小说与专业文稿。",
     "tech_stack": [
       "Python",
       "Agent Skills",
@@ -16,9 +16,9 @@
       "Codex"
     ],
     "use_cases": [
-      "小说与虚构写作的去 AI 化改写",
-      "发布说明、PR 回复、复盘等专业文本润色",
-      "作为技能接入多种兼容 Agent"
+      "改写小说以降低 AI 检测特征",
+      "按场景规范润色发布说明、PR 回复、复盘文档",
+      "诊断文稿的模板化与空话问题"
     ]
   }
 }

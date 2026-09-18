@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-09-18T12:39:38+08:00",
+  "full_name": "Vincentwei1021/anything2explainer",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-17T13:46:14Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "experimental",
+    "problem": "解决制作解说视频需要素材与剪辑的问题，用代码逐帧绘制并自动配音出片。",
+    "summary_zh": "Claude Code / Codex 技能，把任意主题转成带配音、字幕与章节进度条的代码绘制解说视频。",
+    "tech_stack": [
+      "TypeScript",
+      "React",
+      "Remotion",
+      "edge-tts",
+      "kokoro",
+      "ffmpeg",
+      "Python"
+    ],
+    "use_cases": [
+      "把文章或主题自动生成解说视频",
+      "中英文双语视频批量生产",
+      "教学与科普内容自动化"
+    ]
+  }
+}

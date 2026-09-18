@@ -1,25 +1,27 @@
 {
-  "cached_at": "2026-09-17T12:49:10+08:00",
+  "cached_at": "2026-09-18T12:39:38+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-17T04:44:12Z",
+  "repo_pushed_at": "2026-09-18T03:29:31Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "用可视化画布加代码连接 1500+ 集成，构建并部署 AI 代理与自动化工作流。",
-    "summary_zh": "带原生 AI 能力的公平代码工作流自动化平台，支持可视化与自定义代码。",
+    "problem": "解决跨系统流程与 AI 工作流编排问题，通过 1500+ 集成与可视化画布连接模型、工具与业务系统。",
+    "summary_zh": "fair-code 工作流自动化平台，具备原生 AI 能力，可视化搭建与自定义代码结合，支持自托管或云。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "LangChain",
+      "JavaScript",
+      "Python",
       "MCP"
     ],
     "use_cases": [
-      "搭建 AI 代理工作流",
-      "系统集成与自动化",
-      "自托管或云端部署自动化"
+      "搭建多步 AI Agent 工作流",
+      "连接 OpenAI/Anthropic/Google 等模型",
+      "自托管自动化业务流程",
+      "用模板快速构建集成流程"
     ]
   }
 }

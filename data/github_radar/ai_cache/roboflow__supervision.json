@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-09-18T12:39:38+08:00",
+  "full_name": "roboflow/supervision",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-18T01:35:42Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Computer Vision",
+    "maturity": "mature",
+    "problem": "解决 CV 应用开发中数据加载、检测结果处理、可视化与数据集格式转换等重复性工程问题。",
+    "summary_zh": "可复用的计算机视觉工具库，提供模型无关的检测结果处理、标注可视化与数据集工具。",
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "OpenCV",
+      "Ultralytics",
+      "MMDetection"
+    ],
+    "use_cases": [
+      "接入任意检测/分割模型并统一 Detections 结构",
+      "绘制边界框等标注可视化",
+      "加载与切分 COCO/YOLO/Pascal VOC 数据集",
+      "视频实时区域计数"
+    ]
+  }
+}

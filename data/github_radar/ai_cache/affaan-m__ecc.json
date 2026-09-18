@@ -1,27 +1,27 @@
 {
-  "cached_at": "2026-09-17T12:49:10+08:00",
+  "cached_at": "2026-09-18T12:39:38+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-17T04:37:23Z",
+  "repo_pushed_at": "2026-09-17T18:04:07Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码 Agent 缺少统一的技能、记忆、安全与研究工作流层，导致重复配置、上下文丢失与行为不可控。",
-    "summary_zh": "面向 Claude Code、Codex 等编码 Agent 的「性能优化操作系统」，提供技能、记忆、安全与研究流程。",
+    "problem": "解决多款 AI 编码代理缺少统一技能、记忆、安全与研究工作流的问题，让代理行为可复用、可约束。",
+    "summary_zh": "面向 Claude Code、Codex、OpenCode 等编码代理的「代理框架性能优化系统」，提供技能、记忆、安全与研究优先开发能力。",
     "tech_stack": [
       "JavaScript",
-      "Shell",
       "TypeScript",
       "Python",
       "Go",
       "Java",
+      "Shell",
       "MCP"
     ],
     "use_cases": [
-      "为 Claude Code / Codex 增加技能与记忆层",
-      "统一多 Agent 的配置与安全策略",
-      "以研究优先流程驱动开发任务"
+      "为 Claude Code / Codex 安装统一技能插件",
+      "为代理增加记忆与安全护栏",
+      "跨代理复用开发工作流"
     ]
   }
 }
