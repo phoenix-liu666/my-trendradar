@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-08-28T19:20:28+08:00",
+  "cached_at": "2026-09-19T12:34:22+08:00",
   "full_name": "deepseek-ai/deepseek-harness",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-27T17:06:36Z",
+  "repo_pushed_at": "2026-09-17T13:30:15Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "解决 AI 代理的灵活性和可扩展性问题，提供插件化架构和 Web UI。",
-    "summary_zh": "DeepSeek Harness 是一个开源代理 harness，基于一切皆插件的架构，由 DeepSeek AI 开发。",
+    "problem": "提供可扩展的 Agent 运行框架，通过插件机制组合能力，支持 Web UI 交互。",
+    "summary_zh": "DeepSeek 开源的 Agent harness，采用一切皆插件的架构，基于 Cordis 构建。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
+      "pnpm",
       "Cordis"
     ],
     "use_cases": [
-      "AI 代理开发",
-      "插件化代理架构",
-      "Web UI 交互",
-      "本地运行代理"
+      "构建可扩展 Agent 应用",
+      "插件化 Agent 能力组合",
+      "本地 Web UI 运行 Agent",
+      "Agent 框架二次开发"
     ]
   }
 }

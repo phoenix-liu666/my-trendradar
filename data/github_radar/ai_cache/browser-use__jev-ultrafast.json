@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-09-19T12:34:22+08:00",
+  "full_name": "browser-use/jev-ultrafast",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-18T16:28:35Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "让浏览器 Agent 以结构化状态而非截图驱动，减少决策往返并提升执行速度。",
+    "summary_zh": "基于动态索引动作空间的浏览器 Agent，用单次请求完成操作与目标决策。",
+    "tech_stack": [
+      "Python",
+      "uv",
+      "Chrome",
+      "OpenRouter",
+      "JavaScript"
+    ],
+    "use_cases": [
+      "自然语言驱动的网页操作",
+      "表单填写与航班搜索",
+      "浏览器自动化任务",
+      "Agent 动作空间研究"
+    ]
+  }
+}

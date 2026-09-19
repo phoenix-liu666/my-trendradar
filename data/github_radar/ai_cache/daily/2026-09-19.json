@@ -1,0 +1,465 @@
+{
+  "analyses": {
+    "affaan-m/ecc": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "affaan-m/ECC",
+      "maturity": "growing",
+      "problem": "解决编码代理在长期使用中缺乏技能沉淀、记忆与安全约束的问题，试图统一多代理平台的运行外壳。",
+      "recommendation_reason": "与代理工程化兴趣高度契合，可研究其技能/记忆/安全分层设计，但需注意 README 含大量商业推广与安装警告内容。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、MCP、Claude Code、Codex、agent framework 等关键词，且属开发者工具与生产力方向。",
+      "relevance_score": 92,
+      "summary_zh": "面向 Claude Code、Codex 等编码代理的「代理外壳」优化系统，提供技能、记忆、安全与研究优先开发能力。",
+      "tech_stack": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Go",
+        "Shell",
+        "MCP"
+      ],
+      "use_cases": [
+        "为 Claude Code 配置技能与记忆",
+        "多代理平台统一外壳",
+        "代理安全与权限约束",
+        "研究优先的代理开发流程"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "trending_rank"
+        ],
+        "summary": "Star 基数极大且 7 日增量显著，处于 Trending 前列，但无证据表明具体外部驱动事件。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "growing",
+      "problem": "为开发者提供可自托管、跨平台的编码 Agent，用自然语言完成代码探索、修改与多步开发任务。",
+      "recommendation_reason": "与用户关注的编码 Agent 方向高度一致，且为活跃开源项目，值得实际试用。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、OpenCode、agent framework 关键词。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码 Agent，提供终端 UI 与桌面端，内置 build/plan 两种 Agent 模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "Bun",
+        "Homebrew",
+        "Nix"
+      ],
+      "use_cases": [
+        "终端内 AI 辅助编码",
+        "只读方式探索陌生代码库",
+        "多步开发任务自动化",
+        "桌面端编码助手"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 基数极大且 7 日增量显著，属于持续高热度项目；具体外部驱动事件无证据。"
+      }
+    },
+    "anthropics/claude-code": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anthropics/claude-code",
+      "maturity": "mature",
+      "problem": "解决开发者在终端中通过自然语言完成常规编码、代码解释与 Git 操作的需求。",
+      "recommendation_reason": "官方主力编码代理工具，是用户兴趣画像的核心对象，建议实际使用并跟踪其插件生态。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、agentic coding、Claude Code 核心关键词。",
+      "relevance_score": 95,
+      "summary_zh": "Anthropic 官方终端代理式编码工具，可理解代码库并以自然语言执行开发与 Git 工作流。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "Homebrew",
+        "WinGet"
+      ],
+      "use_cases": [
+        "终端内自然语言编码",
+        "代码库理解与解释",
+        "Git 工作流自动化",
+        "IDE 与 GitHub 集成"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 基数大、24 小时有增量且 Trending 排名靠前，但无 7 日增量数据，无法确定具体驱动事件。"
+      }
+    },
+    "browser-use/jev-ultrafast": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "browser-use/jev-ultrafast",
+      "maturity": "experimental",
+      "problem": "让浏览器 Agent 以结构化状态而非截图驱动，减少决策往返并提升执行速度。",
+      "recommendation_reason": "浏览器 Agent 方向与兴趣契合，但项目极新且依赖外部 API，建议先观察。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 computer use、browser agent、tool use 方向。",
+      "relevance_score": 85,
+      "summary_zh": "基于动态索引动作空间的浏览器 Agent，用单次请求完成操作与目标决策。",
+      "tech_stack": [
+        "Python",
+        "uv",
+        "Chrome",
+        "OpenRouter",
+        "JavaScript"
+      ],
+      "use_cases": [
+        "自然语言驱动的网页操作",
+        "表单填写与航班搜索",
+        "浏览器自动化任务",
+        "Agent 动作空间研究"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "created_at",
+          "heat_score"
+        ],
+        "summary": "创建仅数日但 24 小时增量极高，属于新项目爆发式增长；无证据说明具体外部事件。"
+      }
+    },
+    "deepseek-ai/deepseek-harness": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "maturity": "experimental",
+      "problem": "提供可扩展的 Agent 运行框架，通过插件机制组合能力，支持 Web UI 交互。",
+      "recommendation_reason": "插件化 Agent 架构值得研究，但处于 developer preview，暂不建议直接生产使用。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 的 agent framework、agent harness 方向，且为官方开源项目。",
+      "relevance_score": 88,
+      "summary_zh": "DeepSeek 开源的 Agent harness，采用一切皆插件的架构，基于 Cordis 构建。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "pnpm",
+        "Cordis"
+      ],
+      "use_cases": [
+        "构建可扩展 Agent 应用",
+        "插件化 Agent 能力组合",
+        "本地 Web UI 运行 Agent",
+        "Agent 框架二次开发"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "创建时间短但 7 日增量与 24 小时增量都很高，热度上升明显；具体外部驱动事件无证据。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "让用户以可视化方式编排多步 AI 工作流与自动化流程，并连接大量第三方系统。",
+      "recommendation_reason": "与 Agent 工作流和自动化兴趣相关，但更偏通用自动化平台，可按需评估。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 MCP、tool use 与 productivity 的 automation、workflow。",
+      "relevance_score": 78,
+      "summary_zh": "fair-code 工作流自动化平台，可视化画布结合自定义代码，内置 AI 与 MCP 能力。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "JavaScript",
+        "Python",
+        "LangChain"
+      ],
+      "use_cases": [
+        "AI Agent 工作流编排",
+        "跨系统自动化集成",
+        "自托管自动化服务",
+        "带人工审批的多步流程"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 基数大且 7 日增量明显，长期处于高热度区间；无证据指向具体外部事件。"
+      }
+    },
+    "nanako0129/sepia": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "Nanako0129/sepia",
+      "maturity": "growing",
+      "problem": "解决 AI 生成文本在叙事结构与文体层面暴露机器痕迹的问题，而非仅做词句润色。",
+      "recommendation_reason": "与代理技能生态相关，可作为 Agent Skills 形态的案例观察，与用户核心兴趣重合度一般。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 与 Claude Code/Codex 关键词，但核心是写作而非代理工程或科研自动化。",
+      "relevance_score": 55,
+      "summary_zh": "面向 Agent Skills 兼容代理的去 AI 味写作技能，从叙事结构层面修复小说与专业文稿。",
+      "tech_stack": [
+        "Python",
+        "Agent Skills",
+        "Claude Code",
+        "Codex",
+        "Grok Build",
+        "Antigravity"
+      ],
+      "use_cases": [
+        "小说叙事结构改写",
+        "发布说明与 PR 回复润色",
+        "事故复盘文档规范化",
+        "技术文章去模板化"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h"
+        ],
+        "summary": "Star 规模中等，7 日有增长但 24 小时增量很小，无证据表明具体外部驱动事件。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决代理无法从经验中持续学习、跨会话记忆薄弱、部署环境受限的问题。",
+      "recommendation_reason": "自改进学习闭环与多后端部署设计对代理方向有参考价值，但 open_issues 数量极高，需评估稳定性。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、Claude Code、Codex 等关键词，且涉及代理记忆与技能学习。",
+      "relevance_score": 90,
+      "summary_zh": "Nous Research 推出的自改进 AI 代理，具备技能自创建、跨会话记忆与多平台接入能力。",
+      "tech_stack": [
+        "Python",
+        "Docker",
+        "SSH",
+        "Modal",
+        "Daytona",
+        "Vercel Sandbox",
+        "FTS5"
+      ],
+      "use_cases": [
+        "云端长期运行个人代理",
+        "Telegram/Discord 等平台对话",
+        "自动创建与改进技能",
+        "批量轨迹生成用于模型训练"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 与 7 日增量均很高，近期持续更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "为研究与工程提供统一的深度学习模型构建、训练与部署平台。",
+      "recommendation_reason": "成熟基础设施项目，与用户当前关注方向相关度一般，无需特别跟进。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep_learning 画像的 deep learning、neural network，但非 Agent 或光学方向。",
+      "relevance_score": 55,
+      "summary_zh": "Google 开源的端到端机器学习框架，提供 Python 与 C++ 稳定 API。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker",
+        "pip"
+      ],
+      "use_cases": [
+        "深度学习模型训练",
+        "神经网络研究与实验",
+        "生产环境模型部署",
+        "GPU 加速计算"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d"
+        ],
+        "summary": "Star 总量极高但 24 小时增量很小，属于长期存量型热门项目，非近期爆发。"
+      }
+    },
+    "tradesdontlie/tradingview-mcp": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "tradesdontlie/tradingview-mcp",
+      "maturity": "growing",
+      "problem": "解决 LLM 代理无法直接操作专业交易图表界面的问题，提供本地化的图表交互接口层。",
+      "recommendation_reason": "MCP 与桌面应用桥接思路有参考价值，但依赖未公开内部接口且需付费订阅，适用面较窄。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 MCP、Claude Code、automation 关键词，但领域为金融图表，与用户核心兴趣仅部分重合。",
+      "relevance_score": 48,
+      "summary_zh": "通过 MCP 将 Claude Code 连接到本地 TradingView Desktop，实现图表分析与 Pine Script 开发辅助。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "MCP",
+        "Chrome DevTools Protocol",
+        "Electron"
+      ],
+      "use_cases": [
+        "AI 辅助 Pine Script 开发",
+        "图表指标与价格读取",
+        "图表标注与告警管理",
+        "历史回放练习"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "forks"
+        ],
+        "summary": "进入 Trending 榜单，Star 规模中等，但无 24 小时/7 日增量数据，无法判断增长驱动。"
+      }
+    },
+    "vincentwei1021/anything2explainer": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "Vincentwei1021/anything2explainer",
+      "maturity": "growing",
+      "problem": "解决从主题到成片解说视频的自动化生产问题，避免依赖素材库或生成式视频模型。",
+      "recommendation_reason": "多代理分工与 QC 流程对代理编排有借鉴意义，但非用户核心方向，且许可证为非商业用途。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 Coding Agent、Claude Code、Codex 关键词，且展示多代理分工协议，但产出为视频内容。",
+      "relevance_score": 62,
+      "summary_zh": "Claude Code / Codex 技能，将任意主题转为带配音、字幕与章节进度条的代码绘制解说视频。",
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Remotion",
+        "edge-tts",
+        "kokoro",
+        "Python",
+        "ffmpeg"
+      ],
+      "use_cases": [
+        "主题解说视频生成",
+        "文章转视频",
+        "多代理并行分镜制作",
+        "中英文双语视频输出"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 规模较小但近期有增长与更新，无证据表明具体外部驱动事件。"
+      }
+    },
+    "vinzdg/codenotch": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "vinzdg/codenotch",
+      "maturity": "experimental",
+      "problem": "让开发者随时看到各编码助手剩余额度与运行状态，避免额度耗尽或任务卡住。",
+      "recommendation_reason": "对多编码助手用户有实用价值，项目较新，可先观察稳定性。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 Claude Code、Codex 关键词，但本身是辅助监控工具而非 Agent。",
+      "relevance_score": 62,
+      "summary_zh": "macOS 应用，在屏幕边缘显示 Claude Code、Cursor、Codex 等编码助手的用量限额。",
+      "tech_stack": [
+        "Swift",
+        "Rust",
+        "Tauri",
+        "macOS",
+        "SQLite"
+      ],
+      "use_cases": [
+        "监控编码助手用量限额",
+        "查看会话重置时间",
+        "手机端同步查看用量",
+        "本地模型运行状态监控"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "created_at",
+          "forks"
+        ],
+        "summary": "创建时间很短但 Star 与 24 小时增量较高，属于新项目快速升温；无证据说明具体驱动事件。"
+      }
+    }
+  },
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T12:34:22+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 类项目在今日榜单中高度聚集，成为最突出的方向。",
+    "rising_categories": [
+      "Coding Agent",
+      "Developer Tool",
+      "Productivity"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 占 7 个，是今日分布最集中的类别。",
+      "hot_today 中 delta_24h 最高的是 browser-use/jev-ultrafast（3122），其次为 cloudflare/security-audit-skill（3063）与 alibaba/open-code…",
+      "for_you 前四位均为 Coding Agent，relevance 在 90 到 95 之间。",
+      "new_and_rising 中 browser-use/jev-ultrafast 同时具备高 delta_24h（3122）与较高 heat_score（88.08）。",
+      "hot_today 中多个项目语言为 TypeScript 与 Python，覆盖编码代理、浏览器代理与技能类工具。"
+    ],
+    "watch_tomorrow": [
+      "browser-use/jev-ultrafast 的 delta_24h 是否延续",
+      "deepseek-ai/deepseek-harness 的热度与更新节奏",
+      "anthropics/claude-code 与 anomalyco/opencode 等终端编码代理的排名变化",
+      "cloudflare/security-audit-skill 与 alibaba/open-code-review…",
+      "new_and_rising 中 tamaratran/fast-jev-compaction 等新项目的后续表现"
+    ]
+  },
+  "usage": {
+    "cache_hits": 5,
+    "completion_tokens": 3401,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 22303,
+    "prompt_tokens": 24607,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 28008
+  }
+}

@@ -1,27 +1,27 @@
 {
-  "cached_at": "2026-09-18T12:39:38+08:00",
+  "cached_at": "2026-09-19T12:34:22+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-18T03:29:31Z",
+  "repo_pushed_at": "2026-09-19T03:26:11Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "解决跨系统流程与 AI 工作流编排问题，通过 1500+ 集成与可视化画布连接模型、工具与业务系统。",
-    "summary_zh": "fair-code 工作流自动化平台，具备原生 AI 能力，可视化搭建与自定义代码结合，支持自托管或云。",
+    "problem": "让用户以可视化方式编排多步 AI 工作流与自动化流程，并连接大量第三方系统。",
+    "summary_zh": "fair-code 工作流自动化平台，可视化画布结合自定义代码，内置 AI 与 MCP 能力。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
       "JavaScript",
       "Python",
-      "MCP"
+      "LangChain"
     ],
     "use_cases": [
-      "搭建多步 AI Agent 工作流",
-      "连接 OpenAI/Anthropic/Google 等模型",
-      "自托管自动化业务流程",
-      "用模板快速构建集成流程"
+      "AI Agent 工作流编排",
+      "跨系统自动化集成",
+      "自托管自动化服务",
+      "带人工审批的多步流程"
     ]
   }
 }

@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-09-19T12:34:22+08:00",
+  "full_name": "tradesdontlie/tradingview-mcp",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-07-28T17:28:37Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决 LLM 代理无法直接操作专业交易图表界面的问题，提供本地化的图表交互接口层。",
+    "summary_zh": "通过 MCP 将 Claude Code 连接到本地 TradingView Desktop，实现图表分析与 Pine Script 开发辅助。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "MCP",
+      "Chrome DevTools Protocol",
+      "Electron"
+    ],
+    "use_cases": [
+      "AI 辅助 Pine Script 开发",
+      "图表指标与价格读取",
+      "图表标注与告警管理",
+      "历史回放练习"
+    ]
+  }
+}
