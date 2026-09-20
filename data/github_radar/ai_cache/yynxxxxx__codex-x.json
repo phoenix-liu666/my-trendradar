@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-09-20T12:50:43+08:00",
+  "full_name": "yynxxxxx/Codex-X",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-18T03:37:47Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "Codex 的提示词、第三方 API、会话与 MCP/Skills 配置分散在多个文件中，手工维护成本高、状态不可见。",
+    "summary_zh": "面向 OpenAI Codex 桌面端与 CLI 的跨平台可视化管理工具，集中管理提示词、Provider、会话与 Skills/MCP。",
+    "tech_stack": [
+      "Rust",
+      "Tauri 2",
+      "React 18",
+      "TypeScript",
+      "SQLite",
+      "Vite"
+    ],
+    "use_cases": [
+      "管理 Codex 提示词模板与启用开关",
+      "切换官方登录与第三方 API 供应商",
+      "同步与清理本地 Codex 会话",
+      "可视化管理 Skills 与 MCP 配置",
+      "查看本地 Token 用量趋势"
+    ]
+  }
+}

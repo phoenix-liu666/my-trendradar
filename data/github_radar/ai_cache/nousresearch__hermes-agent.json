@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-19T12:34:22+08:00",
+  "cached_at": "2026-09-20T12:50:43+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-19T04:31:03Z",
+  "repo_pushed_at": "2026-09-20T04:50:40Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决代理无法从经验中持续学习、跨会话记忆薄弱、部署环境受限的问题。",
-    "summary_zh": "Nous Research 推出的自改进 AI 代理，具备技能自创建、跨会话记忆与多平台接入能力。",
+    "problem": "解决代理无法从经验中持续学习、跨会话记忆缺失以及被绑定在本地机器上的问题。",
+    "summary_zh": "Nous Research 出品的自我改进型 AI 代理，具备技能自创建、跨会话记忆与多平台接入能力。",
     "tech_stack": [
       "Python",
       "Docker",
@@ -19,10 +19,10 @@
       "FTS5"
     ],
     "use_cases": [
-      "云端长期运行个人代理",
-      "Telegram/Discord 等平台对话",
-      "自动创建与改进技能",
-      "批量轨迹生成用于模型训练"
+      "在 VPS 或云 VM 上常驻运行个人代理",
+      "通过 Telegram/Discord/Slack 与代理交互",
+      "自动创建并迭代技能",
+      "批量生成代理轨迹用于模型训练"
     ]
   }
 }

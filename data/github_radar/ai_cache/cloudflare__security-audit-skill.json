@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-09-20T12:50:43+08:00",
+  "full_name": "cloudflare/security-audit-skill",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-14T19:29:02Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "让编码 Agent 执行安全审计时，结论往往缺乏覆盖度记录与独立验证，难以区分已确认与待验证问题。",
+    "summary_zh": "面向编码 Agent 的安全审计技能，通过多阶段隔离 Agent 流程产出可独立验证的机器可读发现。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js"
+    ],
+    "use_cases": [
+      "对代码库执行多阶段安全审计",
+      "生成结构化 findings.json 与报告",
+      "用独立验证 Agent 复核结论",
+      "按攻击类别覆盖 Web、供应链、云等目标"
+    ]
+  }
+}

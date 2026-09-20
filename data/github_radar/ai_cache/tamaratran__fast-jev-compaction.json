@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-09-20T12:50:43+08:00",
+  "full_name": "tamaratran/fast-jev-compaction",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-18T04:45:31Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "experimental",
+    "problem": "传统上下文压缩依赖 LLM 摘要，会丢失文件路径、错误信息等关键细节，导致后续任务信息缺失。",
+    "summary_zh": "Claude Code 插件，用 Jev 决策替代压缩摘要，只删除或截断过期的工具调用与结果，保留原文。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js"
+    ],
+    "use_cases": [
+      "替换 Claude Code 内置压缩逻辑",
+      "作为 npm 库压缩会话消息",
+      "按阈值保留或截断工具调用结果",
+      "自定义传输层接入自有模型"
+    ]
+  }
+}
