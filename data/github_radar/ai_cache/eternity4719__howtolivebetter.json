@@ -1,0 +1,22 @@
+{
+  "cached_at": "2026-09-21T12:51:38+08:00",
+  "full_name": "eternity4719/HowToLiveBetter",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-21T04:12:32Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Knowledge Management",
+    "maturity": "growing",
+    "problem": "普通人面对健康、法律、财务、社保等生活决策时缺乏低成本、有证据支撑的参考，信息分散且难以判断可信度。",
+    "summary_zh": "按性价比排序的循证生活指南，涵盖健康、法律、理财、育儿等574条建议，附证据分级与出处。",
+    "tech_stack": [
+      "HTML"
+    ],
+    "use_cases": [
+      "查询低成本健康与防病建议",
+      "了解法律红线与社保医保办理",
+      "按证据等级筛选生活决策条目",
+      "通过内置中文 skill 让 AI 检索条目"
+    ]
+  }
+}

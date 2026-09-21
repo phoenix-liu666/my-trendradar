@@ -1,25 +1,27 @@
 {
-  "cached_at": "2026-09-20T12:50:43+08:00",
+  "cached_at": "2026-09-21T12:51:38+08:00",
   "full_name": "vinzdg/codenotch",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-19T10:26:40Z",
+  "repo_pushed_at": "2026-09-20T09:50:39Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "同时使用多个编码助手时，用量限额与剩余额度分散在各工具内部，用户难以随时掌握。",
-    "summary_zh": "macOS 应用，把 Claude Code、Cursor、Codex 等编码助手的用量限额固定在屏幕边缘显示。",
+    "problem": "解决同时使用多个编码助手时难以随时查看各自用量限额与剩余额度的问题。",
+    "summary_zh": "macOS 应用，把 Claude Code、Cursor、Codex 等编码助手的用量限额钉在屏幕边缘。",
     "tech_stack": [
       "Swift",
       "Rust",
-      "Tauri 2",
-      "SQLite"
+      "Tauri",
+      "macOS",
+      "SQLite",
+      "WebView2"
     ],
     "use_cases": [
-      "在屏幕边缘查看各编码助手用量",
-      "查看限额重置时间与会话状态",
-      "通过手机端查看相同用量数据",
-      "监控本地 Ollama/LM Studio 运行状态"
+      "查看编码助手用量限额",
+      "监控会话状态与重置时间",
+      "手机端同步用量信息",
+      "本地模型运行状态查看"
     ]
   }
 }

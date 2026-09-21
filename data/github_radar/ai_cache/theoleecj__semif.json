@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-09-21T12:51:38+08:00",
+  "full_name": "TheoLeeCJ/SemIf",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-19T04:46:36Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "experimental",
+    "problem": "Agent 的小型决策若用聊天模型生成文本再解析回 if 语句，会浪费生成时间，需要更直接的决策接口。",
+    "summary_zh": "用开源模型在本地 3090 上实现语义 if 决策，直接读取选项 logits 而非生成文本再解析。",
+    "tech_stack": [
+      "Python",
+      "CUDA",
+      "MLX",
+      "Qwen",
+      "GGUF",
+      "WebGPU"
+    ],
+    "use_cases": [
+      "Agent 运行时语义决策",
+      "路由与重试等小型判断",
+      "共享状态下的并行决策评估",
+      "浏览器端本地模型决策演示"
+    ]
+  }
+}

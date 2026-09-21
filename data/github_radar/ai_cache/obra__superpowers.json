@@ -1,25 +1,27 @@
 {
-  "cached_at": "2026-08-23T14:48:11+08:00",
+  "cached_at": "2026-09-21T12:51:38+08:00",
   "full_name": "obra/superpowers",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-08-19T17:33:23Z",
+  "repo_pushed_at": "2026-09-20T17:43:04Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决coding agent开发流程不规范、缺乏方法论的问题，提供结构化技能和流程。",
-    "summary_zh": "面向coding agent的软件开发方法论和技能框架，强调子代理驱动开发。",
+    "problem": "编码 Agent 容易直接写代码而跳过需求澄清与设计，缺乏可组合的技能与流程约束，导致产出偏离计划。",
+    "summary_zh": "面向编码 Agent 的 agentic skills 框架与软件开发方法论，支持 Claude Code、Codex、OpenCode 等多种工具。",
     "tech_stack": [
       "Shell",
       "Claude Code",
       "Codex",
-      "OpenCode"
+      "OpenCode",
+      "Gemini CLI",
+      "Cursor"
     ],
     "use_cases": [
-      "软件开发流程管理",
-      "需求分析",
-      "测试驱动开发",
-      "子代理协作"
+      "为编码 Agent 安装可组合技能",
+      "用子代理驱动方式执行开发任务",
+      "按 TDD/YAGNI/DRY 流程约束 Agent 开发",
+      "跨多种 CLI 工具统一 Agent 工作流"
     ]
   }
 }

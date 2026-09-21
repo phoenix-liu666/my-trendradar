@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-09-20T12:50:43+08:00",
+  "cached_at": "2026-09-21T12:51:38+08:00",
   "full_name": "trycua/cua",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-20T02:14:05Z",
+  "repo_pushed_at": "2026-09-21T04:41:07Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决计算机使用代理缺乏跨 macOS/Windows/Linux 的统一驱动、隔离沙箱环境与评测基准的问题。",
-    "summary_zh": "为 AI 代理提供可用计算机的开源驱动、跨系统桌面舰队与计算机使用基准测试。",
+    "problem": "解决 computer-use 代理缺少可用桌面环境、跨系统驱动与标准化评测数据的问题。",
+    "summary_zh": "开源 computer-use 基础设施，提供跨系统驱动、云桌面集群与代理评测基准。",
     "tech_stack": [
       "HTML",
       "Swift",
-      "MCP",
-      "Sandbox SDK",
-      "macOS VM",
+      "macOS 虚拟化",
       "Windows Sandbox",
-      "Linux"
+      "MCP",
+      "SDK"
     ],
     "use_cases": [
-      "让代理操作原生桌面应用与浏览器",
-      "在云端隔离桌面中批量运行代理任务",
-      "本地 macOS/Linux 虚拟机管理",
-      "计算机使用代理的评测与轨迹导出"
+      "为代理提供隔离云桌面",
+      "在 macOS/Windows/Linux 上驱动原生应用",
+      "生成与评测 computer-use 任务轨迹",
+      "训练专用 computer-use 决策模型"
     ]
   }
 }

@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-09-21T12:51:38+08:00",
+  "full_name": "mcncarl/jianying-headless",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-20T06:12:56Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "experimental",
+    "problem": "AI 视频工作流中需要批量生成剪映草稿并自动化导出，但剪映缺少官方 SDK 与无头调用能力。",
+    "summary_zh": "面向剪映专业版 macOS 的本地自动化工具，用结构化剪辑计划生成可编辑草稿并调用本机引擎导出。",
+    "tech_stack": [
+      "Python",
+      "FFmpeg",
+      "macOS",
+      "Agent Skill"
+    ],
+    "use_cases": [
+      "批量生成剪映可编辑草稿",
+      "在独立副本中修改多轨工程",
+      "调用本机剪映引擎导出 MP4",
+      "Agent 辅助视频剪辑工作流"
+    ]
+  }
+}

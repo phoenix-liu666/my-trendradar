@@ -1,13 +1,13 @@
 {
-  "cached_at": "2026-09-18T12:39:38+08:00",
+  "cached_at": "2026-09-21T12:51:38+08:00",
   "full_name": "addyosmani/agent-skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-18T03:32:22Z",
+  "repo_pushed_at": "2026-09-20T19:31:54Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 AI 编码代理缺少统一工程规范、质量门禁与工作流的问题。",
+    "problem": "解决 AI 编码代理缺少统一工程规范与质量门禁、输出质量不稳定的问题。",
     "summary_zh": "面向 AI 编码代理的生产级工程技能集，覆盖从需求到发布的完整开发生命周期。",
     "tech_stack": [
       "JavaScript",
@@ -18,9 +18,10 @@
       "Gemini CLI"
     ],
     "use_cases": [
-      "为编码代理注入规范、计划、测试、评审流程",
-      "通过斜杠命令驱动开发阶段",
-      "跨 70+ 代理一键安装技能"
+      "为编码代理安装规范与评审技能",
+      "用斜杠命令驱动 spec/plan/build/test 流程",
+      "在多种代理间复用同一套工程技能",
+      "为团队统一代码质量约束"
     ]
   }
 }

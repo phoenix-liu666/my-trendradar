@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-09-21T12:51:38+08:00",
+  "full_name": "robbietilton/Compositor",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-21T04:17:04Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "Photoshop 订阅费用高，GIMP 等工具操作习惯差异大，用户需要免费且贴近 Photoshop 工作流的图像编辑工具。",
+    "summary_zh": "面向 macOS 的开源图像编辑器，定位为 Photoshop 替代品，支持图层、蒙版、选区与滤镜。",
+    "tech_stack": [
+      "Swift",
+      "Xcode",
+      "macOS"
+    ],
+    "use_cases": [
+      "图层合成与后期处理",
+      "蒙版与选区编辑",
+      "内容感知填充与修图",
+      "导出 JPEG 等图像格式"
+    ]
+  }
+}

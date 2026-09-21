@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-20T12:50:43+08:00",
+  "cached_at": "2026-09-21T12:51:38+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-20T00:01:14Z",
+  "repo_pushed_at": "2026-09-20T19:37:57Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决多款编码代理在技能复用、长期记忆、安全约束与研究工作流上缺乏统一增强层的问题。",
-    "summary_zh": "面向 Claude Code、Codex、OpenCode 等编码代理的「代理外壳」性能优化系统，提供技能、记忆、安全与研究优先开发能力。",
+    "problem": "解决多种编码代理之间缺乏统一技能、记忆与安全约束的问题，让代理按一致的工作流与质量门禁执行任务。",
+    "summary_zh": "面向 Claude Code、Codex 等编码代理的 harness 性能优化系统，提供技能、记忆、安全与研究优先开发能力。",
     "tech_stack": [
       "JavaScript",
       "TypeScript",
@@ -18,10 +18,10 @@
       "MCP"
     ],
     "use_cases": [
-      "为 Claude Code / Codex 增加技能与记忆层",
-      "统一多代理的 MCP 工具接入",
-      "代理安全与权限管控",
-      "研究优先的代理开发流程"
+      "为 Claude Code / Codex 安装统一技能包",
+      "为代理增加记忆与安全护栏",
+      "跨代理复用开发工作流",
+      "通过 MCP 扩展代理工具能力"
     ]
   }
 }

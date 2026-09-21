@@ -1,26 +1,29 @@
 {
-  "cached_at": "2026-09-20T12:50:43+08:00",
+  "cached_at": "2026-09-21T12:51:38+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-20T03:17:05Z",
+  "repo_pushed_at": "2026-09-21T03:34:22Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "把 AI 工作流与既有系统连接起来需要大量胶水代码，n8n 用可视化画布加代码节点降低集成与编排成本。",
-    "summary_zh": "fair-code 的工作流自动化平台，支持可视化编排与自定义代码，并内置 AI Agent 与 MCP 能力。",
+    "problem": "解决跨系统集成与 AI 工作流编排需要大量自建胶水代码的问题。",
+    "summary_zh": "可视化与代码结合的 fair-code 工作流自动化平台，原生支持 AI 与 MCP。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
+      "JavaScript",
+      "Python",
+      "MCP",
       "LangChain"
     ],
     "use_cases": [
-      "搭建多步 AI Agent 工作流",
-      "连接 1500+ 第三方集成",
-      "自托管自动化流程",
-      "用代码节点扩展复杂逻辑",
-      "基于模板快速搭建流程"
+      "AI Agent 工作流编排",
+      "跨系统集成自动化",
+      "自托管工作流部署",
+      "低代码/无代码流程搭建",
+      "MCP 客户端与服务端接入"
     ]
   }
 }
