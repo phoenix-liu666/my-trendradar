@@ -1,0 +1,454 @@
+{
+  "analyses": {
+    "affaan-m/ecc": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "affaan-m/ECC",
+      "maturity": "growing",
+      "problem": "解决多款编码代理在技能复用、长期记忆、安全与研究工作流上缺乏统一增强层的问题。",
+      "recommendation_reason": "与代理增强方向高度相关，值得研究其技能与记忆机制设计。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Claude Code、Codex、OpenCode、MCP、agent framework 等关键词。",
+      "relevance_score": 95,
+      "summary_zh": "面向 Claude Code、Codex、OpenCode 等编码代理的 harness 性能优化系统，提供技能、记忆与安全能力。",
+      "tech_stack": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Go",
+        "Shell",
+        "MCP"
+      ],
+      "use_cases": [
+        "增强 Claude Code 等代理的技能与记忆",
+        "为代理提供安全与权限控制",
+        "统一多代理开发工作流"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数极大且 7 日增量显著，属于近期高热度代理工具，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "albert-weasker/niubigeo": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "Albert-Weasker/niubigeo",
+      "maturity": "growing",
+      "problem": "解决品牌方无法了解 AI 模型如何描述自己产品、推荐哪些竞品、引用哪些来源的问题。",
+      "recommendation_reason": "与用户技术兴趣画像关联度较低，且含商业服务推广内容。",
+      "recommended_action": "skip",
+      "relevance_reason": "属于营销分析类开发者工具，与 productivity 弱相关，不命中 agent、科研或光学核心方向。",
+      "relevance_score": 35,
+      "summary_zh": "开源 AI 品牌可见性与竞品报告工具，追踪模型如何描述和推荐产品。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "OpenRouter"
+      ],
+      "use_cases": [
+        "AI 品牌可见性监测",
+        "竞品分析",
+        "关键词测试",
+        "引用来源核查"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 增长较快且近期持续更新，README 提及 Trendshift 与 Product Hunt 徽章，但无足够证据确定具体外部驱动事件。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "growing",
+      "problem": "解决开发者缺少开源、可自托管且支持多模型的编码代理工具的问题。",
+      "recommendation_reason": "开源编码代理，安装方式多样，适合直接试用与对比。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、OpenCode、workflow 关键词。",
+      "relevance_score": 93,
+      "summary_zh": "开源 AI 编码代理，提供终端界面、内置 build/plan 代理与桌面应用。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew"
+      ],
+      "use_cases": [
+        "终端内 AI 辅助编码",
+        "代码库探索与变更规划",
+        "多模型切换的代理开发"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数大且 7 日增量可观，近期持续更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "eternity4719/howtolivebetter": {
+      "category": "Knowledge Management",
+      "from_cache": false,
+      "full_name": "eternity4719/HowToLiveBetter",
+      "maturity": "growing",
+      "problem": "解决普通人在健康、法律、财务、生活决策上缺乏可核实、有证据来源的实用建议的问题。",
+      "recommendation_reason": "内容型项目，与用户技术兴趣画像关联度低。",
+      "recommended_action": "skip",
+      "relevance_reason": "属于知识管理类内容项目，与 productivity 弱相关，但不涉及 AI agent、科研或光学。",
+      "relevance_score": 30,
+      "summary_zh": "按性价比排序的循证生活指南，涵盖健康、法律、理财、育儿等 601 条建议。",
+      "tech_stack": [
+        "HTML"
+      ],
+      "use_cases": [
+        "生活决策查询",
+        "健康与法律常识检索",
+        "离线阅读",
+        "AI 辅助生活决策问答"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 数较高且 24 小时增长明显，仓库持续更新，但无足够证据确定具体外部驱动事件。"
+      }
+    },
+    "mizorewww/laya-mlx": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "mizorewww/laya-mlx",
+      "maturity": "growing",
+      "problem": "解决在 Apple Silicon 上本地、低延迟运行类型化决策模型的问题，避免文本生成和云端依赖。",
+      "recommendation_reason": "本地 MLX 推理方案对端侧 AI 有参考价值，可关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于深度学习推理基础设施，与 deep_learning 相关，但不直接命中 agent、科研或光学方向。",
+      "relevance_score": 42,
+      "summary_zh": "Laya 类型化决策模型的 Apple Silicon 原生 MLX 推理运行时，无需 PyTorch 或云 API。",
+      "tech_stack": [
+        "Python",
+        "MLX",
+        "Apple Silicon",
+        "ModernBERT",
+        "Hugging Face"
+      ],
+      "use_cases": [
+        "本地低延迟决策推理",
+        "Apple Silicon 端侧 AI",
+        "多语言类型化决策",
+        "离线决策演示"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "24 小时内 Star 增长显著，热度排名靠前，但无足够证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "解决企业将 AI 代理与既有系统集成时缺乏可视化编排与大量连接器的问题。",
+      "recommendation_reason": "成熟自动化平台，可作为代理工作流编排的备选方案持续关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 与 ai_agents 画像中的 automation、workflow、MCP、tool use 关键词。",
+      "relevance_score": 78,
+      "summary_zh": "fair-code 工作流自动化平台，原生支持 AI 能力，可自托管或云端部署。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "MCP",
+        "JavaScript",
+        "Python"
+      ],
+      "use_cases": [
+        "可视化编排 AI 工作流",
+        "连接 1500+ 集成实现自动化",
+        "自托管部署含人工审批的代理流程"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数大且 7 日增量稳定，项目长期活跃，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "nandhakishorm/laya": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "NandhaKishorM/laya",
+      "maturity": "growing",
+      "problem": "解决需要快速、可解析、低幻觉的结构化决策（选择、评分、真假判断）问题，避免文本生成与解析。",
+      "recommendation_reason": "类型化决策模型思路有参考价值，可关注其推理与路由设计。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于深度学习模型与推理基础设施，与 deep_learning 相关，但不直接属于 agent、科研或光学方向。",
+      "relevance_score": 45,
+      "summary_zh": "多语言非自回归 System 1 决策引擎，单次前向传播输出类型化决策。",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "Transformers",
+        "ModernBERT",
+        "mmBERT",
+        "Hugging Face"
+      ],
+      "use_cases": [
+        "工单分类与路由",
+        "紧急度评分",
+        "流失风险判断",
+        "多语言结构化决策"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "24 小时内 Star 增长显著，热度排名靠前，但无足够证据确定具体外部驱动事件。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决代理无法从经验中持续学习、跨会话记忆薄弱、部署环境受限的问题。",
+      "recommendation_reason": "学习闭环与轨迹生成设计对代理与科研自动化均有参考价值。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、Claude Code、Codex 等关键词，且含研究轨迹生成能力。",
+      "relevance_score": 92,
+      "summary_zh": "Nous Research 推出的自我改进型 AI 代理，具备技能自建、跨会话记忆与多平台接入能力。",
+      "tech_stack": [
+        "Python",
+        "Docker",
+        "SSH",
+        "Telegram",
+        "Discord",
+        "Slack"
+      ],
+      "use_cases": [
+        "自托管长期运行的个人代理",
+        "多平台消息接入与自动化任务",
+        "批量轨迹生成用于工具调用模型训练"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 与 7 日增量均很高，且近期持续更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "解决从研究到生产部署机器学习模型缺乏统一框架与生态的问题。",
+      "recommendation_reason": "成熟通用框架，与用户当前代理与科研自动化兴趣关联度一般。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep_learning 画像中的 deep learning、neural network 关键词，但非代理或光学方向。",
+      "relevance_score": 60,
+      "summary_zh": "Google 开源的端到端机器学习框架，提供 Python 与 C++ 稳定 API。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker",
+        "pip"
+      ],
+      "use_cases": [
+        "构建与训练神经网络",
+        "部署机器学习应用",
+        "科研中的深度学习实验"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数极大但近期增量平缓，属于长期成熟项目，无证据表明存在近期热点事件。"
+      }
+    },
+    "trycua/cua": {
+      "category": "Computer Vision",
+      "from_cache": false,
+      "full_name": "trycua/cua",
+      "maturity": "growing",
+      "problem": "解决 computer-use 代理缺乏可扩展运行环境、跨系统驱动与标准化评测的问题。",
+      "recommendation_reason": "提供可直接试用的沙箱与驱动，适合评估 computer-use 代理能力。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 画像中的 computer use、AI Agent、automation 等关键词。",
+      "relevance_score": 88,
+      "summary_zh": "开源 computer-use 代理基础设施，提供跨系统驱动、云桌面集群与评测基准。",
+      "tech_stack": [
+        "HTML",
+        "Swift",
+        "MCP",
+        "Docker",
+        "macOS 虚拟化"
+      ],
+      "use_cases": [
+        "训练与评测 computer-use 代理",
+        "云端隔离桌面批量运行代理",
+        "桌面应用自动化操作与截图"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "trending_rank",
+          "delta_24h",
+          "stars",
+          "heat_score"
+        ],
+        "summary": "进入 Trending 榜单且 24 小时增量明显，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "vinzdg/codenotch": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "vinzdg/codenotch",
+      "maturity": "growing",
+      "problem": "解决同时使用多个 AI 编码工具时，无法直观看到各自用量额度和剩余额度的问题。",
+      "recommendation_reason": "与编码 agent 工作流相关，可作为用量监控辅助工具关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 AI 编码工具生态的开发者工具，命中 ai_agents 中的 Claude Code、Codex 关键词，但本身不是 agent 框架。",
+      "relevance_score": 62,
+      "summary_zh": "macOS 应用，把 Claude Code、Cursor、Codex 等编码助手的用量额度固定在屏幕边缘显示。",
+      "tech_stack": [
+        "Swift",
+        "macOS",
+        "Rust",
+        "Tauri 2",
+        "Windows"
+      ],
+      "use_cases": [
+        "监控 Claude Code 用量额度",
+        "监控 Cursor/Codex 额度",
+        "手机端查看用量",
+        "本地模型运行状态查看"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 增长较快且近期持续更新，但无足够证据确定具体外部驱动事件。"
+      }
+    },
+    "zai-org/zcode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "zai-org/ZCode",
+      "maturity": "growing",
+      "problem": "为开发者提供统一的 AI 编码工作台，覆盖桌面、Web 与终端三种入口。",
+      "recommendation_reason": "与编码 agent 兴趣高度契合，可实际试用其终端与桌面工作流。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 中的 Coding Agent 与 agentic coding，是用户核心兴趣方向。",
+      "relevance_score": 88,
+      "summary_zh": "Z.ai 的编码 agent 工作台，含桌面应用、浏览器界面和终端 Agent。",
+      "tech_stack": [
+        "TypeScript",
+        "Electron",
+        "Node.js",
+        "pnpm",
+        "TUI"
+      ],
+      "use_cases": [
+        "终端内 AI 编码",
+        "桌面端 AI 编码",
+        "浏览器工作台",
+        "远程 SSH/WSL 项目开发"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "created_at",
+          "pushed_at"
+        ],
+        "summary": "24 小时内 Star 增长明显，仓库新近创建且持续更新，但无足够证据确定具体外部驱动事件。"
+      }
+    }
+  },
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T12:51:18+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 与 LLM 推理基础设施双线活跃，新项目单日增量突出",
+    "rising_categories": [
+      "Coding Agent",
+      "LLM Infrastructure",
+      "Developer Tool",
+      "Computer Vision",
+      "Knowledge Management"
+    ],
+    "signals": [
+      "Coding Agent 是今日分布最集中的类别，共 4 个项目，其中 affaan-m/ECC、NousResearch/hermes-agent、anomalyco/opencode 的 relevance 均在 92 以上",
+      "LLM Infrastructure 出现两个同源项目 laya 与 laya-mlx，delta_24h 分别为 6457 和 2251，是今日增量最高的方向",
+      "新项目榜中 browser-use/jev-ultrafast 单日 +3679 stars、zai-org/ZCode 单日 +2654 stars，热度集中在 agent 与浏览器自动化相关项目",
+      "for_you 列表中 Coding Agent 占据前五中的四席，personal_score 从 75.4 到 91.4，与类别分布一致",
+      "Knowledge Management 的 HowToLiveBetter 单日 +2181 stars，但 relevance 仅 30，属于高热度低相关项目"
+    ],
+    "watch_tomorrow": [
+      "LLM Infrastructure 中 laya 与 laya-mlx 的增量能否延续",
+      "Coding Agent 新项目 zai-org/ZCode 的后续增长",
+      "browser-use/jev-ultrafast 是否持续进入新项目榜前列",
+      "Developer Tool 中 niubigeo 与 codenotch 的走势",
+      "Computer Vision 方向 trycua/cua 的更新与热度变化"
+    ]
+  },
+  "usage": {
+    "cache_hits": 8,
+    "completion_tokens": 3237,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 27434,
+    "prompt_tokens": 29738,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 32975
+  }
+}

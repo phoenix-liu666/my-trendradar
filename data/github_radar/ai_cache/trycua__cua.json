@@ -1,27 +1,25 @@
 {
-  "cached_at": "2026-09-21T12:51:38+08:00",
+  "cached_at": "2026-09-22T12:51:18+08:00",
   "full_name": "trycua/cua",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-21T04:41:07Z",
+  "repo_pushed_at": "2026-09-22T00:37:14Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Computer Vision",
     "maturity": "growing",
-    "problem": "解决 computer-use 代理缺少可用桌面环境、跨系统驱动与标准化评测数据的问题。",
-    "summary_zh": "开源 computer-use 基础设施，提供跨系统驱动、云桌面集群与代理评测基准。",
+    "problem": "解决 computer-use 代理缺乏可扩展运行环境、跨系统驱动与标准化评测的问题。",
+    "summary_zh": "开源 computer-use 代理基础设施，提供跨系统驱动、云桌面集群与评测基准。",
     "tech_stack": [
       "HTML",
       "Swift",
-      "macOS 虚拟化",
-      "Windows Sandbox",
       "MCP",
-      "SDK"
+      "Docker",
+      "macOS 虚拟化"
     ],
     "use_cases": [
-      "为代理提供隔离云桌面",
-      "在 macOS/Windows/Linux 上驱动原生应用",
-      "生成与评测 computer-use 任务轨迹",
-      "训练专用 computer-use 决策模型"
+      "训练与评测 computer-use 代理",
+      "云端隔离桌面批量运行代理",
+      "桌面应用自动化操作与截图"
     ]
   }
 }

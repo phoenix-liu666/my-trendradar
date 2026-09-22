@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-09-22T12:51:18+08:00",
+  "full_name": "zai-org/ZCode",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-21T00:02:36Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "为开发者提供统一的 AI 编码工作台，覆盖桌面、Web 与终端三种入口。",
+    "summary_zh": "Z.ai 的编码 agent 工作台，含桌面应用、浏览器界面和终端 Agent。",
+    "tech_stack": [
+      "TypeScript",
+      "Electron",
+      "Node.js",
+      "pnpm",
+      "TUI"
+    ],
+    "use_cases": [
+      "终端内 AI 编码",
+      "桌面端 AI 编码",
+      "浏览器工作台",
+      "远程 SSH/WSL 项目开发"
+    ]
+  }
+}

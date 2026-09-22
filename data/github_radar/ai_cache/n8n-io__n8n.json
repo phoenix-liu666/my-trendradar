@@ -1,29 +1,26 @@
 {
-  "cached_at": "2026-09-21T12:51:38+08:00",
+  "cached_at": "2026-09-22T12:51:18+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-21T03:34:22Z",
+  "repo_pushed_at": "2026-09-22T03:28:21Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "解决跨系统集成与 AI 工作流编排需要大量自建胶水代码的问题。",
-    "summary_zh": "可视化与代码结合的 fair-code 工作流自动化平台，原生支持 AI 与 MCP。",
+    "problem": "解决企业将 AI 代理与既有系统集成时缺乏可视化编排与大量连接器的问题。",
+    "summary_zh": "fair-code 工作流自动化平台，原生支持 AI 能力，可自托管或云端部署。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "JavaScript",
-      "Python",
       "MCP",
-      "LangChain"
+      "JavaScript",
+      "Python"
     ],
     "use_cases": [
-      "AI Agent 工作流编排",
-      "跨系统集成自动化",
-      "自托管工作流部署",
-      "低代码/无代码流程搭建",
-      "MCP 客户端与服务端接入"
+      "可视化编排 AI 工作流",
+      "连接 1500+ 集成实现自动化",
+      "自托管部署含人工审批的代理流程"
     ]
   }
 }

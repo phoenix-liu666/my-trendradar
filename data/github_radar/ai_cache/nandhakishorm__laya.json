@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-09-21T12:51:38+08:00",
+  "cached_at": "2026-09-22T12:51:18+08:00",
   "full_name": "NandhaKishorM/laya",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-20T17:44:55Z",
+  "repo_pushed_at": "2026-09-21T18:18:43Z",
   "schema_version": 1,
   "static": {
-    "category": "Scientific AI",
-    "maturity": "experimental",
-    "problem": "解决多语言场景下对文本做类型化决策需要生成式模型、易产生幻觉与解析成本的问题。",
-    "summary_zh": "多语言非自回归决策引擎，单次前向传播输出类型化决策，支持 100+ 语言。",
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决需要快速、可解析、低幻觉的结构化决策（选择、评分、真假判断）问题，避免文本生成与解析。",
+    "summary_zh": "多语言非自回归 System 1 决策引擎，单次前向传播输出类型化决策。",
     "tech_stack": [
       "Python",
+      "PyTorch",
+      "Transformers",
       "ModernBERT",
       "mmBERT",
-      "PyTorch",
-      "Hugging Face",
-      "强化学习"
+      "Hugging Face"
     ],
     "use_cases": [
       "工单分类与路由",
       "紧急度评分",
-      "多语言文本决策",
-      "结构化字段抽取",
-      "批量低延迟推理"
+      "流失风险判断",
+      "多语言结构化决策"
     ]
   }
 }

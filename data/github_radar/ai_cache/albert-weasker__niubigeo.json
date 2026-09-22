@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-09-21T12:51:38+08:00",
+  "cached_at": "2026-09-22T12:51:18+08:00",
   "full_name": "Albert-Weasker/niubigeo",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-21T03:36:38Z",
+  "repo_pushed_at": "2026-09-21T11:16:31Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "品牌方难以了解 AI 回答中如何描述自家产品、推荐哪些竞品以及引用哪些来源，GEO 效果缺乏可核查证据。",
-    "summary_zh": "开源 AI 品牌可见性与竞品报告工具，可对比不同模型如何描述产品、推荐竞品及引用来源。",
+    "problem": "解决品牌方无法了解 AI 模型如何描述自己产品、推荐哪些竞品、引用哪些来源的问题。",
+    "summary_zh": "开源 AI 品牌可见性与竞品报告工具，追踪模型如何描述和推荐产品。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "OpenRouter",
-      "Docker"
+      "Docker",
+      "OpenRouter"
     ],
     "use_cases": [
-      "检测 AI 回答中的品牌可见性",
-      "对比多模型对产品的描述与竞品",
-      "分析 AI 回答引用的来源",
-      "按关键词测试品牌出现情况"
+      "AI 品牌可见性监测",
+      "竞品分析",
+      "关键词测试",
+      "引用来源核查"
     ]
   }
 }

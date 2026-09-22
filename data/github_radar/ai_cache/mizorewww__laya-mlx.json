@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-09-22T12:51:18+08:00",
+  "full_name": "mizorewww/laya-mlx",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-19T16:32:30Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决在 Apple Silicon 上本地、低延迟运行类型化决策模型的问题，避免文本生成和云端依赖。",
+    "summary_zh": "Laya 类型化决策模型的 Apple Silicon 原生 MLX 推理运行时，无需 PyTorch 或云 API。",
+    "tech_stack": [
+      "Python",
+      "MLX",
+      "Apple Silicon",
+      "ModernBERT",
+      "Hugging Face"
+    ],
+    "use_cases": [
+      "本地低延迟决策推理",
+      "Apple Silicon 端侧 AI",
+      "多语言类型化决策",
+      "离线决策演示"
+    ]
+  }
+}
