@@ -1,25 +1,27 @@
 {
-  "cached_at": "2026-09-21T12:51:38+08:00",
+  "cached_at": "2026-09-23T12:41:55+08:00",
   "full_name": "Nanako0129/sepia",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-20T21:48:13Z",
+  "repo_pushed_at": "2026-09-22T21:49:59Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决 AI 生成文本在叙事结构与文体层面暴露机器痕迹的问题，而非仅做词句层面的改写。",
+    "problem": "解决 AI 生成文本在叙事结构与文体层面暴露机器痕迹的问题，而非仅做词句润色。",
     "summary_zh": "基于 Agent Skills 标准的去 AI 味写作技能，从叙事结构层面修复小说与专业文稿。",
     "tech_stack": [
       "Python",
       "Agent Skills",
       "Claude Code",
-      "Codex"
+      "Codex",
+      "Grok Build",
+      "Antigravity"
     ],
     "use_cases": [
-      "小说叙事结构改写",
-      "发布说明与 PR 回复等专业文稿润色",
-      "按文体匹配规则生成文本",
-      "在多种代理中安装统一写作技能"
+      "小说叙事结构修复",
+      "发布说明与 PR 回复改写",
+      "事后复盘与工单撰写",
+      "技术文章去模板化"
     ]
   }
 }

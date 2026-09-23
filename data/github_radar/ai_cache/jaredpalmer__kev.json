@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-09-23T12:41:55+08:00",
+  "full_name": "jaredpalmer/kev",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-23T04:21:19Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Scientific AI",
+    "maturity": "growing",
+    "problem": "解决在本地训练和部署类型化决策模型（是-否/选择/评分）的需求，无需依赖云端 API。",
+    "summary_zh": "基于 Qwen3.5 的小型 Jev 类决策模型家族，可自行训练和本地运行。",
+    "tech_stack": [
+      "Python",
+      "Qwen3.5",
+      "CUDA",
+      "ROCm",
+      "MLX",
+      "TypeSafe SDK"
+    ],
+    "use_cases": [
+      "本地工单分类与情绪评分",
+      "自训练小型决策模型",
+      "通过 TypeSafe SDK 调用本地服务"
+    ]
+  }
+}

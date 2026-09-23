@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-09-23T12:41:55+08:00",
+  "full_name": "jev-chat/jev-chat-jarvis",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-23T04:36:33Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "解决在微信/QQ/X/飞书等聊天中快速理解对方意图并起草回复的需求，且不侵入聊天软件。",
+    "summary_zh": "Android 对话副驾，通过无障碍服务读取聊天内容，给出候选回复并一键填入输入框。",
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Accessibility Service",
+      "ML Kit OCR",
+      "LLM API"
+    ],
+    "use_cases": [
+      "聊天意图判断与候选回复生成",
+      "本地知识库与联系人辅助回复",
+      "任意 App 截屏 OCR 分析"
+    ]
+  }
+}

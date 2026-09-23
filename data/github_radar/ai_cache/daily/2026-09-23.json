@@ -1,0 +1,465 @@
+{
+  "analyses": {
+    "affaan-m/ecc": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "affaan-m/ECC",
+      "maturity": "growing",
+      "problem": "解决多款编码代理缺少统一技能、记忆与安全治理层的问题，让代理在长任务中保持可复用能力与受控行为。",
+      "recommendation_reason": "与代理工具链兴趣高度契合，且已形成较大规模，值得研究其技能与记忆架构。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、MCP、Claude Code、Codex、OpenCode 等关键词。",
+      "relevance_score": 95,
+      "summary_zh": "面向 Claude Code、Codex 等编码代理的 harness 性能优化系统，提供技能、记忆、安全与研究优先开发能力。",
+      "tech_stack": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Go",
+        "Shell",
+        "MCP"
+      ],
+      "use_cases": [
+        "为 Claude Code / Codex 配置技能与记忆",
+        "统一多代理工具链",
+        "代理安全与权限治理",
+        "研究优先的代理开发流程"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数极大且 7 日增量显著，属于高热度代理工具类项目；具体外部驱动事件无证据。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "growing",
+      "problem": "解决闭源编码代理不可自托管、不可定制的问题，提供开源可扩展的编码代理方案。",
+      "recommendation_reason": "开源编码代理主线项目，可直接试用并评估其代理模式与工作流。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、OpenCode、workflow 关键词。",
+      "relevance_score": 96,
+      "summary_zh": "开源 AI 编码代理，提供终端 TUI、桌面应用与 build/plan 双代理模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Docker"
+      ],
+      "use_cases": [
+        "终端内 AI 辅助编码",
+        "代码库探索与变更规划",
+        "多步任务子代理编排",
+        "自托管编码代理"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数大且 7 日增量明显，属于持续高热的开源编码代理；无证据指向具体外部事件。"
+      }
+    },
+    "deepseek-ai/deepseek-harness": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "deepseek-ai/deepseek-harness",
+      "maturity": "growing",
+      "problem": "为构建和运行 AI agent 提供可扩展的插件化 harness 与 Web UI。",
+      "recommendation_reason": "插件化 agent harness 架构值得深入研究，与用户 agent 兴趣高度契合。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 的 agent framework / agent harness 方向，且为知名机构开源项目。",
+      "relevance_score": 95,
+      "summary_zh": "DeepSeek 开源的 agent harness，采用一切皆插件的架构，基于 Cordis 构建。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "pnpm",
+        "Cordis"
+      ],
+      "use_cases": [
+        "运行本地 agent Web UI",
+        "开发 dsh 插件",
+        "构建 agent 工作流"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "Star 数极高且 7 日增量显著，属于头部 agent 项目热度，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "jaredpalmer/kev": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "jaredpalmer/kev",
+      "maturity": "growing",
+      "problem": "解决在本地训练和部署类型化决策模型（是-否/选择/评分）的需求，无需依赖云端 API。",
+      "recommendation_reason": "可自训练的小型决策模型对本地推理场景有参考价值。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于决策模型/深度学习方向，命中 deep_learning，与 agent 及科研兴趣部分相关。",
+      "relevance_score": 58,
+      "summary_zh": "基于 Qwen3.5 的小型 Jev 类决策模型家族，可自行训练和本地运行。",
+      "tech_stack": [
+        "Python",
+        "Qwen3.5",
+        "CUDA",
+        "ROCm",
+        "MLX",
+        "TypeSafe SDK"
+      ],
+      "use_cases": [
+        "本地工单分类与情绪评分",
+        "自训练小型决策模型",
+        "通过 TypeSafe SDK 调用本地服务"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "24 小时 Star 增量较高，热度上升，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "jev-chat/jev-chat-jarvis": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "jev-chat/jev-chat-jarvis",
+      "maturity": "growing",
+      "problem": "解决在微信/QQ/X/飞书等聊天中快速理解对方意图并起草回复的需求，且不侵入聊天软件。",
+      "recommendation_reason": "非侵入式无障碍采集与多模型路由设计有参考价值，但非用户核心方向。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于生产力/自动化工具，命中 productivity，但与 agent、科研、光学核心兴趣关联较弱。",
+      "relevance_score": 45,
+      "summary_zh": "Android 对话副驾，通过无障碍服务读取聊天内容，给出候选回复并一键填入输入框。",
+      "tech_stack": [
+        "Kotlin",
+        "Android",
+        "Accessibility Service",
+        "ML Kit OCR",
+        "LLM API"
+      ],
+      "use_cases": [
+        "聊天意图判断与候选回复生成",
+        "本地知识库与联系人辅助回复",
+        "任意 App 截屏 OCR 分析"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "24 小时 Star 增量较高，属于消费级 AI 助手热度上升，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "mizorewww/laya-mlx": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "mizorewww/laya-mlx",
+      "maturity": "growing",
+      "problem": "解决在 Apple Silicon 上本地、低延迟运行 Laya 决策模型而无需 PyTorch 或云 API 的问题。",
+      "recommendation_reason": "MLX 本地推理优化对 Apple Silicon 部署有参考价值，可关注。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于本地推理基础设施，命中 deep_learning 与部分 LLM Infrastructure，但与核心兴趣关联有限。",
+      "relevance_score": 52,
+      "summary_zh": "Laya 类型化决策模型的 Apple Silicon 原生 MLX 推理运行时，短决策约 7–14 毫秒。",
+      "tech_stack": [
+        "Python",
+        "MLX",
+        "ModernBERT",
+        "mmBERT",
+        "Hugging Face tokenizer",
+        "Apple Silicon"
+      ],
+      "use_cases": [
+        "Mac 本地低延迟类型化决策推理",
+        "离线决策模型部署",
+        "批量决策吞吐测试"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "24 小时 Star 增量较高，热度上升，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "解决 AI 工作流与业务系统集成成本高、难以自托管与生产化的问题。",
+      "recommendation_reason": "成熟自动化平台，可作为代理工作流落地的集成层参考。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 与 ai_agents 画像中的 MCP、tool use、automation、workflow 关键词。",
+      "relevance_score": 72,
+      "summary_zh": "fair-code 工作流自动化平台，原生支持 AI 能力，可视化搭建结合自定义代码与 1500+ 集成。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "LangChain",
+        "MCP"
+      ],
+      "use_cases": [
+        "多步 AI 代理工作流编排",
+        "系统集成与数据流自动化",
+        "自托管自动化平台",
+        "带人工审批的 AI 流程"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "项目历史悠久、Star 基数大，7 日仍有稳定增量；无证据表明存在特定外部事件。"
+      }
+    },
+    "nanako0129/sepia": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "Nanako0129/sepia",
+      "maturity": "growing",
+      "problem": "解决 AI 生成文本在叙事结构与文体层面暴露机器痕迹的问题，而非仅做词句润色。",
+      "recommendation_reason": "作为 Agent Skills 生态的写作类技能案例可观察，但非核心兴趣方向。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 Claude Code、Codex、arxiv 等关键词，但核心是写作技能，与代理/科研/光学主线关联较弱。",
+      "relevance_score": 55,
+      "summary_zh": "基于 Agent Skills 标准的去 AI 味写作技能，从叙事结构层面修复小说与专业文稿。",
+      "tech_stack": [
+        "Python",
+        "Agent Skills",
+        "Claude Code",
+        "Codex",
+        "Grok Build",
+        "Antigravity"
+      ],
+      "use_cases": [
+        "小说叙事结构修复",
+        "发布说明与 PR 回复改写",
+        "事后复盘与工单撰写",
+        "技术文章去模板化"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 规模中等且 7 日有增长，热度有限；无证据表明存在外部事件驱动。"
+      }
+    },
+    "nandhakishorm/laya": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "NandhaKishorM/laya",
+      "maturity": "growing",
+      "problem": "解决需要快速、可校准的类型化决策（选择/评分/是-否）而无需文本生成与解析的问题。",
+      "recommendation_reason": "类型化决策模型思路有参考价值，可关注其推理与校准方法。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于决策模型/深度学习方向，命中 deep_learning，但与 agent、科研、光学核心兴趣关联有限。",
+      "relevance_score": 55,
+      "summary_zh": "多语言非自回归 System 1 决策引擎，单次前向传播对 100+ 语言给出类型化决策。",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "Transformers",
+        "ModernBERT",
+        "mmBERT",
+        "Hugging Face"
+      ],
+      "use_cases": [
+        "工单分类与优先级判断",
+        "多语言文本类型化决策",
+        "批量决策推理"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "24 小时 Star 增量很高，热度快速上升，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决代理无法跨会话积累经验、难以在低成本基础设施上长期运行的问题。",
+      "recommendation_reason": "自改进代理与跨会话记忆设计对代理方向有参考价值。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、Claude Code、Codex 等关键词，且涉及代理记忆与技能。",
+      "relevance_score": 92,
+      "summary_zh": "Nous Research 推出的自改进 AI 代理，具备技能自生成、跨会话记忆与多平台接入能力。",
+      "tech_stack": [
+        "Python",
+        "Docker",
+        "SSH",
+        "Modal",
+        "Daytona",
+        "Vercel Sandbox",
+        "FTS5"
+      ],
+      "use_cases": [
+        "长期运行的自主代理",
+        "Telegram/Discord/Slack 多平台助手",
+        "定时自动化任务",
+        "批量轨迹生成用于模型训练"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 与 7 日增量均处于高位，说明近期关注度明显上升；无证据指向具体外部事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "为研究与生产提供统一的机器学习框架，覆盖训练、部署与多语言 API 需求。",
+      "recommendation_reason": "成熟通用框架，与当前兴趣画像重合度有限，无需特别跟进。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep_learning 画像中的 deep learning、neural network 关键词，但非代理或科研自动化主线。",
+      "relevance_score": 60,
+      "summary_zh": "Google 开源的端到端机器学习框架，提供 Python/C++ 稳定 API 与完整工具生态。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker",
+        "pip"
+      ],
+      "use_cases": [
+        "深度学习模型训练与部署",
+        "神经网络研究",
+        "GPU 加速计算",
+        "生产级 ML 应用开发"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数极大但近期增量平缓，属于长期成熟项目而非近期热点；无证据指向外部事件。"
+      }
+    },
+    "vinzdg/codenotch": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "vinzdg/codenotch",
+      "maturity": "growing",
+      "problem": "解决多款 AI 编码助手额度分散、用户无法直观看到各工具剩余用量与重置时间的问题。",
+      "recommendation_reason": "与编码助手工作流相关，可作为用量监控工具关注，非核心 agent 技术。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 中的 Claude Code、Codex 关键词，且属于开发者工具/生产力方向，但本身不是 agent 框架。",
+      "relevance_score": 62,
+      "summary_zh": "macOS 菜单栏小应用，把 Claude Code、Cursor、Codex 等编码助手的用量额度钉在屏幕边缘显示。",
+      "tech_stack": [
+        "Swift",
+        "macOS",
+        "Rust",
+        "Tauri 2",
+        "SQLite",
+        "WKWebView"
+      ],
+      "use_cases": [
+        "查看 Claude Code / Cursor / Codex 用量额度",
+        "监控本地 Ollama / LM Studio 运行状态",
+        "手机端同步查看用量"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "近期 Star 与 7 日增量较高，属于开发者工具类热度上升，但无证据表明具体外部事件驱动。"
+      }
+    }
+  },
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T12:41:55+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "编码代理仍是主线，小型决策模型与本地推理形成新聚集",
+    "rising_categories": [
+      "Coding Agent",
+      "Scientific AI",
+      "LLM Infrastructure",
+      "Productivity"
+    ],
+    "signals": [
+      "Coding Agent 在类别分布中占 4 个，是今日最集中的类别，且 for_you 前四位均为该类",
+      "Scientific AI 占 3 个，其中 laya 单日 delta_24h 达 5808，为汇总中最高",
+      "LLM Infrastructure 仅 1 个（laya-mlx），但 delta_24h 1361，指向本地推理方向",
+      "Productivity 占 3 个，n8n 与 jev-chat-jarvis 分属不同形态，未形成单一技术路线",
+      "高 relevance 项目（ECC 95、opencode 96、deepseek-harness 95）集中在 Coding Agent，与类别分布一致"
+    ],
+    "watch_tomorrow": [
+      "NandhaKishorM/laya 的高 delta_24h 能否延续",
+      "laya-mlx 与 kev 是否带动更多本地决策模型推理项目",
+      "deepseek-ai/deepseek-harness 的插件架构后续热度",
+      "anomalyco/opencode 与 NousResearch/hermes-agent 的代理能力迭代",
+      "Coding Agent 类别是否继续维持最高占比"
+    ]
+  },
+  "usage": {
+    "cache_hits": 6,
+    "completion_tokens": 3356,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 25307,
+    "prompt_tokens": 27611,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 30967
+  }
+}
