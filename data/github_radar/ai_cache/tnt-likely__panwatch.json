@@ -1,0 +1,30 @@
+{
+  "cached_at": "2026-09-24T12:45:25+08:00",
+  "full_name": "TNT-Likely/PanWatch",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-21T03:59:53Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "growing",
+    "problem": "解决个人投资者盯盘与持仓分析耗时的问题，提供自托管、数据私有的实时监控与多 Agent 投研分析。",
+    "summary_zh": "自托管 AI 盯盘助手，集成 TradingAgents 多 Agent 决策，覆盖 A 股/港股/美股监控与推送。",
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "APScheduler",
+      "React",
+      "TypeScript",
+      "LangGraph",
+      "Docker"
+    ],
+    "use_cases": [
+      "股票实时监控与提醒",
+      "持仓多账户汇总",
+      "多 Agent 投研分析",
+      "盘前盘后自动报告",
+      "多渠道消息推送"
+    ]
+  }
+}

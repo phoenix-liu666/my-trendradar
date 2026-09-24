@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-09-24T12:45:25+08:00",
+  "full_name": "DeusData/codebase-memory-mcp",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-24T02:51:00Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决 AI 编码代理逐文件检索代码效率低、token 消耗大的问题，用知识图谱提供亚毫秒级结构查询。",
+    "summary_zh": "高性能代码智能 MCP 服务器，将代码库索引为持久知识图谱以降低 Agent 检索成本。",
+    "tech_stack": [
+      "C",
+      "tree-sitter",
+      "SQLite",
+      "MCP",
+      "Cypher",
+      "LSP"
+    ],
+    "use_cases": [
+      "代码库结构索引",
+      "调用链与影响面分析",
+      "跨服务 HTTP 关联",
+      "死代码检测",
+      "Agent 上下文压缩"
+    ]
+  }
+}

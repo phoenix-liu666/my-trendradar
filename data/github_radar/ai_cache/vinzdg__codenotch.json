@@ -1,26 +1,25 @@
 {
-  "cached_at": "2026-09-23T12:41:55+08:00",
+  "cached_at": "2026-09-24T12:45:25+08:00",
   "full_name": "vinzdg/codenotch",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-23T01:18:54Z",
+  "repo_pushed_at": "2026-09-24T02:43:58Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决多款 AI 编码助手额度分散、用户无法直观看到各工具剩余用量与重置时间的问题。",
-    "summary_zh": "macOS 菜单栏小应用，把 Claude Code、Cursor、Codex 等编码助手的用量额度钉在屏幕边缘显示。",
+    "problem": "解决多款 AI 编码工具额度分散、难以实时查看剩余用量与重置时间的问题。",
+    "summary_zh": "macOS 小工具，把 Claude Code、Cursor、Codex 等编码助手的用量额度钉在屏幕边缘显示。",
     "tech_stack": [
       "Swift",
-      "macOS",
       "Rust",
-      "Tauri 2",
-      "SQLite",
-      "WKWebView"
+      "Tauri",
+      "SQLite"
     ],
     "use_cases": [
-      "查看 Claude Code / Cursor / Codex 用量额度",
-      "监控本地 Ollama / LM Studio 运行状态",
-      "手机端同步查看用量"
+      "实时监控编码助手额度",
+      "查看额度重置时间",
+      "手机端同步用量",
+      "本地模型运行状态监控"
     ]
   }
 }

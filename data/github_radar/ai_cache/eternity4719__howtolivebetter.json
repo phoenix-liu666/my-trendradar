@@ -1,22 +1,22 @@
 {
-  "cached_at": "2026-09-22T12:51:18+08:00",
+  "cached_at": "2026-09-24T12:45:25+08:00",
   "full_name": "eternity4719/HowToLiveBetter",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-22T04:31:47Z",
+  "repo_pushed_at": "2026-09-23T00:23:40Z",
   "schema_version": 1,
   "static": {
     "category": "Knowledge Management",
     "maturity": "growing",
-    "problem": "解决普通人在健康、法律、财务、生活决策上缺乏可核实、有证据来源的实用建议的问题。",
-    "summary_zh": "按性价比排序的循证生活指南，涵盖健康、法律、理财、育儿等 601 条建议。",
+    "problem": "解决普通人在健康、法律、财务、社保等生活决策上缺少可核查、按性价比排序的参考。",
+    "summary_zh": "按性价比排序的循证生活指南，601 条建议标注成本、收益与证据等级并附原始出处。",
     "tech_stack": [
       "HTML"
     ],
     "use_cases": [
-      "生活决策查询",
-      "健康与法律常识检索",
-      "离线阅读",
-      "AI 辅助生活决策问答"
+      "查询生活决策建议",
+      "按证据等级筛选条目",
+      "离线阅读与转发",
+      "配合 Claude Code/Codex skill 问答"
     ]
   }
 }

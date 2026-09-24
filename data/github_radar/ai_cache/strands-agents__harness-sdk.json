@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-09-24T12:45:25+08:00",
+  "full_name": "strands-agents/harness-sdk",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-23T21:50:15Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决手写 Agent 循环难以扩展的问题，提供生命周期控制、工具、MCP、多代理、记忆与可观测性的一体化 SDK。",
+    "summary_zh": "Strands Agents 开源 SDK，用 Python 与 TypeScript 构建并端到端控制生产级 AI Agent。",
+    "tech_stack": [
+      "Python",
+      "TypeScript",
+      "MCP",
+      "Amazon Bedrock",
+      "Anthropic",
+      "OpenAI",
+      "Gemini"
+    ],
+    "use_cases": [
+      "构建生产级 Agent 应用",
+      "多代理协作编排",
+      "模型供应商切换",
+      "Agent 可观测性与评测",
+      "终端原型调试"
+    ]
+  }
+}

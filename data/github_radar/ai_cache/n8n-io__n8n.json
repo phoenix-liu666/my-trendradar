@@ -1,26 +1,27 @@
 {
-  "cached_at": "2026-09-23T12:41:55+08:00",
+  "cached_at": "2026-09-24T12:45:25+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-23T04:20:26Z",
+  "repo_pushed_at": "2026-09-24T03:39:26Z",
   "schema_version": 1,
   "static": {
-    "category": "Productivity",
+    "category": "Developer Tool",
     "maturity": "mature",
-    "problem": "解决 AI 工作流与业务系统集成成本高、难以自托管与生产化的问题。",
-    "summary_zh": "fair-code 工作流自动化平台，原生支持 AI 能力，可视化搭建结合自定义代码与 1500+ 集成。",
+    "problem": "解决把 AI 模型、工具与 1500+ 外部系统串成可落地自动化流程的问题，减少自研集成与编排成本。",
+    "summary_zh": "开源工作流自动化平台，可视化编排并内置 AI Agent 与 MCP 能力，可自托管。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "LangChain",
-      "MCP"
+      "MCP",
+      "LangChain"
     ],
     "use_cases": [
-      "多步 AI 代理工作流编排",
-      "系统集成与数据流自动化",
-      "自托管自动化平台",
-      "带人工审批的 AI 流程"
+      "搭建多步 AI Agent 工作流",
+      "连接内部系统做数据同步",
+      "自托管自动化替代 SaaS 编排",
+      "用 MCP 接入外部工具",
+      "低代码快速验证业务流程"
     ]
   }
 }

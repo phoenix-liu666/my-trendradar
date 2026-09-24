@@ -1,26 +1,28 @@
 {
-  "cached_at": "2026-09-23T12:41:55+08:00",
+  "cached_at": "2026-09-24T12:45:25+08:00",
   "full_name": "NandhaKishorM/laya",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-22T20:41:43Z",
+  "repo_pushed_at": "2026-09-24T04:24:11Z",
   "schema_version": 1,
   "static": {
-    "category": "Scientific AI",
+    "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决需要快速、可校准的类型化决策（选择/评分/是-否）而无需文本生成与解析的问题。",
-    "summary_zh": "多语言非自回归 System 1 决策引擎，单次前向传播对 100+ 语言给出类型化决策。",
+    "problem": "解决对文本做分类、打分、是/否判断时依赖大模型自回归生成、延迟高成本高的问题。",
+    "summary_zh": "非自回归的 System 1 决策引擎，单次前向即可对 100+ 语言文本做类型化决策。",
     "tech_stack": [
       "Python",
       "PyTorch",
-      "Transformers",
       "ModernBERT",
-      "mmBERT",
-      "Hugging Face"
+      "ONNX",
+      "LangChain",
+      "MCP"
     ],
     "use_cases": [
-      "工单分类与优先级判断",
-      "多语言文本类型化决策",
-      "批量决策推理"
+      "工单分类与路由",
+      "风险与流失判断",
+      "多语言零样本决策",
+      "结构化打分与校准",
+      "接入 LangChain 流程"
     ]
   }
 }

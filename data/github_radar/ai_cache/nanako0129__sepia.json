@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-23T12:41:55+08:00",
+  "cached_at": "2026-09-24T12:45:25+08:00",
   "full_name": "Nanako0129/sepia",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-22T21:49:59Z",
+  "repo_pushed_at": "2026-09-23T20:03:22Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决 AI 生成文本在叙事结构与文体层面暴露机器痕迹的问题，而非仅做词句润色。",
-    "summary_zh": "基于 Agent Skills 标准的去 AI 味写作技能，从叙事结构层面修复小说与专业文稿。",
+    "problem": "解决 AI 生成文本被识别为机器写作的问题，从叙事架构与文体规则层面而非仅词汇层面改写。",
+    "summary_zh": "面向 Agent Skills 生态的去 AI 味写作技能，修复小说叙事结构与专业文档文风。",
     "tech_stack": [
       "Python",
       "Agent Skills",
@@ -18,10 +18,11 @@
       "Antigravity"
     ],
     "use_cases": [
-      "小说叙事结构修复",
-      "发布说明与 PR 回复改写",
-      "事后复盘与工单撰写",
-      "技术文章去模板化"
+      "小说去 AI 味改写",
+      "发布说明与公告润色",
+      "PR/Issue 回复改写",
+      "事故复盘文档规范化",
+      "技术文章写作"
     ]
   }
 }
