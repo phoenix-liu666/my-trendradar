@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-09-24T12:45:25+08:00",
+  "cached_at": "2026-09-25T12:53:49+08:00",
   "full_name": "deepseek-ai/deepseek-harness",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-23T13:30:24Z",
+  "repo_pushed_at": "2026-09-24T14:10:21Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "为构建和运行 AI Agent 提供可扩展的插件化运行时与统一界面。",
-    "summary_zh": "DeepSeek 开源的 Agent harness，采用一切皆插件的架构，提供 Web UI。",
+    "problem": "为构建和运行 AI Agent 提供可扩展的 harness 框架，通过插件化架构支持灵活组合与扩展。",
+    "summary_zh": "DeepSeek 开源的 Agent harness，基于一切皆插件的架构，由 Cordis 驱动。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "pnpm",
-      "Cordis"
+      "Cordis",
+      "pnpm"
     ],
     "use_cases": [
-      "运行与编排 AI Agent",
-      "开发自定义 Agent 插件",
-      "本地或 SSH 环境启动 Agent Web UI",
-      "接入自有工具链"
+      "构建可扩展 AI Agent",
+      "开发 dsh 插件",
+      "运行本地 Agent Web UI",
+      "Agent 架构研究"
     ]
   }
 }

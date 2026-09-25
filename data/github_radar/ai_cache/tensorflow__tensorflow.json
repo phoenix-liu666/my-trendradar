@@ -1,13 +1,13 @@
 {
-  "cached_at": "2026-09-24T12:45:25+08:00",
+  "cached_at": "2026-09-25T12:53:49+08:00",
   "full_name": "tensorflow/tensorflow",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-24T04:45:00Z",
+  "repo_pushed_at": "2026-09-25T04:51:17Z",
   "schema_version": 1,
   "static": {
     "category": "Scientific AI",
     "maturity": "mature",
-    "problem": "为深度学习与神经网络研究、训练和部署提供统一框架与工具链。",
+    "problem": "为研究与生产提供统一的机器学习平台，覆盖从模型训练到部署的工具链与库生态。",
     "summary_zh": "Google 开源的端到端机器学习框架，提供 Python/C++ 稳定 API 与完整生态。",
     "tech_stack": [
       "C++",
@@ -16,10 +16,10 @@
       "Docker"
     ],
     "use_cases": [
-      "训练与部署神经网络",
-      "科研机器学习实验",
-      "GPU 加速模型训练",
-      "生产环境模型服务"
+      "训练深度学习模型",
+      "部署 ML 应用",
+      "科研中的神经网络实验",
+      "GPU 加速计算"
     ]
   }
 }

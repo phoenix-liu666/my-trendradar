@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-17T12:49:10+08:00",
+  "cached_at": "2026-09-25T12:53:49+08:00",
   "full_name": "XiaoDuoYa/codex-with-chatgpt",
   "model": "deepseek-v4-flash",
   "repo_pushed_at": "2026-09-13T03:22:46Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "growing",
-    "problem": "ChatGPT 订阅额度闲置而 Codex API 额度被规划与 Review 消耗，成本分配不合理。",
-    "summary_zh": "用网页版 ChatGPT 做规划与审查、Codex 负责执行，通过只读 MCP 桥接工作区。",
+    "maturity": "experimental",
+    "problem": "解决 ChatGPT 订阅额度闲置而 Codex API 额度被规划与 Review 消耗的问题。",
+    "summary_zh": "用 ChatGPT 网页版做规划与审查大脑、Codex 负责执行，通过只读 MCP 桥接工作区。",
     "tech_stack": [
       "TypeScript",
       "MCP",
@@ -17,9 +17,9 @@
       "Cloudflare Tunnel"
     ],
     "use_cases": [
-      "用 ChatGPT 网页版为 Codex 做规划与代码审查",
-      "在不暴露仓库的前提下让模型按需读取代码",
-      "降低编码 Agent 的 API 额度消耗"
+      "用 ChatGPT 规划 Codex 编码任务",
+      "只读方式让 ChatGPT 读取工作区代码",
+      "降低编码 Agent 的 API 消耗"
     ]
   }
 }

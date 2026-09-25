@@ -1,25 +1,24 @@
 {
-  "cached_at": "2026-09-18T12:39:38+08:00",
+  "cached_at": "2026-09-25T12:53:49+08:00",
   "full_name": "cbrock84/headcount",
   "model": "deepseek-v4-flash",
   "repo_pushed_at": "2026-09-17T19:13:19Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决单一提示词难以覆盖多领域专业任务的问题，通过按部门拆分的可独立安装技能包，让项目只加载所需能力。",
-    "summary_zh": "把 AI Agent 组织成公司架构的插件集，含 16 个部门、172 项技能，可在 Claude Code 与 ChatGPT 中按需安装。",
+    "problem": "解决单一提示词难以覆盖多职能专业工作、技能难以按需加载的问题。",
+    "summary_zh": "把 Agent 组织成公司结构的技能集合，含 16 个部门、172 个技能，可在 Claude Code 与 ChatGPT 中安装。",
     "tech_stack": [
       "Markdown",
-      "Claude Code Plugin",
-      "ChatGPT Plugin",
-      "MCP"
+      "MCP",
+      "Claude Code Plugin"
     ],
     "use_cases": [
-      "在 Claude Code 中安装安全部门做威胁建模",
-      "用财务部门技能做单位经济测算",
-      "按部门委派子代理并限定写入范围",
-      "跨部门业务流程（如 SOC 2 需求）演练"
+      "按部门安装业务技能",
+      "安全威胁建模等专业评审",
+      "财务与增长分析辅助",
+      "以子 Agent 形式委派部门任务"
     ]
   }
 }

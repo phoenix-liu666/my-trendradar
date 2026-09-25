@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-09-25T12:53:49+08:00",
+  "full_name": "rohitg00/ai-engineering-from-scratch",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-25T04:51:52Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Knowledge Management",
+    "maturity": "growing",
+    "problem": "面向想系统掌握 AI 工程但缺乏完整路径的人，提供从数学基础到 Agent、MCP 的可动手课程与可复用产物。",
+    "summary_zh": "从零学习并构建 AI 工程的开源课程，含 523 节课、20 个阶段，覆盖 Agent、MCP 与 LLM 工程。",
+    "tech_stack": [
+      "Python",
+      "TypeScript",
+      "Rust",
+      "Julia",
+      "MCP",
+      "LLM",
+      "Agents"
+    ],
+    "use_cases": [
+      "系统学习 AI 工程课程",
+      "学习构建 Agent 与 MCP 服务",
+      "准备 Claude/MCPA 认证",
+      "按学习路径自学 LLM 工程"
+    ]
+  }
+}
