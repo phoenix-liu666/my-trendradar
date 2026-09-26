@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-09-26T12:53:58+08:00",
+  "full_name": "Ryze-AI-Adgent/open-seo-mcp-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-24T01:53:55Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决 SEO 工具数据不透明、按调用加价的问题：直接接入用户自己的 Search Console、GA4 与广告数据，避免估算与中间加价。",
+    "summary_zh": "面向 Claude 的免费 SEO/GEO MCP 服务器与开源技能集，基于自有 GSC/GA4/广告数据。",
+    "tech_stack": [
+      "Shell",
+      "MCP",
+      "Claude Code Plugin",
+      "DataForSEO",
+      "Google Search Console API",
+      "GA4 API",
+      "Google Ads API"
+    ],
+    "use_cases": [
+      "站点 SEO 审计与索引问题排查",
+      "关键词研究与聚类",
+      "排名变动追踪",
+      "竞品关键词与反链分析",
+      "AI 引擎引荐流量可见性分析"
+    ]
+  }
+}

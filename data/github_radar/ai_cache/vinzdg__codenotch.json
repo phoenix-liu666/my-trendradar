@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-09-25T12:53:49+08:00",
+  "cached_at": "2026-09-26T12:53:58+08:00",
   "full_name": "vinzdg/codenotch",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-24T10:39:14Z",
+  "repo_pushed_at": "2026-09-26T04:51:49Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决多款编码助手用量限额分散、难以实时查看的问题，在屏幕边缘统一展示剩余额度与运行状态。",
-    "summary_zh": "macOS 应用，把 Claude Code、Cursor、Codex 等编码助手的用量限额钉在屏幕边缘显示。",
+    "problem": "解决同时使用多个 AI 编码工具时，难以随时掌握各自额度消耗与剩余情况的问题。",
+    "summary_zh": "macOS 应用，把 Claude Code、Cursor、Codex 等编码助手的用量额度钉在屏幕边缘。",
     "tech_stack": [
       "Swift",
+      "macOS",
       "Rust",
-      "Tauri",
-      "macOS"
+      "Tauri"
     ],
     "use_cases": [
-      "监控 Claude Code 用量限额",
-      "查看 Cursor/Codex 剩余额度",
-      "本地模型运行状态监控",
-      "手机端查看用量"
+      "监控 Claude Code 用量窗口",
+      "查看 Cursor 与 Codex 额度",
+      "在屏幕边缘常驻显示剩余额度",
+      "手机端同步查看用量"
     ]
   }
 }

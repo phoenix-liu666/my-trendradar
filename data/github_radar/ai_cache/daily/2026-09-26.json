@@ -1,0 +1,472 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "解决闭源编码 Agent 的锁定问题：提供开源、可多包管理器安装的编码 Agent，支持只读规划与全权限构建两种模式。",
+      "recommendation_reason": "开源编码 Agent 头部项目，与用户兴趣高度一致，建议实际安装试用并评估其 Agent 架构。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、OpenCode、agentic coding 等关键词。",
+      "relevance_score": 92,
+      "summary_zh": "开源 AI 编码 Agent，提供终端 TUI、桌面应用与 build/plan 双 Agent 模式。",
+      "tech_stack": [
+        "TypeScript",
+        "npm/bun/pnpm",
+        "Homebrew",
+        "Scoop",
+        "Nix",
+        "MCP"
+      ],
+      "use_cases": [
+        "终端内进行代码编写与重构",
+        "只读模式探索陌生代码库",
+        "通过子 Agent 处理复杂多步任务",
+        "桌面端使用编码 Agent"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars=210088",
+          "delta_7d=1607",
+          "delta_24h=172",
+          "heat_score=63.69"
+        ],
+        "summary": "Star 数极高且 7 日增量显著，属于头部开源编码 Agent；无证据表明具体外部事件驱动。"
+      }
+    },
+    "anthropics/claude-plugins-official": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "anthropics/claude-plugins-official",
+      "maturity": "growing",
+      "problem": "解决 Claude Code 插件发现与分发问题：提供官方审核的插件市场，统一插件结构、命名与安装规范。",
+      "recommendation_reason": "官方插件目录，对使用 Claude Code 与开发 Agent 技能有直接参考价值，适合持续跟踪。",
+      "recommended_action": "star",
+      "relevance_reason": "直接命中 ai_agents 中的 Claude Code 与 MCP 关键词，是 Agent 插件生态的官方入口。",
+      "relevance_score": 80,
+      "summary_zh": "Anthropic 官方维护的 Claude Code 插件目录，收录内部与第三方高质量插件。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Claude Code Plugin",
+        "JSON 清单"
+      ],
+      "use_cases": [
+        "浏览与安装 Claude Code 插件",
+        "第三方插件提交与审核",
+        "定义插件与技能打包规范",
+        "通过 marketplace 分发技能包"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars=36970",
+          "trending_rank=2",
+          "forks=4155",
+          "heat_score=63.1"
+        ],
+        "summary": "Trending 排名靠前且 Star 数较高，官方属性带来关注；无证据表明具体外部事件。"
+      }
+    },
+    "browser-use/jev-ultrafast": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "browser-use/jev-ultrafast",
+      "maturity": "growing",
+      "problem": "解决网页自动化 Agent 依赖截图与大模型推理、速度慢成本高的问题。",
+      "recommendation_reason": "动作空间设计与执行校验思路对 Agent 研究有参考价值，值得深入阅读其循环实现。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 的 computer use、tool use 与浏览器 Agent 方向，属于用户核心兴趣。",
+      "relevance_score": 82,
+      "summary_zh": "基于动态索引动作空间的快速浏览器 Agent，单次请求完成操作与目标决策。",
+      "tech_stack": [
+        "Python",
+        "Chrome",
+        "uv",
+        "OpenRouter"
+      ],
+      "use_cases": [
+        "自然语言驱动的网页操作",
+        "机票等站点信息检索",
+        "浏览器任务自动化",
+        "作为 Agent 动作空间研究参考"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建时间很短，近 7 日 Star 增量极高，heat_score 高，属于近期快速增长项目；无证据表明具体外部事件驱动。"
+      }
+    },
+    "eternity4719/howtolivebetter": {
+      "category": "Knowledge Management",
+      "from_cache": false,
+      "full_name": "eternity4719/HowToLiveBetter",
+      "maturity": "growing",
+      "problem": "解决普通人在健康、法律、财务等生活决策上缺少成本收益清晰、来源可查的参考信息的问题。",
+      "recommendation_reason": "内容方向与 AI Agent、科研 AI、计算光学等核心兴趣无关，仅可作知识管理案例参考。",
+      "recommended_action": "skip",
+      "relevance_reason": "仅通过 README 中提到的 Claude Code/Codex skill 与 Agent 生态弱相关，主体是生活知识库，与用户核心兴趣不符。",
+      "relevance_score": 30,
+      "summary_zh": "按性价比排序的循证生活指南，涵盖健康、法律、理财与育儿等 608 条建议。",
+      "tech_stack": [
+        "HTML"
+      ],
+      "use_cases": [
+        "查询生活决策的成本收益建议",
+        "按证据等级筛选条目",
+        "离线阅读或打印指南",
+        "用配套 skill 让 AI 检索条目"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score"
+        ],
+        "summary": "近 24 小时与近 7 日 Star 增量很高，heat_score 处于高位，属于近期快速增长项目；无证据表明具体外部事件驱动。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "解决把 AI 模型、工具与既有业务系统串成可运维自动化流程的问题，减少自建集成与编排成本。",
+      "recommendation_reason": "与 Agent 工作流和自动化兴趣相关，成熟度高，可先观察其 MCP 与 Agent 能力演进再决定是否深入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 MCP、tool use 与 productivity 的 automation、workflow，但定位偏通用自动化平台而非专用 Agent 框架。",
+      "relevance_score": 72,
+      "summary_zh": "可视化工作流自动化平台，内置 AI 能力，支持自托管与 1500+ 集成。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "MCP",
+        "LangChain"
+      ],
+      "use_cases": [
+        "搭建多步 AI Agent 工作流",
+        "连接 SaaS 与内部系统做自动化",
+        "自托管数据处理流程",
+        "用低代码加自定义代码做集成",
+        "接入 MCP 工具与模型"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数极大且近 7 日仍有数百增长，属于长期高热度项目；无证据表明存在特定外部事件驱动。"
+      }
+    },
+    "nandhakishorm/laya": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "NandhaKishorM/laya",
+      "maturity": "growing",
+      "problem": "解决对文本做分类、打分与是否判断时依赖大模型自回归生成、延迟高成本高的问题。",
+      "recommendation_reason": "作为低成本决策模型与 Agent 组件有潜在价值，但项目较新，需观察稳定性与生态成熟度。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 deep_learning 与 LLM 基础设施方向，并提供 MCP、LangChain 集成，可服务 Agent 决策场景，但非典型 Agent 框架。",
+      "relevance_score": 68,
+      "summary_zh": "非自回归 System 1 决策引擎，单次前向传播对 100+ 语言文本做类型化决策。",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "ModernBERT",
+        "ONNX",
+        "LangChain",
+        "MCP"
+      ],
+      "use_cases": [
+        "工单部门与紧急度分类",
+        "流失风险判断",
+        "多语言文本零样本决策",
+        "作为 Agent 的快速决策组件"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建时间很短，近 24 小时 Star 增量突出，heat_score 高，属于近期爆发式增长项目；无证据表明具体外部事件驱动。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决通用 Agent 缺乏长期记忆与技能积累的问题：通过内置学习循环、会话检索与用户建模，让 Agent 跨会话持续积累能力。",
+      "recommendation_reason": "与 Agent 兴趣高度契合，且包含记忆、技能自改进、多后端等可借鉴架构设计，值得深入研究。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像：AI Agent、Claude Code、Codex、tool use、agent framework 等关键词全部覆盖。",
+      "relevance_score": 95,
+      "summary_zh": "Nous Research 开源的自我改进型 AI Agent，支持多模型、多终端后端与跨平台消息接入。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "FTS5",
+        "Docker",
+        "SSH",
+        "Modal",
+        "Daytona",
+        "Telegram/Discord/Slack 网关"
+      ],
+      "use_cases": [
+        "在 VPS 或云 VM 上长期运行个人 Agent",
+        "通过 Telegram 等消息平台远程指挥 Agent",
+        "自动生成与自我改进技能",
+        "定时任务与自动化报告",
+        "批量生成工具调用训练轨迹"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars=249015",
+          "delta_7d=2054",
+          "delta_24h=246",
+          "heat_score=67.62"
+        ],
+        "summary": "Star 基数极大且 7 日增量显著，属于高热度 Agent 项目；但无证据表明具体外部事件驱动。"
+      }
+    },
+    "rohitg00/ai-engineering-from-scratch": {
+      "category": "Research Tool",
+      "from_cache": false,
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "maturity": "growing",
+      "problem": "解决 AI 工程学习碎片化问题：提供从数学基础到 LLM 应用、Agent 与 MCP 的系统化课程，每节课产出可复用工件。",
+      "recommendation_reason": "课程覆盖 Agent、MCP 与深度学习，可作为系统性学习资源，但内容宽泛需按需取用。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 deep learning、computer vision、MCP 关键词，且包含 Agent 与 MCP 学习路径，与用户兴趣部分重合。",
+      "relevance_score": 78,
+      "summary_zh": "从零构建 AI 工程的开源课程，含 523 节课、20 个阶段，覆盖 Agent、MCP 与深度学习。",
+      "tech_stack": [
+        "Python",
+        "TypeScript",
+        "Rust",
+        "Julia",
+        "MCP",
+        "Transformers"
+      ],
+      "use_cases": [
+        "系统学习 AI 工程基础与进阶",
+        "学习 Agent 与 MCP 开发",
+        "准备 Claude 与 MCPA 认证",
+        "按学习路径定制课程"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars=57665",
+          "delta_24h=924",
+          "trending_rank=11",
+          "heat_score=70.52"
+        ],
+        "summary": "Trending 排名靠前且 24 小时 Star 增量很高，属于热门教育类仓库；无证据确定具体驱动事件。"
+      }
+    },
+    "ryze-ai-adgent/open-seo-mcp-skills": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "Ryze-AI-Adgent/open-seo-mcp-skills",
+      "maturity": "growing",
+      "problem": "解决 SEO 工具数据不透明、按调用加价的问题：直接接入用户自己的 Search Console、GA4 与广告数据，避免估算与中间加价。",
+      "recommendation_reason": "可作为 MCP 技能封装与 Claude Code 插件结构的参考案例，但业务价值与用户画像匹配度一般。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 MCP 与 Claude Code 关键词，属于 Agent 工具生态，但核心是 SEO 营销场景，与用户主要兴趣方向关联有限。",
+      "relevance_score": 55,
+      "summary_zh": "面向 Claude 的免费 SEO/GEO MCP 服务器与开源技能集，基于自有 GSC/GA4/广告数据。",
+      "tech_stack": [
+        "Shell",
+        "MCP",
+        "Claude Code Plugin",
+        "DataForSEO",
+        "Google Search Console API",
+        "GA4 API",
+        "Google Ads API"
+      ],
+      "use_cases": [
+        "站点 SEO 审计与索引问题排查",
+        "关键词研究与聚类",
+        "排名变动追踪",
+        "竞品关键词与反链分析",
+        "AI 引擎引荐流量可见性分析"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars=1782",
+          "forks=352",
+          "heat_score=51.91",
+          "pushed_at=2026-09-24T01:53:55Z"
+        ],
+        "summary": "Star 数中等且近期仍在更新，热度可能来自 Claude MCP 生态关注；无证据确定具体驱动事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "解决从研究到生产部署的通用深度学习建模与训练基础设施问题。",
+      "recommendation_reason": "属于通用基础框架，用户画像中已有更贴近的方向，除非需要底层训练框架否则优先级不高。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep_learning 的 deep learning、neural network，但未直接涉及 Agent、科研自动化或计算光学。",
+      "relevance_score": 55,
+      "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 稳定 API。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker"
+      ],
+      "use_cases": [
+        "训练与部署神经网络",
+        "科研机器学习实验",
+        "生产环境模型推理",
+        "GPU 加速计算"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "forks",
+          "delta_24h",
+          "delta_7d"
+        ],
+        "summary": "Star 与 fork 基数极高，但近 24 小时与 7 日增量相对平缓，属于长期存量型热门项目。"
+      }
+    },
+    "vincentwei1021/anything2explainer": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "Vincentwei1021/anything2explainer",
+      "maturity": "growing",
+      "problem": "解决解说视频制作门槛高的问题：由 Agent 完成选题研究、旁白、分镜与逐帧代码绘制，无需素材库或生成式视频模型。",
+      "recommendation_reason": "多 Agent 协作与技能工程化思路有借鉴意义，但非用户核心方向，先观察即可。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 Coding Agent、Claude Code、Codex 关键词，展示多 Agent 分工与技能封装范式，但应用场景偏视频生成。",
+      "relevance_score": 70,
+      "summary_zh": "Claude Code/Codex 技能：输入主题，用 Remotion 代码绘制并输出带配音字幕的解说视频。",
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Remotion",
+        "edge-tts",
+        "kokoro-82m",
+        "FFmpeg",
+        "Python",
+        "zsh"
+      ],
+      "use_cases": [
+        "把文章或主题转成解说视频",
+        "中英文双语视频生成",
+        "多 Agent 并行分镜构建",
+        "教学与科普内容批量生产"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars=2066",
+          "delta_7d=417",
+          "delta_24h=18",
+          "heat_score=46.2"
+        ],
+        "summary": "7 日 Star 增量明显且近期有更新，属于 Agent 技能类热门项目；无证据确定具体驱动事件。"
+      }
+    },
+    "vinzdg/codenotch": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "vinzdg/codenotch",
+      "maturity": "growing",
+      "problem": "解决同时使用多个 AI 编码工具时，难以随时掌握各自额度消耗与剩余情况的问题。",
+      "recommendation_reason": "与编码 Agent 使用场景相关，可作为工具类项目关注，但功能面较窄。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 Claude Code、Codex 关键词，属于编码 Agent 生态的辅助工具，但本身不是 Agent 框架。",
+      "relevance_score": 62,
+      "summary_zh": "macOS 应用，把 Claude Code、Cursor、Codex 等编码助手的用量额度钉在屏幕边缘。",
+      "tech_stack": [
+        "Swift",
+        "macOS",
+        "Rust",
+        "Tauri"
+      ],
+      "use_cases": [
+        "监控 Claude Code 用量窗口",
+        "查看 Cursor 与 Codex 额度",
+        "在屏幕边缘常驻显示剩余额度",
+        "手机端同步查看用量"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "created_at"
+        ],
+        "summary": "创建时间较新，近 7 日增长明显，属于近期上升项目；无证据表明具体外部事件驱动。"
+      }
+    }
+  },
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T12:53:58+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 与开发者工具占据今日榜单主体，Agent 相关项目热度集中。",
+    "rising_categories": [
+      "Coding Agent",
+      "Developer Tool",
+      "LLM Infrastructure",
+      "Knowledge Management",
+      "Research Tool"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 4 个、Developer Tool 3 个，是今日出现最多的两个类别。",
+      "for_you 前两位均为 Coding Agent：NousResearch/hermes-agent（personal_score 89.2、relevance 95）与 anomalyco/opencode（84.2、92）。",
+      "hot_today 中 browser-use/jev-ultrafast 属 Coding Agent，delta_24h 399、heat_score 82.75、relevance 82，同时进入 new_and_rising。",
+      "new_and_rising 中 eternity4719/HowToLiveBetter（delta_24h 1954、heat_score 92.09）与 NandhaKishorM/laya（delta_24h 1508、heat_…",
+      "hot_today 中多个项目缺少 category 字段（如 deepseek-ai/deepseek-harness、vectorize-io/hindsight），类别归属暂不确定。"
+    ],
+    "watch_tomorrow": [
+      "Coding Agent 类别能否维持 4 个项目的聚集度",
+      "browser-use/jev-ultrafast 在 hot_today 与 new_and_rising 双榜后的…",
+      "NandhaKishorM/laya 作为 LLM Infrastructure 的高增量是否延续",
+      "eternity4719/HowToLiveBetter 的高 delta_24h 是否持续",
+      "anthropics/claude-plugins-official 等 Developer Tool 项目的排名变化"
+    ]
+  },
+  "usage": {
+    "cache_hits": 6,
+    "completion_tokens": 3827,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 25284,
+    "prompt_tokens": 27716,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 31543
+  }
+}
