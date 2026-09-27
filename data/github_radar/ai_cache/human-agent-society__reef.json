@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-09-27T13:15:18+08:00",
+  "full_name": "Human-Agent-Society/reef",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-27T05:14:41Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "experimental",
+    "problem": "解决 Agent 无法持续从交互反馈中自我改进的问题，支持权重训练与 harness 优化两条路径。",
+    "summary_zh": "面向持续自我改进 Agent 的基础设施，连接推理、反馈、学习与版本化交付。",
+    "tech_stack": [
+      "Python",
+      "vLLM",
+      "SGLang",
+      "Slime",
+      "veRL",
+      "AReaL",
+      "Git LFS"
+    ],
+    "use_cases": [
+      "Agent 权重持续训练",
+      "Agent harness 自优化",
+      "测试时训练",
+      "科学发现类任务",
+      "在线推理与反馈闭环"
+    ]
+  }
+}

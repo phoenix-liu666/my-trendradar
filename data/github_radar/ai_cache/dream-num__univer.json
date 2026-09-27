@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-09-27T13:15:18+08:00",
+  "full_name": "dream-num/univer",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-27T04:18:55Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "mature",
+    "problem": "解决在自有产品中嵌入可定制 Office 编辑能力，并让人类与 AI Agent 在同一文件中协作的问题。",
+    "summary_zh": "面向 AI Agent 的 Office SDK，在统一运行时中提供表格、文档、幻灯片、画布、关系表与 PDF。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "Canvas",
+      "插件架构",
+      "Facade API"
+    ],
+    "use_cases": [
+      "嵌入电子表格编辑",
+      "服务端文档处理",
+      "Agent 生成表格应用",
+      "协作办公内容",
+      "BI 工作流集成"
+    ]
+  }
+}

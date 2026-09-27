@@ -1,27 +1,29 @@
 {
-  "cached_at": "2026-09-26T12:53:58+08:00",
+  "cached_at": "2026-09-27T13:15:18+08:00",
   "full_name": "NandhaKishorM/laya",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-25T11:35:32Z",
+  "repo_pushed_at": "2026-09-26T16:25:54Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决对文本做分类、打分与是否判断时依赖大模型自回归生成、延迟高成本高的问题。",
-    "summary_zh": "非自回归 System 1 决策引擎，单次前向传播对 100+ 语言文本做类型化决策。",
+    "problem": "解决需要低延迟、多语言、结构化决策（分类、评分、是非）的场景，避免自回归大模型的推理开销。",
+    "summary_zh": "非自回归的 System 1 决策引擎，单次前向传播对任意文本做类型化选择、打分和是非判断，支持 100+ 语言。",
     "tech_stack": [
       "Python",
       "PyTorch",
       "ModernBERT",
-      "ONNX",
+      "ONNX Runtime",
       "LangChain",
-      "MCP"
+      "MCP",
+      "Hugging Face"
     ],
     "use_cases": [
-      "工单部门与紧急度分类",
+      "客服工单分类与路由",
+      "文本紧急度评分",
       "流失风险判断",
-      "多语言文本零样本决策",
-      "作为 Agent 的快速决策组件"
+      "多语言零样本决策",
+      "长文档决策"
     ]
   }
 }
