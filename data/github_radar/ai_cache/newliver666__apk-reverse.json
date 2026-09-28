@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-09-28T13:19:35+08:00",
+  "full_name": "newliver666/apk-reverse",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-24T09:22:21Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "把 APK 逆向分析流程整理成 Agent 可执行的技能，减少重复试错与失败排查成本。",
+    "summary_zh": "面向 Android APK 逆向、去广告与 dex 补丁的 Agent Skill 工具集。",
+    "tech_stack": [
+      "Python",
+      "Android"
+    ],
+    "use_cases": [
+      "APK 逆向分析",
+      "去广告与精简",
+      "dex 补丁与重打包",
+      "加固应用分析"
+    ]
+  }
+}

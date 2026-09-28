@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-27T13:15:18+08:00",
+  "cached_at": "2026-09-28T13:19:35+08:00",
   "full_name": "paperclipai/paperclip",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-27T03:47:02Z",
+  "repo_pushed_at": "2026-09-28T04:25:09Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决同时运行大量 AI Agent 时缺乏统一目标对齐、成本监控、权限治理和任务追踪的问题。",
-    "summary_zh": "开源的多 AI Agent 团队编排应用，用仪表盘管理目标、组织架构、预算与任务。",
+    "problem": "解决多 Agent 并行工作时缺乏组织、权限、预算与进度审计的问题。",
+    "summary_zh": "开源 AI Agent 团队编排应用，用仪表盘管理目标、预算与多 Agent 协作。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
@@ -18,9 +18,8 @@
     "use_cases": [
       "编排多 Agent 团队",
       "监控 Agent 成本与预算",
-      "Agent 权限与治理",
-      "跨供应商 Agent 协作",
-      "移动端管理 Agent"
+      "管理 Agent 权限与治理",
+      "跨供应商 Agent 调度"
     ]
   }
 }

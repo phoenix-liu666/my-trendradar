@@ -1,25 +1,26 @@
 {
-  "cached_at": "2026-09-27T13:15:18+08:00",
+  "cached_at": "2026-09-28T13:19:35+08:00",
   "full_name": "rohitg00/ai-engineering-from-scratch",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-26T08:12:38Z",
+  "repo_pushed_at": "2026-09-27T11:54:19Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "解决学习者缺乏系统化、可动手实践的 AI 工程学习路径的问题。",
-    "summary_zh": "从零构建 AI 工程能力的开源课程，含 523 节课、20 个阶段与多语言翻译。",
+    "problem": "解决学习者缺乏从基础到代理工程端到端实践路径的问题。",
+    "summary_zh": "从零构建 AI 工程的系统课程，含 523 节课、20 个阶段，覆盖代理、MCP 与深度学习。",
     "tech_stack": [
       "Python",
       "TypeScript",
       "Rust",
-      "Julia"
+      "Julia",
+      "MCP"
     ],
     "use_cases": [
-      "系统学习 AI 工程基础与数学",
-      "学习 Agent 工程与 MCP 协议",
+      "系统学习 AI 工程基础",
+      "学习代理与 MCP 开发",
       "准备 Claude 与 MCPA 认证",
-      "按学习路径定制课程"
+      "按学习路径构建可复用产物"
     ]
   }
 }

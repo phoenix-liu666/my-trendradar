@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-09-28T13:19:35+08:00",
+  "full_name": "mvschwarz/openrig",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-28T01:40:59Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决多个编码代理分散在终端会话中、缺乏统一编排与协作的问题。",
+    "summary_zh": "用 YAML 定义代理团队，把 Claude Code 与 Codex 作为同一系统编排的多代理框架。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "tmux",
+      "SQLite",
+      "YAML"
+    ],
+    "use_cases": [
+      "多编码代理团队编排",
+      "主代理协调专家代理完成任务",
+      "代理任务队列与审查流程",
+      "共享 TUI 监控代理状态"
+    ]
+  }
+}
