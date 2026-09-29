@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-09-29T13:40:42+08:00",
+  "full_name": "cdyforever/how-to-live-better",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-29T01:20:02Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "mature",
+    "problem": "解决原书在手机上阅读不便的问题，提供零依赖、可搜索、可离线的单页阅读体验。",
+    "summary_zh": "把开源书《高性价比人生指南》528 条建议渲染成单文件 HTML 阅读页。",
+    "tech_stack": [
+      "HTML",
+      "Python"
+    ],
+    "use_cases": [
+      "手机离线阅读",
+      "关键词搜索建议条目",
+      "按证据等级筛选",
+      "打印成纸质版"
+    ]
+  }
+}

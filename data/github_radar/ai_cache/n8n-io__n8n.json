@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-09-28T13:19:35+08:00",
+  "cached_at": "2026-09-29T13:40:42+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-28T03:39:12Z",
+  "repo_pushed_at": "2026-09-29T05:40:12Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "解决企业需要把 AI 代理与既有系统集成、并实现可观测自动化流程的问题。",
-    "summary_zh": "fair-code 工作流自动化平台，具备原生 AI 能力，支持可视化搭建与自托管部署。",
+    "problem": "解决 AI 工作流与业务系统集成困难的问题，通过可视化画布与大量集成连接模型与现有系统。",
+    "summary_zh": "fair-code 工作流自动化平台，具备原生 AI 能力，支持可视化搭建与自定义代码。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "JavaScript",
-      "Python",
+      "LangChain",
       "MCP"
     ],
     "use_cases": [
-      "可视化搭建 AI 工作流",
-      "多步骤代理与人工审批流程",
-      "连接 1500+ 集成系统",
-      "自托管自动化部署"
+      "搭建多步 AI 工作流",
+      "连接 1500+ 集成实现自动化",
+      "自托管 AI 代理编排",
+      "低代码业务流程自动化"
     ]
   }
 }

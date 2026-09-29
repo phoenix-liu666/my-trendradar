@@ -1,26 +1,30 @@
 {
-  "cached_at": "2026-09-23T12:41:55+08:00",
+  "cached_at": "2026-09-29T13:40:42+08:00",
   "full_name": "jaredpalmer/kev",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-23T04:21:19Z",
+  "repo_pushed_at": "2026-09-29T04:13:21Z",
   "schema_version": 1,
   "static": {
     "category": "Scientific AI",
     "maturity": "growing",
-    "problem": "解决在本地训练和部署类型化决策模型（是-否/选择/评分）的需求，无需依赖云端 API。",
-    "summary_zh": "基于 Qwen3.5 的小型 Jev 类决策模型家族，可自行训练和本地运行。",
+    "problem": "解决决策类问题（是/否、多选、评分）需要可自托管、概率校准模型的需求，替代托管决策 API。",
+    "summary_zh": "基于 Qwen3.5/3.8 的小型决策模型家族，可自行训练与本地部署。",
     "tech_stack": [
       "Python",
-      "Qwen3.5",
+      "PyTorch",
+      "MLX",
       "CUDA",
       "ROCm",
-      "MLX",
-      "TypeSafe SDK"
+      "Qwen3.5",
+      "Qwen3.8",
+      "Hugging Face Hub"
     ],
     "use_cases": [
-      "本地工单分类与情绪评分",
-      "自训练小型决策模型",
-      "通过 TypeSafe SDK 调用本地服务"
+      "客服工单分类与路由",
+      "本地部署决策模型",
+      "在自有标注数据上微调",
+      "浏览器内试用决策模型",
+      "替代托管决策 API"
     ]
   }
 }

@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-09-29T13:40:42+08:00",
+  "full_name": "firecrawl/firecrawl",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-29T05:39:10Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "mature",
+    "problem": "解决 AI Agent 获取网页数据时需处理 JS 渲染、代理、限流等问题，提供开箱即用的抓取与结构化输出。",
+    "summary_zh": "面向 AI 的网页数据 API，支持搜索、抓取并输出 Markdown 或结构化数据。",
+    "tech_stack": [
+      "TypeScript",
+      "Python",
+      "Node.js",
+      "MCP",
+      "REST API",
+      "CLI"
+    ],
+    "use_cases": [
+      "为 Agent 提供网页搜索与抓取",
+      "将网页转为 LLM 可用 Markdown",
+      "批量抓取站点数据",
+      "网页交互与结构化抽取",
+      "接入 MCP 客户端"
+    ]
+  }
+}

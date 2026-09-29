@@ -1,28 +1,29 @@
 {
-  "cached_at": "2026-09-28T13:19:35+08:00",
+  "cached_at": "2026-09-29T13:40:42+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-28T05:16:20Z",
+  "repo_pushed_at": "2026-09-29T05:21:35Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决代理无法跨会话积累经验与知识、难以在云端长期低成本运行的问题。",
-    "summary_zh": "Nous Research 出品的自我改进型 AI 代理，具备技能自建、跨会话记忆与多平台接入能力。",
+    "problem": "解决代理无法跨会话积累经验与知识的问题，通过内置学习循环让代理在使用中持续改进。",
+    "summary_zh": "Nous Research 出品的自改进 AI 代理，具备技能自建、跨会话记忆与多平台接入能力。",
     "tech_stack": [
       "Python",
-      "MCP",
-      "Docker",
-      "SSH",
       "Telegram",
       "Discord",
-      "Slack"
+      "Slack",
+      "Docker",
+      "SSH",
+      "Modal",
+      "Daytona"
     ],
     "use_cases": [
-      "跨平台个人代理助手",
-      "代理技能自建与自我改进",
-      "定时自动化任务",
-      "批量轨迹生成用于训练"
+      "云端常驻个人代理",
+      "多平台消息接入的自动化助手",
+      "代理技能自建与自改进",
+      "批量轨迹生成用于工具调用模型训练"
     ]
   }
 }

@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-09-29T13:40:42+08:00",
+  "full_name": "yetone/magpie",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-29T05:27:58Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决多个编码代理各自配置模型、密钥与端点分散的问题，集中切换模型并共享订阅登录。",
+    "summary_zh": "菜单栏工具，统一管理本机各 AI 代理使用的模型，并提供本地网关转发。",
+    "tech_stack": [
+      "Go",
+      "Wails",
+      "macOS",
+      "Linux",
+      "Windows",
+      "OpenAI API",
+      "Anthropic API"
+    ],
+    "use_cases": [
+      "统一切换 Claude Code、Codex 等代理模型",
+      "本地网关转发多厂商模型",
+      "共享订阅登录给其他代理",
+      "按配置快照切换代理设置"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-09-29T13:40:42+08:00",
+  "full_name": "debpalash/VoiceStudio",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-29T00:58:42Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "growing",
+    "problem": "商业语音合成服务存在成本与隐私问题，用户需要本地可控的语音克隆与配音方案。",
+    "summary_zh": "完全本地运行的开源语音克隆、配音、转录与有声书制作工具，支持 646 种语言。",
+    "tech_stack": [
+      "Python",
+      "CUDA",
+      "MLX",
+      "Tauri",
+      "Electron",
+      "Docker"
+    ],
+    "use_cases": [
+      "语音克隆",
+      "视频配音",
+      "语音转录",
+      "有声书制作",
+      "本地 TTS 服务"
+    ]
+  }
+}

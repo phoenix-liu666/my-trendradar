@@ -1,0 +1,30 @@
+{
+  "cached_at": "2026-09-29T13:40:42+08:00",
+  "full_name": "yi1108/printfilm",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-24T11:10:32Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "解决 AI 短剧与短视频从剧本到成片流程割裂的问题，提供分镜、生图、生视频、合成的一体化流水线。",
+    "summary_zh": "模板驱动的 AI 漫剧与短视频创作平台，从文案到成片全流程。",
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Redis",
+      "React",
+      "TypeScript",
+      "Docker"
+    ],
+    "use_cases": [
+      "AI 短视频获客片制作",
+      "AI 漫剧/短剧分集创作",
+      "单点文生图/文生视频",
+      "自托管内容生成平台",
+      "开放 API 集成生图生视频"
+    ]
+  }
+}
