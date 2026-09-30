@@ -1,23 +1,23 @@
 {
-  "cached_at": "2026-09-29T13:40:42+08:00",
+  "cached_at": "2026-09-30T13:28:40+08:00",
   "full_name": "cdyforever/how-to-live-better",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-29T01:20:02Z",
+  "repo_pushed_at": "2026-09-30T00:49:54Z",
   "schema_version": 1,
   "static": {
     "category": "Other",
     "maturity": "mature",
-    "problem": "解决原书在手机上阅读不便的问题，提供零依赖、可搜索、可离线的单页阅读体验。",
-    "summary_zh": "把开源书《高性价比人生指南》528 条建议渲染成单文件 HTML 阅读页。",
+    "problem": "让原书内容在手机和任意设备上无需安装、可搜索、可离线地阅读。",
+    "summary_zh": "把开源书《高性价比人生指南》528 条建议渲染成零依赖单文件 HTML 阅读页。",
     "tech_stack": [
       "HTML",
       "Python"
     ],
     "use_cases": [
-      "手机离线阅读",
+      "手机离线阅读全书",
       "关键词搜索建议条目",
-      "按证据等级筛选",
-      "打印成纸质版"
+      "按证据等级筛选内容",
+      "打印阅读页"
     ]
   }
 }

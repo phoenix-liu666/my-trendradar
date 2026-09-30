@@ -1,28 +1,28 @@
 {
-  "cached_at": "2026-09-29T13:40:42+08:00",
+  "cached_at": "2026-09-30T13:28:40+08:00",
   "full_name": "vectorize-io/hindsight",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-29T00:09:54Z",
+  "repo_pushed_at": "2026-09-30T00:37:11Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决 Agent 记忆系统只做对话历史召回、长期记忆准确率不足的问题，提供 retain/recall/reflect 等记忆操作。",
-    "summary_zh": "面向 AI Agent 的长期记忆系统，强调让 Agent 学习而非仅回忆对话历史。",
+    "problem": "解决 Agent 长期记忆与学习能力不足的问题，替代或补充 RAG、知识图谱等方案。",
+    "summary_zh": "面向 Agent 的长期记忆系统，强调让 Agent 学习而非仅回忆对话历史。",
     "tech_stack": [
       "Python",
       "Docker",
+      "Kubernetes",
+      "Helm",
       "PostgreSQL",
-      "Kubernetes/Helm",
-      "MCP",
-      "OpenAI 兼容 API"
+      "MCP"
     ],
     "use_cases": [
-      "为 Agent 增加长期记忆",
-      "跨会话个性化与学习",
-      "接入 Claude Code/Cursor 等编码 Agent",
-      "通过 MCP 接入外部工具",
-      "企业级自托管记忆服务"
+      "为 Agent 提供长期记忆",
+      "通过 LLM Wrapper 两行接入",
+      "作为 MCP Server 供编码 Agent 使用",
+      "企业级记忆服务部署",
+      "长对话记忆基准评测"
     ]
   }
 }

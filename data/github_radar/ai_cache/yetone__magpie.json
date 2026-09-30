@@ -1,28 +1,28 @@
 {
-  "cached_at": "2026-09-29T13:40:42+08:00",
+  "cached_at": "2026-09-30T13:28:40+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-29T05:27:58Z",
+  "repo_pushed_at": "2026-09-30T05:10:45Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决多个编码代理各自配置模型、密钥与端点分散的问题，集中切换模型并共享订阅登录。",
-    "summary_zh": "菜单栏工具，统一管理本机各 AI 代理使用的模型，并提供本地网关转发。",
+    "problem": "解决多个编码代理各自配置模型、密钥与端点分散的问题，用单一界面与本地网关统一选择模型并复用已有订阅登录。",
+    "summary_zh": "菜单栏工具，集中管理各 AI 代理所用模型，并以内置网关统一转发到不同厂商。",
     "tech_stack": [
       "Go",
       "Wails",
+      "OpenAI API",
+      "Anthropic API",
       "macOS",
       "Linux",
-      "Windows",
-      "OpenAI API",
-      "Anthropic API"
+      "Windows"
     ],
     "use_cases": [
-      "统一切换 Claude Code、Codex 等代理模型",
-      "本地网关转发多厂商模型",
-      "共享订阅登录给其他代理",
-      "按配置快照切换代理设置"
+      "在菜单栏统一切换各代理使用的模型",
+      "让 Codex、Claude Code 等共用同一本地网关",
+      "复用 Claude Code、Codex、Copilot 登录作为提供方",
+      "以配置文件快照方式切换代理配置方案"
     ]
   }
 }

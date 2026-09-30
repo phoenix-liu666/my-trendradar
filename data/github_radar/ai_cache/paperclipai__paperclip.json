@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-09-29T13:40:42+08:00",
+  "cached_at": "2026-09-30T13:28:40+08:00",
   "full_name": "paperclipai/paperclip",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-29T02:46:34Z",
+  "repo_pushed_at": "2026-09-30T05:27:01Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "多 agent 并行工作时缺乏统一的目标对齐、预算控制与工作审计手段。",
-    "summary_zh": "开源的多 AI agent 团队编排应用，用任务管理器式界面管理目标、预算与协作。",
+    "problem": "解决同时运行多个 AI Agent 时缺乏统一目标管理、成本监控与治理的问题。",
+    "summary_zh": "开源的多 Agent 团队编排应用，用仪表盘管理目标、预算与 Agent 协作。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "React",
-      "MCP"
+      "React"
     ],
     "use_cases": [
-      "编排多 agent 团队",
-      "监控 agent 成本预算",
-      "管理 agent 组织与权限",
-      "跨 provider 运行 agent"
+      "编排多 Agent 团队",
+      "为 Agent 分配目标与预算",
+      "监控 Agent 成本与产出",
+      "接入 Claude Code/Codex/Cursor 等 Agent",
+      "通过 MCP 集成外部工具"
     ]
   }
 }

@@ -1,28 +1,28 @@
 {
-  "cached_at": "2026-09-28T13:19:35+08:00",
+  "cached_at": "2026-09-30T13:28:40+08:00",
   "full_name": "NandhaKishorM/laya",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-27T19:38:50Z",
+  "repo_pushed_at": "2026-09-29T17:46:22Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "用一次前向推理替代自回归生成，低成本完成多语言文本分类与决策任务。",
-    "summary_zh": "非自回归多语言决策引擎，单次前向传播输出选择、评分与是否判断。",
+    "problem": "用单次前向的轻量模型替代大模型推理，完成分类、打分与是否判断等结构化决策任务。",
+    "summary_zh": "非自回归的 System 1 决策引擎，单次前向即可对任意文本做多语言类型化决策。",
     "tech_stack": [
       "Python",
       "PyTorch",
-      "ONNX",
-      "LangChain",
-      "LlamaIndex",
-      "CrewAI",
-      "MCP"
+      "ModernBERT",
+      "ONNX Runtime",
+      "TileLang",
+      "TypeScript"
     ],
     "use_cases": [
-      "客服工单分类",
-      "多语言文本决策",
-      "零样本分类与打分",
-      "作为 Agent 路由组件"
+      "客服工单分类与紧急度打分",
+      "多语言零样本分类",
+      "流失风险判断",
+      "作为 LangChain/LlamaIndex/CrewAI 的路由或选择器",
+      "长文档决策"
     ]
   }
 }

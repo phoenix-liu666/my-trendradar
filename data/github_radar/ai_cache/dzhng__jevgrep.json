@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-09-30T13:28:40+08:00",
+  "full_name": "dzhng/jevgrep",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-29T07:30:22Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "experimental",
+    "problem": "解决编码代理在陌生代码库中定位相关文件耗时耗成本的问题，用一次提问返回文件、阅读线索与源码片段作为起点。",
+    "summary_zh": "面向编码代理的 CLI 代码检索工具，通过提问定位相关文件与源码上下文，宣称同等任务下成本更低。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "Vercel AI Gateway",
+      "CLI"
+    ],
+    "use_cases": [
+      "让编码代理快速定位相关源码文件",
+      "在陌生仓库中按行为语义搜索代码",
+      "为 Claude Code、Codex、OpenCode 安装检索技能",
+      "降低编码代理探索代码库的 token 成本"
+    ]
+  }
+}

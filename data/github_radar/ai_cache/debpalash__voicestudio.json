@@ -1,28 +1,30 @@
 {
-  "cached_at": "2026-09-29T13:40:42+08:00",
+  "cached_at": "2026-09-30T13:28:40+08:00",
   "full_name": "debpalash/VoiceStudio",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-29T00:58:42Z",
+  "repo_pushed_at": "2026-09-29T15:45:28Z",
   "schema_version": 1,
   "static": {
-    "category": "Other",
+    "category": "Productivity",
     "maturity": "growing",
-    "problem": "商业语音合成服务存在成本与隐私问题，用户需要本地可控的语音克隆与配音方案。",
-    "summary_zh": "完全本地运行的开源语音克隆、配音、转录与有声书制作工具，支持 646 种语言。",
+    "problem": "为需要语音克隆、视频配音、听写与有声书制作的用户提供可完全本地运行的开源替代方案，避免依赖云端语音服务。",
+    "summary_zh": "本地优先的开源语音克隆、配音、转录与有声书制作桌面应用，支持 646 种语言。",
     "tech_stack": [
       "Python",
-      "CUDA",
-      "MLX",
-      "Tauri",
       "Electron",
-      "Docker"
+      "Tauri",
+      "Bun",
+      "Node.js",
+      "Rust",
+      "CUDA",
+      "MLX"
     ],
     "use_cases": [
-      "语音克隆",
+      "本地语音克隆",
       "视频配音",
-      "语音转录",
-      "有声书制作",
-      "本地 TTS 服务"
+      "语音听写与转录",
+      "有声书批量生成",
+      "通过本地 API/MCP 接入 Agent"
     ]
   }
 }
