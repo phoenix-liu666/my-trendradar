@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-01T13:47:33+08:00",
+  "full_name": "mksglu/context-mode",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-01T00:15:35Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决 MCP 工具调用把大量原始数据灌入上下文、压缩后丢失任务状态以及输出冗余的问题。",
+    "summary_zh": "面向 AI 编码代理的上下文窗口优化 MCP 服务器，沙箱化工具输出并持久化会话记忆。",
+    "tech_stack": [
+      "TypeScript",
+      "MCP",
+      "SQLite",
+      "FTS5",
+      "BM25"
+    ],
+    "use_cases": [
+      "降低编码代理上下文占用",
+      "跨会话保留编辑与任务状态",
+      "用代码执行替代大量工具调用",
+      "多客户端统一上下文路由"
+    ]
+  }
+}

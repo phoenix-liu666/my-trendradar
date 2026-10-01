@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-10-01T13:47:33+08:00",
+  "full_name": "DietrichGebert/ponytail",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-14T14:34:56Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "编码 Agent 容易过度构建代码；该项目通过技能约束让 Agent 采用最小实现，减少代码量、成本与耗时。",
+    "summary_zh": "面向 AI 编码 Agent 的提示技能，引导其写出更少、更精简的代码。",
+    "tech_stack": [
+      "JavaScript",
+      "npm",
+      "Claude Code",
+      "Cursor Rules",
+      "Agent Skills"
+    ],
+    "use_cases": [
+      "约束 Agent 输出更精简的代码",
+      "降低编码 Agent 的 token 与成本",
+      "作为 Claude Code 插件或规则使用"
+    ]
+  }
+}

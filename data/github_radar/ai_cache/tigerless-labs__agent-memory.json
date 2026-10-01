@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-09-30T13:28:40+08:00",
+  "cached_at": "2026-10-01T13:47:33+08:00",
   "full_name": "tigerless-labs/agent-memory",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-28T09:29:00Z",
+  "repo_pushed_at": "2026-09-30T16:36:36Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "experimental",
-    "problem": "解决代理会话结束后遗忘所学内容的问题，用可 grep、可 git 的 Markdown 文件加可重建索引，替代不可迁移的向量库与知识图谱方案。",
-    "summary_zh": "以 Markdown 为真源、本地排序检索的 AI 代理长期记忆运行时，Claude Code 与 Codex 共享同一存储。",
+    "problem": "解决代理会话结束后遗忘所学内容的问题，同时避免记忆被锁进不可迁移的向量库或知识图谱。",
+    "summary_zh": "以 Markdown 为真源、本地检索为索引的 AI 代理长期记忆运行时，Claude Code 与 Codex 共享同一存储。",
     "tech_stack": [
       "Python",
       "SQLite",
@@ -18,10 +18,10 @@
       "MCP"
     ],
     "use_cases": [
-      "为 Claude Code 与 Codex 提供共享长期记忆",
-      "以路径与分层读取方式控制上下文成本",
-      "在睡眠时段自动整合与遗忘记忆",
-      "以 as-of 查询回溯历史记忆状态"
+      "为编码代理提供跨会话长期记忆",
+      "本地可 grep 的代理知识存储",
+      "睡眠期记忆整合与遗忘",
+      "按时间点回溯历史记忆"
     ]
   }
 }

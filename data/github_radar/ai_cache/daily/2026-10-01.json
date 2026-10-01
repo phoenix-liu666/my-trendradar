@@ -1,0 +1,457 @@
+{
+  "analyses": {
+    "affaan-m/ecc": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "affaan-m/ECC",
+      "maturity": "growing",
+      "problem": "解决编码代理在技能复用、长期记忆、安全边界与研究工作流上的能力缺失，试图把代理运行环境标准化为一套可安装的 harness。",
+      "recommendation_reason": "与用户关注的编码代理生态高度相关，值得研究其 harness 设计与技能/记忆机制。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Claude Code、Codex、OpenCode、MCP、agent framework 等关键词。",
+      "relevance_score": 95,
+      "summary_zh": "面向 Claude Code、Codex 等编码代理的 harness 性能优化系统，提供技能、记忆、安全与研究优先开发能力。",
+      "tech_stack": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Go",
+        "Shell",
+        "MCP"
+      ],
+      "use_cases": [
+        "为 Claude Code 配置技能与记忆",
+        "为 Codex/OpenCode 统一代理运行环境",
+        "代理安全与权限治理",
+        "研究优先的代理开发流程"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 与近期增量极高，且持续更新，但缺少可确认的外部驱动事件证据。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可本地安装、可配置的开源编码 Agent，替代闭源方案并支持多平台安装。",
+      "recommendation_reason": "开源编码 Agent 的代表性项目，与用户兴趣高度相关，值得深入研究。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、OpenCode 与 agentic coding。",
+      "relevance_score": 92,
+      "summary_zh": "开源 AI 编码 Agent，提供终端界面、桌面应用与内置 build/plan 双 Agent。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "Homebrew",
+        "Desktop App",
+        "TUI"
+      ],
+      "use_cases": [
+        "终端内进行 AI 辅助编码",
+        "只读模式探索陌生代码库",
+        "作为开源编码 Agent 集成到开发流程"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 超过二十一万、近七日增量约一千五百，属于长期高热度且仍在更新的编码 Agent 项目；无证据确定具体外部驱动事件。"
+      }
+    },
+    "colbymchenry/codegraph": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "colbymchenry/codegraph",
+      "maturity": "growing",
+      "problem": "解决编码代理读取代码时 token 消耗大、工具调用次数多、跨文件理解不足的问题。",
+      "recommendation_reason": "与编码代理工作流直接相关，可本地试用评估其索引与检索效果。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 的 Claude Code、Codex、OpenCode 与 knowledge graph 关键词，属编码代理配套工具。",
+      "relevance_score": 85,
+      "summary_zh": "预索引的代码知识图谱，随代码变更自动同步，为多种编码代理提供本地语义代码检索。",
+      "tech_stack": [
+        "C",
+        "Rust",
+        "MCP",
+        "Node.js"
+      ],
+      "use_cases": [
+        "为编码代理提供代码知识图谱",
+        "减少跨文件检索的 token 与调用次数",
+        "本地离线代码语义索引",
+        "多代理统一代码上下文"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "进入 Trending 榜单且 Star 规模较大，仓库持续更新，但无证据确认具体外部事件。"
+      }
+    },
+    "composiohq/awesome-claude-skills": {
+      "category": "Knowledge Management",
+      "from_cache": false,
+      "full_name": "ComposioHQ/awesome-claude-skills",
+      "maturity": "growing",
+      "problem": "解决用户难以发现、筛选和复用 Claude Skills 及配套工具的问题。",
+      "recommendation_reason": "作为资源清单有检索价值，但本身不是可运行系统，适合按需查阅。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 MCP、Claude Code、Codex 以及 productivity 的 automation、workflow 关键词。",
+      "relevance_score": 78,
+      "summary_zh": "收录 1000+ Claude Skills 与插件的精选清单，覆盖 Claude Code、Codex、Cursor 等编码代理。",
+      "tech_stack": [
+        "Python",
+        "MCP"
+      ],
+      "use_cases": [
+        "查找可复用的 Claude Skills",
+        "为编码代理挑选技能与插件",
+        "了解 Skills 与 MCP、工具的分层关系",
+        "通过 Composio 连接外部应用"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "进入 Trending 榜单且 Star 规模较大，但近期推送时间较早，无外部事件证据。"
+      }
+    },
+    "dietrichgebert/ponytail": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "DietrichGebert/ponytail",
+      "maturity": "growing",
+      "problem": "编码 Agent 容易过度构建代码；该项目通过技能约束让 Agent 采用最小实现，减少代码量、成本与耗时。",
+      "recommendation_reason": "与编码 Agent 工作流相关，但效果数据来自项目自述，建议先观察验证。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、Claude Code、prompt engineering 与开发者工具方向。",
+      "relevance_score": 82,
+      "summary_zh": "面向 AI 编码 Agent 的提示技能，引导其写出更少、更精简的代码。",
+      "tech_stack": [
+        "JavaScript",
+        "npm",
+        "Claude Code",
+        "Cursor Rules",
+        "Agent Skills"
+      ],
+      "use_cases": [
+        "约束 Agent 输出更精简的代码",
+        "降低编码 Agent 的 token 与成本",
+        "作为 Claude Code 插件或规则使用"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "forks",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 数极高、fork 数超过八千并进入 Trending 榜单，属于高热度项目；README 中的基准数据为项目自述，无外部事件证据。"
+      }
+    },
+    "dzhng/jevgrep": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "dzhng/jevgrep",
+      "maturity": "growing",
+      "problem": "编码 Agent 在不熟悉的仓库中需要花时间寻找相关文件；该项目通过语义检索返回文件、阅读线索和源码摘录，减少上下文搜集成本。",
+      "recommendation_reason": "与编码 Agent 工作流高度相关，可作为上下文检索环节试用。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Coding Agent、Claude Code、Codex、tool use 与开发者工具方向。",
+      "relevance_score": 88,
+      "summary_zh": "面向编码 Agent 的 CLI 代码检索工具，用自然语言问题定位相关文件与源码片段。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "Vercel AI Gateway",
+        "CLI"
+      ],
+      "use_cases": [
+        "为 Claude Code / Codex 等 Agent 提供代码定位",
+        "按行为描述检索仓库文件",
+        "为不熟悉代码库补充上下文"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "created_at",
+          "pushed_at"
+        ],
+        "summary": "创建后数日即获得较高 Star 与单日增量，属于新近走热的编码 Agent 辅助工具；具体外部驱动事件无证据。"
+      }
+    },
+    "feder-cr/dots": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "feder-cr/dots",
+      "maturity": "experimental",
+      "problem": "Web Agent 失败常源于浏览器层问题（页面未加载、验证挑战、登录失效、点击未生效），该项目用真实浏览器引擎与一致身份降低这类失败。",
+      "recommendation_reason": "方向相关但项目较新、成熟度未知，建议先观察再决定是否深入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、MCP、automation 与 browser agent 方向。",
+      "relevance_score": 78,
+      "summary_zh": "带独立反检测浏览器的开源 Web AI Agent，可切换模型并驱动真实 Firefox 引擎。",
+      "tech_stack": [
+        "Python",
+        "Firefox",
+        "Playwright",
+        "MCP",
+        "OpenRouter",
+        "uv"
+      ],
+      "use_cases": [
+        "网页自动化任务",
+        "跨站点信息抓取与比价",
+        "为 MCP 客户端提供浏览器能力"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "forks",
+          "created_at",
+          "pushed_at"
+        ],
+        "summary": "创建后短时间内 Star 接近两千、fork 数较高，属于新近受关注的浏览器 Agent 项目；无证据表明具体外部事件驱动。"
+      }
+    },
+    "mksglu/context-mode": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "mksglu/context-mode",
+      "maturity": "growing",
+      "problem": "解决 MCP 工具调用把大量原始数据灌入上下文、压缩后丢失任务状态以及输出冗余的问题。",
+      "recommendation_reason": "上下文优化是编码代理的共性痛点，可直接接入试用验证效果。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 的 MCP、Claude Code、Codex、OpenCode 关键词，属代理基础设施。",
+      "relevance_score": 90,
+      "summary_zh": "面向 AI 编码代理的上下文窗口优化 MCP 服务器，沙箱化工具输出并持久化会话记忆。",
+      "tech_stack": [
+        "TypeScript",
+        "MCP",
+        "SQLite",
+        "FTS5",
+        "BM25"
+      ],
+      "use_cases": [
+        "降低编码代理上下文占用",
+        "跨会话保留编辑与任务状态",
+        "用代码执行替代大量工具调用",
+        "多客户端统一上下文路由"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "进入 Trending 榜单且排名靠前，仓库持续更新，但无证据确认具体外部事件。"
+      }
+    },
+    "mvschwarz/openrig": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "mvschwarz/openrig",
+      "maturity": "growing",
+      "problem": "多个编码 Agent 分散在终端会话中难以协同与追踪；该项目提供持久化团队编排、任务队列与共享看板。",
+      "recommendation_reason": "多 Agent 编排与用户兴趣高度契合，值得研究其架构与协作模式。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 multi-agent、agent orchestration、Claude Code 与 Codex。",
+      "relevance_score": 90,
+      "summary_zh": "用 YAML 定义多 Agent 团队，把 Claude Code 与 Codex 作为统一系统编排运行。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "tmux",
+        "YAML",
+        "npm",
+        "SQLite"
+      ],
+      "use_cases": [
+        "多 Agent 协同完成仓库改动",
+        "owner/checker 双 Agent 代码审查流程",
+        "以团队方式管理编码任务队列"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "进入 Trending 榜单前列，单日 Star 增量约 600，属于近期热度较高的多 Agent 编排项目；无证据确定具体外部驱动事件。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决代理无法从经验中持续学习、跨会话遗忘以及被绑定在单一设备或模型上的问题。",
+      "recommendation_reason": "自我改进与记忆闭环设计对代理方向有参考价值，可深入研究其架构。",
+      "recommended_action": "study",
+      "relevance_reason": "属于 ai_agents 画像核心的 agent framework，并涉及 Claude Code、Codex 等编码代理集成。",
+      "relevance_score": 92,
+      "summary_zh": "Nous Research 推出的自我改进型 AI 代理，具备技能自生成、跨会话记忆与多平台接入能力。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "SQLite",
+        "Docker",
+        "SSH"
+      ],
+      "use_cases": [
+        "在 VPS 或云上长期运行个人代理",
+        "通过 Telegram/Discord 等平台与代理交互",
+        "自动生成并迭代代理技能",
+        "批量生成代理轨迹用于模型训练"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 规模与 7 日增量都很高，仓库仍在活跃更新，但无证据指向具体外部事件。"
+      }
+    },
+    "tigerless-labs/agent-memory": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "tigerless-labs/agent-memory",
+      "maturity": "experimental",
+      "problem": "解决代理会话结束后遗忘所学内容的问题，同时避免记忆被锁进不可迁移的向量库或知识图谱。",
+      "recommendation_reason": "体量小、依赖少、无需 API key，适合直接试用评估其记忆方案。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 的 MCP、Claude Code、Codex 关键词，并涉及 knowledge graph 相关记忆检索。",
+      "relevance_score": 88,
+      "summary_zh": "以 Markdown 为真源、本地检索为索引的 AI 代理长期记忆运行时，Claude Code 与 Codex 共享同一存储。",
+      "tech_stack": [
+        "Python",
+        "SQLite",
+        "FTS5",
+        "BM25",
+        "Markdown",
+        "MCP"
+      ],
+      "use_cases": [
+        "为编码代理提供跨会话长期记忆",
+        "本地可 grep 的代理知识存储",
+        "睡眠期记忆整合与遗忘",
+        "按时间点回溯历史记忆"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "24 小时增量明显，仓库近期仍在更新，但缺少可确认的外部驱动事件。"
+      }
+    },
+    "yetone/magpie": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "yetone/magpie",
+      "maturity": "growing",
+      "problem": "多个编码 Agent 各自维护模型配置与密钥，切换模型和共享订阅登录繁琐；该项目统一管理配置并提供一个本地 API 网关。",
+      "recommendation_reason": "对多 Agent 模型配置管理有直接实用价值，适合试用。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 画像中的 Claude Code、Codex、OpenCode 与 agent 配置管理方向。",
+      "relevance_score": 85,
+      "summary_zh": "macOS 菜单栏工具，集中管理各编码 Agent 使用的模型与本地统一网关。",
+      "tech_stack": [
+        "Go",
+        "Wails",
+        "macOS",
+        "OpenAI API",
+        "Anthropic Messages API",
+        "TUI"
+      ],
+      "use_cases": [
+        "统一切换 Claude Code / Codex 等 Agent 的模型",
+        "共享订阅登录给多个 Agent",
+        "集中管理多家模型供应商密钥"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "pushed_at"
+        ],
+        "summary": "单日 Star 增量约 800、总 Star 近四千，热度指标较高，属于近期快速走热的开发者工具；无证据确定具体外部驱动事件。"
+      }
+    }
+  },
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T13:47:33+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 类项目在今日榜单中占据主导，围绕编码代理的编排、记忆与工具链持续聚集。",
+    "rising_categories": [
+      "Coding Agent",
+      "LLM Infrastructure",
+      "Developer Tool"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 有 7 个项目，是今日分布最集中的类别。",
+      "for_you 前 10 中有 6 个属于 Coding Agent，且 relevance 多在 88-95 区间。",
+      "hot_today 中 affaan-m/ECC、mvschwarz/openrig、NousResearch/hermes-agent、DietrichGebert/ponytail 均为 Coding Agent，delta_24h…",
+      "LLM Infrastructure 出现 2 个项目（mksglu/context-mode、tigerless-labs/agent-memory），均与代理记忆/上下文相关。",
+      "new_and_rising 中 yetone/magpie 与 tigerless-labs/agent-memory 同时出现在 for_you，属于跨榜单重复出现的新项目。"
+    ],
+    "watch_tomorrow": [
+      "Coding Agent 类别的项目数量与 delta_24h 是否继续集中",
+      "affaan-m/ECC 与 mvschwarz/openrig 的编排/优化方向是否出现同类新项目",
+      "LLM Infrastructure 中代理记忆与上下文管理方向（context-mode、agent-memory）",
+      "Developer Tool 中 yetone/magpie 这类统一模型网关工具的后续热度",
+      "new_and_rising 中高 delta_24h 项目（如 eternity4719/HowToLiveBett…"
+    ]
+  },
+  "usage": {
+    "cache_hits": 5,
+    "completion_tokens": 3516,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 25004,
+    "prompt_tokens": 27308,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 30824
+  }
+}

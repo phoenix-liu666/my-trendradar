@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-01T13:47:33+08:00",
+  "full_name": "feder-cr/dots",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-29T23:24:01Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "Web Agent 失败常源于浏览器层问题（页面未加载、验证挑战、登录失效、点击未生效），该项目用真实浏览器引擎与一致身份降低这类失败。",
+    "summary_zh": "带独立反检测浏览器的开源 Web AI Agent，可切换模型并驱动真实 Firefox 引擎。",
+    "tech_stack": [
+      "Python",
+      "Firefox",
+      "Playwright",
+      "MCP",
+      "OpenRouter",
+      "uv"
+    ],
+    "use_cases": [
+      "网页自动化任务",
+      "跨站点信息抓取与比价",
+      "为 MCP 客户端提供浏览器能力"
+    ]
+  }
+}

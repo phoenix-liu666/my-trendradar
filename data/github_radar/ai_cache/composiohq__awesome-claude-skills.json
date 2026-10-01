@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-01T13:47:33+08:00",
+  "full_name": "ComposioHQ/awesome-claude-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-18T07:16:11Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Knowledge Management",
+    "maturity": "growing",
+    "problem": "解决用户难以发现、筛选和复用 Claude Skills 及配套工具的问题。",
+    "summary_zh": "收录 1000+ Claude Skills 与插件的精选清单，覆盖 Claude Code、Codex、Cursor 等编码代理。",
+    "tech_stack": [
+      "Python",
+      "MCP"
+    ],
+    "use_cases": [
+      "查找可复用的 Claude Skills",
+      "为编码代理挑选技能与插件",
+      "了解 Skills 与 MCP、工具的分层关系",
+      "通过 Composio 连接外部应用"
+    ]
+  }
+}

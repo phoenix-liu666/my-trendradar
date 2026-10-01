@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-09-30T13:28:40+08:00",
+  "cached_at": "2026-10-01T13:47:33+08:00",
   "full_name": "mvschwarz/openrig",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-30T05:27:52Z",
+  "repo_pushed_at": "2026-10-01T05:44:37Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决多个编码代理会话零散、缺少组织与协作的问题，用持久化团队、角色分工与队列机制把代理变成可管理的系统。",
-    "summary_zh": "多代理 harness 编排工具，用 YAML 定义代理团队，把 Claude Code 与 Codex 作为同一系统协同运行。",
+    "problem": "多个编码 Agent 分散在终端会话中难以协同与追踪；该项目提供持久化团队编排、任务队列与共享看板。",
+    "summary_zh": "用 YAML 定义多 Agent 团队，把 Claude Code 与 Codex 作为统一系统编排运行。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "tmux",
       "YAML",
-      "SQLite",
-      "CLI"
+      "npm",
+      "SQLite"
     ],
     "use_cases": [
-      "用 YAML 定义并启动多代理编码团队",
-      "让 Claude Code 与 Codex 分工完成同一任务",
-      "以 owner/checker 角色实现变更评审",
-      "通过 TUI 监控各代理运行状态与上下文"
+      "多 Agent 协同完成仓库改动",
+      "owner/checker 双 Agent 代码审查流程",
+      "以团队方式管理编码任务队列"
     ]
   }
 }
