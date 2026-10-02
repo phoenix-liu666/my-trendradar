@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-02T13:32:34+08:00",
+  "full_name": "earendil-works/pi",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-01T23:36:28Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "提供可自扩展的编码代理与代理运行时，统一多家模型接入并支持终端交互。",
+    "summary_zh": "AI 代理工具包，包含统一多模型 LLM API、代理运行时、TUI 与编码代理 CLI。",
+    "tech_stack": [
+      "TypeScript",
+      "npm",
+      "Bun",
+      "OpenAI API",
+      "Anthropic API",
+      "Google API"
+    ],
+    "use_cases": [
+      "终端交互式编码代理",
+      "构建自定义代理运行时",
+      "统一多模型调用",
+      "终端 UI 开发"
+    ]
+  }
+}

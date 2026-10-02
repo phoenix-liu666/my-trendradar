@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-10-01T13:47:33+08:00",
+  "cached_at": "2026-10-02T13:32:34+08:00",
   "full_name": "dzhng/jevgrep",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-01T04:00:47Z",
+  "repo_pushed_at": "2026-10-02T02:48:48Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
-    "maturity": "growing",
-    "problem": "编码 Agent 在不熟悉的仓库中需要花时间寻找相关文件；该项目通过语义检索返回文件、阅读线索和源码摘录，减少上下文搜集成本。",
-    "summary_zh": "面向编码 Agent 的 CLI 代码检索工具，用自然语言问题定位相关文件与源码片段。",
+    "category": "Developer Tool",
+    "maturity": "experimental",
+    "problem": "编码代理在陌生仓库中定位相关文件耗时耗上下文，影响任务成本与效率。",
+    "summary_zh": "面向编码代理的 CLI 代码检索工具，用自然语言问题定位相关文件与源码片段。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "npm",
       "Vercel AI Gateway",
       "CLI"
     ],
     "use_cases": [
-      "为 Claude Code / Codex 等 Agent 提供代码定位",
-      "按行为描述检索仓库文件",
-      "为不熟悉代码库补充上下文"
+      "代理任务前的仓库检索",
+      "按行为描述查找代码位置",
+      "降低编码代理任务成本",
+      "为 Claude Code/Codex 安装检索技能"
     ]
   }
 }

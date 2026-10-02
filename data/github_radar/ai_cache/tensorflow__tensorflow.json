@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-09-30T13:28:40+08:00",
+  "cached_at": "2026-10-02T13:32:34+08:00",
   "full_name": "tensorflow/tensorflow",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-30T05:28:25Z",
+  "repo_pushed_at": "2026-10-02T05:29:19Z",
   "schema_version": 1,
   "static": {
     "category": "Scientific AI",
     "maturity": "mature",
-    "problem": "为研究与开发者提供构建和部署机器学习应用的通用框架与工具生态。",
-    "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 稳定 API 及完整生态。",
+    "problem": "为研究与工程提供通用深度学习框架，支持从训练到部署的机器学习工作流。",
+    "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 稳定 API 及完整工具生态。",
     "tech_stack": [
       "C++",
       "Python",
       "CUDA",
-      "Docker"
+      "Docker",
+      "XLA"
     ],
     "use_cases": [
       "训练神经网络",
-      "部署 ML 应用",
-      "深度学习研究",
+      "部署机器学习模型",
+      "科研机器学习实验",
       "GPU 加速计算"
     ]
   }

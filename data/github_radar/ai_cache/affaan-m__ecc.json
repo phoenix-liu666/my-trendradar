@@ -1,13 +1,13 @@
 {
-  "cached_at": "2026-10-01T13:47:33+08:00",
+  "cached_at": "2026-10-02T13:32:34+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-30T18:45:04Z",
+  "repo_pushed_at": "2026-10-02T02:01:14Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决编码代理在技能复用、长期记忆、安全边界与研究工作流上的能力缺失，试图把代理运行环境标准化为一套可安装的 harness。",
+    "problem": "编码代理在长任务中缺乏统一的技能、记忆与安全层，导致上下文与行为不可控、重复劳动多。",
     "summary_zh": "面向 Claude Code、Codex 等编码代理的 harness 性能优化系统，提供技能、记忆、安全与研究优先开发能力。",
     "tech_stack": [
       "JavaScript",
@@ -18,8 +18,8 @@
       "MCP"
     ],
     "use_cases": [
-      "为 Claude Code 配置技能与记忆",
-      "为 Codex/OpenCode 统一代理运行环境",
+      "为 Claude Code/Codex 增加技能与记忆层",
+      "统一多代理的 harness 配置",
       "代理安全与权限治理",
       "研究优先的代理开发流程"
     ]
