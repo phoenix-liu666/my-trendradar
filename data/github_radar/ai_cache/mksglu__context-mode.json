@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-02T13:32:34+08:00",
+  "cached_at": "2026-10-03T13:14:32+08:00",
   "full_name": "mksglu/context-mode",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-02T00:13:31Z",
+  "repo_pushed_at": "2026-10-03T00:12:31Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "MCP 工具调用把大量原始数据灌入上下文，压缩后代理丢失文件与任务状态，成本与连续性受损。",
-    "summary_zh": "通过 MCP 与 hooks 为编码代理做上下文窗口优化，沙箱化工具输出并持久化会话记忆。",
+    "problem": "MCP 工具调用会把大量原始数据塞入上下文窗口，导致上下文快速耗尽，压缩后 Agent 丢失任务与文件状态。",
+    "summary_zh": "面向 AI 编码 Agent 的上下文窗口优化 MCP 服务，沙箱化工具输出并持久化会话记忆。",
     "tech_stack": [
       "TypeScript",
       "MCP",
@@ -17,10 +17,10 @@
       "BM25"
     ],
     "use_cases": [
-      "降低编码代理上下文占用",
-      "跨压缩的会话状态恢复",
-      "多客户端统一路由（17 平台）",
-      "以代码执行替代大量工具调用"
+      "降低编码 Agent 的上下文占用",
+      "跨会话保留任务与编辑状态",
+      "通过代码执行替代大量工具调用",
+      "统一多客户端 Agent 路由"
     ]
   }
 }

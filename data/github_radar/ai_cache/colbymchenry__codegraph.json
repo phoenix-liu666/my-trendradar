@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-10-01T13:47:33+08:00",
+  "cached_at": "2026-10-03T13:14:32+08:00",
   "full_name": "colbymchenry/codegraph",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-01T04:35:00Z",
+  "repo_pushed_at": "2026-10-03T05:05:29Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决编码代理读取代码时 token 消耗大、工具调用次数多、跨文件理解不足的问题。",
-    "summary_zh": "预索引的代码知识图谱，随代码变更自动同步，为多种编码代理提供本地语义代码检索。",
+    "problem": "编码 Agent 在陌生代码库中需要大量 token 和工具调用才能定位相关代码，效率低且上下文消耗大。",
+    "summary_zh": "本地预索引代码知识图谱，随代码变更自动同步，为多种编码 Agent 提供语义代码检索。",
     "tech_stack": [
       "C",
       "Rust",
-      "MCP",
-      "Node.js"
+      "Node.js",
+      "MCP"
     ],
     "use_cases": [
-      "为编码代理提供代码知识图谱",
-      "减少跨文件检索的 token 与调用次数",
-      "本地离线代码语义索引",
-      "多代理统一代码上下文"
+      "为 Claude Code/Cursor/Codex 提供代码图谱",
+      "减少 Agent 检索代码的 token 消耗",
+      "本地索引代码库结构",
+      "跨文件语义检索"
     ]
   }
 }

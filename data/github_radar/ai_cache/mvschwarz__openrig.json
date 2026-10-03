@@ -1,26 +1,28 @@
 {
-  "cached_at": "2026-10-02T13:32:34+08:00",
+  "cached_at": "2026-10-03T13:14:32+08:00",
   "full_name": "mvschwarz/openrig",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-02T04:39:59Z",
+  "repo_pushed_at": "2026-10-03T04:59:47Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "多个编码代理分散在终端会话中，缺乏角色、共享上下文与任务归属的统一编排。",
-    "summary_zh": "用 YAML 定义多代理团队，把 Claude Code、Codex 等 harness 组织为持久化协作网络。",
+    "problem": "多个编码 Agent 分散在终端会话中，缺少角色、共享上下文与任务归属；OpenRig 提供持久团队、队列与共享看板来组织协作。",
+    "summary_zh": "用 YAML 定义多 Agent 团队，把 Claude Code、Codex 等编排成持久协作的团队。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "tmux",
       "SQLite",
-      "YAML"
+      "YAML",
+      "Claude Code",
+      "Codex"
     ],
     "use_cases": [
-      "多代理团队编排",
-      "跨 Claude Code 与 Codex 协作",
-      "带角色与审查流程的代理工作流",
-      "持久化代理团队与任务队列"
+      "搭建多 Agent 编码团队",
+      "定义角色与共享上下文",
+      "用队列分配与跟踪任务",
+      "在 TUI 中查看团队运行状态"
     ]
   }
 }

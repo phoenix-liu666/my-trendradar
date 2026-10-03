@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-03T13:14:32+08:00",
+  "full_name": "coreyhaines31/marketingskills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-03T01:51:50Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "技术型营销人员和创始人希望编码 Agent 能处理转化优化、文案、SEO 等营销任务；该项目以技能文件形式提供对应框架与工作流。",
+    "summary_zh": "面向 Claude Code 等 AI Agent 的营销技能集合，覆盖 CRO、文案、SEO 与分析。",
+    "tech_stack": [
+      "JavaScript",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Windsurf",
+      "Agent Skills"
+    ],
+    "use_cases": [
+      "让 Agent 执行 SEO 审计与内容优化",
+      "生成与迭代广告创意和文案",
+      "规划 A/B 测试与增长实验",
+      "搭建营销相关 Agent 工作流"
+    ]
+  }
+}

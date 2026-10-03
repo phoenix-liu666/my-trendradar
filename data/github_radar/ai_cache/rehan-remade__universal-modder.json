@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-10-03T13:14:32+08:00",
+  "full_name": "rehan-remade/universal-modder",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-30T23:39:09Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "给 PC 游戏做 Mod 需要侦察、逆向、素材生成与实机验证等重复流程；该项目把流程固化为 Agent 技能、工具和可复用的现场笔记知识库。",
+    "summary_zh": "面向编码 Agent 的游戏 Mod 技能与工具集，含 fal MCP 与共享知识库。",
+    "tech_stack": [
+      "Python",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Gemini CLI",
+      "fal"
+    ],
+    "use_cases": [
+      "让 Agent 侦察游戏引擎并规划 Mod 路线",
+      "逆向游戏文件格式",
+      "用 fal 生成美术、3D 与音频素材",
+      "在实机中验证 Mod 并记录现场笔记"
+    ]
+  }
+}

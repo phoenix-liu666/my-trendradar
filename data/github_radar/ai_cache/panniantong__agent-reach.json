@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-10-03T13:14:32+08:00",
+  "full_name": "Panniantong/Agent-Reach",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-15T16:16:24Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "AI Agent 无法直接访问 Twitter、Reddit、YouTube、小红书等平台，各平台存在付费 API、封锁、登录和数据清洗门槛，需要逐个配置。",
+    "summary_zh": "为 AI Agent 提供读取和搜索多平台内容的 CLI 工具，零 API 费用。",
+    "tech_stack": [
+      "Python",
+      "CLI",
+      "MCP"
+    ],
+    "use_cases": [
+      "让 Agent 读取网页与 RSS",
+      "抓取 YouTube 字幕与搜索",
+      "搜索 Twitter/Reddit/B站/小红书内容",
+      "为 Claude Code、Cursor 等 Agent 增加联网能力"
+    ]
+  }
+}
