@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-02T13:32:34+08:00",
+  "cached_at": "2026-10-04T13:48:18+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-02T04:26:18Z",
+  "repo_pushed_at": "2026-10-04T04:48:50Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "让团队用可视化画布加自定义代码连接大量系统，构建自动化流程与多步 AI 代理。",
-    "summary_zh": "fair-code 工作流自动化平台，支持可视化搭建与代码混合，内置 AI 与 MCP 能力。",
+    "problem": "团队需要把 AI 代理与既有系统连接起来，同时兼顾可视化搭建与自定义代码。",
+    "summary_zh": "具备原生 AI 能力的可视化工作流自动化平台，支持自托管。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
@@ -18,10 +18,10 @@
       "MCP"
     ],
     "use_cases": [
-      "搭建自动化工作流",
-      "构建多步 AI 代理",
-      "连接第三方系统集成",
-      "自托管流程编排"
+      "搭建多步 AI 代理工作流",
+      "连接 1500+ 集成实现自动化",
+      "自托管处理敏感数据",
+      "用代码节点扩展高级 AI 流程"
     ]
   }
 }

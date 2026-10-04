@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-04T13:48:18+08:00",
+  "full_name": "pbakaus/impeccable",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-03T07:35:50Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "AI 生成的前端界面高度同质化，缺乏设计规范约束，导致字体、配色、卡片嵌套等重复问题。",
+    "summary_zh": "面向 AI 编码 Agent 的前端设计语言，含 1 个 skill、24 条命令与 61 条确定性检测规则。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "Claude Code Skill",
+      "Cursor",
+      "Codex CLI",
+      "Gemini CLI"
+    ],
+    "use_cases": [
+      "为 AI 编码工具安装设计 skill",
+      "审查与打磨前端界面",
+      "在浏览器中实时迭代视觉变体",
+      "运行无 LLM 的确定性设计检测"
+    ]
+  }
+}

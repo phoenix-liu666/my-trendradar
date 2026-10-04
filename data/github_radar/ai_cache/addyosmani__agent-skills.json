@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-09-21T12:51:38+08:00",
+  "cached_at": "2026-10-04T13:48:18+08:00",
   "full_name": "addyosmani/agent-skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-09-20T19:31:54Z",
+  "repo_pushed_at": "2026-10-03T18:21:11Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 AI 编码代理缺少统一工程规范与质量门禁、输出质量不稳定的问题。",
-    "summary_zh": "面向 AI 编码代理的生产级工程技能集，覆盖从需求到发布的完整开发生命周期。",
+    "problem": "AI 编码代理缺少一致的工程流程与质量门禁，导致产出质量不稳定。",
+    "summary_zh": "面向 AI 编码代理的生产级工程技能与工作流集合。",
     "tech_stack": [
       "JavaScript",
-      "Agent Skills",
       "Claude Code",
       "Cursor",
       "Codex",
       "Gemini CLI"
     ],
     "use_cases": [
-      "为编码代理安装规范与评审技能",
-      "用斜杠命令驱动 spec/plan/build/test 流程",
-      "在多种代理间复用同一套工程技能",
-      "为团队统一代码质量约束"
+      "为编码代理安装规范、计划、构建、测试等技能",
+      "在 Claude Code、Cursor 等工具中复用工程流程",
+      "用斜杠命令驱动开发生命周期",
+      "自动触发对应领域的技能"
     ]
   }
 }

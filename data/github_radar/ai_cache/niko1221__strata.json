@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-04T13:48:18+08:00",
+  "full_name": "Niko1221/Strata",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-03T01:17:05Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "大模型通常需要服务器级硬件，普通用户难以在自有 PC 上本地运行大参数模型并接入现有应用与编码 Agent。",
+    "summary_zh": "在消费级显卡上本地运行 125B 大模型的推理引擎，提供一键安装与本地 OpenAI/Anthropic 兼容 API。",
+    "tech_stack": [
+      "C++",
+      "CUDA",
+      "ROCm",
+      "MCP",
+      "OpenAI API",
+      "Anthropic API"
+    ],
+    "use_cases": [
+      "本地运行量化大模型",
+      "为编码 Agent 提供本地模型后端",
+      "通过 MCP 让 AI 工具自动安装与启停",
+      "本地图片输入推理"
+    ]
+  }
+}

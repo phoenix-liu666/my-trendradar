@@ -1,24 +1,23 @@
 {
-  "cached_at": "2026-10-02T13:32:34+08:00",
+  "cached_at": "2026-10-04T13:48:18+08:00",
   "full_name": "eternity4719/HowToLiveBetter",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-02T00:13:38Z",
+  "repo_pushed_at": "2026-10-04T02:44:45Z",
   "schema_version": 1,
   "static": {
     "category": "Knowledge Management",
     "maturity": "growing",
-    "problem": "用可核查的成本收益与证据分级，帮助普通人做健康、法律、财务等生活决策。",
-    "summary_zh": "中文生活决策指南，650 条建议标注成本收益与证据等级，附 Claude Code/Codex skill。",
+    "problem": "健康、法律、社保、理财等生活决策信息分散且缺乏证据分级，普通人难以低成本判断哪些做法真正划算。",
+    "summary_zh": "中文「高性价比人生指南」文档库，654 条建议标注成本、收益与证据等级，并附 AI 检索 skill。",
     "tech_stack": [
       "HTML",
-      "Claude Code",
-      "Codex"
+      "Claude Code Skill",
+      "Codex Skill"
     ],
     "use_cases": [
-      "查询生活决策建议",
-      "通过 AI skill 检索条目",
-      "离线阅读 PDF/EPUB",
-      "按证据等级筛选内容"
+      "按主题查阅生活决策建议",
+      "用 AI skill 检索并引用具体条目",
+      "导出 PDF/EPUB 离线阅读"
     ]
   }
 }
