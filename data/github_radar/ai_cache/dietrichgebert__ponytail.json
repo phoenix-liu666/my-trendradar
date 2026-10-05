@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-10-03T13:14:32+08:00",
+  "cached_at": "2026-10-05T13:34:17+08:00",
   "full_name": "DietrichGebert/ponytail",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-03T05:12:55Z",
+  "repo_pushed_at": "2026-10-05T03:45:49Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码 Agent 容易过度实现、引入多余依赖与代码；ponytail 通过技能约束让 Agent 优先使用原生方案、减少代码量与成本。",
-    "summary_zh": "让 AI 编码 Agent 遵循 YAGNI、少写代码的 Agent 技能。",
+    "problem": "编码代理倾向过度设计，引入多余依赖与代码，增加成本与维护负担。",
+    "summary_zh": "一个提示词技能，让 AI 编码代理遵循 YAGNI，用最少代码完成任务。",
     "tech_stack": [
       "JavaScript",
-      "Claude Code",
-      "Cursor",
-      "Agent Skills"
+      "Claude Code Plugin",
+      "Codex Plugin",
+      "AGENTS.md"
     ],
     "use_cases": [
-      "约束 Agent 减少过度实现",
-      "降低编码会话的代码量与成本",
-      "作为 Claude Code 等 Agent 的技能插件"
+      "约束代理减少过度工程",
+      "审查 diff 并给出可删除清单",
+      "在多种代理中统一编码风格约束",
+      "降低代理改动的代码量与成本"
     ]
   }
 }

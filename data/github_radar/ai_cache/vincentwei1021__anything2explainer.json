@@ -1,29 +1,28 @@
 {
-  "cached_at": "2026-09-26T12:53:58+08:00",
+  "cached_at": "2026-10-05T13:34:17+08:00",
   "full_name": "Vincentwei1021/anything2explainer",
   "model": "deepseek-v4-flash",
   "repo_pushed_at": "2026-09-18T11:52:13Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Research Tool",
     "maturity": "growing",
-    "problem": "解决解说视频制作门槛高的问题：由 Agent 完成选题研究、旁白、分镜与逐帧代码绘制，无需素材库或生成式视频模型。",
-    "summary_zh": "Claude Code/Codex 技能：输入主题，用 Remotion 代码绘制并输出带配音字幕的解说视频。",
+    "problem": "制作解说视频需要脚本、配音、分镜与渲染多环节，缺少可由编码代理端到端执行的流程。",
+    "summary_zh": "Claude Code/Codex 技能，把任意主题生成带配音字幕的代码绘制解说视频。",
     "tech_stack": [
       "TypeScript",
       "React",
       "Remotion",
       "edge-tts",
-      "kokoro-82m",
-      "FFmpeg",
+      "kokoro",
       "Python",
-      "zsh"
+      "ffmpeg"
     ],
     "use_cases": [
-      "把文章或主题转成解说视频",
-      "中英文双语视频生成",
-      "多 Agent 并行分镜构建",
-      "教学与科普内容批量生产"
+      "把主题或文档转成解说视频",
+      "生成中英文配音与字幕",
+      "用多代理并行构建分镜",
+      "按 QC 脚本检查渲染帧质量"
     ]
   }
 }

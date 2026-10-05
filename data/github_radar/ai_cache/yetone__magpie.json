@@ -1,28 +1,29 @@
 {
-  "cached_at": "2026-10-04T13:48:18+08:00",
+  "cached_at": "2026-10-05T13:34:17+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-04T05:46:46Z",
+  "repo_pushed_at": "2026-10-05T05:34:09Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "多个 AI 编码代理各自维护模型配置，切换模型需逐个改配置文件，且订阅与密钥难以共享。",
-    "summary_zh": "菜单栏工具，统一为各类 AI 编码代理切换与配置模型。",
+    "problem": "多个编码代理各自维护模型配置与密钥，切换模型需逐个改配置文件，订阅登录也无法共享。",
+    "summary_zh": "菜单栏工具，统一为各类 AI 编码代理选择与切换模型，并提供本地 API 网关。",
     "tech_stack": [
       "Go",
       "Wails",
-      "OpenAI API",
-      "Anthropic API",
+      "OpenAI Chat Completions API",
+      "OpenAI Responses API",
+      "Anthropic Messages API",
       "macOS",
       "Linux",
       "Windows"
     ],
     "use_cases": [
       "统一管理 Claude Code、Codex 等代理的模型",
-      "本地网关转发多厂商模型请求",
-      "共享已有订阅登录给其它代理",
-      "保存与切换代理配置快照"
+      "把已有订阅登录共享给其它代理",
+      "本地网关转发多家模型供应商",
+      "按配置快照切换整套代理设置"
     ]
   }
 }

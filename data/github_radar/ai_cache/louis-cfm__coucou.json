@@ -1,24 +1,27 @@
 {
-  "cached_at": "2026-10-03T13:14:32+08:00",
+  "cached_at": "2026-10-05T13:34:17+08:00",
   "full_name": "Louis-CFM/coucou",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-03T02:11:41Z",
+  "repo_pushed_at": "2026-10-05T02:29:59Z",
   "schema_version": 1,
   "static": {
-    "category": "Productivity",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码 Agent 在后台运行时用户难以实时查看进度、批准权限请求或切换终端窗口。",
-    "summary_zh": "驻留在 macOS 刘海或屏幕顶部的桌面小助手，实时监控并操作 AI 编码 Agent 会话。",
+    "problem": "编码代理在终端里运行时状态不可见，权限审批需要切回终端，打断当前工作。",
+    "summary_zh": "macOS 刘海/屏幕顶部的桌面伴侣，实时监控并审批 Claude Code 等编码代理会话。",
     "tech_stack": [
       "Swift",
       "SwiftUI",
-      "Tauri 2"
+      "Tauri 2",
+      "macOS",
+      "Windows",
+      "Linux"
     ],
     "use_cases": [
-      "在刘海处查看 Agent 会话状态",
-      "直接批准或拒绝权限请求",
+      "在刘海查看代理会话与文件改动",
+      "直接批准或拒绝代理权限请求",
       "从桌面与 Claude 等模型对话",
-      "拖拽文件作为 Agent 上下文"
+      "把窗口或文件作为上下文投喂给代理"
     ]
   }
 }
