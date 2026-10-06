@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-10-06T14:16:11+08:00",
+  "full_name": "tester-army/e2e",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-05T21:55:17Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "传统 e2e 测试脚本编写与维护成本高，界面变动后易失效；该项目让 agent 按自然语言目标操作应用，并把已验证动作录制回放以减少模型调用。",
+    "summary_zh": "面向 Web 与移动端的端到端测试框架，用自然语言描述目标，由 agent 驱动应用完成并断言结果。",
+    "tech_stack": [
+      "TypeScript",
+      "Playwright",
+      "Chromium",
+      "Firefox",
+      "WebKit",
+      "iOS Simulator",
+      "Android Emulator",
+      "npm"
+    ],
+    "use_cases": [
+      "Web 应用端到端测试",
+      "移动端 iOS/Android 自动化测试",
+      "CI 中按 PR 运行自然语言测试",
+      "用断言校验 agent 操作结果"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-06T14:16:11+08:00",
+  "full_name": "shihabal3amri/DiPlay",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-06T05:35:35Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "experimental",
+    "problem": "在未获 Apple 认证的 BYD 安卓车机上实现 CarPlay 投屏与导航显示，无需越狱、加密狗或认证服务器。",
+    "summary_zh": "面向兼容 BYD 安卓车机的独立 CarPlay 接收端，支持有线与无线，处于公开预览阶段。",
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Wi-Fi Direct",
+      "USB",
+      "CarPlay"
+    ],
+    "use_cases": [
+      "BYD 车机有线 CarPlay 投屏",
+      "无线 CarPlay 连接",
+      "HUD 导航箭头与路名显示",
+      "导出本地诊断报告"
+    ]
+  }
+}

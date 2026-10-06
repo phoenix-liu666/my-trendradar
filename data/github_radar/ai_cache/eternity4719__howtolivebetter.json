@@ -1,23 +1,23 @@
 {
-  "cached_at": "2026-10-04T13:48:18+08:00",
+  "cached_at": "2026-10-06T14:16:11+08:00",
   "full_name": "eternity4719/HowToLiveBetter",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-04T02:44:45Z",
+  "repo_pushed_at": "2026-10-06T03:03:14Z",
   "schema_version": 1,
   "static": {
     "category": "Knowledge Management",
     "maturity": "growing",
-    "problem": "健康、法律、社保、理财等生活决策信息分散且缺乏证据分级，普通人难以低成本判断哪些做法真正划算。",
-    "summary_zh": "中文「高性价比人生指南」文档库，654 条建议标注成本、收益与证据等级，并附 AI 检索 skill。",
+    "problem": "解决普通人在健康、法律、社保、理财等方面缺少可核查、按性价比排序的决策参考的问题。",
+    "summary_zh": "中文高性价比人生指南，667 条建议标注成本、收益、证据等级与原始出处。",
     "tech_stack": [
-      "HTML",
-      "Claude Code Skill",
-      "Codex Skill"
+      "HTML"
     ],
     "use_cases": [
-      "按主题查阅生活决策建议",
-      "用 AI skill 检索并引用具体条目",
-      "导出 PDF/EPUB 离线阅读"
+      "查询健康与防病建议",
+      "查询法律与社保规定",
+      "用 AI skill 按书条目回答生活决策问题",
+      "离线阅读 PDF/EPUB",
+      "在线全文检索"
     ]
   }
 }

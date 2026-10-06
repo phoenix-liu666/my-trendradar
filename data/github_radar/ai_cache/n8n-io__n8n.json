@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-05T13:34:17+08:00",
+  "cached_at": "2026-10-06T14:16:11+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-05T05:22:38Z",
+  "repo_pushed_at": "2026-10-06T06:12:27Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "把 AI 能力接入既有系统需要大量胶水代码，缺少可视化编排与自托管方案。",
-    "summary_zh": "fair-code 工作流自动化平台，可视化画布结合代码，内置 AI 与 MCP 能力。",
+    "problem": "解决把 AI 模型、工具与既有系统连接起来做多步自动化的问题，提供可视化画布加自定义代码的方式编排工作流。",
+    "summary_zh": "公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云端部署。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
@@ -18,10 +18,11 @@
       "MCP"
     ],
     "use_cases": [
-      "可视化编排多步 AI 工作流",
-      "连接 1500+ 集成与自有系统",
-      "自托管部署自动化流程",
-      "构建带人工审批的代理流程"
+      "搭建多步 AI 代理工作流",
+      "连接 1500+ 集成做业务自动化",
+      "自托管处理敏感数据流程",
+      "用 MCP 接入外部工具",
+      "基于模板快速搭建自动化"
     ]
   }
 }

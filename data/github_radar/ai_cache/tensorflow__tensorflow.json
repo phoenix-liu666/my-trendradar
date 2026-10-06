@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-04T13:48:18+08:00",
+  "cached_at": "2026-10-06T14:16:11+08:00",
   "full_name": "tensorflow/tensorflow",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-04T04:45:21Z",
+  "repo_pushed_at": "2026-10-06T06:16:13Z",
   "schema_version": 1,
   "static": {
     "category": "Scientific AI",
     "maturity": "mature",
-    "problem": "研究人员与开发者需要统一的机器学习与神经网络构建、训练和部署平台。",
-    "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 等 API。",
+    "problem": "为研究人员和开发者提供构建与部署机器学习应用的统一框架，覆盖从研究到生产的完整链路。",
+    "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 稳定 API 及完整生态。",
     "tech_stack": [
       "C++",
       "Python",
@@ -17,10 +17,11 @@
       "XLA"
     ],
     "use_cases": [
-      "构建与训练神经网络",
-      "部署机器学习应用",
-      "使用 GPU 加速训练",
-      "在研究中复现与扩展模型"
+      "训练与部署神经网络",
+      "科研机器学习实验",
+      "GPU 加速模型训练",
+      "构建 ML 应用",
+      "分布式训练"
     ]
   }
 }

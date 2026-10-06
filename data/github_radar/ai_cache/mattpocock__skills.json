@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-10-06T14:16:11+08:00",
+  "full_name": "mattpocock/skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-05T12:04:32Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "编码 agent 常见失败模式是需求对齐不足与输出冗长；该项目用可组合的小型技能（如需求追问、共享术语表）来改善与 agent 的协作流程。",
+    "summary_zh": "面向真实工程实践的 agent 技能集合，可从 .agents 目录安装到 Claude Code、Codex 等编码 agent。",
+    "tech_stack": [
+      "Shell",
+      "Claude Code Plugin",
+      "skills.sh",
+      "npx"
+    ],
+    "use_cases": [
+      "为 Claude Code 安装技能",
+      "为 Codex 等 agent 安装技能",
+      "用追问技能对齐需求",
+      "用术语表统一项目语言"
+    ]
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可自托管、可切换代理模式的开源编码代理，替代闭源编码助手，支持只读规划与全权限开发两种工作方式。",
+      "recommendation_reason": "作为开源编码代理的代表项目，值得研究其代理模式设计与多端分发方式，也可直接试用。",
+      "recommended_action": "study",
+      "relevance_reason": "开源编码代理本体，直接命中 ai_agents 中的 Coding Agent、OpenCode、agent framework 等关键词。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码代理，提供终端界面与桌面应用，内置 build/plan 两种代理模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Docker"
+      ],
+      "use_cases": [
+        "在终端中运行 AI 编码代理",
+        "用 plan 模式只读探索陌生代码库",
+        "用 build 模式执行开发任务",
+        "通过桌面应用使用编码代理",
+        "通过 @general 子代理做复杂搜索"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "Star 总量约 21 万，7 天新增 1237，24 小时新增 139，属于持续高热度项目；无证据确定具体外部驱动事件。"
+      }
+    },
+    "cdyforever/how-to-live-better": {
+      "category": "Knowledge Management",
+      "from_cache": false,
+      "full_name": "cdyforever/how-to-live-better",
+      "maturity": "mature",
+      "problem": "原书内容在手机上阅读与检索不便；该项目将其打包为自包含单页，无需安装、断网可读并支持搜索与筛选。",
+      "recommendation_reason": "内容型阅读页，与用户技术兴趣画像关联度低。",
+      "recommended_action": "skip",
+      "relevance_reason": "属于知识管理与阅读工具，与 productivity 有弱关联，但不涉及 AI agent、科研 AI、计算光学或深度学习。",
+      "relevance_score": 18,
+      "summary_zh": "把开源书《高性价比人生指南》528 条建议渲染成零依赖、可离线、可搜索的单文件 HTML 阅读页。",
+      "tech_stack": [
+        "HTML",
+        "Python",
+        "GitHub Actions",
+        "GitHub Pages"
+      ],
+      "use_cases": [
+        "手机离线阅读全书",
+        "按关键词搜索建议",
+        "按证据等级筛选条目",
+        "打印阅读页"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "7 日 Star 增量明显且 24 小时仍有增长，仓库近期持续更新，但缺少足够证据确定具体外部驱动事件。"
+      }
+    },
+    "eternity4719/howtolivebetter": {
+      "category": "Knowledge Management",
+      "from_cache": false,
+      "full_name": "eternity4719/HowToLiveBetter",
+      "maturity": "growing",
+      "problem": "解决普通人在健康、法律、社保、理财等方面缺少可核查、按性价比排序的决策参考的问题。",
+      "recommendation_reason": "主题为生活指南，与 AI 代理、科研 AI、计算光学等核心兴趣不匹配。",
+      "recommended_action": "skip",
+      "relevance_reason": "仅因 README 提到 Claude Code 与 Codex skill 而命中关键词，内容主题与用户兴趣画像基本无关。",
+      "relevance_score": 30,
+      "summary_zh": "中文高性价比人生指南，667 条建议标注成本、收益、证据等级与原始出处。",
+      "tech_stack": [
+        "HTML"
+      ],
+      "use_cases": [
+        "查询健康与防病建议",
+        "查询法律与社保规定",
+        "用 AI skill 按书条目回答生活决策问题",
+        "离线阅读 PDF/EPUB",
+        "在线全文检索"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "24 小时新增 2918 Star，7 天新增 18852，热度极高，属于近期快速传播的项目；无证据确定具体外部驱动事件。"
+      }
+    },
+    "louis-cfm/coucou": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "Louis-CFM/coucou",
+      "maturity": "growing",
+      "problem": "解决开发者使用 Claude Code、Codex 等编码代理时需频繁切换终端查看进度与批准权限的问题，把会话状态和审批放到刘海或锁屏上。",
+      "recommendation_reason": "与用户关注的编码代理工作流高度相关，且为开源可自托管，适合实际试用其刘海审批体验。",
+      "recommended_action": "try",
+      "relevance_reason": "直接面向 Claude Code、Codex、Cursor 等编码代理的监控与审批，命中 ai_agents 权重 1.0 的核心关键词。",
+      "relevance_score": 88,
+      "summary_zh": "Mac 刘海与 iPhone 上的 AI 编码代理监控小助手，可查看会话并直接批准权限。",
+      "tech_stack": [
+        "Swift",
+        "SwiftUI",
+        "Tauri 2",
+        "macOS",
+        "iOS",
+        "Windows",
+        "Linux"
+      ],
+      "use_cases": [
+        "在 Mac 刘海查看 Claude Code 会话进度",
+        "从刘海或锁屏批准代理权限请求",
+        "在 iPhone 上跟踪编码代理会话",
+        "拖拽文件给代理作为上下文",
+        "查看 Claude 套餐用量"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "pushed_at"
+        ],
+        "summary": "24 小时新增 217 Star，热度中等，属于编码代理周边工具的自然增长；无证据表明存在特定外部事件驱动。"
+      }
+    },
+    "mattpocock/skills": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "mattpocock/skills",
+      "maturity": "growing",
+      "problem": "编码 agent 常见失败模式是需求对齐不足与输出冗长；该项目用可组合的小型技能（如需求追问、共享术语表）来改善与 agent 的协作流程。",
+      "recommendation_reason": "与编码 agent 使用方式高度相关，安装成本低，可实际试用其技能流程。",
+      "recommended_action": "try",
+      "relevance_reason": "直接面向 Claude Code、Codex 等编码 agent 的技能与工作流，命中 ai_agents 核心兴趣，同时属于开发者生产力工具。",
+      "relevance_score": 88,
+      "summary_zh": "面向真实工程实践的 agent 技能集合，可从 .agents 目录安装到 Claude Code、Codex 等编码 agent。",
+      "tech_stack": [
+        "Shell",
+        "Claude Code Plugin",
+        "skills.sh",
+        "npx"
+      ],
+      "use_cases": [
+        "为 Claude Code 安装技能",
+        "为 Codex 等 agent 安装技能",
+        "用追问技能对齐需求",
+        "用术语表统一项目语言"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "Star 数量与 24 小时增量都很高，仓库近期仍在更新，但缺少足够证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "解决把 AI 模型、工具与既有系统连接起来做多步自动化的问题，提供可视化画布加自定义代码的方式编排工作流。",
+      "recommendation_reason": "与自动化与代理编排相关，但用户核心兴趣在编码代理与科研 AI，可先观察其 AI 代理能力演进。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 的 automation、workflow 与 ai_agents 的 MCP、tool use，但并非编码代理本体。",
+      "relevance_score": 72,
+      "summary_zh": "公平代码的工作流自动化平台，原生支持 AI 能力，可自托管或云端部署。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "JavaScript",
+        "Python",
+        "MCP"
+      ],
+      "use_cases": [
+        "搭建多步 AI 代理工作流",
+        "连接 1500+ 集成做业务自动化",
+        "自托管处理敏感数据流程",
+        "用 MCP 接入外部工具",
+        "基于模板快速搭建自动化"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score",
+          "forks"
+        ],
+        "summary": "Star 总量约 20.7 万，7 天新增 504，24 小时新增 59，属于长期高基数项目的稳定增长；无证据确定具体外部事件。"
+      }
+    },
+    "nandhakishorm/laya": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "NandhaKishorM/laya",
+      "maturity": "growing",
+      "problem": "用生成式大模型做分类与判定成本高、延迟大；该项目以非自回归方式在单次前向中输出类型化决策，支持 100 多种语言与长文档。",
+      "recommendation_reason": "与 agent 工具链和模型基础设施相关，且提供多种集成方式，值得深入研究其路由与决策机制。",
+      "recommended_action": "study",
+      "relevance_reason": "属于 LLM 基础设施与决策模型，提供 MCP、LangChain、CrewAI 等 agent 集成，与 ai_agents 相关，同时涉及深度学习模型。",
+      "relevance_score": 70,
+      "summary_zh": "多语言非自回归 System 1 决策引擎，单次前向传播完成选择、评分与是/否判断，并按请求路由到合适检查点。",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "ModernBERT",
+        "ONNX Runtime",
+        "Hugging Face",
+        "MCP",
+        "LangChain",
+        "LlamaIndex"
+      ],
+      "use_cases": [
+        "文本分类与工单分流",
+        "风险或流失倾向评分",
+        "是/否判定任务",
+        "多语言文本决策",
+        "作为 agent 工具或 MCP 服务接入"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 数量与 7 日增量都很高，仓库近期仍在更新，但缺少足够证据确定具体外部驱动事件。"
+      }
+    },
+    "niko1221/strata": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "Niko1221/Strata",
+      "maturity": "growing",
+      "problem": "解决大模型通常需要服务器才能运行的问题，让普通游戏 PC 在 12GB 以上显存下本地运行大模型并对外提供 API。",
+      "recommendation_reason": "本地大模型推理对编码代理后端有实用价值，但项目较新且 issue 较多，建议先观察稳定性。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 LLM Infrastructure，且 README 提到可服务编码代理与 MCP，与 ai_agents 间接相关，但非代理本体。",
+      "relevance_score": 70,
+      "summary_zh": "在消费级显卡上本地运行 1250 亿参数大模型的推理引擎，提供一键安装。",
+      "tech_stack": [
+        "C++",
+        "CUDA",
+        "ROCm",
+        "MCP",
+        "OpenAI API",
+        "Anthropic API"
+      ],
+      "use_cases": [
+        "本地运行大模型对话与写代码",
+        "在 localhost 提供 OpenAI/Anthropic 兼容 API",
+        "为编码代理提供本地模型后端",
+        "本地图片输入推理",
+        "多卡共享模型推理"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "24 小时新增 2780 Star，热度很高，属于近期快速上升项目；无证据确定具体外部驱动事件。"
+      }
+    },
+    "robbietilton/compositor": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "robbietilton/Compositor",
+      "maturity": "growing",
+      "problem": "Photoshop 订阅成本高、部分开源工具操作习惯不熟悉；该项目提供免费开源、贴近 Photoshop 工作流的像素级图像编辑工具。",
+      "recommendation_reason": "与兴趣画像关联有限，但其 agent 可写项目文件的设计值得留意。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于生产力与开发者工具，且提到 AI agent 可写入 .comp 项目，与 ai_agents 有弱关联，但主体是图像编辑，与核心兴趣距离较远。",
+      "relevance_score": 30,
+      "summary_zh": "面向 macOS 的开源图像编辑器，定位为 Photoshop 替代品，支持图层、蒙版、调整与 PSD 导入。",
+      "tech_stack": [
+        "Swift",
+        "macOS",
+        "Xcode",
+        "Metal/GPU 渲染",
+        "Homebrew"
+      ],
+      "use_cases": [
+        "图像合成与后期处理",
+        "图层与蒙版编辑",
+        "PSD 文件导入编辑",
+        "由 AI agent 或脚本生成 .comp 项目"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score"
+        ],
+        "summary": "24 小时与 7 日 Star 增量较高，热度分靠前，但缺少足够证据确定具体外部驱动事件。"
+      }
+    },
+    "shihabal3amri/diplay": {
+      "category": "Other",
+      "from_cache": false,
+      "full_name": "shihabal3amri/DiPlay",
+      "maturity": "experimental",
+      "problem": "在未获 Apple 认证的 BYD 安卓车机上实现 CarPlay 投屏与导航显示，无需越狱、加密狗或认证服务器。",
+      "recommendation_reason": "与兴趣画像无关，且项目自述为非认证、兼容性未保证的预览版本。",
+      "recommended_action": "skip",
+      "relevance_reason": "车载 CarPlay 接收端，与用户关注的 AI agent、科研 AI、计算光学、深度学习、生产力方向均无关联。",
+      "relevance_score": 5,
+      "summary_zh": "面向兼容 BYD 安卓车机的独立 CarPlay 接收端，支持有线与无线，处于公开预览阶段。",
+      "tech_stack": [
+        "Kotlin",
+        "Android",
+        "Wi-Fi Direct",
+        "USB",
+        "CarPlay"
+      ],
+      "use_cases": [
+        "BYD 车机有线 CarPlay 投屏",
+        "无线 CarPlay 连接",
+        "HUD 导航箭头与路名显示",
+        "导出本地诊断报告"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "pushed_at"
+        ],
+        "summary": "24 小时 Star 增量与热度分较高，仓库近期持续更新，但缺少足够证据确定具体外部驱动事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "为研究人员和开发者提供构建与部署机器学习应用的统一框架，覆盖从研究到生产的完整链路。",
+      "recommendation_reason": "成熟通用框架，用户大概率已了解，无新增情报价值，无需特别关注。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep_learning 的 deep learning、neural network，权重 0.8，但与用户核心的代理、科研自动化、光学方向关联有限。",
+      "relevance_score": 55,
+      "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 稳定 API 及完整生态。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker",
+        "XLA"
+      ],
+      "use_cases": [
+        "训练与部署神经网络",
+        "科研机器学习实验",
+        "GPU 加速模型训练",
+        "构建 ML 应用",
+        "分布式训练"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score"
+        ],
+        "summary": "Star 总量约 20 万，7 天新增 110，24 小时新增 7，属于成熟框架的低速自然增长，无热度事件迹象。"
+      }
+    },
+    "tester-army/e2e": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "tester-army/e2e",
+      "maturity": "growing",
+      "problem": "传统 e2e 测试脚本编写与维护成本高，界面变动后易失效；该项目让 agent 按自然语言目标操作应用，并把已验证动作录制回放以减少模型调用。",
+      "recommendation_reason": "与 agent 工具链相关且热度高，但项目自述仍在 1.0 前、API 可能变动，建议先观察。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 agent 驱动工具与开发者工具，涉及 agent 操作应用（computer use 类），与 ai_agents 和 productivity 兴趣相关，但非编码 agent 或科研方向。",
+      "relevance_score": 62,
+      "summary_zh": "面向 Web 与移动端的端到端测试框架，用自然语言描述目标，由 agent 驱动应用完成并断言结果。",
+      "tech_stack": [
+        "TypeScript",
+        "Playwright",
+        "Chromium",
+        "Firefox",
+        "WebKit",
+        "iOS Simulator",
+        "Android Emulator",
+        "npm"
+      ],
+      "use_cases": [
+        "Web 应用端到端测试",
+        "移动端 iOS/Android 自动化测试",
+        "CI 中按 PR 运行自然语言测试",
+        "用断言校验 agent 操作结果"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "trending_rank",
+          "heat_score"
+        ],
+        "summary": "Star 与 24 小时增量较高且位列 trending 第 1，但缺少足够证据确定具体外部驱动事件。"
+      }
+    }
+  },
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T14:16:11+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 与 LLM 基础设施仍是主线，本地推理与知识管理类项目热度突出。",
+    "rising_categories": [
+      "Coding Agent",
+      "LLM Infrastructure",
+      "Knowledge Management",
+      "Productivity",
+      "Developer Tool"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 有 3 个项目，为今日数量最多的类别。",
+      "hot_today 中 Knowledge Management 的 HowToLiveBetter delta_24h 达 2918，为当日最高增量。",
+      "LLM Infrastructure 的 Strata delta_24h 为 2780，heat_score 89.26，本地大模型推理方向热度靠前。",
+      "for_you 中 Coding Agent 三项 relevance 分别为 88、95、88，与个人关注方向匹配度最高。",
+      "new_and_rising 中同时出现 HowToLiveBetter 与 how-to-live-better 两个同主题项目，知识管理类出现聚集。"
+    ],
+    "watch_tomorrow": [
+      "Coding Agent 类别是否继续维持最多项目数",
+      "Niko1221/Strata 的本地大模型推理热度是否延续",
+      "eternity4719/HowToLiveBetter 与 cdyforever/how-to-live-bette…",
+      "tester-army/e2e 这类自然语言驱动测试工具的增长",
+      "robbietilton/Compositor 等开源桌面生产力工具的后续表现"
+    ]
+  },
+  "usage": {
+    "cache_hits": 3,
+    "completion_tokens": 3832,
+    "failed_requests": 1,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 24867,
+    "prompt_tokens": 27171,
+    "repositories_analyzed": 12,
+    "requests": 4,
+    "successful_requests": 3,
+    "total_tokens": 31003
+  }
+}

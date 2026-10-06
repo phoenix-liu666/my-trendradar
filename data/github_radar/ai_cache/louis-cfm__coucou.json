@@ -1,27 +1,29 @@
 {
-  "cached_at": "2026-10-05T13:34:17+08:00",
+  "cached_at": "2026-10-06T14:16:11+08:00",
   "full_name": "Louis-CFM/coucou",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-05T02:29:59Z",
+  "repo_pushed_at": "2026-10-06T00:52:16Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码代理在终端里运行时状态不可见，权限审批需要切回终端，打断当前工作。",
-    "summary_zh": "macOS 刘海/屏幕顶部的桌面伴侣，实时监控并审批 Claude Code 等编码代理会话。",
+    "problem": "解决开发者使用 Claude Code、Codex 等编码代理时需频繁切换终端查看进度与批准权限的问题，把会话状态和审批放到刘海或锁屏上。",
+    "summary_zh": "Mac 刘海与 iPhone 上的 AI 编码代理监控小助手，可查看会话并直接批准权限。",
     "tech_stack": [
       "Swift",
       "SwiftUI",
       "Tauri 2",
       "macOS",
+      "iOS",
       "Windows",
       "Linux"
     ],
     "use_cases": [
-      "在刘海查看代理会话与文件改动",
-      "直接批准或拒绝代理权限请求",
-      "从桌面与 Claude 等模型对话",
-      "把窗口或文件作为上下文投喂给代理"
+      "在 Mac 刘海查看 Claude Code 会话进度",
+      "从刘海或锁屏批准代理权限请求",
+      "在 iPhone 上跟踪编码代理会话",
+      "拖拽文件给代理作为上下文",
+      "查看 Claude 套餐用量"
     ]
   }
 }
