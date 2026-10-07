@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-10-07T13:54:49+08:00",
+  "full_name": "morluto/rea",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-07T05:54:31Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "想理解某应用功能实现却无源码，缺少让 Agent 系统化分析二进制与前端产物的工具链。",
+    "summary_zh": "通过 MCP 让 Agent 对二进制、应用与运行时行为做逆向工程分析。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "MCP",
+      "Ghidra",
+      "Hopper",
+      "JavaScript",
+      "Electron",
+      ".NET"
+    ],
+    "use_cases": [
+      "让 Agent 逆向分析原生二进制",
+      "分析 JavaScript/Electron 应用",
+      "分析 .NET 程序集与网站",
+      "在终端直接运行逆向分析"
+    ]
+  }
+}

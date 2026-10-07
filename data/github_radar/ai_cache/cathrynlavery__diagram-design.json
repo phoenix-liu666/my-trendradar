@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-07T13:54:49+08:00",
+  "full_name": "cathrynlavery/diagram-design",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-06T16:12:51Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "让 AI 生成的图表风格统一、可读，避免通用圆角框与 Mermaid 式粗糙输出。",
+    "summary_zh": "面向 Claude Code、Codex 等的编辑级图表设计技能，输出自包含 HTML+SVG。",
+    "tech_stack": [
+      "HTML",
+      "SVG",
+      "Claude Code",
+      "Codex",
+      "GitHub Copilot",
+      "Agent Skills"
+    ],
+    "use_cases": [
+      "生成架构图与流程图",
+      "生成时序图、状态机、ER 图",
+      "重绘 draw.io/Mermaid/Excalidraw 源",
+      "为文档生成品牌风格图表"
+    ]
+  }
+}
