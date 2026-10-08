@@ -1,0 +1,257 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "解决闭源编码 Agent 不可控的问题，提供开源、可自托管、多平台安装的编码 Agent。",
+      "recommendation_reason": "作为开源编码 Agent 的代表项目，值得深入研究其架构与 Agent 模式设计。",
+      "recommended_action": "study",
+      "relevance_reason": "正是 ai_agents 画像中的 OpenCode / Coding Agent 核心项目，相关度最高。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码 Agent，提供终端界面与桌面应用，内置 build/plan 等 Agent 模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Docker"
+      ],
+      "use_cases": [
+        "终端内 AI 编码",
+        "代码库探索与规划",
+        "多步任务自动化",
+        "自托管编码 Agent"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "forks"
+        ],
+        "summary": "Star 数极高且近 7 日仍有增长，更新活跃，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "cathrynlavery/diagram-design": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "cathrynlavery/diagram-design",
+      "maturity": "growing",
+      "problem": "解决 AI 生成图表样式千篇一律、缺乏设计感的问题，提供 42 种图表类型与品牌化视觉输出。",
+      "recommendation_reason": "对 Agent 输出质量提升有实用价值，可按需再评估是否引入工作流。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 Agent 技能与开发者工具，与 ai_agents、productivity 相关，但不涉及研究或光学方向。",
+      "relevance_score": 62,
+      "summary_zh": "为 Claude Code、Codex 等 Agent 提供编辑级图表设计的技能，输出自包含 HTML+SVG。",
+      "tech_stack": [
+        "HTML",
+        "SVG",
+        "Claude Code",
+        "Codex",
+        "Agent Skills"
+      ],
+      "use_cases": [
+        "生成架构图与流程图",
+        "重绘 draw.io/Mermaid 图",
+        "文档配图",
+        "品牌化视觉输出"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "trending_rank",
+          "forks"
+        ],
+        "summary": "Star 数很高且当日仍有增长，Trending 排名靠前，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "louis-cfm/coucou": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "Louis-CFM/coucou",
+      "maturity": "growing",
+      "problem": "解决编码 Agent 运行时需频繁切回终端确认权限、查看进度的问题，在刘海或锁屏直接批准与查看。",
+      "recommendation_reason": "对提升 Agent 交互体验有参考意义，非核心基础设施。",
+      "recommended_action": "watch",
+      "relevance_reason": "面向 Coding Agent 使用体验，与 ai_agents、productivity 相关，但偏消费端 UI。",
+      "relevance_score": 66,
+      "summary_zh": "Mac 刘海与 iPhone 上的小助手，实时监控并批准 Claude Code、Codex 等编码 Agent 会话。",
+      "tech_stack": [
+        "Swift",
+        "SwiftUI",
+        "Tauri",
+        "iOS",
+        "macOS"
+      ],
+      "use_cases": [
+        "监控 Agent 会话",
+        "刘海/锁屏批准权限",
+        "查看文件改动 diff",
+        "跨设备跟进 Agent 状态"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 数中等且当日有增长，更新活跃，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "morluto/rea": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "morluto/rea",
+      "maturity": "growing",
+      "problem": "解决在缺少源码时理解应用功能实现的问题：让 Agent 检查原生二进制、Electron/JS 应用、.NET 程序集与网站，并给出带证据的分析结论。",
+      "recommendation_reason": "MCP 与 Agent 工具链设计有参考价值，且热度与更新活跃度都较高。",
+      "recommended_action": "study",
+      "relevance_reason": "属于 AI Agent / MCP / tool use 方向，与 ai_agents 兴趣高度相关，兼有安全分析属性。",
+      "relevance_score": 88,
+      "summary_zh": "通过 MCP 让 AI Agent 对二进制、应用与运行时行为做逆向分析的工具集。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "Ghidra",
+        "Hopper",
+        "Electron"
+      ],
+      "use_cases": [
+        "逆向分析原生二进制",
+        "分析 Electron/JS 应用",
+        "在 Agent 中做静态分析",
+        "CTF 与安全研究",
+        "复刻他人产品功能"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "trending_rank",
+          "forks"
+        ],
+        "summary": "Star 量高且当日增长显著，Trending 排名第 1，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "rehan-remade/universal-modder": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "rehan-remade/universal-modder",
+      "maturity": "growing",
+      "problem": "解决游戏模组开发门槛高的问题：让 Agent 识别引擎、阅读代码、生成美术资源、在游戏中验证并沉淀经验。",
+      "recommendation_reason": "Agent 技能编排与知识库设计有参考价值，但适用场景较垂直。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 Agent 技能与 MCP 应用，与 ai_agents 相关，但领域偏游戏模组。",
+      "relevance_score": 70,
+      "summary_zh": "让 AI 编码 Agent 对 PC 游戏做逆向与模组开发的技能、工具与共享知识库。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Claude Code",
+        "Codex",
+        "fal",
+        "Blender",
+        "ffmpeg"
+      ],
+      "use_cases": [
+        "游戏模组开发",
+        "游戏逆向与侦察",
+        "AI 生成美术/3D/音频资源",
+        "模组知识库协作"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 数较高且当日有增长，更新活跃，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "yetone/magpie": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "yetone/magpie",
+      "maturity": "growing",
+      "problem": "解决多个编码 Agent 各自维护模型配置、订阅无法互通、配额耗尽需手动改配置的问题。",
+      "recommendation_reason": "对多 Agent、多模型工作流有直接实用价值，且项目仍在快速迭代。",
+      "recommended_action": "try",
+      "relevance_reason": "直接服务于 Coding Agent 使用体验，与 ai_agents 兴趣高度相关。",
+      "relevance_score": 80,
+      "summary_zh": "菜单栏工具，统一管理多个编码 Agent 的模型与 API 网关，支持配额耗尽自动切换。",
+      "tech_stack": [
+        "Go",
+        "macOS",
+        "OpenAI API",
+        "Anthropic API",
+        "Gemini API",
+        "Docker"
+      ],
+      "use_cases": [
+        "统一管理多 Agent 模型配置",
+        "跨供应商 API 路由与故障转移",
+        "订阅账号共享",
+        "用量与成本追踪"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "forks"
+        ],
+        "summary": "Star 与近 7 日增长明显，更新活跃，但无证据确定具体外部驱动事件。"
+      }
+    }
+  },
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T13:58:51+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 类项目在今日榜单中聚集最明显，热度与个人相关性双高。",
+    "rising_categories": [
+      "Coding Agent",
+      "LLM Infrastructure",
+      "Developer Tool",
+      "Productivity"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 占 3 个，是今日分布最多的类别。",
+      "hot_today 中 morluto/rea 的 delta_24h 为 6622，heat_score 81.45，relevance 88，属于热度与相关性都靠前的项目。",
+      "for_you 前两位均为 Coding Agent（morluto/rea 88、anomalyco/opencode 95），个人相关性评分集中在该类别。",
+      "new_and_rising 中 storytold/photocraft（delta_24h 9975）与 openai/math（delta_24h 5864）是当日增量最高的两个项目，但未标注 category。",
+      "LLM Infrastructure 与 Developer Tool 各仅 1 个项目进入汇总，样本不足以判断为类别级趋势。"
+    ],
+    "watch_tomorrow": [
+      "morluto/rea 的 delta_24h 与 heat_score 能否维持（Coding Agent）",
+      "anomalyco/opencode 在 for_you 中 relevance 95 的后续表现",
+      "yetone/magpie 作为 LLM Infrastructure 单点是否带动同类项目出现",
+      "storytold/photocraft 与 openai/math 的高增量是否持续",
+      "cathrynlavery/diagram-design 代表的 Agent 配套技能类工具是否增多"
+    ]
+  },
+  "usage": {
+    "cache_hits": 3,
+    "completion_tokens": 1893,
+    "failed_requests": 1,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 13834,
+    "prompt_tokens": 15242,
+    "repositories_analyzed": 6,
+    "requests": 3,
+    "successful_requests": 2,
+    "total_tokens": 17135
+  }
+}

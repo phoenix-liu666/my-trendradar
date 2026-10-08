@@ -1,29 +1,27 @@
 {
-  "cached_at": "2026-10-07T13:54:49+08:00",
+  "cached_at": "2026-10-08T13:58:51+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-07T05:47:03Z",
+  "repo_pushed_at": "2026-10-08T05:53:33Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "多个编码 Agent 各自维护模型配置、密钥与订阅，配额耗尽时需手动改配置，缺乏统一入口。",
-    "summary_zh": "本地网关统一管理多个编码 Agent 的模型与订阅，可从菜单栏切换。",
+    "problem": "解决多个编码 Agent 各自维护模型配置、订阅无法互通、配额耗尽需手动改配置的问题。",
+    "summary_zh": "菜单栏工具，统一管理多个编码 Agent 的模型与 API 网关，支持配额耗尽自动切换。",
     "tech_stack": [
       "Go",
       "macOS",
-      "Windows",
-      "Linux",
-      "Docker",
       "OpenAI API",
       "Anthropic API",
-      "Gemini API"
+      "Gemini API",
+      "Docker"
     ],
     "use_cases": [
-      "统一管理多个编码 Agent 的模型配置",
-      "在多个供应商间做配额路由与故障转移",
-      "共享 Claude/ChatGPT 等订阅给其它 Agent",
-      "查看 token 用量与成本"
+      "统一管理多 Agent 模型配置",
+      "跨供应商 API 路由与故障转移",
+      "订阅账号共享",
+      "用量与成本追踪"
     ]
   }
 }
