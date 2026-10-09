@@ -1,0 +1,266 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可自托管、可切换代理模式的编码代理工具，替代闭源编码代理。",
+      "recommendation_reason": "作为开源编码代理可直接安装试用，与 Claude Code、Codex 形成对照，适合纳入日常工作流评估。",
+      "recommended_action": "try",
+      "relevance_reason": "本身就是开源 Coding Agent，直接命中 ai_agents 与 OpenCode 关键词，与用户兴趣高度一致。",
+      "relevance_score": 92,
+      "summary_zh": "开源 AI 编码代理，提供终端界面与桌面应用，内置 build/plan 等代理模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Docker"
+      ],
+      "use_cases": [
+        "终端内进行 AI 辅助编码",
+        "用只读 plan 代理探索陌生代码库",
+        "多步任务委派给子代理",
+        "通过包管理器安装与更新",
+        "桌面端使用编码代理"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars: 212248",
+          "delta_7d: 878",
+          "delta_24h: -8",
+          "forks: 28333",
+          "heat_score: 25.71"
+        ],
+        "summary": "Star 总量很大且 7 天仍有增长，但 24 小时增量为负，热度处于高位波动；无证据确定具体外部驱动事件。"
+      }
+    },
+    "dietrichgebert/ponytail": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "DietrichGebert/ponytail",
+      "maturity": "growing",
+      "problem": "代理容易过度生成代码与依赖；该技能约束代理复用现有组件、少写代码，同时保留校验、错误处理与安全逻辑。",
+      "recommendation_reason": "其提示词与基准方法对理解如何约束代理输出有参考价值，值得研究后再决定是否长期使用。",
+      "recommended_action": "study",
+      "relevance_reason": "面向 Claude Code、Cursor 等编码代理的行为约束技能，命中 ai_agents 与 developer tools 关键词。",
+      "relevance_score": 85,
+      "summary_zh": "一个让 AI 编码代理遵循 YAGNI、只写必要代码的 agent skill。",
+      "tech_stack": [
+        "JavaScript",
+        "npm",
+        "Claude Code",
+        "Cursor"
+      ],
+      "use_cases": [
+        "约束代理减少冗余代码",
+        "代码评审时发现遗漏的破坏性改动",
+        "降低代理 token 与成本",
+        "在编码代理中统一工程规范"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars: 158788",
+          "delta_7d: 8008",
+          "forks: 8538",
+          "heat_score: 79.34"
+        ],
+        "summary": "Star 总量与 7 天增量都极高，属于当前热度很高的代理技能项目；无证据确定具体外部驱动事件。"
+      }
+    },
+    "louis-cfm/coucou": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "Louis-CFM/coucou",
+      "maturity": "growing",
+      "problem": "编码代理在终端里跑时，用户需要切窗口才能看到进度、审批权限请求；该项目把会话状态与审批入口放到刘海/锁屏上。",
+      "recommendation_reason": "与用户对 Coding Agent 工具链的兴趣高度相关，且为开源可自建，适合实际试用其审批与监控体验。",
+      "recommended_action": "try",
+      "relevance_reason": "直接面向 Claude Code、Codex、Cursor、OpenCode 等编码代理的会话监控与审批，命中 ai_agents 权重 1.0 关键词。",
+      "relevance_score": 88,
+      "summary_zh": "在 Mac 刘海与 iPhone 上监控并审批 Claude Code、Codex 等 AI 编码代理会话的桌面小工具。",
+      "tech_stack": [
+        "Swift",
+        "SwiftUI",
+        "Tauri 2",
+        "macOS",
+        "iOS",
+        "Windows",
+        "Linux"
+      ],
+      "use_cases": [
+        "在刘海查看 Claude Code 会话进度",
+        "从刘海批准/拒绝权限请求",
+        "跳转到对应终端窗口",
+        "在 iPhone 锁屏/Dynamic Island 跟进代理状态",
+        "与本地或云端模型聊天"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars: 4286",
+          "delta_24h: 217",
+          "delta_7d: 1733",
+          "forks: 719",
+          "heat_score: 59.62"
+        ],
+        "summary": "近期 Star 增长明显，7 天增量较大，属于编码代理周边工具的热度上升；无证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "把 AI 代理、工具调用与既有系统连接起来，用可视化画布加自定义代码构建可上生产的自动化流程。",
+      "recommendation_reason": "项目成熟且与自动化/MCP 相关，但当前热度平稳，可先观察其 AI 代理能力演进再决定是否投入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 automation、workflow、MCP、tool use 等关键词，与生产力及代理工具链兴趣相关，但非编码代理本体。",
+      "relevance_score": 70,
+      "summary_zh": "fair-code 的工作流自动化平台，具备原生 AI 能力与大量集成。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "JavaScript",
+        "Python",
+        "MCP"
+      ],
+      "use_cases": [
+        "搭建多步 AI 工作流",
+        "连接 1500+ 集成做数据流转",
+        "自托管自动化服务",
+        "在流程中加入人工审批",
+        "用 MCP 接入外部工具"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars: 206758",
+          "delta_24h: -95",
+          "delta_7d: 279",
+          "forks: 61028",
+          "heat_score: 21.52"
+        ],
+        "summary": "Star 总量极高但近期 24 小时与 7 天增量有限，属于长期成熟项目的常态波动；无证据确定具体外部驱动事件。"
+      }
+    },
+    "qingyuna/answer-me-with-html": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "QingYunA/answer-me-with-html",
+      "maturity": "growing",
+      "problem": "代理回答复杂问题时输出大段终端文本难以阅读；该技能让模型只写 Markdown 草稿，由 CLI 生成带图表的单页 HTML。",
+      "recommendation_reason": "安装成本低，可直接在现有编码代理中试用，验证其输出可读性与 token 节省效果。",
+      "recommended_action": "try",
+      "relevance_reason": "属于 Claude Code / Codex / OpenCode 等代理的技能扩展，命中 ai_agents 关键词，同时提升开发者输出可读性。",
+      "relevance_score": 82,
+      "summary_zh": "一个 agent skill，让 AI 代理把复杂问题的回答渲染成一页可读的 HTML。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "HTML",
+        "SVG",
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "OpenCode"
+      ],
+      "use_cases": [
+        "把技术解释渲染成单页 HTML",
+        "生成仓库结构图",
+        "生成讲解视频页面",
+        "降低代理输出 token 与等待时间",
+        "离线单文件分享解释页"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars: 2374",
+          "forks: 159",
+          "heat_score: 48.72",
+          "created_at: 2026-10-02T09:57:40Z"
+        ],
+        "summary": "Star 数在较短时间内达到数千，属于新近出现的 agent skill 类项目热度；无证据确定具体外部驱动事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "为研究与生产提供统一的机器学习框架、工具与库生态，支持从训练到部署。",
+      "recommendation_reason": "属于广为人知的成熟基础框架，用户画像中已有更高优先级方向，无需专门跟进。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep learning、neural network 关键词，与深度学习兴趣相关，但与代理、科研自动化、光学计算等核心方向关联较弱。",
+      "relevance_score": 55,
+      "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 等 API。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker",
+        "XLA"
+      ],
+      "use_cases": [
+        "训练与部署神经网络",
+        "科研中的机器学习实验",
+        "GPU 加速计算",
+        "构建 ML 应用"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars: 200561",
+          "delta_24h: -174",
+          "delta_7d: -100",
+          "forks: 78659",
+          "heat_score: 9.94"
+        ],
+        "summary": "Star 总量巨大但近期 24 小时与 7 天增量均为负，属于成熟项目的自然波动；无证据确定具体外部驱动事件。"
+      }
+    }
+  },
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T14:04:24+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 在个性化推荐中占主导，Rust 系新项目集中冲榜",
+    "rising_categories": [
+      "Coding Agent",
+      "Productivity",
+      "Scientific AI"
+    ],
+    "signals": [
+      "for_you 中 Coding Agent 占 4/6，是推荐权重最高的类别",
+      "hot_today 中 storytold 系列 5 个 Rust 项目同时上榜，delta_24h 在 1589 至 9570 之间",
+      "new_and_rising 前 10 中有 5 个为 storytold 的 Rust 项目，呈明显同源聚集",
+      "morluto/rea 以 delta_24h 13295 居当日增量首位，heat_score 81.6",
+      "openai/math 使用 Lean 语言，delta_24h 2012，是榜单中少见的数学形式化方向"
+    ],
+    "watch_tomorrow": [
+      "storytold 系列 Rust 项目（photocraft、lightcraft、pdfcraft、filmcra…",
+      "morluto/rea 的高 delta_24h 是否持续",
+      "Coding Agent 类别在 for_you 中的占比是否继续扩大",
+      "openai/math 代表的 Lean 形式化方向是否出现更多同类项目",
+      "hot_today 与 new_and_rising 的重合项目次日排名变化"
+    ]
+  },
+  "usage": {
+    "cache_hits": 2,
+    "completion_tokens": 2121,
+    "failed_requests": 1,
+    "prompt_cache_hit_tokens": 1536,
+    "prompt_cache_miss_tokens": 13060,
+    "prompt_tokens": 14596,
+    "repositories_analyzed": 6,
+    "requests": 3,
+    "successful_requests": 2,
+    "total_tokens": 16717
+  }
+}

@@ -1,26 +1,29 @@
 {
-  "cached_at": "2026-10-08T13:58:51+08:00",
+  "cached_at": "2026-10-09T14:04:24+08:00",
   "full_name": "Louis-CFM/coucou",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-07T23:37:42Z",
+  "repo_pushed_at": "2026-10-09T01:12:57Z",
   "schema_version": 1,
   "static": {
-    "category": "Productivity",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决编码 Agent 运行时需频繁切回终端确认权限、查看进度的问题，在刘海或锁屏直接批准与查看。",
-    "summary_zh": "Mac 刘海与 iPhone 上的小助手，实时监控并批准 Claude Code、Codex 等编码 Agent 会话。",
+    "problem": "编码代理在终端里跑时，用户需要切窗口才能看到进度、审批权限请求；该项目把会话状态与审批入口放到刘海/锁屏上。",
+    "summary_zh": "在 Mac 刘海与 iPhone 上监控并审批 Claude Code、Codex 等 AI 编码代理会话的桌面小工具。",
     "tech_stack": [
       "Swift",
       "SwiftUI",
-      "Tauri",
+      "Tauri 2",
+      "macOS",
       "iOS",
-      "macOS"
+      "Windows",
+      "Linux"
     ],
     "use_cases": [
-      "监控 Agent 会话",
-      "刘海/锁屏批准权限",
-      "查看文件改动 diff",
-      "跨设备跟进 Agent 状态"
+      "在刘海查看 Claude Code 会话进度",
+      "从刘海批准/拒绝权限请求",
+      "跳转到对应终端窗口",
+      "在 iPhone 锁屏/Dynamic Island 跟进代理状态",
+      "与本地或云端模型聊天"
     ]
   }
 }

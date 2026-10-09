@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-10-05T13:34:17+08:00",
+  "cached_at": "2026-10-09T14:04:24+08:00",
   "full_name": "DietrichGebert/ponytail",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-05T03:45:49Z",
+  "repo_pushed_at": "2026-10-08T16:19:55Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码代理倾向过度设计，引入多余依赖与代码，增加成本与维护负担。",
-    "summary_zh": "一个提示词技能，让 AI 编码代理遵循 YAGNI，用最少代码完成任务。",
+    "problem": "代理容易过度生成代码与依赖；该技能约束代理复用现有组件、少写代码，同时保留校验、错误处理与安全逻辑。",
+    "summary_zh": "一个让 AI 编码代理遵循 YAGNI、只写必要代码的 agent skill。",
     "tech_stack": [
       "JavaScript",
-      "Claude Code Plugin",
-      "Codex Plugin",
-      "AGENTS.md"
+      "npm",
+      "Claude Code",
+      "Cursor"
     ],
     "use_cases": [
-      "约束代理减少过度工程",
-      "审查 diff 并给出可删除清单",
-      "在多种代理中统一编码风格约束",
-      "降低代理改动的代码量与成本"
+      "约束代理减少冗余代码",
+      "代码评审时发现遗漏的破坏性改动",
+      "降低代理 token 与成本",
+      "在编码代理中统一工程规范"
     ]
   }
 }
