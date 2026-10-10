@@ -1,26 +1,27 @@
 {
-  "cached_at": "2026-10-08T13:58:51+08:00",
+  "cached_at": "2026-10-10T13:47:46+08:00",
   "full_name": "cathrynlavery/diagram-design",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-08T01:34:39Z",
+  "repo_pushed_at": "2026-10-10T04:32:06Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决 AI 生成图表样式千篇一律、缺乏设计感的问题，提供 42 种图表类型与品牌化视觉输出。",
-    "summary_zh": "为 Claude Code、Codex 等 Agent 提供编辑级图表设计的技能，输出自包含 HTML+SVG。",
+    "problem": "解决 AI Agent 生成图表时样式粗糙、依赖 Mermaid、难以直接交付可读成品的问题。",
+    "summary_zh": "面向 Claude Code、Codex 等 Agent 的图表设计技能，输出自包含 HTML+SVG，内置 44 种图表类型。",
     "tech_stack": [
       "HTML",
       "SVG",
+      "Agent Skills",
       "Claude Code",
       "Codex",
-      "Agent Skills"
+      "GitHub Copilot"
     ],
     "use_cases": [
-      "生成架构图与流程图",
-      "重绘 draw.io/Mermaid 图",
-      "文档配图",
-      "品牌化视觉输出"
+      "让 Agent 生成架构图",
+      "生成象限图/时序图",
+      "按品牌配色出图",
+      "导出单文件 HTML 图表"
     ]
   }
 }

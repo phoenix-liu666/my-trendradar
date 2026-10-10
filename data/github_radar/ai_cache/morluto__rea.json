@@ -1,28 +1,28 @@
 {
-  "cached_at": "2026-10-08T13:58:51+08:00",
+  "cached_at": "2026-10-10T13:47:46+08:00",
   "full_name": "morluto/rea",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-08T05:57:04Z",
+  "repo_pushed_at": "2026-10-10T05:47:35Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决在缺少源码时理解应用功能实现的问题：让 Agent 检查原生二进制、Electron/JS 应用、.NET 程序集与网站，并给出带证据的分析结论。",
-    "summary_zh": "通过 MCP 让 AI Agent 对二进制、应用与运行时行为做逆向分析的工具集。",
+    "problem": "解决在缺少源码时理解应用功能实现的问题，让 Agent 能检查原生二进制、JS/Electron 应用、.NET 程序集与网站并解释其行为。",
+    "summary_zh": "通过 MCP 让 AI Agent 对二进制、应用与运行时行为做逆向分析并给出证据。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "MCP",
       "Ghidra",
       "Hopper",
-      "Electron"
+      "IDA"
     ],
     "use_cases": [
       "逆向分析原生二进制",
       "分析 Electron/JS 应用",
-      "在 Agent 中做静态分析",
-      "CTF 与安全研究",
-      "复刻他人产品功能"
+      "理解竞品功能实现",
+      "CTF 与静态分析",
+      "在终端做代码/二进制调查"
     ]
   }
 }

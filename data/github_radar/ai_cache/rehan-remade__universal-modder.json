@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-10-08T13:58:51+08:00",
+  "cached_at": "2026-10-10T13:47:46+08:00",
   "full_name": "rehan-remade/universal-modder",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-08T03:33:39Z",
+  "repo_pushed_at": "2026-10-09T22:36:13Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决游戏模组开发门槛高的问题：让 Agent 识别引擎、阅读代码、生成美术资源、在游戏中验证并沉淀经验。",
-    "summary_zh": "让 AI 编码 Agent 对 PC 游戏做逆向与模组开发的技能、工具与共享知识库。",
+    "problem": "解决游戏 Mod 开发中引擎识别、逆向、素材生成与验证流程分散、难以复用的问题。",
+    "summary_zh": "让 Claude Code 等编码 Agent 修改 PC 游戏的技能、工具与 fal MCP 集成，含共享知识库。",
     "tech_stack": [
       "Python",
       "MCP",
       "Claude Code",
       "Codex",
-      "fal",
-      "Blender",
-      "ffmpeg"
+      "OpenCode",
+      "fal"
     ],
     "use_cases": [
-      "游戏模组开发",
-      "游戏逆向与侦察",
-      "AI 生成美术/3D/音频资源",
-      "模组知识库协作"
+      "游戏逆向侦察",
+      "生成 Mod 美术/3D/音频素材",
+      "在游戏中测试 Mod",
+      "沉淀 Mod 知识笔记"
     ]
   }
 }

@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-10T13:47:46+08:00",
+  "full_name": "feder-cr/invisible_playwright_mcp",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-10T03:52:48Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决 AI 浏览器 Agent 在自动化网页操作时被反爬机制和验证码拦截的问题。",
+    "summary_zh": "基于反检测 Firefox 的 Playwright MCP 服务器，让 AI Agent 绕过反爬与验证码浏览网页。",
+    "tech_stack": [
+      "Python",
+      "Playwright",
+      "MCP",
+      "Firefox",
+      "OpenRouter"
+    ],
+    "use_cases": [
+      "Agent 网页自动化",
+      "反检测网页抓取",
+      "比价与信息采集",
+      "computer use 场景",
+      "求职信息检索"
+    ]
+  }
+}

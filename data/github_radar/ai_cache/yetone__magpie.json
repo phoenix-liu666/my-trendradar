@@ -1,27 +1,28 @@
 {
-  "cached_at": "2026-10-08T13:58:51+08:00",
+  "cached_at": "2026-10-10T13:47:46+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-08T05:53:33Z",
+  "repo_pushed_at": "2026-10-10T05:42:03Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决多个编码 Agent 各自维护模型配置、订阅无法互通、配额耗尽需手动改配置的问题。",
-    "summary_zh": "菜单栏工具，统一管理多个编码 Agent 的模型与 API 网关，支持配额耗尽自动切换。",
+    "problem": "解决各 Agent 模型配置分散、订阅无法跨 Agent 复用、配额耗尽即中断的问题。",
+    "summary_zh": "本地网关应用，让 Claude Code、Codex 等 Agent 自由切换任意模型与账号。",
     "tech_stack": [
       "Go",
+      "Docker",
       "macOS",
-      "OpenAI API",
-      "Anthropic API",
-      "Gemini API",
-      "Docker"
+      "Windows",
+      "Linux",
+      "Termux"
     ],
     "use_cases": [
-      "统一管理多 Agent 模型配置",
-      "跨供应商 API 路由与故障转移",
-      "订阅账号共享",
-      "用量与成本追踪"
+      "为 Agent 切换模型",
+      "跨账号配额故障转移",
+      "统一本地模型网关",
+      "多 Agent 配置管理",
+      "订阅额度查看"
     ]
   }
 }

@@ -1,30 +1,27 @@
 {
-  "cached_at": "2026-10-09T14:04:24+08:00",
+  "cached_at": "2026-10-10T13:47:46+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-09T05:05:25Z",
+  "repo_pushed_at": "2026-10-10T04:12:07Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "代理回答复杂问题时输出大段终端文本难以阅读；该技能让模型只写 Markdown 草稿，由 CLI 生成带图表的单页 HTML。",
-    "summary_zh": "一个 agent skill，让 AI 代理把复杂问题的回答渲染成一页可读的 HTML。",
+    "problem": "解决 Agent 用纯文本回答复杂问题时输出冗长、难以阅读的问题，并降低生成 token 成本。",
+    "summary_zh": "Agent 技能：把复杂问题的回答渲染成一页可读 HTML，模型只需写 Markdown 草稿。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "HTML",
-      "SVG",
+      "Agent Skills",
       "Claude Code",
       "Codex",
-      "Cursor",
       "OpenCode"
     ],
     "use_cases": [
-      "把技术解释渲染成单页 HTML",
-      "生成仓库结构图",
-      "生成讲解视频页面",
-      "降低代理输出 token 与等待时间",
-      "离线单文件分享解释页"
+      "解释技术概念",
+      "梳理仓库模块结构",
+      "生成对比说明页",
+      "输出离线单文件说明页"
     ]
   }
 }
