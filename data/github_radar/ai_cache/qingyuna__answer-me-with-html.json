@@ -1,27 +1,28 @@
 {
-  "cached_at": "2026-10-10T13:47:46+08:00",
+  "cached_at": "2026-10-11T13:41:57+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-10T04:12:07Z",
+  "repo_pushed_at": "2026-10-10T06:14:23Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决 Agent 用纯文本回答复杂问题时输出冗长、难以阅读的问题，并降低生成 token 成本。",
-    "summary_zh": "Agent 技能：把复杂问题的回答渲染成一页可读 HTML，模型只需写 Markdown 草稿。",
+    "problem": "解决 Agent 用纯文本回答复杂问题时信息密度低、难以阅读的问题，同时减少模型输出 token。",
+    "summary_zh": "Agent 技能：把复杂问题的回答渲染成一页可离线阅读的 HTML，含图表与讲解视频。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
       "Agent Skills",
-      "Claude Code",
-      "Codex",
-      "OpenCode"
+      "Claude Code Plugin",
+      "HTML",
+      "SVG"
     ],
     "use_cases": [
-      "解释技术概念",
-      "梳理仓库模块结构",
-      "生成对比说明页",
-      "输出离线单文件说明页"
+      "把技术概念解释渲染成单页 HTML",
+      "生成仓库模块关系图",
+      "生成对比类问题的可视化页面",
+      "生成讲解视频",
+      "离线阅读与分享回答"
     ]
   }
 }
