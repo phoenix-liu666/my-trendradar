@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-12T13:51:51+08:00",
+  "full_name": "pytorch/pytorch",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-12T05:51:50Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Scientific AI",
+    "maturity": "mature",
+    "problem": "为深度学习研究与科学计算提供灵活、GPU 加速的张量运算和自动微分能力。",
+    "summary_zh": "提供 GPU 加速张量计算与动态神经网络的开源深度学习框架。",
+    "tech_stack": [
+      "Python",
+      "C++",
+      "CUDA",
+      "ROCm",
+      "NumPy",
+      "autograd"
+    ],
+    "use_cases": [
+      "训练与部署深度神经网络",
+      "GPU 加速张量计算",
+      "科研级模型实验",
+      "自定义网络层开发"
+    ]
+  }
+}

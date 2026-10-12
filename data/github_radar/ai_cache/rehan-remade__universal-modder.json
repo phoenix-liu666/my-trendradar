@@ -1,30 +1,27 @@
 {
-  "cached_at": "2026-10-11T13:41:57+08:00",
+  "cached_at": "2026-10-12T13:51:51+08:00",
   "full_name": "rehan-remade/universal-modder",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-10T21:40:52Z",
+  "repo_pushed_at": "2026-10-11T21:55:26Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决游戏 Mod 开发中引擎识别、逆向分析、资源生成与游戏内验证流程分散、重复踩坑的问题。",
-    "summary_zh": "让编码 Agent 对 PC 游戏做逆向与 Mod 的技能、工具与知识库，含 fal MCP 生成美术资源。",
+    "problem": "解决游戏 Mod 开发中引擎识别、逆向分析、素材生成与游戏内验证流程繁琐的问题。",
+    "summary_zh": "让 AI 编码 Agent 对任意 PC 游戏做逆向、建模与素材生成的技能与工具集。",
     "tech_stack": [
       "Python",
       "MCP",
-      "Agent Skills",
-      "Claude Code Plugin",
-      "fal",
-      "ComfyUI",
-      "Blender",
-      "ffmpeg"
+      "Claude Code",
+      "Codex",
+      "OpenCode",
+      "fal"
     ],
     "use_cases": [
-      "识别游戏引擎并选择 Mod 路线",
-      "逆向分析游戏代码",
-      "用 fal 生成图像/3D/音频资源",
-      "在运行中的游戏里测试 Mod",
-      "沉淀可复用的 Mod 知识库笔记"
+      "游戏 Mod 开发",
+      "游戏引擎逆向分析",
+      "AI 生成美术与音频素材",
+      "游戏内自动化测试"
     ]
   }
 }
