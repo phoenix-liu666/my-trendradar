@@ -1,27 +1,30 @@
 {
-  "cached_at": "2026-10-12T13:51:51+08:00",
+  "cached_at": "2026-10-13T14:44:43+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-12T05:43:36Z",
+  "repo_pushed_at": "2026-10-13T06:43:47Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 无法跨会话积累经验与知识的问题，提供技能自生成、会话检索与用户建模的学习闭环。",
-    "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自建、记忆与跨平台运行能力。",
+    "problem": "解决 Agent 无法跨会话积累经验与知识的问题，通过内置学习循环、记忆与技能自改进实现持续成长。",
+    "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自创建、跨会话记忆与多平台接入。",
     "tech_stack": [
       "Python",
       "MCP",
-      "Docker",
       "Telegram",
       "Discord",
-      "Slack"
+      "Slack",
+      "Docker",
+      "Modal",
+      "Daytona"
     ],
     "use_cases": [
       "长期运行的自主 Agent",
-      "跨平台消息接入",
+      "跨平台（Telegram/Discord/Slack）对话",
       "定时自动化任务",
-      "轨迹数据生成用于模型训练"
+      "批量轨迹生成用于训练工具调用模型",
+      "多子 Agent 并行任务"
     ]
   }
 }

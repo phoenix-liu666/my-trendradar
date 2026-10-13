@@ -1,27 +1,29 @@
 {
-  "cached_at": "2026-10-12T13:51:51+08:00",
+  "cached_at": "2026-10-13T14:44:43+08:00",
   "full_name": "rehan-remade/universal-modder",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-11T21:55:26Z",
+  "repo_pushed_at": "2026-10-13T00:36:35Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决游戏 Mod 开发中引擎识别、逆向分析、素材生成与游戏内验证流程繁琐的问题。",
-    "summary_zh": "让 AI 编码 Agent 对任意 PC 游戏做逆向、建模与素材生成的技能与工具集。",
+    "problem": "解决游戏 Mod 开发门槛高的问题，把侦察、逆向、素材生成、游戏内验证串成 Agent 可执行的流程。",
+    "summary_zh": "让 Claude Code 等编码 Agent 对任意 PC 游戏做逆向、建模、生成素材并测试的技能与工具集。",
     "tech_stack": [
       "Python",
       "MCP",
-      "Claude Code",
-      "Codex",
-      "OpenCode",
-      "fal"
+      "Agent Skills",
+      "fal",
+      "ComfyUI",
+      "Blender",
+      "ffmpeg"
     ],
     "use_cases": [
       "游戏 Mod 开发",
-      "游戏引擎逆向分析",
-      "AI 生成美术与音频素材",
-      "游戏内自动化测试"
+      "游戏逆向工程",
+      "AI 生成美术/3D/音频素材",
+      "游戏内自动化测试",
+      "Mod 知识库沉淀"
     ]
   }
 }

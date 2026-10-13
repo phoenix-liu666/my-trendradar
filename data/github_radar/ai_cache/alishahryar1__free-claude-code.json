@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-13T14:44:43+08:00",
+  "full_name": "Alishahryar1/free-claude-code",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-13T05:39:20Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决编码 Agent 各自绑定模型与账号、免费额度分散的问题，提供统一提供商目录与故障切换。",
+    "summary_zh": "聚合多家免费/付费模型提供商，让 Claude Code、Codex 等 11 种编码 Agent 共用模型目录。",
+    "tech_stack": [
+      "Python",
+      "Pytest",
+      "Ruff",
+      "Whisper",
+      "NVIDIA NIM"
+    ],
+    "use_cases": [
+      "为编码 Agent 接入免费模型额度",
+      "多 Agent 共用同一模型目录",
+      "提供商故障时自动切换模型",
+      "语音输入驱动编码 Agent"
+    ]
+  }
+}

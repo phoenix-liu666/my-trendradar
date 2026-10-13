@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-11T13:41:57+08:00",
+  "cached_at": "2026-10-13T14:44:43+08:00",
   "full_name": "mksglu/context-mode",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-11T00:15:03Z",
+  "repo_pushed_at": "2026-10-12T18:05:18Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决 MCP 工具调用把大量原始数据灌入上下文、压缩后丢失会话状态的问题，通过沙箱与 SQLite/FTS5 检索降低上下文占用。",
-    "summary_zh": "为 AI 编码 Agent 优化上下文窗口：沙箱化工具输出、持久化会话记忆与路由。",
+    "problem": "解决 MCP 工具调用把大量原始数据灌入上下文、压缩后丢失任务状态的问题，通过沙箱与索引检索降低上下文占用。",
+    "summary_zh": "面向 AI 编码 Agent 的上下文窗口优化 MCP 服务，沙箱化工具输出并持久化会话记忆。",
     "tech_stack": [
       "TypeScript",
       "MCP",
@@ -17,10 +17,10 @@
       "BM25"
     ],
     "use_cases": [
-      "降低 Agent 上下文消耗",
-      "跨会话记忆与状态恢复",
-      "多平台 Agent 统一路由",
-      "大输出工具结果处理"
+      "降低编码 Agent 上下文占用",
+      "跨会话任务状态延续",
+      "多平台 Agent 路由统一",
+      "大仓库代码分析脚本化"
     ]
   }
 }
