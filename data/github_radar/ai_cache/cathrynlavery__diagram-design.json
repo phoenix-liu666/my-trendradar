@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-10-13T14:44:43+08:00",
+  "cached_at": "2026-10-14T12:49:03+08:00",
   "full_name": "cathrynlavery/diagram-design",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-13T04:30:17Z",
+  "repo_pushed_at": "2026-10-13T21:48:36Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决 AI Agent 生成图表时依赖 Mermaid、样式粗糙、难以匹配品牌的问题，输出可直接打开的单文件图表。",
-    "summary_zh": "面向 Claude Code、Codex 等 Agent 的图表技能，用自包含 HTML+SVG 生成 45 种编辑级图表。",
+    "problem": "解决 Agent 生成图表样式粗糙、依赖 Mermaid 且难以匹配品牌视觉的问题。",
+    "summary_zh": "面向编码 Agent 的图表设计技能，输出自包含 HTML+SVG 的编辑级图表。",
     "tech_stack": [
       "HTML",
       "SVG",
       "Agent Skills",
-      "Claude Code Plugin",
-      "Codex Plugin"
+      "Claude Code Plugin"
     ],
     "use_cases": [
-      "让 Agent 生成架构图",
-      "生成象限图/时序图",
+      "生成架构图与流程图",
       "按品牌配色出图",
-      "从 drawio/Mermaid 导入",
-      "导出 PNG/SVG"
+      "导入 drawio/Mermaid",
+      "导出 PNG/SVG",
+      "文档配图"
     ]
   }
 }

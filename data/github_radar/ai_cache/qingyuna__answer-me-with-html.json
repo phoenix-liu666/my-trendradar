@@ -1,26 +1,25 @@
 {
-  "cached_at": "2026-10-13T14:44:43+08:00",
+  "cached_at": "2026-10-14T12:49:03+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-13T06:10:47Z",
+  "repo_pushed_at": "2026-10-14T04:33:20Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 用纯文本回答复杂问题时冗长难读、手写 HTML 又浪费 token 的问题。",
-    "summary_zh": "一个 Agent 技能，把复杂问题的回答渲染成可读的单页 HTML，并显著减少模型输出 token。",
+    "problem": "代理直接输出大段终端文本难以阅读，手写 HTML 又消耗大量 token；该项目用 CLI 生成页面降低模型输出量。",
+    "summary_zh": "让 AI Agent 用一页可读 HTML 回答复杂问题的 agent skill，模型只需写 Markdown 草稿。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "Agent Skills",
-      "Claude Code Plugin"
+      "Claude Code Skill",
+      "CLI"
     ],
     "use_cases": [
-      "把技术解释渲染成网页",
-      "生成带图表的说明页",
-      "降低 Agent 输出 token",
-      "生成讲解视频",
-      "离线单文件分享"
+      "把复杂技术问题渲染成单页 HTML",
+      "生成带图解的说明页",
+      "生成讲解视频页面",
+      "在 Claude Code/Codex 中安装为 skill"
     ]
   }
 }

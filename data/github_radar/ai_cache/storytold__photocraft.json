@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-10-14T12:49:03+08:00",
+  "full_name": "storytold/photocraft",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-14T04:38:25Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "experimental",
+    "problem": "提供离线、开源、原生的专业图像编辑替代方案，并支持读写分层 PSD 文件。",
+    "summary_zh": "用纯 Rust 从零实现的 Photoshop 类开源图像编辑器，支持图层、蒙版与真实 PSD。",
+    "tech_stack": [
+      "Rust",
+      "wgpu",
+      "Metal",
+      "Vulkan",
+      "DX12",
+      "WebGPU",
+      "MCP"
+    ],
+    "use_cases": [
+      "图层与调整图层编辑",
+      "打开与保存 PSD 文件",
+      "通过 CLI/JSON/MCP 驱动编辑",
+      "跨平台原生图像处理"
+    ]
+  }
+}
