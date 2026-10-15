@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-14T12:49:03+08:00",
+  "cached_at": "2026-10-15T12:33:13+08:00",
   "full_name": "Louis-CFM/coucou",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-14T02:13:15Z",
+  "repo_pushed_at": "2026-10-15T01:58:41Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "开发者使用多个 AI 编码代理时需频繁切换终端查看进度与审批权限，该项目把会话状态、权限审批和聊天集中到刘海/锁屏。",
-    "summary_zh": "在 Mac 刘海与 iPhone 上监控并审批 Claude Code、Codex 等 AI 编码代理会话的桌面小工具。",
+    "problem": "解决开发者在使用多个 AI 编码代理时需频繁切换终端查看进度、批准权限的问题，把会话状态与审批放到刘海和锁屏。",
+    "summary_zh": "Mac 刘海/iPhone 上的小助手，实时监控并批准 Claude Code、Codex 等 AI 编码代理会话。",
     "tech_stack": [
       "Swift",
       "SwiftUI",
@@ -21,10 +21,9 @@
     ],
     "use_cases": [
       "在刘海查看 Claude Code 会话进度",
-      "从刘海审批权限请求",
-      "在锁屏/灵动岛跟踪代理状态",
-      "与多家模型聊天",
-      "拖拽文件作为上下文"
+      "从刘海批准/拒绝代理权限请求",
+      "跳转到对应终端窗口",
+      "语音听写与通话记录转写"
     ]
   }
 }

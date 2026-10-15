@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-15T12:33:13+08:00",
+  "full_name": "edenfunf/reelmimic",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-15T00:16:10Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决想按某参考视频风格自制动画但缺乏制作能力的问题，用多智能体分工完成拆解、规划、生成与审核。",
+    "summary_zh": "输入参考视频，由 Claude Code 或 Codex 多智能体协作规划并生成同风格 2D 动画视频。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "Python",
+      "FFmpeg",
+      "Claude Code",
+      "Codex CLI"
+    ],
+    "use_cases": [
+      "按参考视频风格生成 2D 动画",
+      "多智能体分工制作与交叉审核视频",
+      "在视频时间轴上逐秒评论修改",
+      "用 Markdown 定义新风格"
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "解决开发者需要开源、可自托管、可切换代理模式的 AI 编码助手的问题。",
+      "recommendation_reason": "作为开源编码代理的代表项目，值得深入研究其代理模式与架构设计。",
+      "recommended_action": "study",
+      "relevance_reason": "正是用户画像中的 Coding Agent/OpenCode 核心方向，权重最高。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码代理，提供终端界面与桌面应用，内置 build/plan 等代理模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Docker"
+      ],
+      "use_cases": [
+        "终端内进行 AI 辅助编码",
+        "用只读 plan 代理探索陌生代码库",
+        "通过桌面应用使用编码代理",
+        "多平台包管理器安装"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 数极高且近 7 日与 24 小时均有明显增长，属于头部开源编码代理项目，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "edenfunf/reelmimic": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "edenfunf/reelmimic",
+      "maturity": "growing",
+      "problem": "解决想按某参考视频风格自制动画但缺乏制作能力的问题，用多智能体分工完成拆解、规划、生成与审核。",
+      "recommendation_reason": "多智能体编排思路有参考价值，但运行耗时较长且与用户核心兴趣部分重合，先观察。",
+      "recommended_action": "watch",
+      "relevance_reason": "以 Claude Code/Codex 多智能体驱动视频生成，命中 ai_agents，但偏向视频创作而非编码代理本身。",
+      "relevance_score": 72,
+      "summary_zh": "输入参考视频，由 Claude Code 或 Codex 多智能体协作规划并生成同风格 2D 动画视频。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Python",
+        "FFmpeg",
+        "Claude Code",
+        "Codex CLI"
+      ],
+      "use_cases": [
+        "按参考视频风格生成 2D 动画",
+        "多智能体分工制作与交叉审核视频",
+        "在视频时间轴上逐秒评论修改",
+        "用 Markdown 定义新风格"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "forks",
+          "heat_score",
+          "pushed_at"
+        ],
+        "summary": "Star 数较高且近期仍在更新，属于 AI 视频生成与多智能体结合的热门方向，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "louis-cfm/coucou": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "Louis-CFM/coucou",
+      "maturity": "growing",
+      "problem": "解决开发者在使用多个 AI 编码代理时需频繁切换终端查看进度、批准权限的问题，把会话状态与审批放到刘海和锁屏。",
+      "recommendation_reason": "与用户对 Coding Agent 工具链的兴趣高度契合，可实际安装体验其代理监控与审批流程。",
+      "recommended_action": "try",
+      "relevance_reason": "直接面向 Claude Code、Codex 等 Coding Agent 的监控与审批，命中 ai_agents 高权重兴趣。",
+      "relevance_score": 88,
+      "summary_zh": "Mac 刘海/iPhone 上的小助手，实时监控并批准 Claude Code、Codex 等 AI 编码代理会话。",
+      "tech_stack": [
+        "Swift",
+        "SwiftUI",
+        "Tauri 2",
+        "macOS",
+        "iOS",
+        "Android",
+        "Windows",
+        "Linux"
+      ],
+      "use_cases": [
+        "在刘海查看 Claude Code 会话进度",
+        "从刘海批准/拒绝代理权限请求",
+        "跳转到对应终端窗口",
+        "语音听写与通话记录转写"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 基数较大且近 7 日增长明显，属于近期活跃的 AI 编码代理周边工具，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "解决把 AI 能力与既有系统连接、编排多步骤自动化流程的问题，支持自托管与云端。",
+      "recommendation_reason": "与用户自动化与 Agent 工作流兴趣相关，但项目庞大，按需再深入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 与 MCP/tool use 关键词，但更偏通用自动化而非编码代理。",
+      "relevance_score": 70,
+      "summary_zh": "fair-code 工作流自动化平台，具备原生 AI 能力，可视化搭建结合自定义代码与大量集成。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "LangChain",
+        "MCP",
+        "JavaScript",
+        "Python"
+      ],
+      "use_cases": [
+        "搭建多步骤 AI 工作流与代理",
+        "连接 1500+ 集成实现自动化",
+        "自托管处理敏感数据流程",
+        "用可视化画布加代码扩展节点"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 数极高且近 7 日仍有增长，属于长期活跃的自动化平台，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "qingyuna/answer-me-with-html": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "QingYunA/answer-me-with-html",
+      "maturity": "growing",
+      "problem": "解决 AI 直接输出大段终端文本难以阅读、手写 HTML 又浪费 token 的问题，由 CLI 生成图表与样式。",
+      "recommendation_reason": "安装成本低、与日常 Agent 使用场景贴合，可快速验证其输出可读性与 token 节省效果。",
+      "recommended_action": "try",
+      "relevance_reason": "作为 Claude Code/Codex 等 Agent 的技能，直接命中 ai_agents 与开发者工具兴趣。",
+      "relevance_score": 85,
+      "summary_zh": "一个 Agent 技能，让 AI 用一页可读 HTML 回答复杂问题，模型只需写 Markdown 草稿。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "OpenCode"
+      ],
+      "use_cases": [
+        "把复杂技术问题输出为单页 HTML",
+        "生成含图表的解释页面",
+        "生成讲解视频页面",
+        "在多种 Agent 中作为技能安装"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks",
+          "heat_score"
+        ],
+        "summary": "Star 数较高且近 24 小时仍有增长，属于 Claude Code 技能生态的活跃项目，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "tensorflow/tensorflow": {
+      "category": "Scientific AI",
+      "from_cache": false,
+      "full_name": "tensorflow/tensorflow",
+      "maturity": "mature",
+      "problem": "为研究与开发者提供构建和部署机器学习模型的通用框架与生态。",
+      "recommendation_reason": "作为通用深度学习框架已广为人知，与用户当前关注方向重合度有限，无需特别跟进。",
+      "recommended_action": "skip",
+      "relevance_reason": "命中 deep_learning 关键词，但与用户核心的 Agent 与科研自动化兴趣关联较弱。",
+      "relevance_score": 55,
+      "summary_zh": "端到端开源机器学习框架，提供 Python/C++ 等 API 与完整工具生态。",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "CUDA",
+        "Docker",
+        "XLA"
+      ],
+      "use_cases": [
+        "训练与部署深度学习模型",
+        "科研中的神经网络实验",
+        "GPU 加速的模型训练",
+        "跨语言模型部署"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 数极高但近期增长平缓，属于长期成熟项目，无证据表明存在近期热点事件。"
+      }
+    }
+  },
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T12:33:13+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 在个性化推荐中聚集，Rust 系工具在热榜持续放量",
+    "rising_categories": [
+      "Coding Agent",
+      "Developer Tool",
+      "Productivity",
+      "Scientific AI"
+    ],
+    "signals": [
+      "for_you 中 Coding Agent 占 3 席（opencode、coucou、reelmimic），是推荐侧最集中的类别",
+      "hot_today 中 storytold 系列 Rust 项目（photocraft、wordcraft、pdfcraft、filmcraft、lightcraft、vectorcraft、cadcraft、gridcraft）同时上榜…",
+      "new_and_rising 中 photocraft（delta_24h 2967）、anatomy（2332）、dsh-our-free-model（1999）为当日增量最高的新晋项目",
+      "hot_today 榜首 morluto/rea 的 delta_24h 达 33135，远高于其余项目，但汇总未提供其类别与驱动原因",
+      "类别分布为 Coding Agent 3、Developer Tool 1、Productivity 1、Scientific AI 1，样本量小，暂不足以判断整体行业走向"
+    ],
+    "watch_tomorrow": [
+      "storytold 系列 Rust 工具（photocraft、wordcraft、pdfcraft 等）是否继续同步…",
+      "morluto/rea 的高 delta_24h 是否延续，以及其类别归属",
+      "deepseek-ai/deepseek-harness 在无 delta_24h 数据下的后续热度变化",
+      "new_and_rising 中 anatomy、dsh-our-free-model 的增量能否保持",
+      "Coding Agent 类别在 for_you 中的占比是否继续上升"
+    ]
+  },
+  "usage": {
+    "cache_hits": 1,
+    "completion_tokens": 1999,
+    "failed_requests": 1,
+    "prompt_cache_hit_tokens": 1536,
+    "prompt_cache_miss_tokens": 12808,
+    "prompt_tokens": 14344,
+    "repositories_analyzed": 6,
+    "requests": 3,
+    "successful_requests": 2,
+    "total_tokens": 16343
+  }
+}
