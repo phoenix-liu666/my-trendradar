@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-16T12:27:05+08:00",
+  "full_name": "K-Dense-AI/scientific-agent-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-15T23:57:39Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Scientific AI",
+    "maturity": "growing",
+    "problem": "为 AI Agent 提供生物、化学、医学等领域的可复用科研流程知识与校验规范。",
+    "summary_zh": "面向科研 Agent 的技能库，含 177 个科学技能与 100+ 科学数据库接入。",
+    "tech_stack": [
+      "Python",
+      "Agent Skills",
+      "MCP",
+      "Claude Code",
+      "Codex"
+    ],
+    "use_cases": [
+      "生物信息与基因组分析",
+      "药物发现与分子对接",
+      "蛋白质组学数据处理",
+      "科研数据可视化"
+    ]
+  }
+}

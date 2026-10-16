@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-16T12:27:05+08:00",
+  "full_name": "ruvnet/ruflo",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-15T11:18:51Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "为编码 Agent 提供编排、记忆、学习与安全护栏的执行层，使多 Agent 可协作。",
+    "summary_zh": "面向 Claude Code 与 Codex 的 Agent 元 harness，支持多 Agent 集群、记忆与联邦通信。",
+    "tech_stack": [
+      "TypeScript",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "向量检索"
+    ],
+    "use_cases": [
+      "多 Agent 集群编排",
+      "Agent 长期记忆与学习",
+      "跨机器联邦协作",
+      "Agent 成本与流程控制"
+    ]
+  }
+}

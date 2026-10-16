@@ -1,27 +1,24 @@
 {
-  "cached_at": "2026-10-15T12:33:13+08:00",
+  "cached_at": "2026-10-16T12:27:05+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-15T04:28:29Z",
+  "repo_pushed_at": "2026-10-16T02:54:46Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决 AI 直接输出大段终端文本难以阅读、手写 HTML 又浪费 token 的问题，由 CLI 生成图表与样式。",
-    "summary_zh": "一个 Agent 技能，让 AI 用一页可读 HTML 回答复杂问题，模型只需写 Markdown 草稿。",
+    "problem": "Agent 用纯文本回答复杂问题时输出冗长难读，手写 HTML 又耗费大量 token。",
+    "summary_zh": "Agent 技能：把复杂问题输出为一页可读的离线 HTML 说明页。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "Claude Code",
-      "Codex",
-      "Cursor",
-      "OpenCode"
+      "Agent Skill",
+      "Claude Code Plugin"
     ],
     "use_cases": [
-      "把复杂技术问题输出为单页 HTML",
-      "生成含图表的解释页面",
-      "生成讲解视频页面",
-      "在多种 Agent 中作为技能安装"
+      "把技术问题转成带图解的 HTML 页面",
+      "降低 Agent 生成解释页的 token 消耗",
+      "生成讲解视频式说明页"
     ]
   }
 }

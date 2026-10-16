@@ -1,26 +1,25 @@
 {
-  "cached_at": "2026-10-14T12:49:03+08:00",
+  "cached_at": "2026-10-16T12:27:05+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-14T02:53:38Z",
+  "repo_pushed_at": "2026-10-16T04:13:47Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决各 Agent 模型配置分散、订阅无法跨 Agent 复用、配额耗尽即中断的问题。",
-    "summary_zh": "本地网关统一为多个编码 Agent 配置任意模型与账号，支持配额耗尽自动切换。",
+    "problem": "每个 Agent 各自维护模型配置与密钥，订阅额度无法跨 Agent 复用，额度耗尽即中断。",
+    "summary_zh": "菜单栏应用与本地网关，为各类编码 Agent 统一配置和切换模型与账号。",
     "tech_stack": [
       "Go",
+      "MCP",
       "Docker",
       "CLI",
       "TUI"
     ],
     "use_cases": [
-      "为 Claude Code/Codex 切换模型",
-      "多账号配额故障转移",
-      "统一本地模型网关",
-      "配置档案切换",
-      "查看各订阅剩余额度"
+      "给 Claude Code、Codex 等切换任意模型",
+      "多账号/多订阅额度自动故障转移",
+      "本地网关统一代理多家模型 API"
     ]
   }
 }
