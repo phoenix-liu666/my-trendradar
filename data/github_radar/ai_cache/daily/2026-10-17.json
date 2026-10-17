@@ -1,0 +1,461 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可自托管、可配置的开源编码 Agent，替代闭源编码工具。",
+      "recommendation_reason": "成熟开源编码 Agent，值得深入研究其 Agent 架构与工作流设计。",
+      "recommended_action": "study",
+      "relevance_reason": "用户画像明确包含 OpenCode 与 Coding Agent，属于核心关注对象。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码 Agent，提供终端界面与桌面应用。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Nix"
+      ],
+      "use_cases": [
+        "在终端中进行 AI 辅助编码",
+        "用只读 plan Agent 探索代码库",
+        "通过子 Agent 处理复杂多步任务",
+        "桌面端使用编码 Agent"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 达 21 万量级，近 7 日增长约 2000，长期热度高；具体外部驱动事件无证据。"
+      }
+    },
+    "anthropics/claude-plugins-official": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "anthropics/claude-plugins-official",
+      "maturity": "growing",
+      "problem": "为 Claude Code 用户提供经过筛选的插件市场入口，并规范插件结构与提交方式。",
+      "recommendation_reason": "官方插件目录，对跟踪 Claude Code 生态与可用插件有直接价值。",
+      "recommended_action": "star",
+      "relevance_reason": "命中 ai_agents 画像中的 Claude Code 与 MCP，属于 Agent 生态基础设施。",
+      "relevance_score": 80,
+      "summary_zh": "Anthropic 官方维护的 Claude Code 插件目录，收录内部与第三方插件。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Claude Code"
+      ],
+      "use_cases": [
+        "发现与安装 Claude Code 插件",
+        "插件开发参考",
+        "MCP 服务集成"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "trending_rank",
+          "delta_24h",
+          "stars",
+          "pushed_at"
+        ],
+        "summary": "Trending 排名第 1 且 24 小时 Star 增量明显，属于官方目录型仓库。"
+      }
+    },
+    "edenfunf/reelmimic": {
+      "category": "Other",
+      "from_cache": false,
+      "full_name": "edenfunf/reelmimic",
+      "maturity": "growing",
+      "problem": "希望复刻参考视频的剪辑节奏与视觉风格，但手工制作动画视频成本高、周期长。",
+      "recommendation_reason": "多 Agent 编排思路可参考，但应用领域与用户兴趣画像重合度低。",
+      "recommended_action": "skip",
+      "relevance_reason": "使用编码 Agent 作为执行后端，命中 ai_agents，但核心是视频生成，与用户方向关联有限。",
+      "relevance_score": 55,
+      "summary_zh": "用 Claude Code 或 Codex 多 Agent 协作，按参考视频风格生成新视频。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Python",
+        "FFmpeg",
+        "Claude Code",
+        "Codex CLI"
+      ],
+      "use_cases": [
+        "按参考视频风格生成动画短片",
+        "多 Agent 分工制作与交叉审核视频",
+        "在网页端审阅分镜与逐帧评论"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "创建约三周获 3382 Star，近期仍在更新；具体外部驱动事件无证据。"
+      }
+    },
+    "louis-cfm/coucou": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "Louis-CFM/coucou",
+      "maturity": "growing",
+      "problem": "编码 Agent 在后台运行时需频繁切换窗口查看进度与审批权限，打断当前工作。",
+      "recommendation_reason": "对多 Agent 日常使用有辅助价值，但依赖 macOS 生态，按需再评估。",
+      "recommended_action": "watch",
+      "relevance_reason": "围绕 Claude Code、Codex 等编码 Agent 的交互与审批，命中 ai_agents，但偏桌面体验工具。",
+      "relevance_score": 70,
+      "summary_zh": "Mac 刘海与手机端的 AI 编码 Agent 会话监控与审批工具。",
+      "tech_stack": [
+        "Swift",
+        "SwiftUI",
+        "Tauri 2",
+        "iOS",
+        "Android",
+        "Windows",
+        "Linux"
+      ],
+      "use_cases": [
+        "在刘海区查看 Agent 会话进度",
+        "从刘海或锁屏审批权限请求",
+        "跳转到对应终端窗口",
+        "语音听写与通话记录"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h"
+        ],
+        "summary": "近 7 日增长约 800 Star，热度中等；具体外部驱动事件无证据。"
+      }
+    },
+    "mksglu/context-mode": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "mksglu/context-mode",
+      "maturity": "growing",
+      "problem": "MCP 工具调用把大量原始数据灌入上下文，压缩后丢失任务状态；该项目通过沙箱、SQLite 事件索引与代码化分析降低占用。",
+      "recommendation_reason": "解决 Agent 上下文膨胀的实际痛点，可直接在编码 Agent 工作流中试用。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 画像中的 MCP、Claude Code、Codex、OpenCode 等关键词。",
+      "relevance_score": 85,
+      "summary_zh": "为 AI 编码 Agent 优化上下文窗口的 MCP 服务，沙箱化工具输出并持久化会话记忆。",
+      "tech_stack": [
+        "TypeScript",
+        "MCP",
+        "SQLite",
+        "FTS5",
+        "BM25"
+      ],
+      "use_cases": [
+        "降低 Agent 上下文占用",
+        "跨会话记忆恢复",
+        "多客户端统一路由",
+        "工具输出沙箱"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "进入 Trending 前列且近期持续更新，Star 有一定规模；README 中的企业使用声明无法用指标验证。"
+      }
+    },
+    "morluto/rea": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "morluto/rea",
+      "maturity": "growing",
+      "problem": "让 Agent 在没有源码的情况下检查应用与原生二进制，解释功能实现并给出证据，辅助复刻或安全分析。",
+      "recommendation_reason": "与 Agent 工具生态高度相关，可研究其 MCP 工具设计与证据化分析流程。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 MCP、Claude Code、Codex 与 agent 工具链。",
+      "relevance_score": 88,
+      "summary_zh": "面向 AI Agent 的逆向工程 MCP 工具，可分析二进制、Electron 应用与网站。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "Ghidra",
+        "Hopper",
+        "IDA"
+      ],
+      "use_cases": [
+        "二进制静态分析",
+        "Electron/JS 应用逆向",
+        "功能行为复刻",
+        "安全研究"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 规模与 7 日增量极高，且持续更新，但缺少可确认的外部驱动事件证据。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "提供可长期运行、从经验中创建并改进技能、跨会话记住用户的通用 Agent，并支持多种部署后端与消息平台。",
+      "recommendation_reason": "项目体量大但 open issues 极多，建议先观察稳定性再决定是否深入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、Claude Code、Codex 等关键词。",
+      "relevance_score": 82,
+      "summary_zh": "Nous Research 推出的可自我改进 AI Agent，具备技能学习、跨会话记忆与多平台接入。",
+      "tech_stack": [
+        "Python",
+        "FTS5",
+        "Docker",
+        "SSH",
+        "Modal",
+        "Daytona"
+      ],
+      "use_cases": [
+        "个人长期 AI 助手",
+        "定时自动化任务",
+        "多平台消息接入",
+        "子 Agent 并行任务"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 规模极大且近期持续更新，但缺少可验证的外部驱动事件证据。"
+      }
+    },
+    "oldcircle/geo-sleuth": {
+      "category": "Computer Vision",
+      "from_cache": false,
+      "full_name": "Oldcircle/geo-sleuth",
+      "maturity": "growing",
+      "problem": "在无 GPS、无文字标识的照片中，利用几何、高程与卫星影像证据定位拍摄点并给出误差半径。",
+      "recommendation_reason": "作为 Agent Skill 的案例有参考价值，但应用领域偏窄。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 computer vision 与 Claude Code/Codex/OpenCode 关键词，但与核心 Agent 工程兴趣关联较间接。",
+      "relevance_score": 55,
+      "summary_zh": "通过 OpenStreetMap、高程天际线与街景推断照片拍摄位置的 Agent Skill。",
+      "tech_stack": [
+        "Python",
+        "SKILL.md",
+        "OpenStreetMap",
+        "Claude Code",
+        "Codex",
+        "OpenCode"
+      ],
+      "use_cases": [
+        "照片地理定位",
+        "OSINT 调查",
+        "地理猜谜辅助",
+        "多 Agent 技能复用"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "pushed_at",
+          "forks"
+        ],
+        "summary": "Star 规模中等、近期仍在更新，但无 Trending 或明显增长指标支撑热度判断。"
+      }
+    },
+    "qingyuna/answer-me-with-html": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "QingYunA/answer-me-with-html",
+      "maturity": "growing",
+      "problem": "Agent 对复杂问题的纯文本回答冗长难读，直接让模型写 HTML 又消耗大量 token。",
+      "recommendation_reason": "轻量 Agent 技能，可作为技能设计参考，实用价值取决于用户输出场景。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 Agent Skill 生态，兼容 Claude Code、Codex、OpenCode，命中 ai_agents。",
+      "relevance_score": 68,
+      "summary_zh": "Agent 技能：把复杂问题的回答生成为单页可读 HTML。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Claude Code",
+        "Codex",
+        "OpenCode"
+      ],
+      "use_cases": [
+        "将技术解释生成为带图表的单页 HTML",
+        "生成离线可读的说明页面",
+        "降低 Agent 输出 HTML 的 token 消耗"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h"
+        ],
+        "summary": "近 7 日增长约 900 Star，热度中等；具体外部驱动事件无证据。"
+      }
+    },
+    "rehan-remade/universal-modder": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "rehan-remade/universal-modder",
+      "maturity": "growing",
+      "problem": "让编码 Agent 完成游戏逆向、模组编写、素材生成与游戏内测试，降低模组制作门槛。",
+      "recommendation_reason": "可作为 Agent Skills 与 MCP 集成的参考案例，实际用途与用户兴趣不完全重合。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 Agent 技能与 MCP 工具实践，命中 ai_agents，但应用场景为游戏模组，与用户核心方向偏离。",
+      "relevance_score": 72,
+      "summary_zh": "面向 AI 编码 Agent 的游戏模组技能与工具集，含 MCP 与素材生成。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Claude Code",
+        "Codex",
+        "Gemini CLI",
+        "OpenCode"
+      ],
+      "use_cases": [
+        "用 Agent 为 PC 游戏制作模组",
+        "逆向分析游戏引擎与代码",
+        "用 fal 生成美术、3D 与音频素材",
+        "在运行中的游戏里测试模组"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h"
+        ],
+        "summary": "近 7 日增长约 2000 Star，热度较高；具体外部驱动事件无证据。"
+      }
+    },
+    "ruvnet/ruflo": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "ruvnet/ruflo",
+      "maturity": "growing",
+      "problem": "为编码 Agent 提供工具、记忆、循环、沙箱与协调层，使多个 Agent 能协作并跨会话保留状态。",
+      "recommendation_reason": "属于 Agent 编排框架的代表性项目，值得研究其架构与多智能体协调方式。",
+      "recommended_action": "study",
+      "relevance_reason": "高度匹配 ai_agents 画像中的 agent framework、MCP、Claude Code、Codex、swarm。",
+      "relevance_score": 90,
+      "summary_zh": "面向 Claude Code 与 Codex 的 Agent 编排框架，支持多智能体集群、记忆与联邦通信。",
+      "tech_stack": [
+        "TypeScript",
+        "MCP",
+        "npm",
+        "Claude Code",
+        "Codex"
+      ],
+      "use_cases": [
+        "多智能体编排",
+        "Agent 记忆管理",
+        "跨机器联邦协作",
+        "编码工作流自动化"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 规模大、进入 Trending 且近期有更新，但无足够证据确定具体外部驱动事件。"
+      }
+    },
+    "yetone/magpie": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "yetone/magpie",
+      "maturity": "growing",
+      "problem": "每个编码 Agent 各自维护模型配置、密钥与订阅，跨 Agent 复用订阅困难，额度耗尽时需手动切换。",
+      "recommendation_reason": "与用户关注的编码 Agent 生态高度相关，可实际用于多 Agent 多模型配置管理。",
+      "recommended_action": "try",
+      "relevance_reason": "直接服务 Claude Code、Codex、OpenCode 等编码 Agent 的模型接入与切换，命中 ai_agents 核心兴趣。",
+      "relevance_score": 88,
+      "summary_zh": "菜单栏应用与本地网关，为各类编码 Agent 统一配置模型与账号。",
+      "tech_stack": [
+        "Go",
+        "macOS",
+        "Windows",
+        "Linux",
+        "Docker",
+        "Termux"
+      ],
+      "use_cases": [
+        "为 Claude Code、Codex 等 Agent 切换模型",
+        "统一管理多个模型供应商与订阅账号",
+        "额度耗尽时自动切换账号或模型",
+        "通过 CLI 管理 Agent 配置"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "created_at"
+        ],
+        "summary": "创建约三周即获 1.4 万 Star，近 7 日增长约 6600，热度高；具体外部驱动事件无证据。"
+      }
+    }
+  },
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T12:21:03+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 与 LLM 基础设施类项目在今日榜单中集中出现，Rust 工具链项目也成批上榜",
+    "rising_categories": [
+      "Coding Agent",
+      "LLM Infrastructure",
+      "Developer Tool"
+    ],
+    "signals": [
+      "类别分布中 Coding Agent 有 5 个、Developer Tool 有 3 个、LLM Infrastructure 有 2 个，是今日最集中的三个方向",
+      "morluto/rea 的 delta_24h 为 18289、heat_score 为 91.23，在 hot_today 中明显领先，其余项目 delta_24h 多在 2000 以下",
+      "for_you 前五名中有 3 个属于 Coding Agent，relevance 分别为 88、90、95",
+      "new_and_rising 中 storytold 系列有 photocraft、pdfcraft、wordcraft、filmcraft、craft-launcher 共 5 个项目，语言均为 Rust",
+      "LLM Infrastructure 的 yetone/magpie 与 mksglu/context-mode 同时出现在 for_you 与 hot_today 中，relevance 分别为 88 和 85"
+    ],
+    "watch_tomorrow": [
+      "morluto/rea 的高热度能否延续",
+      "Coding Agent 类别是否继续在 for_you 与 hot_today 中占据多数",
+      "LLM Infrastructure 中 yetone/magpie 与 mksglu/context-mode 的后…",
+      "storytold 系列 Rust 项目是否继续成批出现在 new_and_rising",
+      "anthropics/claude-plugins-official 作为 Developer Tool 的走势"
+    ]
+  },
+  "usage": {
+    "cache_hits": 3,
+    "completion_tokens": 3388,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 26769,
+    "prompt_tokens": 27921,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 31309
+  }
+}

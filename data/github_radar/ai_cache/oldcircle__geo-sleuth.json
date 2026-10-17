@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-17T12:21:03+08:00",
+  "full_name": "Oldcircle/geo-sleuth",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-16T13:27:09Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Computer Vision",
+    "maturity": "growing",
+    "problem": "在无 GPS、无文字标识的照片中，利用几何、高程与卫星影像证据定位拍摄点并给出误差半径。",
+    "summary_zh": "通过 OpenStreetMap、高程天际线与街景推断照片拍摄位置的 Agent Skill。",
+    "tech_stack": [
+      "Python",
+      "SKILL.md",
+      "OpenStreetMap",
+      "Claude Code",
+      "Codex",
+      "OpenCode"
+    ],
+    "use_cases": [
+      "照片地理定位",
+      "OSINT 调查",
+      "地理猜谜辅助",
+      "多 Agent 技能复用"
+    ]
+  }
+}

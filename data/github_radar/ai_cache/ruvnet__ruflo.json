@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-10-16T12:27:05+08:00",
+  "cached_at": "2026-10-17T12:21:03+08:00",
   "full_name": "ruvnet/ruflo",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-15T11:18:51Z",
+  "repo_pushed_at": "2026-10-16T11:04:29Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "为编码 Agent 提供编排、记忆、学习与安全护栏的执行层，使多 Agent 可协作。",
-    "summary_zh": "面向 Claude Code 与 Codex 的 Agent 元 harness，支持多 Agent 集群、记忆与联邦通信。",
+    "problem": "为编码 Agent 提供工具、记忆、循环、沙箱与协调层，使多个 Agent 能协作并跨会话保留状态。",
+    "summary_zh": "面向 Claude Code 与 Codex 的 Agent 编排框架，支持多智能体集群、记忆与联邦通信。",
     "tech_stack": [
       "TypeScript",
       "MCP",
+      "npm",
       "Claude Code",
-      "Codex",
-      "向量检索"
+      "Codex"
     ],
     "use_cases": [
-      "多 Agent 集群编排",
-      "Agent 长期记忆与学习",
+      "多智能体编排",
+      "Agent 记忆管理",
       "跨机器联邦协作",
-      "Agent 成本与流程控制"
+      "编码工作流自动化"
     ]
   }
 }

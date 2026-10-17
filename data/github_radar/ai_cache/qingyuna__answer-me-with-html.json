@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-10-16T12:27:05+08:00",
+  "cached_at": "2026-10-17T12:21:03+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-16T02:54:46Z",
+  "repo_pushed_at": "2026-10-16T09:52:07Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "Agent 用纯文本回答复杂问题时输出冗长难读，手写 HTML 又耗费大量 token。",
-    "summary_zh": "Agent 技能：把复杂问题输出为一页可读的离线 HTML 说明页。",
+    "problem": "Agent 对复杂问题的纯文本回答冗长难读，直接让模型写 HTML 又消耗大量 token。",
+    "summary_zh": "Agent 技能：把复杂问题的回答生成为单页可读 HTML。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "Agent Skill",
-      "Claude Code Plugin"
+      "Claude Code",
+      "Codex",
+      "OpenCode"
     ],
     "use_cases": [
-      "把技术问题转成带图解的 HTML 页面",
-      "降低 Agent 生成解释页的 token 消耗",
-      "生成讲解视频式说明页"
+      "将技术解释生成为带图表的单页 HTML",
+      "生成离线可读的说明页面",
+      "降低 Agent 输出 HTML 的 token 消耗"
     ]
   }
 }
