@@ -1,13 +1,13 @@
 {
-  "cached_at": "2026-10-17T12:21:03+08:00",
+  "cached_at": "2026-10-18T12:27:06+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-17T04:04:57Z",
+  "repo_pushed_at": "2026-10-18T04:26:59Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "每个编码 Agent 各自维护模型配置、密钥与订阅，跨 Agent 复用订阅困难，额度耗尽时需手动切换。",
+    "problem": "每个 Agent 各自维护模型配置与密钥，订阅额度无法跨 Agent 共用；额度耗尽时需手动切换。magpie 用统一网关集中管理模型、账号与故障转移。",
     "summary_zh": "菜单栏应用与本地网关，为各类编码 Agent 统一配置模型与账号。",
     "tech_stack": [
       "Go",
@@ -19,9 +19,9 @@
     ],
     "use_cases": [
       "为 Claude Code、Codex 等 Agent 切换模型",
-      "统一管理多个模型供应商与订阅账号",
-      "额度耗尽时自动切换账号或模型",
-      "通过 CLI 管理 Agent 配置"
+      "跨订阅账号自动故障转移",
+      "查看各订阅剩余额度",
+      "用配置档管理多套模型组合"
     ]
   }
 }

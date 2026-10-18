@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-10-09T14:04:24+08:00",
+  "cached_at": "2026-10-18T12:27:06+08:00",
   "full_name": "DietrichGebert/ponytail",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-08T16:19:55Z",
+  "repo_pushed_at": "2026-10-18T01:55:14Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "growing",
-    "problem": "代理容易过度生成代码与依赖；该技能约束代理复用现有组件、少写代码，同时保留校验、错误处理与安全逻辑。",
-    "summary_zh": "一个让 AI 编码代理遵循 YAGNI、只写必要代码的 agent skill。",
+    "maturity": "mature",
+    "problem": "编码 Agent 常过度实现、堆砌代码；Ponytail 以「最懒资深开发者」规则约束 Agent 只写必要代码，同时保留校验与安全。",
+    "summary_zh": "让 AI 编码 Agent 遵循极简原则的提示技能，减少代码量与 token 消耗。",
     "tech_stack": [
       "JavaScript",
-      "npm",
       "Claude Code",
-      "Cursor"
+      "Cursor",
+      "npm"
     ],
     "use_cases": [
-      "约束代理减少冗余代码",
-      "代码评审时发现遗漏的破坏性改动",
-      "降低代理 token 与成本",
-      "在编码代理中统一工程规范"
+      "约束 Agent 减少冗余代码",
+      "降低 token 与时间成本",
+      "代码评审时发现遗漏改动",
+      "在多种 Agent 中复用同一规则"
     ]
   }
 }

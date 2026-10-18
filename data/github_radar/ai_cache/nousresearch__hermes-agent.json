@@ -1,27 +1,27 @@
 {
-  "cached_at": "2026-10-17T12:21:03+08:00",
+  "cached_at": "2026-10-18T12:27:06+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-17T04:17:27Z",
+  "repo_pushed_at": "2026-10-18T04:22:26Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "提供可长期运行、从经验中创建并改进技能、跨会话记住用户的通用 Agent，并支持多种部署后端与消息平台。",
-    "summary_zh": "Nous Research 推出的可自我改进 AI Agent，具备技能学习、跨会话记忆与多平台接入。",
+    "problem": "提供可长期运行、跨会话记忆并自我改进的通用 Agent，支持多模型与多终端后端。",
+    "summary_zh": "Nous Research 推出的自改进 AI Agent，具备技能学习、记忆与多平台接入。",
     "tech_stack": [
       "Python",
-      "FTS5",
+      "MCP",
+      "Telegram",
+      "Discord",
       "Docker",
-      "SSH",
-      "Modal",
-      "Daytona"
+      "SSH"
     ],
     "use_cases": [
-      "个人长期 AI 助手",
-      "定时自动化任务",
-      "多平台消息接入",
-      "子 Agent 并行任务"
+      "长期运行的通用 Agent",
+      "跨平台对话与自动化",
+      "定时任务与报告",
+      "批量轨迹生成用于训练"
     ]
   }
 }

@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-18T12:27:06+08:00",
+  "full_name": "stablyai/orca",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-18T04:24:38Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决多个编码 Agent 并行工作时的隔离、监控与结果对比问题，通过独立 worktree 统一管理。",
+    "summary_zh": "多 Agent 编排桌面与移动端 IDE，可并行运行 Claude Code、Codex、OpenCode 等。",
+    "tech_stack": [
+      "TypeScript",
+      "Electron",
+      "Git worktree",
+      "SSH",
+      "Ghostty"
+    ],
+    "use_cases": [
+      "并行运行多个编码 Agent",
+      "移动端监控 Agent 任务",
+      "远程 SSH 运行 Agent",
+      "对比多个 Agent 的产出"
+    ]
+  }
+}
