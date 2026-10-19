@@ -1,28 +1,24 @@
 {
-  "cached_at": "2026-10-18T12:27:06+08:00",
+  "cached_at": "2026-10-19T12:35:34+08:00",
   "full_name": "rehan-remade/universal-modder",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-18T00:08:08Z",
+  "repo_pushed_at": "2026-10-18T20:38:43Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "让编码 Agent 能对 PC 游戏做侦察、逆向、构建 Mod、生成美术与音效并在游戏内测试，降低 Mod 制作门槛。",
-    "summary_zh": "面向 AI 编码 Agent 的游戏 Mod 技能与工具集，含 fal MCP 与素材生成。",
+    "problem": "游戏 Mod 制作需要逆向、美术、音频与测试，流程繁琐且门槛高。",
+    "summary_zh": "让 AI 编码代理为任意 PC 游戏制作 Mod 的技能、工具与知识库集合。",
     "tech_stack": [
       "Python",
       "MCP",
-      "Claude Code",
-      "Codex",
-      "Gemini CLI",
-      "OpenCode",
-      "Cursor"
+      "Claude Code Plugin",
+      "Agent Skills"
     ],
     "use_cases": [
-      "用 Agent 逆向分析游戏引擎",
-      "生成 Mod 所需美术、3D 与音频素材",
-      "在运行中的游戏里测试 Mod",
-      "沉淀跨游戏的 Mod 知识库"
+      "用代理逆向游戏引擎",
+      "生成 Mod 美术与音频素材",
+      "在运行中的游戏里测试 Mod"
     ]
   }
 }

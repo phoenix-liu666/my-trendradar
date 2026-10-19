@@ -1,28 +1,25 @@
 {
-  "cached_at": "2026-10-15T12:33:13+08:00",
+  "cached_at": "2026-10-19T12:35:34+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-15T00:24:53Z",
+  "repo_pushed_at": "2026-10-19T04:34:15Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "解决把 AI 能力与既有系统连接、编排多步骤自动化流程的问题，支持自托管与云端。",
-    "summary_zh": "fair-code 工作流自动化平台，具备原生 AI 能力，可视化搭建结合自定义代码与大量集成。",
+    "problem": "跨系统集成与 AI 工作流编排需要大量胶水代码，缺乏可视化与可观测性。",
+    "summary_zh": "具备原生 AI 能力的 fair-code 工作流自动化平台，支持自托管。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "LangChain",
       "MCP",
-      "JavaScript",
-      "Python"
+      "LangChain"
     ],
     "use_cases": [
-      "搭建多步骤 AI 工作流与代理",
-      "连接 1500+ 集成实现自动化",
-      "自托管处理敏感数据流程",
-      "用可视化画布加代码扩展节点"
+      "搭建多步 AI 代理工作流",
+      "连接 1500+ 集成自动化数据流",
+      "自托管部署内部自动化"
     ]
   }
 }
