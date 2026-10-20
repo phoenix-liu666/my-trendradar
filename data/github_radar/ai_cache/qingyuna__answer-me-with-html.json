@@ -1,27 +1,24 @@
 {
-  "cached_at": "2026-10-18T12:27:06+08:00",
+  "cached_at": "2026-10-20T12:44:53+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-18T04:24:30Z",
+  "repo_pushed_at": "2026-10-20T01:48:50Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "Agent 直接输出大段终端文本难以阅读，手写 HTML 又消耗大量 token；该技能让模型只写 Markdown 草稿，由 CLI 生成页面。",
-    "summary_zh": "Agent 技能：把复杂问题的回答生成单页可读 HTML，含图表与讲解视频。",
+    "problem": "解决 AI Agent 回答复杂问题时输出大段纯文本、难以阅读的问题；模型只写 Markdown 草稿，由 CLI 生成图表与样式，减少输出 token。",
+    "summary_zh": "一个 Agent 技能，让 AI 用一页可读的 HTML 页面回答复杂问题，而非大段终端文本。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "Claude Code",
-      "Codex",
-      "OpenCode",
-      "Cursor"
+      "CLI",
+      "Agent Skills"
     ],
     "use_cases": [
-      "把技术解释渲染成单页 HTML",
-      "生成架构图与示意图",
-      "制作讲解视频",
-      "离线查看回答页面"
+      "让 Claude Code 等 Agent 用 HTML 页面解释复杂概念",
+      "生成带图表的仓库结构说明",
+      "制作讲解视频式页面"
     ]
   }
 }

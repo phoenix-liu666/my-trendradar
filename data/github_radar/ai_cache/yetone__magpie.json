@@ -1,27 +1,25 @@
 {
-  "cached_at": "2026-10-19T12:35:34+08:00",
+  "cached_at": "2026-10-20T12:44:53+08:00",
   "full_name": "yetone/magpie",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-19T03:36:40Z",
+  "repo_pushed_at": "2026-10-20T02:09:10Z",
   "schema_version": 1,
   "static": {
-    "category": "LLM Infrastructure",
+    "category": "Developer Tool",
     "maturity": "growing",
     "problem": "解决各编码 Agent 模型配置分散、订阅无法跨 Agent 复用与配额耗尽问题。",
-    "summary_zh": "菜单栏应用，为多个编码 Agent 统一配置模型与本地网关。",
+    "summary_zh": "菜单栏工具，为多种编码 Agent 统一配置模型与本地网关。",
     "tech_stack": [
       "Go",
       "macOS",
-      "Windows",
-      "Linux",
       "Docker",
-      "Termux"
+      "CLI"
     ],
     "use_cases": [
-      "为 Claude Code/Codex 切换模型",
-      "统一管理多供应商 API Key",
-      "配额耗尽自动切换账号",
-      "本地网关代理"
+      "为 Claude Code 切换模型",
+      "为 Codex 切换模型",
+      "多账号配额故障转移",
+      "统一管理模型供应商"
     ]
   }
 }

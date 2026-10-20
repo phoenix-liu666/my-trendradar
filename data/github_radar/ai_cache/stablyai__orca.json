@@ -1,8 +1,8 @@
 {
-  "cached_at": "2026-10-19T12:35:34+08:00",
+  "cached_at": "2026-10-20T12:44:53+08:00",
   "full_name": "stablyai/orca",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-19T04:35:31Z",
+  "repo_pushed_at": "2026-10-20T04:41:41Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
@@ -13,14 +13,13 @@
       "TypeScript",
       "Electron",
       "Git worktrees",
-      "Ghostty",
       "SSH"
     ],
     "use_cases": [
       "并行运行多个编码 Agent",
-      "用独立 worktree 对比结果",
       "移动端监控 Agent",
-      "远程 SSH 运行 Agent"
+      "远程 SSH 运行 Agent",
+      "审查 AI 生成的 diff"
     ]
   }
 }

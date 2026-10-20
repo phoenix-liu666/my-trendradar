@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-10-17T12:21:03+08:00",
+  "cached_at": "2026-10-20T12:44:53+08:00",
   "full_name": "edenfunf/reelmimic",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-16T06:37:19Z",
+  "repo_pushed_at": "2026-10-19T19:36:19Z",
   "schema_version": 1,
   "static": {
     "category": "Other",
     "maturity": "growing",
-    "problem": "希望复刻参考视频的剪辑节奏与视觉风格，但手工制作动画视频成本高、周期长。",
-    "summary_zh": "用 Claude Code 或 Codex 多 Agent 协作，按参考视频风格生成新视频。",
+    "problem": "解决按参考视频风格制作原创 2D 动画视频流程复杂的问题，用多 Agent 分工完成拆解、制作与审核。",
+    "summary_zh": "输入参考视频，由 Claude Code 或 Codex 多 Agent 协作规划、制作并审核同风格的新 2D 动画视频。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
       "Python",
-      "FFmpeg",
       "Claude Code",
-      "Codex CLI"
+      "Codex CLI",
+      "FFmpeg"
     ],
     "use_cases": [
-      "按参考视频风格生成动画短片",
-      "多 Agent 分工制作与交叉审核视频",
-      "在网页端审阅分镜与逐帧评论"
+      "根据参考视频生成同风格动画短片",
+      "多 Agent 分工制作与交叉审核视频镜头",
+      "在网页端对成片逐秒评论修改"
     ]
   }
 }
