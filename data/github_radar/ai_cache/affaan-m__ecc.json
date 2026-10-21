@@ -1,26 +1,25 @@
 {
-  "cached_at": "2026-10-20T12:44:53+08:00",
+  "cached_at": "2026-10-21T12:41:19+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-20T03:39:21Z",
+  "repo_pushed_at": "2026-10-20T23:08:28Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "为多种编码 Agent 提供统一的技能、记忆、安全与研究优先开发能力。",
-    "summary_zh": "面向 Claude Code、Codex 等 Agent 的性能优化与技能、记忆、安全框架。",
+    "problem": "为编码 Agent 提供技能、记忆、安全与研究优先的开发增强层，提升 harness 表现。",
+    "summary_zh": "面向 Claude Code、Codex 等 Agent 的 harness 优化系统，含技能、记忆与安全。",
     "tech_stack": [
       "JavaScript",
-      "MCP",
-      "Claude Code",
-      "Codex",
-      "OpenCode"
+      "TypeScript",
+      "Python",
+      "Go",
+      "MCP"
     ],
     "use_cases": [
-      "增强 Claude Code 能力",
-      "管理 Agent 技能与记忆",
-      "Agent 安全防护",
-      "多 Agent 工具统一配置"
+      "增强 Claude Code 工作流",
+      "Agent 技能与记忆管理",
+      "Agent 安全防护"
     ]
   }
 }

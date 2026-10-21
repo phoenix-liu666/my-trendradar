@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-19T12:35:34+08:00",
+  "cached_at": "2026-10-21T12:41:19+08:00",
   "full_name": "onehumanbeing/esp32-iphone-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-19T04:16:59Z",
+  "repo_pushed_at": "2026-10-20T10:28:41Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "在无越狱、无 Mac 运行时的条件下，让 AI 模型直接操作真实 iPhone。",
-    "summary_zh": "用 7 美元 ESP32 让视觉模型通过 AirPlay 与 USB HID 操作真实 iPhone。",
+    "problem": "在无 Mac、无越狱、无开发者账号的条件下，让 AI 代理直接操作真实手机界面。",
+    "summary_zh": "用约 7 美元的 ESP32 让视觉模型通过 AirPlay 与 USB HID 操作真实 iPhone。",
     "tech_stack": [
       "C",
       "ESP32-S3",
@@ -18,9 +18,9 @@
       "iOS"
     ],
     "use_cases": [
-      "computer use 操作手机",
-      "视觉模型驱动 UI 自动化",
-      "手机端 Agent 实验"
+      "让视觉模型自动操作 iPhone 应用",
+      "录制并回放代理操作轨迹",
+      "低成本手机端 computer use 实验"
     ]
   }
 }

@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-21T12:41:19+08:00",
+  "full_name": "sickn33/agentic-awesome-skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-20T19:30:38Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "编码代理缺少可检索、可校验、可复用的技能库，用户难以在改动项目前确认代理会选用哪些技能。",
+    "summary_zh": "面向 Codex/Claude 等编码代理的本地技能目录与控制面，收录 2700+ 个 SKILL.md 技能。",
+    "tech_stack": [
+      "Python",
+      "MCP",
+      "CLI"
+    ],
+    "use_cases": [
+      "为 Claude Code/Codex 检索并安装技能",
+      "在改动前预览技能选择计划",
+      "校验技能栈清单"
+    ]
+  }
+}

@@ -1,27 +1,25 @@
 {
-  "cached_at": "2026-10-20T12:44:53+08:00",
+  "cached_at": "2026-10-21T12:41:19+08:00",
   "full_name": "headroomlabs-ai/headroom",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-20T02:56:03Z",
+  "repo_pushed_at": "2026-10-21T04:15:22Z",
   "schema_version": 1,
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决 Agent 上下文窗口被冗长工具输出、日志与 RAG 内容占满、token 成本高的问题，提供可逆压缩与检索。",
-    "summary_zh": "在内容进入 LLM 前压缩工具输出、日志、文件与 RAG 片段，降低 token 消耗且保持答案一致。",
+    "problem": "代理上下文被日志、JSON 与文件大量占用，导致 token 成本高、上下文窗口紧张。",
+    "summary_zh": "在内容进入 LLM 前压缩工具输出、日志、文件与 RAG 片段，降低 token 消耗。",
     "tech_stack": [
       "Python",
       "TypeScript",
       "MCP",
       "FastAPI",
-      "LangChain",
-      "Proxy"
+      "LangChain"
     ],
     "use_cases": [
-      "压缩 Claude Code 等 Agent 的工具输出与日志",
-      "降低 RAG 与 JSON 内容的 token 消耗",
-      "作为 MCP 服务器接入任意 MCP 客户端",
-      "跨 Agent 共享记忆"
+      "压缩编码代理的工具输出与日志",
+      "以代理或 MCP 服务方式接入现有应用",
+      "跨代理共享压缩后的记忆"
     ]
   }
 }

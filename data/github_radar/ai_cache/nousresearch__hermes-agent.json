@@ -1,27 +1,28 @@
 {
-  "cached_at": "2026-10-20T12:44:53+08:00",
+  "cached_at": "2026-10-21T12:41:19+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-20T04:35:52Z",
+  "repo_pushed_at": "2026-10-21T04:34:05Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "提供可跨平台运行、具备记忆与技能自学习能力的通用 AI Agent。",
-    "summary_zh": "Nous Research 推出的自改进 AI Agent，支持多平台与技能自学习。",
+    "problem": "提供可自托管、跨平台、带学习闭环与定时自动化的通用 AI Agent 运行环境。",
+    "summary_zh": "Nous Research 的自改进 AI Agent，具备技能学习、跨会话记忆与多平台接入。",
     "tech_stack": [
       "Python",
-      "Telegram",
-      "Discord",
-      "Slack",
       "Docker",
-      "SSH"
+      "SSH",
+      "Modal",
+      "Daytona",
+      "Telegram",
+      "Discord"
     ],
     "use_cases": [
-      "个人通用 AI 助手",
+      "自托管个人 Agent",
       "跨平台消息接入",
       "定时自动化任务",
-      "子 Agent 并行任务"
+      "子 Agent 并行"
     ]
   }
 }

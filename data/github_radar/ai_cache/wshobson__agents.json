@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-21T12:41:19+08:00",
+  "full_name": "wshobson/agents",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-19T18:28:14Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "不同编码工具的插件、子代理、技能与命令格式各异，难以统一复用同一套组件。",
+    "summary_zh": "跨 Claude Code、Codex、Cursor、OpenCode 等多工具的代理插件与技能市场。",
+    "tech_stack": [
+      "Python",
+      "Markdown",
+      "MCP"
+    ],
+    "use_cases": [
+      "在多个编码代理间共享插件与技能",
+      "安装代码审查、测试、安全类插件",
+      "按工具生成适配的代理与命令"
+    ]
+  }
+}
