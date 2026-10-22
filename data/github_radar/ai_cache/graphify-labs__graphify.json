@@ -1,26 +1,27 @@
 {
-  "cached_at": "2026-10-21T12:41:19+08:00",
+  "cached_at": "2026-10-22T12:38:58+08:00",
   "full_name": "Graphify-Labs/graphify",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-20T16:16:19Z",
+  "repo_pushed_at": "2026-10-21T15:23:36Z",
   "schema_version": 1,
   "static": {
     "category": "Knowledge Management",
     "maturity": "growing",
-    "problem": "让 Agent 用知识图谱查询替代逐文件 grep，降低 token 消耗并解释每条边来源。",
-    "summary_zh": "把代码库、文档与 PDF 转成可查询知识图谱的 /graphify 技能。",
+    "problem": "减少 Agent 在代码库中盲目 grep 的 token 消耗，用确定性 AST 解析构建带边解释的知识图谱。",
+    "summary_zh": "把代码库、文档、SQL 与 PDF 转成可查询知识图谱的 Agent 技能。",
     "tech_stack": [
       "Python",
       "tree-sitter",
       "AST",
       "MCP",
-      "Leiden"
+      "Leiden",
+      "知识图谱"
     ],
     "use_cases": [
-      "代码库知识图谱",
-      "跨文档检索",
-      "Agent 上下文压缩",
-      "代码结构分析"
+      "代码库知识图谱构建",
+      "Agent 代码检索替代 grep",
+      "文档与 PDF 语义关联",
+      "跨文件依赖追踪"
     ]
   }
 }

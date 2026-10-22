@@ -1,22 +1,25 @@
 {
-  "cached_at": "2026-10-21T12:41:19+08:00",
+  "cached_at": "2026-10-22T12:38:58+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-21T03:06:59Z",
+  "repo_pushed_at": "2026-10-21T06:56:25Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "代理对复杂问题的纯文本回答难以阅读，直接让模型手写 HTML 又浪费大量 token。",
-    "summary_zh": "一个代理技能，把复杂问题的回答生成为单页可读 HTML，而非大段终端文本。",
+    "problem": "Agent 对复杂问题的纯文本回答冗长难读，而直接生成 HTML 又消耗大量 token。",
+    "summary_zh": "让 AI Agent 用一页可离线阅读的 HTML 回答复杂问题的技能。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "CLI"
+      "Claude Code",
+      "Codex",
+      "OpenCode"
     ],
     "use_cases": [
-      "让代理用单页 HTML 解释复杂概念",
-      "生成带图表的说明页",
+      "把复杂技术问题输出为单页 HTML",
+      "生成带图解的说明页面",
+      "降低 Agent 输出 token 消耗",
       "生成讲解视频页面"
     ]
   }
