@@ -1,18 +1,18 @@
 {
-  "cached_at": "2026-10-22T12:38:58+08:00",
+  "cached_at": "2026-10-23T12:44:26+08:00",
   "full_name": "morluto/rea",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-22T04:32:59Z",
+  "repo_pushed_at": "2026-10-23T03:53:10Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "帮助开发者在没有源码的情况下理解应用功能实现，覆盖原生二进制、Electron/JS、.NET 与网站，并给出证据与局限。",
-    "summary_zh": "通过 MCP 让 AI Agent 对二进制、应用与运行时行为做逆向分析的工具。",
+    "problem": "让 Agent 在没有源码的情况下理解应用功能实现，覆盖二进制、JS/Electron、.NET 与网站分析，并给出证据与局限。",
+    "summary_zh": "面向 AI Agent 的逆向工程 MCP 工具，可分析原生二进制、Electron 应用与网站。",
     "tech_stack": [
       "TypeScript",
-      "MCP",
       "Node.js",
+      "MCP",
       "Ghidra",
       "Hopper",
       "IDA"
@@ -20,8 +20,8 @@
     "use_cases": [
       "逆向分析原生二进制",
       "分析 Electron/JS 应用",
-      "理解竞品功能实现",
-      "Agent 驱动的静态分析"
+      "通过 MCP 接入 Claude Code/Codex",
+      "终端静态分析"
     ]
   }
 }
