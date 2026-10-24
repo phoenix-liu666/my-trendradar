@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-10-23T12:44:26+08:00",
+  "cached_at": "2026-10-24T12:31:46+08:00",
   "full_name": "Louis-CFM/coucou",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-22T20:09:48Z",
+  "repo_pushed_at": "2026-10-23T17:25:38Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "让用户在离开终端时也能查看 Agent 进度、审批权限请求并跳转到对应终端窗口。",
-    "summary_zh": "驻留 Mac 刘海与 iPhone 的助手，实时监控并审批 AI 编码 Agent 会话。",
+    "problem": "让开发者无需切换窗口即可查看多个 AI 编码 Agent 会话进度并完成权限审批。",
+    "summary_zh": "驻留 Mac 刘海与 iPhone 的 AI 编码 Agent 状态监控与审批小工具。",
     "tech_stack": [
       "Swift",
       "SwiftUI",
-      "Tauri 2",
+      "Tauri",
       "iOS",
       "Android"
     ],
     "use_cases": [
-      "刘海栏监控 Agent 会话",
-      "远程审批权限请求",
-      "锁屏与灵动岛通知",
+      "监控 Claude Code 等 Agent 会话",
+      "在刘海上审批权限请求",
+      "跨设备查看 Agent 状态",
       "语音听写与会议记录"
     ]
   }

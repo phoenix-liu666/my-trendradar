@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-10-24T12:31:46+08:00",
+  "full_name": "cloudflare/security-audit-skill",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-09-14T19:29:02Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "解决 AI 辅助安全审计缺乏覆盖度追踪、结论难以验证和报告结构不统一的问题。",
+    "summary_zh": "将编码 Agent 变为安全审计员的技能，分六阶段产出可独立验证的机器可读漏洞发现。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "JSON Schema"
+    ],
+    "use_cases": [
+      "代码库安全审计",
+      "漏洞挖掘与验证",
+      "渗透测试辅助",
+      "生成结构化审计报告"
+    ]
+  }
+}

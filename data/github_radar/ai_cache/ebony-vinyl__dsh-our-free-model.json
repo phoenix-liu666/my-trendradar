@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-10-24T12:31:46+08:00",
+  "full_name": "Ebony-Vinyl/dsh-our-free-model",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-24T01:51:50Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决使用前沿大模型需注册、填 API Key 和受配额限制的门槛问题。",
+    "summary_zh": "为 dsh 提供免登录免 Key 的多渠道免费模型插件，含本地网关、用量看板与路由降级。",
+    "tech_stack": [
+      "JavaScript",
+      "OpenAI 兼容 API",
+      "Anthropic API"
+    ],
+    "use_cases": [
+      "免 Key 调用大模型",
+      "本地 OpenAI 兼容网关",
+      "多模型路由降级",
+      "Token 用量统计"
+    ]
+  }
+}

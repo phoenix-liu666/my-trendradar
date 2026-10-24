@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-24T12:31:46+08:00",
+  "full_name": "deepseek-ai/DeepInfer",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-21T04:55:44Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决 DeepSeek 模型大规模生产推理中的吞吐、延迟与并行调度效率问题。",
+    "summary_zh": "DeepSeek 开源的高性能大模型推理框架，支持 V4.1 Flash 与多种并行及优化内核。",
+    "tech_stack": [
+      "Python",
+      "CUDA",
+      "TileLang",
+      "FlashMLA",
+      "DeepGEMM",
+      "DeepEP"
+    ],
+    "use_cases": [
+      "DeepSeek 模型离线推理",
+      "大规模推理服务部署",
+      "结构化输出生成",
+      "NVIDIA 与昇腾硬件推理"
+    ]
+  }
+}
