@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-25T12:36:16+08:00",
+  "full_name": "google-gemini/gemini-cli",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-25T01:31:54Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "mature",
+    "problem": "让开发者在终端中直接调用 Gemini 完成代码理解、生成、调试与脚本化自动化，并可通过 MCP 扩展能力。",
+    "summary_zh": "Google 开源的终端 AI Agent，将 Gemini 能力接入命令行。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "MCP",
+      "Gemini API",
+      "Vertex AI"
+    ],
+    "use_cases": [
+      "终端内代码问答与编辑",
+      "多模态生成应用原型",
+      "PR 与 rebase 等运维自动化",
+      "脚本非交互调用",
+      "接入 MCP 扩展工具"
+    ]
+  }
+}

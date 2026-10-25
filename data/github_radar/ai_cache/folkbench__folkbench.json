@@ -1,0 +1,22 @@
+{
+  "cached_at": "2026-10-25T12:36:16+08:00",
+  "full_name": "Folkbench/folkbench",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-23T18:17:59Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "帮助用户比较各 AI API 中转站的可用率、延迟与价格，并写入 Claude Code、Codex 配置。",
+    "summary_zh": "AI API 中转站实测排行与配置切换桌面客户端。",
+    "tech_stack": [
+      "Rust",
+      "Tauri"
+    ],
+    "use_cases": [
+      "API 中转站可用性对比",
+      "Claude Code/Codex 线路切换",
+      "模型价格与延迟参考"
+    ]
+  }
+}

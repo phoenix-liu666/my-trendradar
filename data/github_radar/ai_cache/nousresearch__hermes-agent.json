@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-24T12:31:46+08:00",
+  "cached_at": "2026-10-25T12:36:16+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-24T04:07:25Z",
+  "repo_pushed_at": "2026-10-25T04:15:00Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "提供一个可长期运行、跨平台接入、能从经验中积累技能与记忆的通用 AI Agent。",
-    "summary_zh": "Nous Research 推出的可自我改进 AI Agent，支持多模型、多平台与技能自学习。",
+    "problem": "提供可长期运行、跨平台、具备记忆与技能学习闭环的通用 Agent 运行环境。",
+    "summary_zh": "Nous Research 出品的可自我改进 AI Agent，支持多平台与多模型。",
     "tech_stack": [
       "Python",
       "MCP",
@@ -18,10 +18,10 @@
       "Daytona"
     ],
     "use_cases": [
-      "个人长期运行 AI 助手",
-      "跨平台消息接入",
+      "长期运行的个人 Agent",
+      "跨 IM 平台任务执行",
       "定时自动化任务",
-      "子代理并行任务",
+      "子 Agent 并行编排",
       "轨迹数据生成"
     ]
   }

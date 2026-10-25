@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-10-25T12:36:16+08:00",
+  "full_name": "makecindy/cindy",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-25T04:36:08Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "把多种 Agent harness、模型与工具整合进一个本地桌面/移动客户端，降低使用门槛。",
+    "summary_zh": "开源开箱即用 AI Agent 客户端，整合 Claude Code 与 Codex 等 harness。",
+    "tech_stack": [
+      "TypeScript",
+      "Electron",
+      "React Native",
+      "Expo",
+      "pnpm",
+      "MCP"
+    ],
+    "use_cases": [
+      "本地桌面 Agent 使用",
+      "移动端 Agent 接入",
+      "多 harness 混合编排",
+      "MCP 工具接入"
+    ]
+  }
+}
