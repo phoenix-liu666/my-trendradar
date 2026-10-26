@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-10-25T12:36:16+08:00",
+  "cached_at": "2026-10-26T12:41:28+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-24T23:11:27Z",
+  "repo_pushed_at": "2026-10-26T00:47:05Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "把 AI 模型、工具与 1500+ 外部系统编排成可自托管、可观测的多步自动化流程，降低集成成本。",
-    "summary_zh": "可视化与代码结合的 fair-code 工作流自动化平台，原生支持 AI Agent。",
+    "problem": "让用户以可视化画布加自定义代码的方式连接各类系统，构建自动化工作流与多步 AI Agent。",
+    "summary_zh": "Fair-code 工作流自动化平台，支持可视化编排与原生 AI Agent 能力。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "LangChain",
-      "MCP"
+      "JavaScript",
+      "Python"
     ],
     "use_cases": [
-      "多步 AI Agent 工作流编排",
-      "跨系统数据集成",
-      "自托管自动化部署",
-      "人工审批与可观测流程",
-      "低代码业务自动化"
+      "构建多步 AI Agent 工作流",
+      "系统集成与数据流转自动化",
+      "自托管自动化平台",
+      "接入 MCP 客户端与服务端"
     ]
   }
 }

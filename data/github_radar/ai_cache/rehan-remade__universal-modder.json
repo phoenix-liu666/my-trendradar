@@ -1,13 +1,13 @@
 {
-  "cached_at": "2026-10-25T12:36:16+08:00",
+  "cached_at": "2026-10-26T12:41:28+08:00",
   "full_name": "rehan-remade/universal-modder",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-24T20:45:22Z",
+  "repo_pushed_at": "2026-10-25T20:48:13Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "把游戏逆向、资源生成与游戏内测试流程封装为 Agent 可复用的技能与 MCP 工具。",
+    "problem": "把游戏模组制作流程交给 Agent，包括侦察、逆向、素材生成、游戏内测试与视频展示。",
     "summary_zh": "让 AI 编码 Agent 为 PC 游戏制作模组的技能、工具与知识库集合。",
     "tech_stack": [
       "Python",
@@ -18,10 +18,10 @@
       "fal"
     ],
     "use_cases": [
-      "游戏模组开发",
-      "游戏逆向侦察",
-      "AI 生成美术与音频资源",
-      "Agent 技能库复用"
+      "游戏模组自动制作",
+      "逆向分析游戏引擎",
+      "AI 生成美术与音频素材",
+      "游戏内自动化测试"
     ]
   }
 }

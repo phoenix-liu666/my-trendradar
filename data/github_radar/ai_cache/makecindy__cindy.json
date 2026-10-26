@@ -1,27 +1,29 @@
 {
-  "cached_at": "2026-10-25T12:36:16+08:00",
+  "cached_at": "2026-10-26T12:41:28+08:00",
   "full_name": "makecindy/cindy",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-25T04:36:08Z",
+  "repo_pushed_at": "2026-10-26T04:18:28Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "把多种 Agent harness、模型与工具整合进一个本地桌面/移动客户端，降低使用门槛。",
-    "summary_zh": "开源开箱即用 AI Agent 客户端，整合 Claude Code 与 Codex 等 harness。",
+    "problem": "把多种 harness、模型与工具整合进一个本地 Agent，在用户真实文件与已登录应用中完成实际任务。",
+    "summary_zh": "开源开箱即用的本地 AI Agent 客户端，支持桌面与移动端。",
     "tech_stack": [
       "TypeScript",
       "Electron",
       "React Native",
       "Expo",
       "pnpm",
-      "MCP"
+      "MCP",
+      "Claude Code",
+      "Codex"
     ],
     "use_cases": [
-      "本地桌面 Agent 使用",
-      "移动端 Agent 接入",
-      "多 harness 混合编排",
-      "MCP 工具接入"
+      "本地桌面 Agent 助手",
+      "多 harness 与模型切换",
+      "浏览器与手机操作自动化",
+      "定时任务自动化"
     ]
   }
 }

@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-26T12:41:28+08:00",
+  "full_name": "Zagitta/gpu-unlock",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-24T15:47:28Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "experimental",
+    "problem": "在驱动加载前写入速度选择器，使消费级 30 系显卡获得接近专业卡的 FP/BF16 矩阵吞吐。",
+    "summary_zh": "Linux 内核模块，解锁 Nvidia 30 系显卡的 FP/BF16 指令发射速率。",
+    "tech_stack": [
+      "C",
+      "Linux kernel module",
+      "NVIDIA driver"
+    ],
+    "use_cases": [
+      "提升 30 系显卡 BF16/FP16 矩阵运算吞吐",
+      "加速 LLM 预填充与扩散模型推理",
+      "低成本提升本地推理性能"
+    ]
+  }
+}
