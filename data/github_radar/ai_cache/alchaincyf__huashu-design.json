@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-27T12:58:52+08:00",
+  "full_name": "alchaincyf/huashu-design",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-23T15:32:08Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "非设计人员难以快速产出可交付的设计稿，通用模型生成的设计容易同质化、缺乏方向选择。",
+    "summary_zh": "HTML 原生的设计技能，让 Agent 产出网页、App 原型、可编辑 PPTX 与动画。",
+    "tech_stack": [
+      "HTML",
+      "Agent Skills"
+    ],
+    "use_cases": [
+      "生成网页与 App 交互原型",
+      "生成可编辑 PPTX 演示",
+      "生成产品发布动画与信息图",
+      "对设计做多维度评审"
+    ]
+  }
+}

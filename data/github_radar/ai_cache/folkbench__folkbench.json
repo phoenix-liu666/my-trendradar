@@ -1,22 +1,22 @@
 {
-  "cached_at": "2026-10-26T12:41:28+08:00",
+  "cached_at": "2026-10-27T12:58:52+08:00",
   "full_name": "Folkbench/folkbench",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-25T09:27:52Z",
+  "repo_pushed_at": "2026-10-26T17:32:01Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "帮助用户比较各家 AI API 中转站的可用率、延迟与价格，并一键把选定线路写入编码工具配置。",
+    "problem": "中转站质量参差，用户难以判断哪家稳定、便宜、安全，也缺少把选定线路快速写入编码工具配置的手段。",
     "summary_zh": "AI API 中转站实测榜单与桌面切换客户端，可把线路写入 Claude Code、Codex 配置。",
     "tech_stack": [
       "Rust",
       "Tauri"
     ],
     "use_cases": [
-      "对比 AI API 中转站稳定性与价格",
-      "为 Claude Code 切换 API 线路",
-      "为 Codex 切换 API 线路"
+      "对比 AI API 中转站可用率与价格",
+      "为 Claude Code / Codex 切换 API 线路",
+      "查看单模型跨站点实测表现"
     ]
   }
 }

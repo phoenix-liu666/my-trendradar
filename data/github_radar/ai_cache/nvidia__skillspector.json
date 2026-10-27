@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-27T12:58:52+08:00",
+  "full_name": "NVIDIA/SkillSpector",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-23T09:40:29Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "growing",
+    "problem": "在安装 Agent 技能前检测提示词注入、数据外泄、供应链等安全风险。",
+    "summary_zh": "NVIDIA 出品的 AI Agent 技能安全扫描器，检测漏洞与恶意模式。",
+    "tech_stack": [
+      "Python",
+      "MCP",
+      "YARA",
+      "SARIF",
+      "Docker"
+    ],
+    "use_cases": [
+      "Agent 技能安装前扫描",
+      "提示词注入检测",
+      "MCP 权限审查",
+      "CI 安全门禁"
+    ]
+  }
+}
