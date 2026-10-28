@@ -1,27 +1,24 @@
 {
-  "cached_at": "2026-10-23T12:44:26+08:00",
+  "cached_at": "2026-10-28T13:36:11+08:00",
   "full_name": "Arekejoker/qwen21-nsfw-pose-skill",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-20T07:03:30Z",
+  "repo_pushed_at": "2026-10-26T16:43:07Z",
   "schema_version": 1,
   "static": {
     "category": "Other",
     "maturity": "experimental",
-    "problem": "提供可复现的提示词配方、NSFW LoRA 与 136 个 3D 姿势库，用于本地精确控制人物姿势出图。",
-    "summary_zh": "基于 ComfyUI 与 Qwen-Image 2.1 的 NSFW 出图与姿势控制 Agent 技能。",
+    "problem": "为本地图像生成提供可复现的提示词结构、LoRA 与姿势控制流程。",
+    "summary_zh": "基于 Qwen-Image 2.1 与 ComfyUI 的出图技能，含提示词配方与 136 姿势控制。",
     "tech_stack": [
       "Python",
       "ComfyUI",
-      "Qwen-Image",
-      "LoRA",
       "three.js",
       "Playwright"
     ],
     "use_cases": [
-      "本地文生图并控制人物姿势",
-      "已有角色图换姿势",
-      "用 3D 人偶姿势库精确指定姿态",
-      "作为 Claude Code/Codex 技能调用"
+      "本地图像生成配方复现",
+      "3D 人偶姿势控制出图",
+      "角色图换姿势编辑"
     ]
   }
 }

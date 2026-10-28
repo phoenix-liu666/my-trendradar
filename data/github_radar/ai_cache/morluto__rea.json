@@ -1,13 +1,13 @@
 {
-  "cached_at": "2026-10-27T12:58:52+08:00",
+  "cached_at": "2026-10-28T13:36:11+08:00",
   "full_name": "morluto/rea",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-27T04:57:44Z",
+  "repo_pushed_at": "2026-10-28T05:29:41Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "让 Agent 在无源码情况下检查原生二进制、Electron/JS 应用、.NET 程序与网站，解释功能实现并给出证据。",
+    "problem": "让 Agent 在没有源码的情况下检查原生二进制、Electron 应用、.NET 程序与网站，解释功能实现并给出证据。",
     "summary_zh": "面向 AI Agent 的逆向工程 MCP 工具，可分析二进制、应用与运行时行为。",
     "tech_stack": [
       "TypeScript",
@@ -19,9 +19,9 @@
     ],
     "use_cases": [
       "二进制逆向分析",
-      "Electron/JS 应用行为分析",
-      "网站功能还原",
-      "Agent 工具集成"
+      "应用功能复刻调研",
+      "Electron/JS 静态分析",
+      "Agent 工具链集成"
     ]
   }
 }
