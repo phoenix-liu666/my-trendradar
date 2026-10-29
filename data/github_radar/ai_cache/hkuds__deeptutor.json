@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-10-29T13:43:04+08:00",
+  "full_name": "HKUDS/DeepTutor",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-28T18:01:08Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "个性化学习缺乏可持续的辅导记忆、学习路径与多智能体协作支持。",
+    "summary_zh": "基于多智能体与 RAG 的终身个性化 AI 辅导系统，提供 CLI 与学习工作区。",
+    "tech_stack": [
+      "Python",
+      "Next.js",
+      "RAG",
+      "多智能体系统",
+      "CLI"
+    ],
+    "use_cases": [
+      "个性化学习辅导",
+      "基于资料的知识问答与检索",
+      "学习路径与评估管理"
+    ]
+  }
+}

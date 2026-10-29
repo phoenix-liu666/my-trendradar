@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-10-29T13:43:04+08:00",
+  "full_name": "JetBrains/thinkrail",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-29T04:08:37Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "编码 Agent 缺乏隔离工作区、持久项目知识与可复用技能，难以在真实项目中协作。",
+    "summary_zh": "JetBrains 孵化的 agentic IDE，围绕 pi 编码 Agent 提供隔离工作区、规格与技能。",
+    "tech_stack": [
+      "TypeScript",
+      "Monaco",
+      "git worktree",
+      "MCP",
+      "pi coding agent"
+    ],
+    "use_cases": [
+      "多 Agent 并行编码与分支管理",
+      "基于 SPEC 的项目知识维护",
+      "PR 创建与 CI 状态跟踪"
+    ]
+  }
+}

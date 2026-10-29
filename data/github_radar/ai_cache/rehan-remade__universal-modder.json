@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-28T13:36:11+08:00",
+  "cached_at": "2026-10-29T13:43:04+08:00",
   "full_name": "rehan-remade/universal-modder",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-27T22:10:44Z",
+  "repo_pushed_at": "2026-10-28T22:32:21Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "把游戏模组制作流程交给编码 Agent：侦察引擎、逆向代码、生成美术音频、在游戏中测试并记录经验。",
-    "summary_zh": "让 AI 编码 Agent 通过技能、工具与 fal MCP 为 PC 游戏制作模组。",
+    "problem": "把游戏模组制作流程交给 Agent：识别引擎、逆向代码、生成美术与音频、在游戏中测试并沉淀知识。",
+    "summary_zh": "让 AI 编程 Agent 通过 Skills、工具与 fal MCP 为 PC 游戏制作模组。",
     "tech_stack": [
       "Python",
       "MCP",
@@ -18,10 +18,10 @@
       "fal"
     ],
     "use_cases": [
-      "游戏模组制作",
-      "逆向工程辅助",
-      "AI 生成游戏素材",
-      "Agent 知识库积累"
+      "用 Agent 逆向并修改游戏",
+      "生成模组美术、3D 与音频素材",
+      "在运行中的游戏内测试模组",
+      "沉淀可复用的模组知识库"
     ]
   }
 }

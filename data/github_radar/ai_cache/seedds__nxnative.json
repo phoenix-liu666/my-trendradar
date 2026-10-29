@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-29T13:43:04+08:00",
+  "full_name": "seedds/nxnative",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-29T05:35:11Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "experimental",
+    "problem": "Switch 游戏无法在 Apple 设备上原生运行，模拟器存在性能与兼容性限制。",
+    "summary_zh": "将 Switch 游戏 NSP 转为可在 iPhone/iPad/Mac 原生运行的 IPA，非模拟器方案。",
+    "tech_stack": [
+      "Objective-C",
+      "Metal",
+      "Python",
+      "Xcode"
+    ],
+    "use_cases": [
+      "在 Apple 设备上运行自有 Switch 游戏",
+      "将 NSP 打包为可侧载 IPA"
+    ]
+  }
+}

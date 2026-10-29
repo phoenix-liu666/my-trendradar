@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-10-29T13:43:04+08:00",
+  "full_name": "KnifeLemon/Filee",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-29T05:05:02Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "文件格式转换通常依赖在线服务或 Office 套件，存在隐私与安装成本问题。",
+    "summary_zh": "开源离线文件转换器，拖拽即可在 263 种格式间转换，无需上传或 Office。",
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "Avalonia"
+    ],
+    "use_cases": [
+      "图片、PDF、Office 文档格式互转",
+      "音视频与电子书转换",
+      "离线批量文件处理"
+    ]
+  }
+}

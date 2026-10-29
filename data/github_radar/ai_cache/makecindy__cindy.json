@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-28T13:36:11+08:00",
+  "cached_at": "2026-10-29T13:43:04+08:00",
   "full_name": "makecindy/cindy",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-28T05:25:19Z",
+  "repo_pushed_at": "2026-10-29T05:37:03Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "把多台电脑与手机连成一体，让用户用已有模型订阅在真实设备上完成实际工作。",
-    "summary_zh": "开源跨设备 AI Agent 客户端，支持桌面与移动端，可接入 Claude Code、Codex 等。",
+    "problem": "把多台电脑与手机连成一个工作环境，统一接入已有模型订阅与 Agent 框架，并支持远程桌面与自动化。",
+    "summary_zh": "开源开箱即用的跨设备 AI Agent 客户端，整合 Claude Code、Codex 等执行框架。",
     "tech_stack": [
       "TypeScript",
       "Electron",
@@ -17,10 +17,10 @@
       "MCP"
     ],
     "use_cases": [
-      "跨设备 Agent 会话",
-      "远程桌面操作",
-      "多 Agent 协作",
-      "技能与插件扩展"
+      "跨设备继续同一 Agent 会话",
+      "整合 Claude Code/Codex 工作流",
+      "手机远程操作桌面",
+      "用 Skills 与插件扩展 Agent"
     ]
   }
 }

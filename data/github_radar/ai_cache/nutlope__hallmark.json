@@ -1,23 +1,24 @@
 {
-  "cached_at": "2026-10-28T13:36:11+08:00",
+  "cached_at": "2026-10-29T13:43:04+08:00",
   "full_name": "Nutlope/hallmark",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-27T15:05:53Z",
+  "repo_pushed_at": "2026-10-28T14:52:03Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 AI 生成网页千篇一律、模板化的问题，通过主题与规则约束产出更自然的设计。",
-    "summary_zh": "面向 Claude Code、Codex、Cursor 的设计技能，用于生成非 AI 味的网页设计。",
+    "problem": "让编码 Agent 生成的网页避免模板化 AI 风格，通过主题、规则与浏览器检查提升设计质量。",
+    "summary_zh": "面向 Claude Code、Codex、Cursor 等编码 Agent 的反 AI 味网页设计技能。",
     "tech_stack": [
       "CSS",
       "JavaScript",
       "Node.js"
     ],
     "use_cases": [
-      "AI 编码助手生成网页设计",
-      "页面重设计与设计审计",
-      "主题化落地页生成"
+      "为 Agent 生成页面提供设计规范",
+      "网页重设计与设计审计",
+      "按主题生成落地页",
+      "自动截图与视觉检查"
     ]
   }
 }
