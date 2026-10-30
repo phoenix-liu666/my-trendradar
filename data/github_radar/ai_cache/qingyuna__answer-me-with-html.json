@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-10-28T13:36:11+08:00",
+  "cached_at": "2026-10-30T13:42:09+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-28T03:11:44Z",
+  "repo_pushed_at": "2026-10-30T01:39:17Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "模型直接手写 HTML 时大量 token 花在 SVG、CSS 与标签上，改用 Markdown 草稿加 CLI 渲染来提速省 token。",
-    "summary_zh": "Agent 技能：把复杂问题答案渲染成单页可读 HTML，减少模型输出 token。",
+    "problem": "解决 Agent 直接输出大段终端文本难以阅读的问题，用 Markdown 草稿加 CLI 生成带图表的单页 HTML，减少模型输出 token。",
+    "summary_zh": "让 AI Agent 用一页离线 HTML 回答复杂问题的 Agent Skill。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "Claude Code",
-      "Codex",
-      "OpenCode"
+      "Claude Code Skill",
+      "Agent Skills"
     ],
     "use_cases": [
-      "复杂问题可视化解释",
-      "仓库结构图解",
-      "Agent 输出格式化"
+      "复杂概念讲解",
+      "仓库结构梳理",
+      "技术方案对比",
+      "生成可离线阅读的说明页"
     ]
   }
 }

@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-10-30T13:42:09+08:00",
+  "full_name": "milind-soni/OpenMausBot",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-30T05:15:09Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "把多个本地运行的 Claude/Codex Agent 组织成带人格、记忆和虚拟机的聊天联系人。",
+    "summary_zh": "开源 Grok Bot 替代品，以聊天应用形式管理多个本地 AI Agent。",
+    "tech_stack": [
+      "TypeScript",
+      "React",
+      "Electron",
+      "Docker",
+      "Expo"
+    ],
+    "use_cases": [
+      "本地多 Agent 管理",
+      "computer use 任务",
+      "自托管 Agent 聊天",
+      "Agent 桌面控制"
+    ]
+  }
+}
