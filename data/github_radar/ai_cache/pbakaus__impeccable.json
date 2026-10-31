@@ -1,27 +1,28 @@
 {
-  "cached_at": "2026-10-04T13:48:18+08:00",
+  "cached_at": "2026-10-31T13:35:08+08:00",
   "full_name": "pbakaus/impeccable",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-03T07:35:50Z",
+  "repo_pushed_at": "2026-10-30T17:36:40Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "AI 生成的前端界面高度同质化，缺乏设计规范约束，导致字体、配色、卡片嵌套等重复问题。",
-    "summary_zh": "面向 AI 编码 Agent 的前端设计语言，含 1 个 skill、24 条命令与 61 条确定性检测规则。",
+    "problem": "解决编码 Agent 生成界面时千篇一律、缺乏设计判断力的问题，提供可复用的设计指令与确定性检查规则。",
+    "summary_zh": "面向编码 Agent 的设计词汇与审查技能集，用命令式技能约束 UI 产出质量。",
     "tech_stack": [
-      "JavaScript",
-      "Node.js",
-      "Claude Code Skill",
-      "Cursor",
-      "Codex CLI",
-      "Gemini CLI"
+      "Rust",
+      "npx",
+      "Vite",
+      "Next.js",
+      "SvelteKit",
+      "Astro",
+      "Nuxt"
     ],
     "use_cases": [
-      "为 AI 编码工具安装设计 skill",
-      "审查与打磨前端界面",
-      "在浏览器中实时迭代视觉变体",
-      "运行无 LLM 的确定性设计检测"
+      "让编码 Agent 按指定风格修改界面",
+      "对现有页面做 UX 评分与可访问性审计",
+      "检测 AI 生成界面的常见设计问题",
+      "在浏览器中实时切换组件变体"
     ]
   }
 }

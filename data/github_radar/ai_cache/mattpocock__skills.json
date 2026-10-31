@@ -1,25 +1,26 @@
 {
-  "cached_at": "2026-10-06T14:16:11+08:00",
+  "cached_at": "2026-10-31T13:35:08+08:00",
   "full_name": "mattpocock/skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-05T12:04:32Z",
+  "repo_pushed_at": "2026-10-30T14:00:30Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码 agent 常见失败模式是需求对齐不足与输出冗长；该项目用可组合的小型技能（如需求追问、共享术语表）来改善与 agent 的协作流程。",
-    "summary_zh": "面向真实工程实践的 agent 技能集合，可从 .agents 目录安装到 Claude Code、Codex 等编码 agent。",
+    "problem": "解决编码 Agent 需求理解偏差、输出冗长、缺乏共享术语等常见失败模式。",
+    "summary_zh": "面向真实工程实践的编码 Agent 技能集合，强调小、可组合、可改造。",
     "tech_stack": [
       "Shell",
-      "Claude Code Plugin",
-      "skills.sh",
-      "npx"
+      "Claude Code",
+      "Codex",
+      "GitHub Copilot",
+      "Gemini CLI"
     ],
     "use_cases": [
-      "为 Claude Code 安装技能",
-      "为 Codex 等 agent 安装技能",
-      "用追问技能对齐需求",
-      "用术语表统一项目语言"
+      "用提问式技能在开工前对齐需求",
+      "为项目建立共享术语表",
+      "按 issue 跟踪器流程做任务分诊",
+      "在多种编码 Agent 间复用同一套技能"
     ]
   }
 }

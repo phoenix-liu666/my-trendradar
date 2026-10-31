@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-10-31T13:35:08+08:00",
+  "full_name": "CopilotKit/OpenBot",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-30T22:06:51Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决企业希望自建可控 AI 助手的问题，通过统一网关对每次工具调用做决策与审计记录。",
+    "summary_zh": "可自托管的开源 AI 同事平台，每个 Agent 拥有独立浏览器、文件与受控工具。",
+    "tech_stack": [
+      "TypeScript",
+      "Docker Compose",
+      "PostgreSQL",
+      "Bun",
+      "AG-UI",
+      "MCP",
+      "LangGraph",
+      "CrewAI"
+    ],
+    "use_cases": [
+      "在自有基础设施部署 AI 同事",
+      "为 Agent 提供隔离浏览器与文件环境",
+      "对 Agent 工具调用做策略审批与审计",
+      "接入任意 AG-UI 协议的 Agent 框架"
+    ]
+  }
+}

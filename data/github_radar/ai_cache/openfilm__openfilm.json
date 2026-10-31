@@ -1,11 +1,11 @@
 {
-  "cached_at": "2026-10-30T13:42:09+08:00",
+  "cached_at": "2026-10-31T13:35:08+08:00",
   "full_name": "openfilm/openfilm",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-30T05:37:11Z",
+  "repo_pushed_at": "2026-10-30T08:47:54Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Developer Tool",
     "maturity": "experimental",
     "problem": "让编码 Agent 以网页形式生成视频，并提供可视化编辑器修改成片。",
     "summary_zh": "开源 AI 视频 Agent，让编码 Agent 用 HTML 制作并编辑视频。",
@@ -19,8 +19,8 @@
     ],
     "use_cases": [
       "Agent 生成视频",
-      "视频剪辑编辑",
-      "动效制作",
+      "网页动画剪辑",
+      "视频后期编辑",
       "多格式导出"
     ]
   }

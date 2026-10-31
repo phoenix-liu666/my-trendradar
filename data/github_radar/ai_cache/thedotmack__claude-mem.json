@@ -1,27 +1,27 @@
 {
-  "cached_at": "2026-10-30T13:42:09+08:00",
+  "cached_at": "2026-10-31T13:35:08+08:00",
   "full_name": "thedotmack/claude-mem",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-30T03:07:33Z",
+  "repo_pushed_at": "2026-10-31T02:09:54Z",
   "schema_version": 1,
   "static": {
-    "category": "Knowledge Management",
+    "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决 Agent 会话结束后上下文丢失的问题，通过压缩与检索实现跨会话记忆。",
-    "summary_zh": "为编码 Agent 提供跨会话持久记忆，压缩并回注上下文。",
+    "problem": "解决 Agent 会话结束后丢失上下文的问题，通过捕获、压缩并回注相关记忆实现连续性。",
+    "summary_zh": "为 Claude Code 等 Agent 提供跨会话持久记忆的压缩与检索系统。",
     "tech_stack": [
       "TypeScript",
       "SQLite",
       "ChromaDB",
-      "embeddings",
+      "Embeddings",
       "RAG",
       "MCP"
     ],
     "use_cases": [
-      "Claude Code 记忆增强",
-      "跨会话上下文恢复",
       "Agent 长期记忆",
-      "语义检索"
+      "跨会话上下文恢复",
+      "历史会话语义检索",
+      "多 Agent 记忆共享"
     ]
   }
 }

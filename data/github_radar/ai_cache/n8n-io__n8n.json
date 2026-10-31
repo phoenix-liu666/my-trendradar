@@ -1,25 +1,24 @@
 {
-  "cached_at": "2026-10-30T13:42:09+08:00",
+  "cached_at": "2026-10-31T13:35:08+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-30T03:45:54Z",
+  "repo_pushed_at": "2026-10-31T03:27:32Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "解决跨系统集成与自动化流程搭建成本高的问题，提供可视化画布、1500+ 集成与 AI Agent 编排能力。",
-    "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持可视化与代码。",
+    "problem": "解决跨系统集成与自动化编排问题，让用户用可视化画布加自定义代码构建 AI 工作流与多步 Agent。",
+    "summary_zh": "带原生 AI 能力的可视化工作流自动化平台，支持自托管与 1500+ 集成。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "MCP",
-      "LangChain"
+      "LangChain",
+      "MCP"
     ],
     "use_cases": [
-      "搭建自动化工作流",
-      "编排多步骤 AI Agent",
-      "连接现有系统与 API",
+      "构建多步 AI Agent 工作流",
+      "系统间数据集成与自动化",
       "自托管企业内部自动化"
     ]
   }

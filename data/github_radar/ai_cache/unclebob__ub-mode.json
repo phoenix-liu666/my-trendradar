@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-10-31T13:35:08+08:00",
+  "full_name": "unclebob/ub-mode",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-25T16:07:59Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决 Agent 写代码时缺乏工程纪律的问题，用确定性质量门禁约束复杂度、重复与测试覆盖。",
+    "summary_zh": "约束编码 Agent 遵循工程纪律的 Agent 技能，配套复杂度、重复度与变异测试工具。",
+    "tech_stack": [
+      "SKILL.md",
+      "Claude Code",
+      "Cursor"
+    ],
+    "use_cases": [
+      "在编码 Agent 中强制执行 TDD 与重构流程",
+      "用 CRAP 分数约束函数复杂度",
+      "用变异测试发现未覆盖代码",
+      "检测并消除结构性重复代码"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "cached_at": "2026-10-31T13:35:08+08:00",
+  "full_name": "togg53192-cmd/jailbreaks",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-28T12:31:33Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Security",
+    "maturity": "unknown",
+    "problem": "整理可粘贴使用的模型指令与 Agent 配置文件集合，供研究指令层级与策略覆盖行为。",
+    "summary_zh": "收集面向多款模型的系统提示词、人格设定与 Agent 工作区指令文件。",
+    "tech_stack": [
+      "Ollama",
+      "AGENTS.md"
+    ],
+    "use_cases": [
+      "研究提示词注入与指令冲突行为",
+      "对比不同模型的指令格式差异",
+      "作为 Agent 工作区指令文件参考"
+    ]
+  }
+}
