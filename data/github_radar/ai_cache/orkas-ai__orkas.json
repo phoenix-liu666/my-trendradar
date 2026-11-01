@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-01T13:57:30+08:00",
+  "full_name": "Orkas-AI/Orkas",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-01T01:24:48Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "把目标拆解为待办并协调多个专业 Agent 与已有编码 Agent 协作完成持续项目，数据保留在本机。",
+    "summary_zh": "本地优先的多 Agent 桌面团队应用，由 Commander 调度 16 个专业 Agent。",
+    "tech_stack": [
+      "JavaScript",
+      "Claude Code",
+      "Codex",
+      "OpenCode",
+      "Hermes-Agent"
+    ],
+    "use_cases": [
+      "用多 Agent 团队完成研究、内容与办公交付物",
+      "定时自动化重复任务",
+      "协调 Claude Code 等编码 Agent 参与项目"
+    ]
+  }
+}

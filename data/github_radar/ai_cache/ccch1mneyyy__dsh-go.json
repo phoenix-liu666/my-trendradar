@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-11-01T13:57:30+08:00",
+  "full_name": "ccch1mneyyy/dsh-Go",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-01T04:25:36Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "让用户无需电脑即可在手机上运行或远程操控 DeepSeek Harness 编码代理，并内置免 Root 的 Linux 环境。",
+    "summary_zh": "DeepSeek Harness 的 Android 客户端，可在手机本机运行，也能远程控制电脑上的 DSH。",
+    "tech_stack": [
+      "Dart",
+      "Flutter",
+      "Android"
+    ],
+    "use_cases": [
+      "手机端运行编码代理",
+      "远程操控电脑上的 DSH",
+      "移动端对话与分享"
+    ]
+  }
+}

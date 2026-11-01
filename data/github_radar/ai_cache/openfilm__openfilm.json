@@ -1,27 +1,27 @@
 {
-  "cached_at": "2026-10-31T13:35:08+08:00",
+  "cached_at": "2026-11-01T13:57:30+08:00",
   "full_name": "openfilm/openfilm",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-30T08:47:54Z",
+  "repo_pushed_at": "2026-10-31T17:59:51Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
-    "maturity": "experimental",
-    "problem": "让编码 Agent 以网页形式生成视频，并提供可视化编辑器修改成片。",
-    "summary_zh": "开源 AI 视频 Agent，让编码 Agent 用 HTML 制作并编辑视频。",
+    "maturity": "growing",
+    "problem": "让编码 Agent 用 HTML 页面与 frame(t) 函数生成视频，并提供可手动或对话修改的真实时间线编辑器。",
+    "summary_zh": "把编码 Agent 变成视频 Agent 的开源工具，附带浏览器内视频编辑器。",
     "tech_stack": [
       "TypeScript",
-      "HTML",
-      "CSS",
+      "Node.js",
+      "ffmpeg",
+      "Chromium",
       "three.js",
       "WebGL",
-      "ffmpeg"
+      "CSS"
     ],
     "use_cases": [
-      "Agent 生成视频",
-      "网页动画剪辑",
-      "视频后期编辑",
-      "多格式导出"
+      "用 Claude Code 或 Codex 生成发布视频",
+      "在 Studio 中手动微调时间线与画面元素",
+      "导出 MP4、GIF、字幕或剪辑工程文件"
     ]
   }
 }

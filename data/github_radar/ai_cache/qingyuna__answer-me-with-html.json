@@ -1,25 +1,22 @@
 {
-  "cached_at": "2026-10-31T13:35:08+08:00",
+  "cached_at": "2026-11-01T13:57:30+08:00",
   "full_name": "QingYunA/answer-me-with-html",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-31T03:14:50Z",
+  "repo_pushed_at": "2026-11-01T05:18:59Z",
   "schema_version": 1,
   "static": {
-    "category": "Productivity",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 回答复杂问题时输出大段终端文本难以阅读的问题，用 HTML 页面呈现图表与解释。",
-    "summary_zh": "Agent 技能，把复杂问题答案生成为单页可读 HTML。",
+    "problem": "解决 AI 回答复杂问题时输出大段难读文本、手写 HTML 成本高的问题。",
+    "summary_zh": "一个 Agent 技能，让 AI 用单页 HTML 回答复杂问题，减少输出 token。",
     "tech_stack": [
       "JavaScript",
-      "Node.js",
-      "HTML",
-      "SVG"
+      "Node.js"
     ],
     "use_cases": [
-      "复杂问题可视化解释",
-      "仓库结构说明",
-      "技术方案对比",
-      "解释型视频生成"
+      "复杂概念可视化解释",
+      "仓库结构图解",
+      "生成可离线阅读的单页说明"
     ]
   }
 }
