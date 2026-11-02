@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-31T13:35:08+08:00",
+  "cached_at": "2026-11-02T13:56:57+08:00",
   "full_name": "Gathin23/cleanyourtv",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-31T05:27:38Z",
+  "repo_pushed_at": "2026-11-02T05:28:45Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决智能电视广告多、预装软件冗余的问题，无需 root 即可禁用遥测与广告服务并恢复原状。",
-    "summary_zh": "通过 Wi-Fi 用 ADB 精简 Android/Google TV 预装应用并替换为类 Apple TV 桌面。",
+    "problem": "解决智能电视预装软件、广告与遥测过多的问题；无需 root、无需卸载，并提供一行命令恢复。",
+    "summary_zh": "通过 Wi-Fi 用 ADB 精简 Android TV 或 Google TV 的预装软件，并替换为类 Apple TV 的启动器。",
     "tech_stack": [
       "Python",
       "ADB",
@@ -16,9 +16,9 @@
       "Java"
     ],
     "use_cases": [
-      "去除 Android TV 广告与预装应用",
-      "替换电视默认桌面",
-      "隐私保护与设备精简"
+      "禁用电视厂商广告与遥测服务",
+      "安装第三方启动器替换默认桌面",
+      "按品牌定制去臃肿流程"
     ]
   }
 }

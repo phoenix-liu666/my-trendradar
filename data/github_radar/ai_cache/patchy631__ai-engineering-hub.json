@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-02T13:56:57+08:00",
+  "full_name": "patchy631/ai-engineering-hub",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-01T04:39:16Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Research Tool",
+    "maturity": "growing",
+    "problem": "为不同水平的学习者提供可运行的 LLM、RAG 与代理应用示例，降低 AI 工程实践门槛。",
+    "summary_zh": "面向 LLM、RAG 与 AI Agent 实战应用的中深度教程合集。",
+    "tech_stack": [
+      "Jupyter Notebook",
+      "Python",
+      "LlamaIndex",
+      "CrewAI",
+      "MCP"
+    ],
+    "use_cases": [
+      "学习 RAG 实现",
+      "构建代理工作流示例",
+      "本地 OCR 与多模态应用"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-02T13:56:57+08:00",
+  "full_name": "heydamir/unslop",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-01T16:46:10Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "experimental",
+    "problem": "解决 vibecoded 界面中紫色渐变、发光、emoji 标签、文案浮夸、间距不齐等「AI 味」问题。",
+    "summary_zh": "面向 Claude Code 与 Codex 的技能，把 AI 生成感强的界面改造成有设计感的界面。",
+    "tech_stack": [
+      "JavaScript",
+      "Claude Code",
+      "Codex",
+      "Playwright",
+      "ffmpeg"
+    ],
+    "use_cases": [
+      "审查并重设计 AI 生成的仪表盘",
+      "改造落地页视觉与文案",
+      "生成界面改造过程短视频"
+    ]
+  }
+}

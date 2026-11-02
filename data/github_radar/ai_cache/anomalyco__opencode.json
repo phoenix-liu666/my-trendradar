@@ -1,23 +1,24 @@
 {
-  "cached_at": "2026-11-01T13:57:30+08:00",
+  "cached_at": "2026-11-02T13:56:57+08:00",
   "full_name": "anomalyco/opencode",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-01T05:56:45Z",
+  "repo_pushed_at": "2026-11-02T05:41:31Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "mature",
-    "problem": "为开发者提供可自托管、可切换模型的开源编码代理，替代闭源方案。",
-    "summary_zh": "开源 AI 编码代理，提供终端界面、内置 build/plan 代理与桌面应用。",
+    "problem": "为开发者提供可自托管的开源编码代理，支持构建与只读规划两种工作模式。",
+    "summary_zh": "开源 AI 编码代理，提供终端界面、桌面应用与多代理模式。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "Bun"
+      "npm",
+      "Homebrew"
     ],
     "use_cases": [
       "终端内 AI 编码",
       "代码库探索与变更规划",
-      "多步骤开发任务"
+      "多步任务子代理"
     ]
   }
 }

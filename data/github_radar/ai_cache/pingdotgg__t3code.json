@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-11-02T13:56:57+08:00",
+  "full_name": "pingdotgg/t3code",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-02T05:53:32Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决在不同编码 Agent（Claude Code、Codex、Cursor、OpenCode 等）之间切换、远程操控与统一管理的问题。",
+    "summary_zh": "统一控制本机多种编码 Agent 的「Agent harness 控制面」，提供移动端、Web 与桌面客户端。",
+    "tech_stack": [
+      "TypeScript",
+      "Electron",
+      "MCP",
+      "Vite"
+    ],
+    "use_cases": [
+      "在手机上远程操控本机编码 Agent",
+      "统一管理多个 Agent 订阅与账号",
+      "通过 MCP 连接外部 Agent"
+    ]
+  }
+}

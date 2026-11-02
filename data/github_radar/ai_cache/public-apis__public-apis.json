@@ -1,0 +1,20 @@
+{
+  "cached_at": "2026-11-02T13:56:57+08:00",
+  "full_name": "public-apis/public-apis",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-01T18:22:08Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Data Tool",
+    "maturity": "mature",
+    "problem": "解决开发者寻找可用免费 API 时信息分散的问题，提供集中索引。",
+    "summary_zh": "社区维护的免费公共 API 汇总清单，长期更新。",
+    "tech_stack": [
+      "Python"
+    ],
+    "use_cases": [
+      "查找免费 API 资源",
+      "为项目选型第三方接口"
+    ]
+  }
+}

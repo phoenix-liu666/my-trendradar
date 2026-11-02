@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-02T13:56:57+08:00",
+  "full_name": "kornia/kornia",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-01T18:28:07Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Computer Vision",
+    "maturity": "mature",
+    "problem": "提供可微、可批处理、可 GPU 加速的图像处理与几何视觉算子，弥补 torchvision 覆盖不足。",
+    "summary_zh": "基于 PyTorch 的可微计算机视觉与几何视觉库，面向空间 AI。",
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "ONNX",
+      "CUDA"
+    ],
+    "use_cases": [
+      "可微图像处理与增强",
+      "相机几何与位姿估计",
+      "GPU 批量特征匹配",
+      "机器人空间感知"
+    ]
+  }
+}

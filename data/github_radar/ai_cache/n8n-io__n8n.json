@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-11-01T13:57:30+08:00",
+  "cached_at": "2026-11-02T13:56:57+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-01T04:07:32Z",
+  "repo_pushed_at": "2026-11-02T05:36:45Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "让用户以可视化方式连接大量服务并编排 AI 工作流与多步骤代理。",
-    "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持可视化与自定义代码。",
+    "problem": "让用户以可视化画布加代码的方式编排自动化工作流与多步 AI 代理，并连接大量外部系统。",
+    "summary_zh": "具备原生 AI 能力的 fair-code 工作流自动化平台，支持可视化与自定义代码。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "LangChain"
+      "LangChain",
+      "MCP"
     ],
     "use_cases": [
-      "AI 工作流自动化",
-      "多步骤代理编排",
-      "系统集成与数据流转"
+      "构建多步 AI 代理工作流",
+      "系统集成与自动化",
+      "自托管工作流编排"
     ]
   }
 }

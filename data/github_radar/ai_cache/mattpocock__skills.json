@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-10-31T13:35:08+08:00",
+  "cached_at": "2026-11-02T13:56:57+08:00",
   "full_name": "mattpocock/skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-30T14:00:30Z",
+  "repo_pushed_at": "2026-11-01T11:42:33Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决编码 Agent 需求理解偏差、输出冗长、缺乏共享术语等常见失败模式。",
-    "summary_zh": "面向真实工程实践的编码 Agent 技能集合，强调小、可组合、可改造。",
+    "problem": "解决编码 Agent 常见失败模式：需求理解偏差、输出冗长、缺少共享术语与流程约束。",
+    "summary_zh": "面向真实工程实践的 Agent 技能集合，来自作者日常使用的 .agents 目录。",
     "tech_stack": [
       "Shell",
       "Claude Code",
@@ -17,10 +17,9 @@
       "Gemini CLI"
     ],
     "use_cases": [
-      "用提问式技能在开工前对齐需求",
+      "用提问式技能对齐需求",
       "为项目建立共享术语表",
-      "按 issue 跟踪器流程做任务分诊",
-      "在多种编码 Agent 间复用同一套技能"
+      "在多种 Agent 中复用可组合技能"
     ]
   }
 }
