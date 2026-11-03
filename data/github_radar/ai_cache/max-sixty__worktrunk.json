@@ -1,0 +1,22 @@
+{
+  "cached_at": "2026-11-03T14:43:07+08:00",
+  "full_name": "max-sixty/worktrunk",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-03T06:40:34Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决原生 git worktree 操作繁琐的问题，让多个编码 Agent 各自拥有独立工作目录并行工作。",
+    "summary_zh": "面向并行 AI Agent 工作流的 Git worktree 管理 CLI。",
+    "tech_stack": [
+      "Rust",
+      "Git"
+    ],
+    "use_cases": [
+      "并行运行多个编码 Agent",
+      "worktree 快速切换与清理",
+      "本地工作流钩子自动化"
+    ]
+  }
+}

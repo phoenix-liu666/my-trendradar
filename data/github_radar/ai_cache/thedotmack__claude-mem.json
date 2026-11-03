@@ -1,8 +1,8 @@
 {
-  "cached_at": "2026-11-02T13:56:57+08:00",
+  "cached_at": "2026-11-03T14:43:07+08:00",
   "full_name": "thedotmack/claude-mem",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-02T05:56:40Z",
+  "repo_pushed_at": "2026-11-03T03:52:52Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
@@ -22,7 +22,7 @@
       "Claude Code 跨会话记忆",
       "多 Agent 上下文共享",
       "长期项目知识保留",
-      "会话历史语义检索"
+      "历史会话检索"
     ]
   }
 }

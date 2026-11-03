@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-03T14:43:07+08:00",
+  "full_name": "paperclipai/paperclip",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-03T06:41:12Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "解决多个异构 AI Agent 协作时的任务分配、成本追踪与治理问题，提供统一管理界面。",
+    "summary_zh": "开源多 Agent 编排应用，用仪表盘管理 Agent 团队、目标、预算与权限。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "React",
+      "MCP"
+    ],
+    "use_cases": [
+      "多 Agent 团队编排",
+      "Agent 成本与预算管理",
+      "任务与权限治理",
+      "接入 Claude Code/Codex 等"
+    ]
+  }
+}

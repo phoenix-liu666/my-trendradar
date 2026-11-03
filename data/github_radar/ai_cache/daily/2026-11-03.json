@@ -1,0 +1,451 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可自托管的编码 Agent，内置 build/plan 等模式与子 Agent 协作。",
+      "recommendation_reason": "是编码 Agent 的代表性开源实现，值得研究其 Agent 模式与工作流设计。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 中的 OpenCode、Coding Agent、agentic coding。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码 Agent，提供终端界面与桌面应用。",
+      "tech_stack": [
+        "TypeScript",
+        "CLI",
+        "npm",
+        "Homebrew",
+        "Nix"
+      ],
+      "use_cases": [
+        "终端内 AI 辅助编码",
+        "只读模式探索陌生代码库",
+        "多步任务子 Agent 调度"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 规模大且 7 日仍有增长，持续更新；无证据指向具体外部事件。"
+      }
+    },
+    "ccch1mneyyy/dsh-go": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "ccch1mneyyy/dsh-Go",
+      "maturity": "growing",
+      "problem": "把编码 Agent 的 Harness 搬到移动端，让用户在手机上运行或远程接管电脑上的会话。",
+      "recommendation_reason": "与编码 Agent 兴趣相关，但移动端封装形态对用户价值有限。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 Coding Agent 生态，但为特定 Harness 的移动客户端，通用性有限。",
+      "relevance_score": 70,
+      "summary_zh": "DeepSeek Harness 的 Android 客户端，可在手机本机运行并遥控电脑端。",
+      "tech_stack": [
+        "Dart",
+        "Flutter",
+        "Android",
+        "LLM"
+      ],
+      "use_cases": [
+        "手机端运行编码 Agent",
+        "远程连接电脑上的 DSH 会话",
+        "移动端对话分享与回放"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "24 小时 Star 增量明显且近期活跃更新；README 提及社区渠道，但无指标证明具体驱动。"
+      }
+    },
+    "kornia/kornia": {
+      "category": "Computer Vision",
+      "from_cache": false,
+      "full_name": "kornia/kornia",
+      "maturity": "mature",
+      "problem": "提供可微、可批处理、可 GPU 加速的图像处理与几何视觉算子，替代零散的手写实现。",
+      "recommendation_reason": "成熟视觉库，若涉及可微几何或视觉管线可再深入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 deep_learning 中的计算机视觉与神经网络，但与 Agent、科研自动化关联较弱。",
+      "relevance_score": 62,
+      "summary_zh": "基于 PyTorch 的可微几何计算机视觉库，面向空间 AI。",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "ONNX",
+        "torch.compile",
+        "CUDA"
+      ],
+      "use_cases": [
+        "可微图像变换与增强",
+        "批量相机几何与位姿估计",
+        "GPU 上的特征检测与匹配"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "进入 trending_rank 前 10 且 24 小时有 Star 增量，近期仍在更新；驱动原因不确定。"
+      }
+    },
+    "max-sixty/worktrunk": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "max-sixty/worktrunk",
+      "maturity": "growing",
+      "problem": "解决原生 git worktree 操作繁琐的问题，让多个编码 Agent 各自拥有独立工作目录并行工作。",
+      "recommendation_reason": "轻量 CLI，能显著改善多 Agent 并行开发体验，适合直接试用。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 与 productivity 画像，直接服务于 Claude Code、Codex 并行工作流。",
+      "relevance_score": 80,
+      "summary_zh": "面向并行 AI Agent 工作流的 Git worktree 管理 CLI。",
+      "tech_stack": [
+        "Rust",
+        "Git"
+      ],
+      "use_cases": [
+        "并行运行多个编码 Agent",
+        "worktree 快速切换与清理",
+        "本地工作流钩子自动化"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Trending 排名第 12，Star 超 1 万，近期仍在更新；具体外部驱动事件无足够证据。"
+      }
+    },
+    "microsoft/tokeneconomizer": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "microsoft/TokenEconomizer",
+      "maturity": "growing",
+      "problem": "解决编码 Agent 在常用仓库中重复学习、加载无用工具和陷入失败循环导致的成本浪费。",
+      "recommendation_reason": "插件形式易接入现有编码 Agent，且有量化实验结果，适合实际试用验证成本收益。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 与 productivity 画像，涉及 Coding Agent、Claude Code、Codex 与成本优化。",
+      "relevance_score": 90,
+      "summary_zh": "面向编码 Agent 的黑盒成本控制插件，通过经验学习降低 token 开销。",
+      "tech_stack": [
+        "Python",
+        "Claude Code",
+        "Codex",
+        "GitHub Copilot CLI",
+        "Pi",
+        "OpenCode"
+      ],
+      "use_cases": [
+        "降低 Claude Code 运行成本",
+        "工具裁剪",
+        "失败循环干预",
+        "仓库微技能积累"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "24 小时新增 416 Star，来自微软研究院并有 arXiv 论文，近期仍在更新；具体传播事件无足够证据。"
+      }
+    },
+    "morluto/rea": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "morluto/rea",
+      "maturity": "growing",
+      "problem": "让 Agent 在没有源码的情况下检查应用与原生二进制，解释功能实现并给出证据。",
+      "recommendation_reason": "MCP 集成方式值得参考，但逆向场景与用户核心兴趣不完全重合。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 MCP 与 Claude Code 集成，但核心是逆向工程安全方向。",
+      "relevance_score": 78,
+      "summary_zh": "通过 MCP 让 Agent 逆向分析二进制、应用与运行时行为的工具集。",
+      "tech_stack": [
+        "TypeScript",
+        "MCP",
+        "Node.js",
+        "Claude Code",
+        "Codex"
+      ],
+      "use_cases": [
+        "Agent 辅助逆向分析原生二进制",
+        "分析 Electron/JavaScript 应用",
+        "为 Agent 注册逆向工程 MCP 工具"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 规模极大且 7 日增量显著，近期持续更新；未见可确认的外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "把 AI Agent 与多步骤工作流、大量第三方集成连接起来，兼顾可视化与自定义代码。",
+      "recommendation_reason": "成熟自动化平台，可作为 Agent 工作流编排的备选，但非核心研究方向。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 的自动化与 workflow，以及 ai_agents 的 MCP、tool use。",
+      "relevance_score": 72,
+      "summary_zh": "带原生 AI 能力的工作流自动化平台，支持可视化搭建与自托管。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "MCP",
+        "LangChain"
+      ],
+      "use_cases": [
+        "搭建多步骤 AI 工作流",
+        "连接 1500+ 集成做自动化",
+        "自托管部署内部自动化流程"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 规模大且 7 日有增长，持续更新；无足够证据确定具体外部驱动。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "提供可长期运行、跨平台接入、能从经验中创建并改进技能的个人 AI Agent，降低部署与模型锁定成本。",
+      "recommendation_reason": "Agent 学习闭环与多后端运行设计有参考价值，但 open_issues 数量庞大需注意成熟度。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 画像中的 AI Agent、Claude Code、Codex 等关键词，且涉及技能自学习与多 Agent 编排。",
+      "relevance_score": 92,
+      "summary_zh": "Nous Research 出品的可自我改进 AI Agent，支持多平台、多模型与技能自学习。",
+      "tech_stack": [
+        "Python",
+        "Node.js",
+        "SQLite FTS5",
+        "Docker",
+        "SSH",
+        "Modal",
+        "Daytona"
+      ],
+      "use_cases": [
+        "个人长期 AI 助手",
+        "多平台消息接入",
+        "定时自动化任务",
+        "子 Agent 并行编排",
+        "Agent 轨迹数据生成"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "pushed_at"
+        ],
+        "summary": "Star 数接近 26 万，7 天新增 2496、24 小时新增 385，近期持续更新；具体外部驱动事件无足够证据。"
+      }
+    },
+    "openfilm/openfilm": {
+      "category": "Other",
+      "from_cache": false,
+      "full_name": "openfilm/openfilm",
+      "maturity": "growing",
+      "problem": "解决用编码 Agent 生成视频后难以精细编辑的问题，提供基于网页的影片结构与本地编辑器。",
+      "recommendation_reason": "与用户核心兴趣关联较弱，但展示了编码 Agent 的扩展用法，可保持观察。",
+      "recommended_action": "watch",
+      "relevance_reason": "仅通过 Claude Code、Codex 间接关联 ai_agents 画像，核心是视频制作而非 Agent 基础设施。",
+      "relevance_score": 55,
+      "summary_zh": "开源 AI 视频 Agent，让编码 Agent 用 HTML 制作并编辑视频。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "HTML",
+        "CSS",
+        "WebGL",
+        "three.js",
+        "ffmpeg",
+        "Chromium"
+      ],
+      "use_cases": [
+        "Agent 生成宣传视频",
+        "网页动画影片制作",
+        "视频时间线编辑",
+        "多格式导出"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "24 小时新增 178 Star，近期仍在更新；具体外部驱动事件无足够证据。"
+      }
+    },
+    "paperclipai/paperclip": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "paperclipai/paperclip",
+      "maturity": "growing",
+      "problem": "解决多个异构 AI Agent 协作时的任务分配、成本追踪与治理问题，提供统一管理界面。",
+      "recommendation_reason": "多 Agent 编排与治理是 Agent 生态关键方向，但 open_issues 较多，建议先研究架构。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 画像中的 MCP、Claude Code、Codex、多 Agent 与工作流自动化。",
+      "relevance_score": 88,
+      "summary_zh": "开源多 Agent 编排应用，用仪表盘管理 Agent 团队、目标、预算与权限。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "React",
+        "MCP"
+      ],
+      "use_cases": [
+        "多 Agent 团队编排",
+        "Agent 成本与预算管理",
+        "任务与权限治理",
+        "接入 Claude Code/Codex 等"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 超 11 万，Trending 排名第 13，近期仍在更新；具体外部驱动事件无足够证据。"
+      }
+    },
+    "thedotmack/claude-mem": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "thedotmack/claude-mem",
+      "maturity": "growing",
+      "problem": "解决 Agent 会话结束后丢失项目上下文的问题，通过捕获工具调用、生成语义摘要并在后续会话注入相关记忆。",
+      "recommendation_reason": "与编码 Agent 生态高度相关，记忆压缩与上下文注入机制值得研究借鉴。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 Claude Code、Codex、OpenCode、MCP 与 Agent 记忆，属于核心兴趣。",
+      "relevance_score": 95,
+      "summary_zh": "为 Claude Code 等编码 Agent 提供跨会话持久记忆，自动压缩并回注上下文。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "ChromaDB",
+        "Embeddings",
+        "RAG",
+        "MCP"
+      ],
+      "use_cases": [
+        "Claude Code 跨会话记忆",
+        "多 Agent 上下文共享",
+        "长期项目知识保留",
+        "历史会话检索"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 量极高且 24 小时新增 1329，Trending 排名第 2，近期仍在更新；具体外部驱动事件无足够证据。"
+      }
+    },
+    "vercel-labs/agent-desktop": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "vercel-labs/agent-desktop",
+      "maturity": "growing",
+      "problem": "让 Agent 无需像素匹配即可观察和操作桌面应用，用快照引用加动作再验证的循环替代图像识别。",
+      "recommendation_reason": "与 Agent 桌面操作方向高度契合，可作为 computer use 能力的基础设施试用。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 中的 computer use、MCP、agent 工具链兴趣。",
+      "relevance_score": 92,
+      "summary_zh": "面向 AI Agent 的桌面操作 CLI，通过系统无障碍树读取并操作桌面应用。",
+      "tech_stack": [
+        "Rust",
+        "CLI",
+        "MCP",
+        "Accessibility API",
+        "npm"
+      ],
+      "use_cases": [
+        "Agent 自动化桌面应用操作",
+        "无障碍树快照与元素引用点击",
+        "跨 macOS/Windows/Linux 的桌面自动化"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "pushed_at"
+        ],
+        "summary": "Star 过万且 trending_rank 为 1，近期仍在更新；具体外部驱动事件无证据。"
+      }
+    }
+  },
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T14:43:07+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 类项目在榜单中占比最高，Agent 记忆与端侧运行成为细分方向",
+    "rising_categories": [
+      "Coding Agent",
+      "Security",
+      "Developer Tool",
+      "Productivity"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 有 7 个，是唯一明显聚集的类别，其余类别各 1 个",
+      "for_you 前 5 名中有 4 个属于 Coding Agent，relevance 均在 90 以上",
+      "hot_today 中 thedotmack/claude-mem 与 ccch1mneyyy/dsh-Go 同属 Coding Agent，delta_24h 分别为 1329 和 1226",
+      "new_and_rising 中 deepseek-ai/dsh-superagent-prototype 的 delta_24h 为 5057，是汇总里最高的单日增量",
+      "morluto/rea 是 hot_today 中唯一标注 Security 类别的项目，heat_score 为 90.62，delta_24h 为 4280"
+    ],
+    "watch_tomorrow": [
+      "deepseek-ai/dsh-superagent-prototype 的高增量能否延续",
+      "Coding Agent 类别是否继续占据榜单多数",
+      "thedotmack/claude-mem 等 Agent 记忆类项目的后续热度",
+      "ccch1mneyyy/dsh-Go 代表的端侧或移动端 Agent 方向",
+      "morluto/rea 所在的 Security 类别是否出现更多同类项目"
+    ]
+  },
+  "usage": {
+    "cache_hits": 8,
+    "completion_tokens": 3284,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 26392,
+    "prompt_tokens": 28824,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 32108
+  }
+}
