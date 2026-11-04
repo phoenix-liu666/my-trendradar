@@ -1,25 +1,27 @@
 {
-  "cached_at": "2026-11-03T14:43:07+08:00",
+  "cached_at": "2026-11-04T14:11:33+08:00",
   "full_name": "vercel-labs/agent-desktop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-03T05:51:54Z",
+  "repo_pushed_at": "2026-11-03T23:16:15Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "让 Agent 无需像素匹配即可观察和操作桌面应用，用快照引用加动作再验证的循环替代图像识别。",
-    "summary_zh": "面向 AI Agent 的桌面操作 CLI，通过系统无障碍树读取并操作桌面应用。",
+    "problem": "解决 Agent 操作桌面应用时依赖截图与像素匹配的脆弱问题，改为读取无障碍树并以引用执行点击输入。",
+    "summary_zh": "让 AI Agent 通过操作系统无障碍树操作桌面应用的 computer use CLI。",
     "tech_stack": [
       "Rust",
-      "CLI",
+      "C",
       "MCP",
-      "Accessibility API",
-      "npm"
+      "macOS AX API",
+      "Windows UI Automation",
+      "AT-SPI"
     ],
     "use_cases": [
-      "Agent 自动化桌面应用操作",
-      "无障碍树快照与元素引用点击",
-      "跨 macOS/Windows/Linux 的桌面自动化"
+      "Agent 操作桌面应用",
+      "跨平台桌面自动化",
+      "MCP 工具集成",
+      "无障碍驱动的 UI 交互"
     ]
   }
 }

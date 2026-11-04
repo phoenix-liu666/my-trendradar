@@ -1,25 +1,26 @@
 {
-  "cached_at": "2026-11-03T14:43:07+08:00",
+  "cached_at": "2026-11-04T14:11:33+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-03T06:41:20Z",
+  "repo_pushed_at": "2026-11-04T06:11:35Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "把 AI Agent 与多步骤工作流、大量第三方集成连接起来，兼顾可视化与自定义代码。",
-    "summary_zh": "带原生 AI 能力的工作流自动化平台，支持可视化搭建与自托管。",
+    "problem": "让用户以可视化加代码方式编排 AI 工作流与多步 Agent，并连接大量外部系统。",
+    "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持可视化与自定义代码。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "MCP",
-      "LangChain"
+      "LangChain",
+      "MCP"
     ],
     "use_cases": [
-      "搭建多步骤 AI 工作流",
-      "连接 1500+ 集成做自动化",
-      "自托管部署内部自动化流程"
+      "AI 工作流编排",
+      "多步 Agent 构建",
+      "系统集成自动化",
+      "自托管自动化平台"
     ]
   }
 }

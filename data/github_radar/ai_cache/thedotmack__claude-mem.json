@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-11-03T14:43:07+08:00",
+  "cached_at": "2026-11-04T14:11:33+08:00",
   "full_name": "thedotmack/claude-mem",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-03T03:52:52Z",
+  "repo_pushed_at": "2026-11-04T06:05:08Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 会话结束后丢失项目上下文的问题，通过捕获工具调用、生成语义摘要并在后续会话注入相关记忆。",
+    "problem": "解决编码 Agent 会话结束后丢失项目上下文、需反复重新了解仓库的问题，通过捕获会话观察、生成摘要并在后续会话注入相关记忆。",
     "summary_zh": "为 Claude Code 等编码 Agent 提供跨会话持久记忆，自动压缩并回注上下文。",
     "tech_stack": [
       "TypeScript",
-      "Node.js",
       "SQLite",
       "ChromaDB",
       "Embeddings",
       "RAG",
-      "MCP"
+      "Claude Agent SDK"
     ],
     "use_cases": [
       "Claude Code 跨会话记忆",
-      "多 Agent 上下文共享",
-      "长期项目知识保留",
-      "历史会话检索"
+      "Codex/OpenCode 等 Agent 上下文延续",
+      "项目长期知识沉淀",
+      "会话检索与摘要"
     ]
   }
 }
