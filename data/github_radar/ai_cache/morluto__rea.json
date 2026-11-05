@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-11-04T14:11:33+08:00",
+  "cached_at": "2026-11-05T14:40:01+08:00",
   "full_name": "morluto/rea",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-04T06:07:06Z",
+  "repo_pushed_at": "2026-11-04T22:50:59Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Security",
     "maturity": "growing",
-    "problem": "帮助开发者在没有源码的情况下理解应用功能实现，覆盖原生二进制、JS/Electron、.NET 与网站分析。",
-    "summary_zh": "通过 MCP 让 Agent 逆向分析二进制、应用与运行时行为的工具集。",
+    "problem": "让编码 Agent 在无源码情况下检查原生二进制、Electron/JS 应用、.NET 程序与网站，并给出带证据的分析结论。",
+    "summary_zh": "面向逆向工程的 MCP 工具集，让 Agent 分析二进制、应用与运行时行为。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "MCP",
-      "Claude Code",
-      "Codex"
+      "Ghidra",
+      "Hopper",
+      "IDA"
     ],
     "use_cases": [
-      "逆向分析原生二进制",
-      "分析 Electron/JS 应用",
-      "为 Agent 提供逆向工程工具",
-      "安全研究与行为分析"
+      "二进制逆向分析",
+      "应用行为研究",
+      "Agent 辅助安全分析"
     ]
   }
 }

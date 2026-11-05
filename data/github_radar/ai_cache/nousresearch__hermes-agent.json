@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-04T14:11:33+08:00",
+  "cached_at": "2026-11-05T14:40:01+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-04T06:10:30Z",
+  "repo_pushed_at": "2026-11-05T06:34:44Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 无法从经验中持续学习、跨平台运行与长期记忆的问题，提供技能自生成、会话检索与多终端后端。",
-    "summary_zh": "Nous Research 出品的可自我改进 AI Agent，具备技能学习与跨会话记忆。",
+    "problem": "解决 Agent 无法从经验中持续学习、难以跨平台长期运行的问题，提供学习闭环、子 Agent 并行与多终端后端。",
+    "summary_zh": "Nous Research 推出的可自我改进 AI Agent，具备技能自创建、跨会话记忆与多平台接入。",
     "tech_stack": [
       "Python",
       "FTS5",
@@ -19,11 +19,10 @@
       "Vercel Sandbox"
     ],
     "use_cases": [
-      "个人长期 AI 助手",
-      "多平台消息接入（Telegram/Discord/Slack）",
+      "长期运行的个人 AI Agent",
+      "Telegram/Discord 等消息平台接入",
       "定时自动化任务",
-      "子 Agent 并行任务",
-      "工具调用模型轨迹生成"
+      "批量轨迹生成用于训练"
     ]
   }
 }

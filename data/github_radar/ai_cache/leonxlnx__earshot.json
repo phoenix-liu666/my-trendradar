@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-11-05T14:40:01+08:00",
+  "full_name": "Leonxlnx/earshot",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-22T23:12:59Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "编码 Agent 能生成音视频代码却无法判断声音效果，该项目把声音转成可推理的证据与评分。",
+    "summary_zh": "给编码 Agent 提供听觉能力：描述、匹配、评估并生成声音，纯 CPU 运行。",
+    "tech_stack": [
+      "Python",
+      "MCP",
+      "CLI",
+      "CPU-only"
+    ],
+    "use_cases": [
+      "Agent 音频质量评估",
+      "音效匹配与检索",
+      "视频声音时间线分析"
+    ]
+  }
+}
