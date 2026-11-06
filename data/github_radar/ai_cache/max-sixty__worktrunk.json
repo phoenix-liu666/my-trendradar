@@ -1,22 +1,23 @@
 {
-  "cached_at": "2026-11-05T14:40:01+08:00",
+  "cached_at": "2026-11-06T14:36:10+08:00",
   "full_name": "max-sixty/worktrunk",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-05T06:30:18Z",
+  "repo_pushed_at": "2026-11-06T06:32:53Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决原生 git worktree 操作繁琐、难以并行管理多个 Agent 工作目录的问题，提供切换、创建、清理与钩子自动化。",
-    "summary_zh": "面向并行 AI Agent 工作流的 Git worktree 管理 CLI，用分支名简化 worktree 操作。",
+    "problem": "原生 git worktree 操作繁琐，难以支撑多个编码代理并行工作。",
+    "summary_zh": "面向并行 AI 代理工作流的 Git worktree 管理 CLI。",
     "tech_stack": [
       "Rust",
-      "Git worktrees"
+      "Git"
     ],
     "use_cases": [
       "并行运行多个 Claude Code/Codex 实例",
-      "多分支隔离开发",
-      "本地工作流钩子自动化"
+      "按分支快速切换工作树",
+      "自动化本地工作流钩子",
+      "批量清理工作树"
     ]
   }
 }

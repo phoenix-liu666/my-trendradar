@@ -1,18 +1,19 @@
 {
-  "cached_at": "2026-11-04T14:11:33+08:00",
+  "cached_at": "2026-11-06T14:36:10+08:00",
   "full_name": "tensorflow/tensorflow",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-04T05:22:24Z",
+  "repo_pushed_at": "2026-11-06T06:31:23Z",
   "schema_version": 1,
   "static": {
     "category": "Scientific AI",
     "maturity": "mature",
-    "problem": "为研究与工程提供统一的深度学习框架，覆盖训练、部署与多硬件支持。",
-    "summary_zh": "Google 开源的端到端机器学习框架，提供 Python 与 C++ 等 API。",
+    "problem": "为研究与生产提供可扩展的深度学习训练与部署框架。",
+    "summary_zh": "端到端开源机器学习框架，提供 Python 与 C++ 等 API 及完整工具生态。",
     "tech_stack": [
       "C++",
       "Python",
       "CUDA",
+      "XLA",
       "Docker"
     ],
     "use_cases": [

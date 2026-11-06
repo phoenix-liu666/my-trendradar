@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-11-05T14:40:01+08:00",
+  "cached_at": "2026-11-06T14:36:10+08:00",
   "full_name": "scenario-labs/skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-05T01:29:55Z",
+  "repo_pushed_at": "2026-11-05T23:21:04Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 生成生产级多媒体与 3D 内容时模型选择、成本控制与品牌一致性难以保证的问题。",
-    "summary_zh": "面向 AI 编码 Agent 的 Scenario 技能集，通过 MCP 生成图像、视频、音频与 3D 资产。",
+    "problem": "AI 代理生成多媒体资产时缺少模型选择、成本预估与品牌一致性控制。",
+    "summary_zh": "面向编码代理的 Scenario 技能集，用于生成图像、视频、音频与 3D 资产。",
     "tech_stack": [
       "Python",
       "MCP",
-      "Agent Skills",
       "Blender",
       "Maya",
-      "Unreal Engine",
-      "Unity"
+      "Unity",
+      "Unreal Engine"
     ],
     "use_cases": [
-      "游戏资产生成",
-      "图像/视频/音频生成",
-      "DCC 软件与游戏引擎自动化",
-      "品牌一致性内容生产"
+      "代理生成游戏美术资产",
+      "角色与品牌一致性控制",
+      "3D 与纹理资产生成",
+      "视频与音频内容生产"
     ]
   }
 }

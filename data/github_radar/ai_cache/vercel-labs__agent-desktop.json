@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-11-05T14:40:01+08:00",
+  "cached_at": "2026-11-06T14:36:10+08:00",
   "full_name": "vercel-labs/agent-desktop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-05T06:31:12Z",
+  "repo_pushed_at": "2026-11-06T01:21:24Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Agent 操作桌面应用依赖截图与像素匹配、脆弱且不可靠的问题，改为读取无障碍树并返回可操作引用。",
-    "summary_zh": "Vercel Labs 的 computer use CLI，通过操作系统无障碍树让 Agent 操作桌面应用。",
+    "problem": "代理操作桌面应用依赖截图与像素匹配，脆弱且难以验证操作结果。",
+    "summary_zh": "基于操作系统无障碍树的桌面 computer use CLI，供 AI 代理操作桌面应用。",
     "tech_stack": [
       "Rust",
-      "C 库",
-      "macOS AX API",
+      "MCP",
+      "macOS Accessibility API",
       "Windows UI Automation",
-      "Linux AT-SPI",
-      "MCP"
+      "AT-SPI"
     ],
     "use_cases": [
-      "Agent 操作桌面应用",
-      "跨平台桌面自动化",
-      "无障碍树驱动的 UI 交互",
-      "MCP 集成"
+      "代理操作 macOS/Windows/Linux 桌面应用",
+      "无截图 UI 自动化",
+      "通过 MCP 接入代理",
+      "可访问性驱动的测试自动化"
     ]
   }
 }
