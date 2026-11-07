@@ -1,24 +1,24 @@
 {
-  "cached_at": "2026-11-06T14:36:10+08:00",
+  "cached_at": "2026-11-07T13:54:14+08:00",
   "full_name": "ccch1mneyyy/dsh-Go",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-06T06:35:43Z",
+  "repo_pushed_at": "2026-11-07T05:41:26Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "让用户在手机上直接运行编码 Agent，并可在手机与电脑之间切换同一会话。",
-    "summary_zh": "DeepSeek Harness 的 Android 客户端，可在手机本机运行，也能远程控制电脑上的 DSH。",
+    "problem": "让用户在手机上直接运行或远程操控 DeepSeek Harness 编码代理，无需电脑或 Termux 环境。",
+    "summary_zh": "DeepSeek Harness 的 Android 客户端，可在手机本机运行，也能远程遥控电脑上的 DSH。",
     "tech_stack": [
       "Dart",
       "Flutter",
       "Android",
-      "Linux 环境"
+      "DeepSeek Harness"
     ],
     "use_cases": [
-      "移动端编码 Agent",
-      "远程控制桌面 Agent",
-      "对话分享与回放"
+      "手机端运行编码代理",
+      "远程连接电脑上的 DSH 会话",
+      "移动端查看与分享对话"
     ]
   }
 }

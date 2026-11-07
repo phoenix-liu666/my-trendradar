@@ -1,25 +1,22 @@
 {
-  "cached_at": "2026-11-06T14:36:10+08:00",
+  "cached_at": "2026-11-07T13:54:14+08:00",
   "full_name": "microsoft/TokenEconomizer",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-06T06:21:57Z",
+  "repo_pushed_at": "2026-11-06T20:41:57Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码代理在常用仓库中重复学习、加载无用工具并陷入失败循环，导致成本浪费。",
-    "summary_zh": "微软研究院等提出的编码代理黑盒成本控制插件，通过经验学习降低 token 开销。",
+    "problem": "解决编码 Agent 在常用仓库中重复学习、加载无用工具、陷入失败循环导致的 Token 浪费。",
+    "summary_zh": "微软研究院提出的编码 Agent 黑盒成本控制插件，通过微技能、工具裁剪与循环干预降低开销。",
     "tech_stack": [
-      "Python",
-      "Claude Code",
-      "Codex",
-      "GitHub Copilot CLI"
+      "Python"
     ],
     "use_cases": [
-      "降低 Claude Code/Codex 运行成本",
-      "仓库级微技能积累",
-      "工具集裁剪",
-      "失败循环干预"
+      "降低 Claude Code 运行成本",
+      "降低 Codex 运行成本",
+      "Copilot CLI 成本优化",
+      "Agent 失败循环检测"
     ]
   }
 }

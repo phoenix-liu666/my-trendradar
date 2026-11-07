@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-07T13:54:14+08:00",
+  "full_name": "KKKKhazix/agent-autoloop",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-07T01:12:00Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决命令行 Agent 必须人工守着终端、离开即中断的问题，提供事件驱动的任务调度中台。",
+    "summary_zh": "让命令行 Agent 在后台自动接活并跟进，遇到需决策时通过消息卡片请求确认。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "MCP"
+    ],
+    "use_cases": [
+      "定时早报生成",
+      "GitHub Issue 自动跟进",
+      "线上告警排查",
+      "网站巡检",
+      "PR 自动交付"
+    ]
+  }
+}

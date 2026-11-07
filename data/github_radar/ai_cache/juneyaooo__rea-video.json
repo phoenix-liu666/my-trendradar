@@ -1,0 +1,26 @@
+{
+  "cached_at": "2026-11-07T13:54:14+08:00",
+  "full_name": "JuneYaooo/rea-video",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-07T05:43:57Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Research Tool",
+    "maturity": "growing",
+    "problem": "帮助创作者理解任意视频的镜头、字幕、剪辑与音频制作方式，并规划如何复刻。",
+    "summary_zh": "逐镜头逆向分析视频的制作方式，判断实拍、AI 生成或代码制作，并给出复刻方案。",
+    "tech_stack": [
+      "Python",
+      "ffmpeg",
+      "Claude Code",
+      "Codex",
+      "Remotion",
+      "VLM"
+    ],
+    "use_cases": [
+      "拆解短视频制作手法",
+      "判断视频是否为 AI 生成",
+      "生成视频复刻与重制方案"
+    ]
+  }
+}

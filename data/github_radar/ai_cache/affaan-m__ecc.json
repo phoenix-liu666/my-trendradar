@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-06T14:36:10+08:00",
+  "cached_at": "2026-11-07T13:54:14+08:00",
   "full_name": "affaan-m/ECC",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-06T05:29:44Z",
+  "repo_pushed_at": "2026-11-06T21:21:50Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "编码代理缺少统一的技能、记忆、安全与研究工作流层，跨工具使用时配置与行为不一致。",
-    "summary_zh": "面向 Claude Code、Codex 等编码代理的 harness 优化系统，提供技能、记忆、安全与研究流程。",
+    "problem": "解决命令行编码 Agent 缺少统一技能管理、记忆、安全与研究工作流的问题，通过插件方式增强多个 Agent 运行时。",
+    "summary_zh": "面向 Claude Code、Codex 等命令行 Agent 的性能优化与技能、记忆、安全增强框架。",
     "tech_stack": [
       "JavaScript",
       "TypeScript",
@@ -18,10 +18,10 @@
       "MCP"
     ],
     "use_cases": [
-      "为 Claude Code 配置技能与记忆",
-      "跨 Codex/OpenCode/Cursor 统一代理行为",
-      "代理安全与权限管控",
-      "研究优先的开发流程编排"
+      "增强 Claude Code 工作流",
+      "为 Codex 添加技能与记忆",
+      "统一多 Agent 配置管理",
+      "Agent 安全防护"
     ]
   }
 }
