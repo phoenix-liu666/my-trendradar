@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-08T13:56:07+08:00",
+  "full_name": "haydenschmitty/floorplan",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-02T20:06:48Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "解决 AI 辅助构建的应用难以理解整体结构的问题：把部件、文件、接口与跨仓库请求关系可视化成可探索地图。",
+    "summary_zh": "由 Claude 或 Codex 读取代码库并生成可交互、白话命名的应用结构地图。",
+    "tech_stack": [
+      "JavaScript",
+      "Node.js",
+      "Claude Code",
+      "Codex"
+    ],
+    "use_cases": [
+      "理解 AI 生成的应用结构",
+      "团队新人快速上手",
+      "查看 AI 改动影响范围",
+      "代码健康检查"
+    ]
+  }
+}

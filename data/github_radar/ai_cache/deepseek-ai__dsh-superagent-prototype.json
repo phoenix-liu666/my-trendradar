@@ -1,24 +1,23 @@
 {
-  "cached_at": "2026-11-02T13:56:57+08:00",
+  "cached_at": "2026-11-08T13:56:07+08:00",
   "full_name": "deepseek-ai/dsh-superagent-prototype",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-10-31T12:05:51Z",
+  "repo_pushed_at": "2026-11-03T09:29:14Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "让编码 Agent 在收到请求或团队规则允许时，自主创建工作任务、在独立会话中执行，并在原对话中回复（例如提交 PR），从而减少人工介入。",
-    "summary_zh": "面向单个 GitHub 仓库的主动式编码 Agent 研究原型，以 DeepSeek Harness 插件包形式发布。",
+    "problem": "让 agent 监听 GitHub/飞书请求，自主开工作项、在独立会话中执行并以 PR 形式回复，尽量减少人工注意力消耗。",
+    "summary_zh": "DeepSeek 研究原型：面向单个 GitHub 仓库的主动式编码 agent。",
     "tech_stack": [
       "TypeScript",
       "pnpm",
-      "GitHub",
-      "Feishu"
+      "DeepSeek Harness"
     ],
     "use_cases": [
-      "仓库内自动化编码任务",
-      "由 GitHub 或飞书消息触发 Agent 工作",
-      "通过 Web 面板查看待人工处理事项"
+      "仓库级自主编码任务",
+      "自动响应 issue 并提 PR",
+      "团队 agent 工作流实验"
     ]
   }
 }

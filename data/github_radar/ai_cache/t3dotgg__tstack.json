@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-08T13:56:07+08:00",
+  "full_name": "t3dotgg/tstack",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-10-28T02:38:03Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "把作者日常使用的编码 agent 工作流（自动提 PR、多模型评审、看护 CI、接管他人 PR）整理成可复用技能，减少人工盯流程。",
+    "summary_zh": "面向 Claude Code 与 Codex 的日常 agent 技能集合，覆盖提 PR、评审、合并等流程。",
+    "tech_stack": [
+      "Python",
+      "Claude Code",
+      "Codex",
+      "GitHub CLI"
+    ],
+    "use_cases": [
+      "自动提交并合并 PR",
+      "多模型交叉评审",
+      "看护 PR 的 CI 与评审机器人",
+      "接管他人 PR 或分支"
+    ]
+  }
+}

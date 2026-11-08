@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-11-08T13:56:07+08:00",
+  "full_name": "zortos293/Lichii",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-08T02:05:25Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "experimental",
+    "problem": "提供实验性的 Switch/Switch 2 游戏模拟与渲染兼容性改进，并收集社区兼容性报告。",
+    "summary_zh": "基于 yuzu/Eden 等分支的极早期 Nintendo Switch 2 模拟器。",
+    "tech_stack": [
+      "C++"
+    ],
+    "use_cases": [
+      "运行 Switch 游戏",
+      "提交兼容性报告",
+      "研究模拟器渲染修复"
+    ]
+  }
+}

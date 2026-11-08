@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-07T13:54:14+08:00",
+  "cached_at": "2026-11-08T13:56:07+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-07T05:43:57Z",
+  "repo_pushed_at": "2026-11-08T01:32:44Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
-    "maturity": "growing",
-    "problem": "帮助创作者理解任意视频的镜头、字幕、剪辑与音频制作方式，并规划如何复刻。",
-    "summary_zh": "逐镜头逆向分析视频的制作方式，判断实拍、AI 生成或代码制作，并给出复刻方案。",
+    "maturity": "experimental",
+    "problem": "帮助用户判断视频各镜头是实拍、AI 生成还是代码制作，并给出可执行的复刻计划。",
+    "summary_zh": "逐镜逆向分析视频制作方式并给出复刻方案的 Agent 技能。",
     "tech_stack": [
       "Python",
       "ffmpeg",
@@ -18,9 +18,10 @@
       "VLM"
     ],
     "use_cases": [
-      "拆解短视频制作手法",
-      "判断视频是否为 AI 生成",
-      "生成视频复刻与重制方案"
+      "拆解短视频制作方式",
+      "生成视频复刻方案",
+      "字幕与剪辑结构分析",
+      "AI 视频检测"
     ]
   }
 }
