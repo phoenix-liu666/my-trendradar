@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-29T13:43:04+08:00",
+  "cached_at": "2026-11-09T14:18:44+08:00",
   "full_name": "Zagitta/gpu-unlock",
   "model": "deepseek-v4-flash",
   "repo_pushed_at": "2026-10-29T02:30:54Z",
@@ -7,17 +7,17 @@
   "static": {
     "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "消费级 GeForce 显卡的张量核心在 FP16/BF16/TF32 运算上被限制为半速，影响 AI 训练与推理性能。",
-    "summary_zh": "在 Linux 启动阶段解除 GeForce RTX 20/30/40 系列张量核心 FP16/BF16/TF32 速率限制。",
+    "problem": "GeForce 显卡的 FP16/BF16/TF32 张量核心被限制在半速，影响 AI 训练与推理性能。",
+    "summary_zh": "在 Linux 启动时解除 GeForce RTX 20/30/40 张量核心 FP16/BF16 限速。",
     "tech_stack": [
       "C",
       "Linux 内核模块",
-      "NVIDIA 驱动"
+      "CUDA"
     ],
     "use_cases": [
-      "提升 LLM 预填充与微调吞吐",
-      "加速扩散模型图像生成",
-      "提升 FlashAttention 类内核性能"
+      "提升 LLM 预填充与微调速度",
+      "加速图像生成推理",
+      "提升 FlashAttention 内核吞吐"
     ]
   }
 }

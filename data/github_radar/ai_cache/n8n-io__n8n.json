@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-08T13:56:07+08:00",
+  "cached_at": "2026-11-09T14:18:44+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-08T02:33:06Z",
+  "repo_pushed_at": "2026-11-09T06:03:22Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "用可视化画布加自定义代码连接大量集成，构建并部署自动化与 AI Agent 工作流。",
-    "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持自托管。",
+    "problem": "让团队以可视化画布加自定义代码的方式搭建自动化工作流与多步 AI 代理。",
+    "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持可视化与代码结合。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
@@ -17,10 +17,9 @@
       "MCP"
     ],
     "use_cases": [
-      "构建自动化工作流",
-      "编排多步 AI Agent",
-      "连接第三方系统集成",
-      "自托管部署"
+      "工作流自动化",
+      "多步 AI 代理编排",
+      "系统集成与数据流转"
     ]
   }
 }

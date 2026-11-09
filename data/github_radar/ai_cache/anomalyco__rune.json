@@ -1,0 +1,23 @@
+{
+  "cached_at": "2026-11-09T14:18:44+08:00",
+  "full_name": "anomalyco/rune",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-09T06:01:26Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "experimental",
+    "problem": "Agent 难以直接构建和验证原生 UI，缺少可无头渲染、可脚本驱动的 UI 框架。",
+    "summary_zh": "GPU 渲染的原生 Rust UI 框架，支持无头渲染，便于 Agent 驱动与自检。",
+    "tech_stack": [
+      "Rust",
+      "GPU 渲染",
+      "MCP"
+    ],
+    "use_cases": [
+      "用编码 Agent 构建原生跨平台 UI",
+      "无头渲染 PNG 并检查元素树",
+      "构建带 GPU 特效的桌面应用"
+    ]
+  }
+}

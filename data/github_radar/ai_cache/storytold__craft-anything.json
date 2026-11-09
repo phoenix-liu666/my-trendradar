@@ -1,24 +1,23 @@
 {
-  "cached_at": "2026-11-08T13:56:07+08:00",
+  "cached_at": "2026-11-09T14:18:44+08:00",
   "full_name": "storytold/craft-anything",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-08T00:33:00Z",
+  "repo_pushed_at": "2026-11-09T06:12:15Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "experimental",
-    "problem": "让用户理解任意软件的实现方式，并借助编码 agent 生成可对照原版校验的复刻项目。",
-    "summary_zh": "纯 Rust 引擎，用检查工具研究网站/应用/游戏，再由编码 agent 复刻并比对。",
+    "problem": "想复刻某个网站、应用或游戏时，缺少系统化的检查、重建与结果比对流程。",
+    "summary_zh": "纯 Rust 引擎，用检查工具研究网站、应用或游戏，再由编码 Agent 重建并比对。",
     "tech_stack": [
       "Rust",
       "MCP",
       "CLI"
     ],
     "use_cases": [
-      "复刻网站页面",
-      "复刻小游戏玩法",
-      "逆向研究桌面/移动应用",
-      "为 agent 提供 320 个 MCP 工具"
+      "研究目标网站或应用的结构",
+      "让编码 Agent 重建网站或小游戏",
+      "自动比对重建结果与原版差异"
     ]
   }
 }
