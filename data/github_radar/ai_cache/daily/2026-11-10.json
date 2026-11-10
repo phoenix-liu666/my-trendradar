@@ -1,0 +1,468 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可本地运行、可切换 Agent 模式的开源编码助手。",
+      "recommendation_reason": "成熟的开源编码 Agent，适合研究其 Agent 架构与工作流设计。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 中的 OpenCode、Coding Agent 与 agentic coding，是用户核心兴趣。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码 Agent，提供终端与桌面端，内置 build/plan 等 Agent 模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew"
+      ],
+      "use_cases": [
+        "终端内 AI 编码",
+        "代码库探索与变更规划",
+        "多 Agent 模式切换",
+        "桌面端编码辅助"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "forks",
+          "heat_score"
+        ],
+        "summary": "Star 基数庞大且 7 日仍有稳定增量，属长期热门项目，无证据指向单一近期事件。"
+      }
+    },
+    "ccch1mneyyy/dsh-go": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "ccch1mneyyy/dsh-Go",
+      "maturity": "growing",
+      "problem": "让用户在手机上运行或远程操控编码 Agent 会话，内置 Linux 环境免 Root。",
+      "recommendation_reason": "与 Agent 使用场景相关，但技术参考价值有限，可观察其移动端 Agent 交互设计。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 与 Coding Agent 关键词，但形态是移动客户端而非 Agent 框架本身。",
+      "relevance_score": 72,
+      "summary_zh": "DeepSeek Harness 的 Android 客户端，手机本机运行并可遥控电脑端。",
+      "tech_stack": [
+        "Dart",
+        "Flutter",
+        "Android",
+        "DeepSeek"
+      ],
+      "use_cases": [
+        "手机端运行编码 Agent",
+        "远程操控电脑上的 Agent 会话",
+        "移动端对话分享与回放"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score"
+        ],
+        "summary": "24 小时与 7 日 Star 增量显著，README 自称登上 Trendshift 日榜第一，但无独立证据确认外部驱动。"
+      }
+    },
+    "haydenschmitty/floorplan": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "haydenschmitty/floorplan",
+      "maturity": "growing",
+      "problem": "解决 AI 辅助构建的应用难以理解整体结构与改动影响的问题，提供可视化代码地图与健康检查。",
+      "recommendation_reason": "作为 Agent 辅助开发工具值得关注，但与核心 Agent 框架兴趣相关度中等。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 与 productivity 画像，涉及 Claude Code、Codex 与开发者工具。",
+      "relevance_score": 72,
+      "summary_zh": "由 Claude 或 Codex 读取代码库并绘制可交互的通俗架构地图。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Claude Code",
+        "Codex"
+      ],
+      "use_cases": [
+        "理解 AI 生成的应用结构",
+        "团队新人快速上手",
+        "查看 AI 改动影响范围",
+        "代码库健康检查",
+        "跨仓库请求链路梳理"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at",
+          "created_at"
+        ],
+        "summary": "24 小时 Star 增量明显，仓库较新且持续更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "juneyaooo/rea-video": {
+      "category": "Research Tool",
+      "from_cache": false,
+      "full_name": "JuneYaooo/rea-video",
+      "maturity": "growing",
+      "problem": "帮助创作者判断视频各镜头的制作方式，并生成可执行的复刻与提示词方案。",
+      "recommendation_reason": "可作为 Agent skill 封装案例参考，但领域与用户画像匹配度一般。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 Claude Code、Codex 的 Agent 运行方式，但核心是视频分析，与用户兴趣交集有限。",
+      "relevance_score": 45,
+      "summary_zh": "逐镜头逆向视频来源（实拍、AI 生成或代码制作）并给出复刻方案。",
+      "tech_stack": [
+        "Python",
+        "ffmpeg",
+        "Claude Code",
+        "Codex",
+        "Remotion",
+        "VLM"
+      ],
+      "use_cases": [
+        "短视频镜头拆解",
+        "AI 视频来源判定",
+        "生成复刻拍摄与提示词方案",
+        "字幕与音频分析"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "24 小时 Star 增量明显，README 展示 Trendshift 徽章，但无证据确认具体传播事件。"
+      }
+    },
+    "kkkkhazix/agent-autoloop": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "KKKKhazix/agent-autoloop",
+      "maturity": "experimental",
+      "problem": "解决 Claude Code、Codex 等命令行 Agent 必须人守终端、离开即中断的问题，实现无人值守任务闭环。",
+      "recommendation_reason": "与 Agent 自动化需求高度匹配，可本地试跑验证多轮问答与事件调度。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 与 productivity 画像，涉及 MCP、Claude Code、Codex、自动化工作流。",
+      "relevance_score": 92,
+      "summary_zh": "轻量自动化中台，让命令行 Agent 在后台接活跟进，遇关键决策才推送卡片询问。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "Webhook"
+      ],
+      "use_cases": [
+        "定时早报生成",
+        "GitHub Issue 自动跟进",
+        "线上告警排查",
+        "网站巡检",
+        "PR 自动交付流水线"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "pushed_at",
+          "created_at"
+        ],
+        "summary": "24 小时 Star 增量明显，仓库较新且持续更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "milind-soni/openmausbot": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "milind-soni/OpenMausBot",
+      "maturity": "growing",
+      "problem": "解决闭源个人 Agent 产品将模型、计算与数据锁定在厂商侧的问题，提供本地优先、自带 Agent 的方案。",
+      "recommendation_reason": "方向契合但 open_issues 较多，建议观察稳定性后再决定是否试用。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 画像中的 computer use、Claude Code、Codex，属 Agent 桌面应用。",
+      "relevance_score": 85,
+      "summary_zh": "开源 Grok Bot 替代品，以聊天应用形式管理多个本地运行的 AI Agent。",
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Electron",
+        "Docker",
+        "Composio"
+      ],
+      "use_cases": [
+        "多 Agent 聊天式管理",
+        "Agent 使用云端 Linux 桌面",
+        "本地 VM 隔离运行 Agent",
+        "连接 500+ 应用",
+        "computer use 场景"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "pushed_at"
+        ],
+        "summary": "Trending 排名靠前且近期持续更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "morluto/rea": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "morluto/rea",
+      "maturity": "growing",
+      "problem": "让编码 Agent 在没有源码的情况下检查应用与原生二进制，解释功能实现并给出证据。",
+      "recommendation_reason": "可作为 Agent 工具化与 MCP 集成的参考实现，但需注意其逆向用途的合规边界。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 中的 MCP、Claude Code、Codex 与 agent tool use，同时属安全逆向方向。",
+      "relevance_score": 88,
+      "summary_zh": "面向 AI Agent 的逆向工程 MCP 工具，可分析二进制、Electron、.NET 与网站。",
+      "tech_stack": [
+        "TypeScript",
+        "MCP",
+        "Node.js",
+        "Claude Code",
+        "Codex",
+        "Ghidra",
+        "Hopper"
+      ],
+      "use_cases": [
+        "逆向分析原生二进制",
+        "分析 Electron/JS 应用",
+        "分析 .NET 程序集",
+        "为 Agent 提供逆向工具链"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "heat_score"
+        ],
+        "summary": "Star 与 7 日增量极高，且被多个 Agent 生态关键词命中，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "让用户以低代码方式连接大量系统并编排 AI 工作流与多步 Agent。",
+      "recommendation_reason": "成熟自动化平台，可作为 Agent 工作流落地的集成层，但非 Agent 框架本身。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 的 automation、workflow 以及 ai_agents 的 MCP、tool use。",
+      "relevance_score": 78,
+      "summary_zh": "可视化与代码结合的工作流自动化平台，原生支持 AI Agent 与 MCP。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "MCP",
+        "LangChain"
+      ],
+      "use_cases": [
+        "AI 工作流编排",
+        "多系统集成自动化",
+        "自托管 Agent 流程",
+        "人工审批与可观测流程"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "forks"
+        ],
+        "summary": "Star 基数大但近期增量平缓，属长期成熟项目，无证据指向近期热点事件。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决命令行 Agent 缺乏长期记忆与技能积累的问题，让 Agent 能在云端持续运行、自我改进并跨平台交互。",
+      "recommendation_reason": "与 Agent 兴趣高度契合，可研究其技能自学习与记忆机制设计。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 画像中的 AI Agent、Claude Code、Codex 等关键词，且为完整 Agent 框架。",
+      "relevance_score": 95,
+      "summary_zh": "Nous Research 推出的自改进 AI Agent，具备技能自学习、跨会话记忆与多平台接入。",
+      "tech_stack": [
+        "Python",
+        "FTS5",
+        "Docker",
+        "SSH",
+        "Modal",
+        "Daytona",
+        "Vercel Sandbox"
+      ],
+      "use_cases": [
+        "长期运行的自主 Agent",
+        "跨平台（Telegram/Slack 等）对话助手",
+        "定时自动化任务",
+        "批量生成 Agent 轨迹用于训练",
+        "多子 Agent 并行任务"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 基数极大且 7 日增量显著，近期仍在更新，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "onehumanbeing/esp32-iphone-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "onehumanbeing/esp32-iphone-agent",
+      "maturity": "growing",
+      "problem": "解决 iPhone Agent 依赖 Mac、开发者账号与越狱的问题，让普通用户仅凭手机与廉价板即可使用。",
+      "recommendation_reason": "computer use 方向有趣但依赖特定硬件，建议先观察再考虑尝试。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 画像中的 computer use、AI Agent、automation。",
+      "relevance_score": 78,
+      "summary_zh": "用 7 美元 ESP32 板让 AI 模型通过 AirPlay 视觉与 USB HID 操作真实 iPhone。",
+      "tech_stack": [
+        "Swift",
+        "ESP32-S3",
+        "AirPlay",
+        "USB HID",
+        "OpenAI 兼容视觉模型"
+      ],
+      "use_cases": [
+        "AI 自动操作 iPhone 应用",
+        "无障碍辅助操作",
+        "自动化重复手机任务",
+        "语音与听力练习场景",
+        "长任务分步回放"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "从现有 GitHub 数据看，该项目近期关注度明显上升，目前没有足够证据确定具体外部驱动事件。"
+      }
+    },
+    "qybaihe/bla": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "qybaihe/bla",
+      "maturity": "growing",
+      "problem": "保护二进制、Electron、JS、WASM 等发布产物不被 AI 逆向 Agent 快速还原。",
+      "recommendation_reason": "与 Agent 安全攻防话题相关，但实用价值取决于具体发布场景。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 中的 MCP 与 Claude Code，且与 REA 类逆向 Agent 形成攻防对照。",
+      "relevance_score": 70,
+      "summary_zh": "对抗 AI 逆向 Agent 的防御工具，通过混淆与资源耗尽保护发布产物。",
+      "tech_stack": [
+        "TypeScript",
+        "MCP",
+        "Node.js",
+        "WebAssembly",
+        "Vite",
+        "Rollup",
+        "Webpack"
+      ],
+      "use_cases": [
+        "发布产物混淆加固",
+        "对抗 LLM 逆向分析",
+        "构建流程集成防护",
+        "Agent 驱动的加固闭环"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score"
+        ],
+        "summary": "Star 与 24 小时增量较高，README 自称进入 GitHub Trending，但无独立证据确认。"
+      }
+    },
+    "ruvnet/ruview": {
+      "category": "Other",
+      "from_cache": false,
+      "full_name": "ruvnet/RuView",
+      "maturity": "growing",
+      "problem": "解决无摄像头环境下的人员感知与健康监测问题，通过 WiFi 信号扰动推断空间与生理信息。",
+      "recommendation_reason": "属 WiFi 感知领域，与用户核心兴趣画像匹配度低。",
+      "recommended_action": "skip",
+      "relevance_reason": "涉及 MCP 与自动化，但与 ai_agents、research_ai、computational_optics 核心兴趣关联较弱。",
+      "relevance_score": 35,
+      "summary_zh": "利用 WiFi CSI 信号实现穿墙存在检测、生命体征监测与无摄像头姿态估计。",
+      "tech_stack": [
+        "Rust",
+        "TypeScript",
+        "WebAssembly",
+        "ESP32",
+        "MQTT",
+        "Matter",
+        "Home Assistant"
+      ],
+      "use_cases": [
+        "穿墙人员存在检测",
+        "非接触呼吸心率监测",
+        "睡眠质量分析",
+        "智能家居联动",
+        "无摄像头姿态估计"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "pushed_at"
+        ],
+        "summary": "Trending 排名靠前且 Star 基数大，近期仍在更新，但无证据确定具体外部驱动事件。"
+      }
+    }
+  },
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T15:11:58+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 与 AI 逆向安全工具同日聚集，攻防两端同步升温",
+    "rising_categories": [
+      "Coding Agent",
+      "Security",
+      "Research Tool"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 占 6 个，是今日最集中的类别",
+      "Security 类出现两个方向相反的项目：morluto/rea 做 AI 逆向分析，qybaihe/bla 做对抗逆向的防御",
+      "hot_today 首位 morluto/rea 的 delta_24h 为 3311、heat_score 为 91.37，两项均为当日最高",
+      "new_and_rising 中 Minireel/HGhub（delta_24h 3137）与 NotRexed/Hookshot（delta_24h 2095）增长靠前，但汇总未给出类别与摘要",
+      "for_you 前 10 中有 6 个属于 Coding Agent，其中 NousResearch/hermes-agent 的 relevance 为 95"
+    ],
+    "watch_tomorrow": [
+      "morluto/rea 与 qybaihe/bla 的逆向与反逆向对抗是否持续",
+      "Coding Agent 类别能否维持 6 个项目的聚集度",
+      "Minireel/HGhub 与 NotRexed/Hookshot 的高 delta_24h 是否延续",
+      "ccch1mneyyy/dsh-Go 等 DeepSeek Harness 相关项目的后续动向",
+      "JuneYaooo/rea-video 所属 Research Tool 类别是否扩散"
+    ]
+  },
+  "usage": {
+    "cache_hits": 7,
+    "completion_tokens": 3379,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 27347,
+    "prompt_tokens": 29651,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 33030
+  }
+}

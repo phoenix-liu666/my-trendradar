@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-11-10T15:11:58+08:00",
+  "full_name": "ruvnet/RuView",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-10T06:16:34Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "growing",
+    "problem": "解决无摄像头环境下的人员感知与健康监测问题，通过 WiFi 信号扰动推断空间与生理信息。",
+    "summary_zh": "利用 WiFi CSI 信号实现穿墙存在检测、生命体征监测与无摄像头姿态估计。",
+    "tech_stack": [
+      "Rust",
+      "TypeScript",
+      "WebAssembly",
+      "ESP32",
+      "MQTT",
+      "Matter",
+      "Home Assistant"
+    ],
+    "use_cases": [
+      "穿墙人员存在检测",
+      "非接触呼吸心率监测",
+      "睡眠质量分析",
+      "智能家居联动",
+      "无摄像头姿态估计"
+    ]
+  }
+}

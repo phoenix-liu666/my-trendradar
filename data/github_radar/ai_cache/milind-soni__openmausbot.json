@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-11-08T13:56:07+08:00",
+  "cached_at": "2026-11-10T15:11:58+08:00",
   "full_name": "milind-soni/OpenMausBot",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-08T03:29:55Z",
+  "repo_pushed_at": "2026-11-10T07:10:36Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决单一助手形态不适合多 Agent 协作的问题：让每个 bot 拥有独立人格、模型、云电脑与已连接应用，并本地优先运行。",
-    "summary_zh": "开源版 Grok Bot 替代品：聊天应用形态，每个会话背后是本地运行的 Claude 或 Codex Agent。",
+    "problem": "解决闭源个人 Agent 产品将模型、计算与数据锁定在厂商侧的问题，提供本地优先、自带 Agent 的方案。",
+    "summary_zh": "开源 Grok Bot 替代品，以聊天应用形式管理多个本地运行的 AI Agent。",
     "tech_stack": [
       "TypeScript",
       "React",
       "Electron",
-      "Expo",
       "Docker",
-      "Claude Code",
-      "Codex"
+      "Composio"
     ],
     "use_cases": [
-      "多 Agent 聊天式协作",
-      "computer use 操作虚拟机",
-      "本地优先的 Agent 托管",
-      "接入已有 Claude/Codex 订阅"
+      "多 Agent 聊天式管理",
+      "Agent 使用云端 Linux 桌面",
+      "本地 VM 隔离运行 Agent",
+      "连接 500+ 应用",
+      "computer use 场景"
     ]
   }
 }

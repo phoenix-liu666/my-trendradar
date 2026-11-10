@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-09T14:18:44+08:00",
+  "cached_at": "2026-11-10T15:11:58+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-08T16:12:27Z",
+  "repo_pushed_at": "2026-11-09T15:40:48Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "帮助创作者拆解任意短视频的镜头构成、生成方式与制作流程，以便复刻。",
-    "summary_zh": "逐镜头逆向分析视频是实拍、AI 生成还是代码制作，并给出复刻方案。",
+    "problem": "帮助创作者判断视频各镜头的制作方式，并生成可执行的复刻与提示词方案。",
+    "summary_zh": "逐镜头逆向视频来源（实拍、AI 生成或代码制作）并给出复刻方案。",
     "tech_stack": [
       "Python",
       "ffmpeg",
@@ -19,8 +19,8 @@
     ],
     "use_cases": [
       "短视频镜头拆解",
-      "AI 视频与实拍判别",
-      "生成复刻提示词与制作方案",
+      "AI 视频来源判定",
+      "生成复刻拍摄与提示词方案",
       "字幕与音频分析"
     ]
   }
