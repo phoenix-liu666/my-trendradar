@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-11-12T15:05:32+08:00",
+  "full_name": "huamidev/GestaltX",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-11T03:51:20Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "experimental",
+    "problem": "让用户在 iOS 设备上读取和修改 MobileGestalt 字段，尝试启用区域相关功能。",
+    "summary_zh": "面向 iOS 27.x 的 MobileGestalt 编辑器，支持区域码调整、设备预设与备份。",
+    "tech_stack": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "use_cases": [
+      "编辑 MobileGestalt 字段",
+      "备份与恢复设备配置"
+    ]
+  }
+}

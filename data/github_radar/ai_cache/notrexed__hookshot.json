@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-11-12T15:05:32+08:00",
+  "full_name": "NotRexed/Hookshot",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-12T06:24:29Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Other",
+    "maturity": "experimental",
+    "problem": "让玩家无需模拟器，在 PC 上用自有游戏副本原生运行该游戏。",
+    "summary_zh": "将《塞尔达传说：时之笛》Switch 2 版静态重编译为 Windows/Linux 原生程序。",
+    "tech_stack": [
+      "C++",
+      "Vulkan"
+    ],
+    "use_cases": [
+      "在 PC 上原生运行该游戏",
+      "研究静态重编译与图形后端重建"
+    ]
+  }
+}

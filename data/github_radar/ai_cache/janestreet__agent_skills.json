@@ -1,0 +1,20 @@
+{
+  "cached_at": "2026-11-12T15:05:32+08:00",
+  "full_name": "janestreet/agent_skills",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-03T18:14:13Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "为编码 Agent 或聊天机器人提供可复用的 SKILL.md 技能定义，规范教学类交互。",
+    "summary_zh": "Jane Street 发布的 AI Agent 技能集合，目前包含苏格拉底式教学技能。",
+    "tech_stack": [
+      "SKILL.md"
+    ],
+    "use_cases": [
+      "给编码 Agent 安装教学技能",
+      "用苏格拉底法辅导学习"
+    ]
+  }
+}

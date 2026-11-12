@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-11-11T14:08:08+08:00",
+  "cached_at": "2026-11-12T15:05:32+08:00",
   "full_name": "anomalyco/opencode",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-11T05:56:47Z",
+  "repo_pushed_at": "2026-11-12T06:51:31Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "mature",
-    "problem": "为开发者提供可自托管、可切换模型的编码 Agent，支持构建与只读规划两种模式及子 Agent 协作。",
-    "summary_zh": "开源 AI 编码 Agent，提供终端界面与桌面应用。",
+    "problem": "为开发者提供可自托管、可切换模型的编码 Agent，覆盖代码探索、修改与多步任务执行。",
+    "summary_zh": "开源 AI 编码 Agent，提供终端界面、桌面应用与多 Agent 模式。",
     "tech_stack": [
       "TypeScript",
+      "Node.js",
       "Bun",
       "npm",
-      "Homebrew",
-      "Nix"
+      "Homebrew"
     ],
     "use_cases": [
-      "在终端中进行 AI 辅助编码",
-      "以只读模式探索陌生代码库",
-      "通过子 Agent 执行多步搜索任务",
-      "桌面端使用编码 Agent"
+      "终端内 AI 辅助编码",
+      "只读模式探索陌生代码库",
+      "多步任务与子 Agent 调度",
+      "桌面端编码助手"
     ]
   }
 }

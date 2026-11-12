@@ -1,29 +1,28 @@
 {
-  "cached_at": "2026-11-11T14:08:08+08:00",
+  "cached_at": "2026-11-12T15:05:32+08:00",
   "full_name": "morluto/rea",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-11T06:06:50Z",
+  "repo_pushed_at": "2026-11-12T02:45:58Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "解决在无源码情况下理解应用功能实现、并复刻到自有项目的问题。",
-    "summary_zh": "通过 MCP 让 Agent 对二进制、应用与运行时行为进行逆向分析。",
+    "problem": "解决在无源码情况下理解应用功能实现的问题，为 Agent 提供二进制、JS/Electron、.NET 与网站分析工具链。",
+    "summary_zh": "面向 Agent 的逆向工程 MCP，可分析原生二进制、应用与运行时行为。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "MCP",
-      "Claude Code",
-      "Codex",
+      "Hopper",
       "Ghidra",
       "IDA",
-      "Hopper"
+      "JADX"
     ],
     "use_cases": [
-      "分析原生二进制与 Electron 应用",
-      "逆向网站与 .NET 程序集",
-      "为 Agent 提供逆向工具链",
-      "构建逆向 RL 环境"
+      "分析原生二进制实现",
+      "逆向 JS/Electron 应用",
+      "分析 .NET 程序集",
+      "为自研产品复刻功能提供证据"
     ]
   }
 }

@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-11-12T15:05:32+08:00",
+  "full_name": "meta/astryx",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-12T07:05:25Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "growing",
+    "problem": "为应用开发提供统一、可主题化且对 Agent 友好的组件与 CLI 工具链。",
+    "summary_zh": "Meta 开源的可定制设计系统，基于 React 19 与 StyleX，面向人和 AI Agent 共同使用。",
+    "tech_stack": [
+      "TypeScript",
+      "React 19",
+      "StyleX",
+      "CLI"
+    ],
+    "use_cases": [
+      "构建 React 应用界面",
+      "为 AI 助手提供组件文档与脚手架",
+      "定制品牌主题"
+    ]
+  }
+}

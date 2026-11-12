@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-11-11T14:08:08+08:00",
+  "cached_at": "2026-11-12T15:05:32+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-11T06:03:00Z",
+  "repo_pushed_at": "2026-11-12T06:27:17Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "让用户以可视化画布结合自定义代码搭建自动化工作流与多步 AI Agent，并连接现有系统。",
-    "summary_zh": "带原生 AI 能力的可视化工作流自动化平台，支持自托管与 1500+ 集成。",
+    "problem": "让非工程团队也能把 AI 模型、工具与既有系统串联成可运维的自动化流程。",
+    "summary_zh": "可视化工作流自动化平台，内置 AI 能力与大量集成，可自托管或云端部署。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "LangChain",
-      "MCP"
+      "MCP",
+      "LangChain"
     ],
     "use_cases": [
       "搭建多步 AI Agent 工作流",
-      "连接第三方 API 实现自动化",
-      "自托管企业内部自动化流程",
-      "用可视化画布编排人工审批环节"
+      "系统间数据集成与自动化",
+      "人工审批与可观测的 AI 流程",
+      "自托管企业内部自动化"
     ]
   }
 }

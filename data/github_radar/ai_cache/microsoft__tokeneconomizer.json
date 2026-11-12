@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-11-11T14:08:08+08:00",
+  "cached_at": "2026-11-12T15:05:32+08:00",
   "full_name": "microsoft/TokenEconomizer",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-10T19:09:48Z",
+  "repo_pushed_at": "2026-11-12T00:30:28Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决 Claude Code、Codex 等编码 Agent 在常用仓库中重复学习、加载无用工具、陷入失败循环造成的成本浪费。",
-    "summary_zh": "面向编码 Agent 的黑盒成本控制插件，通过经验学习降低 token 消耗。",
+    "problem": "解决编码 Agent 在常用仓库中反复重新学习仓库知识、加载未用工具、陷入失败循环造成的成本浪费。",
+    "summary_zh": "微软研究院等出品的编码 Agent 成本控制插件，通过经验学习降低 Token 消耗。",
     "tech_stack": [
       "Python",
       "Claude Code",
       "Codex",
       "GitHub Copilot CLI",
-      "MCP"
+      "Pi",
+      "opencode"
     ],
     "use_cases": [
-      "降低编码 Agent 在固定仓库的调用成本",
-      "自动沉淀仓库操作微技能",
+      "降低 Claude Code/Codex 在固定仓库的调用成本",
+      "自动沉淀仓库构建与命令知识",
       "裁剪未使用工具定义",
       "检测并干预失败循环"
     ]

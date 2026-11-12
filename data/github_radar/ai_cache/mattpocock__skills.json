@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-08T13:56:07+08:00",
+  "cached_at": "2026-11-12T15:05:32+08:00",
   "full_name": "mattpocock/skills",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-05T10:40:01Z",
+  "repo_pushed_at": "2026-11-11T14:40:17Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "通过小型可组合技能（需求对齐、共享术语、流程规范）缓解编码 agent 理解偏差与输出冗长等常见失败模式。",
-    "summary_zh": "面向真实工程实践的 agent 技能集，支持 Claude Code、Codex、Copilot 等多种 agent。",
+    "problem": "编码 Agent 常出现需求理解偏差、输出冗长等问题，缺少可组合的工程化技能约束。",
+    "summary_zh": "面向真实工程实践的 Agent 技能集合，支持 Claude Code、Codex 等多种编码 Agent。",
     "tech_stack": [
       "Shell",
       "Claude Code",
@@ -17,10 +17,9 @@
       "Gemini CLI"
     ],
     "use_cases": [
-      "需求澄清与对齐",
-      "建立项目共享术语",
-      "规范 agent 工程流程",
-      "多 agent 平台统一技能安装"
+      "为编码 Agent 安装工程技能",
+      "用提问式技能对齐需求",
+      "统一项目术语与文档"
     ]
   }
 }
