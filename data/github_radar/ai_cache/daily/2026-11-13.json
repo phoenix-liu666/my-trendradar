@@ -1,0 +1,473 @@
+{
+  "analyses": {
+    "alishahryar1/free-claude-code": {
+      "category": "LLM Infrastructure",
+      "from_cache": false,
+      "full_name": "Alishahryar1/free-claude-code",
+      "maturity": "growing",
+      "problem": "解决编码 Agent 的模型与额度绑定问题，通过本地代理在多个 harness 与提供方之间路由，并提供重试、限流与回退。",
+      "recommendation_reason": "对多 harness 与多提供方路由有实用价值，但涉及第三方服务条款与免费额度稳定性，建议先观察。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 Claude Code、Codex、OpenCode 关键词，属于 Agent 基础设施，但更偏模型路由而非 Agent 能力本身。",
+      "relevance_score": 80,
+      "summary_zh": "把 Claude Code、Codex 等 12 种编码 harness 路由到 61 家模型提供方的本地代理工具。",
+      "tech_stack": [
+        "Python",
+        "Whisper",
+        "Discord",
+        "Telegram",
+        "VS Code"
+      ],
+      "use_cases": [
+        "Claude Code 接入第三方模型",
+        "多 API Key 自动回退",
+        "手机端通过 Discord/Telegram 编码",
+        "浏览器内原生 Code 会话",
+        "降低 token 消耗"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "trending_rank",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "Star 近 7 万且 Trending 排名第 12，热度较高；但无证据说明具体外部驱动事件。"
+      }
+    },
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可自托管、可切换代理模式的开源编码代理，替代闭源方案。",
+      "recommendation_reason": "与用户兴趣高度重合且成熟度高，值得深入研究其代理架构与工作流设计。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 ai_agents 中的 OpenCode、Coding Agent 与 agentic coding 关键词。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码代理，提供终端界面与桌面应用，内置 build 与 plan 两种代理模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Nix"
+      ],
+      "use_cases": [
+        "终端内 AI 编码",
+        "代码库探索与变更规划",
+        "多步骤任务委派给子代理"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 基数极大且仍在持续增长，属于长期高热度编码代理项目；具体增长驱动无证据。"
+      }
+    },
+    "ccch1mneyyy/dsh-go": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "ccch1mneyyy/dsh-Go",
+      "maturity": "growing",
+      "problem": "让用户在手机上直接运行和操控 DeepSeek Harness 编码代理，无需电脑或 Termux 环境。",
+      "recommendation_reason": "与编码代理兴趣高度相关，但 open_issues 较多、项目较新，建议先观察稳定性再试用。",
+      "recommended_action": "watch",
+      "relevance_reason": "直接命中 ai_agents 中的 Coding Agent 与 Claude Code 类代理使用场景，且为移动端入口。",
+      "relevance_score": 82,
+      "summary_zh": "DeepSeek Harness 的 Android 客户端，可在手机本机运行，也能远程操控电脑上的 DSH。",
+      "tech_stack": [
+        "Dart",
+        "Flutter",
+        "Android",
+        "DeepSeek Harness"
+      ],
+      "use_cases": [
+        "手机端运行编码代理",
+        "远程连接电脑上的 DSH 会话",
+        "移动端查看和分享对话"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "Star 量高且 7 日增量显著，属于近期快速走热的移动端编码代理客户端；具体外部驱动事件无证据。"
+      }
+    },
+    "haydenschmitty/floorplan": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "haydenschmitty/floorplan",
+      "maturity": "experimental",
+      "problem": "解决 AI 辅助构建的应用难以理解整体结构与改动影响的问题，把代码、文件与请求关系可视化为可缩放地图。",
+      "recommendation_reason": "对理解 AI 生成代码有实际帮助，但版本仍为 0.8.0，建议观察稳定性后再试用。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 Claude Code/Codex 与 developer tools、workflow，但核心是代码可视化而非 Agent 能力。",
+      "relevance_score": 72,
+      "summary_zh": "由 Claude 或 Codex 读取代码库并生成可交互、通俗命名的应用结构地图。",
+      "tech_stack": [
+        "JavaScript",
+        "Node.js",
+        "Claude Code",
+        "Codex"
+      ],
+      "use_cases": [
+        "理解 AI 生成的应用结构",
+        "团队新人快速上手",
+        "查看 AI 改动影响范围",
+        "跨仓库前后端请求映射",
+        "代码健康检查"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "created_at",
+          "pushed_at"
+        ],
+        "summary": "创建约两周即近 4000 Star，24 小时新增 238，处于早期快速增长；无证据确定具体外部驱动事件。"
+      }
+    },
+    "juneyaooo/rea-video": {
+      "category": "Research Tool",
+      "from_cache": false,
+      "full_name": "JuneYaooo/rea-video",
+      "maturity": "growing",
+      "problem": "帮助创作者和代理理解短视频的镜头构成与制作方式，从而复刻或识别 AI 生成内容。",
+      "recommendation_reason": "代理式工作流设计有参考价值，但与用户核心兴趣重合度中等。",
+      "recommended_action": "watch",
+      "relevance_reason": "以 Claude Code、Codex 作为运行载体，与 agent 生态相关，但核心是视频分析而非代理或科研。",
+      "relevance_score": 55,
+      "summary_zh": "逐镜头逆向分析视频是实拍、AI 生成还是代码制作，并给出复刻方法，输出 VIDEO.md。",
+      "tech_stack": [
+        "Python",
+        "ffmpeg",
+        "Claude Code",
+        "Codex",
+        "VLM"
+      ],
+      "use_cases": [
+        "短视频镜头拆解",
+        "AI 生成视频识别",
+        "复刻拍摄与剪辑方案",
+        "生成字幕与剪辑分析"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "24 小时与 7 日 Star 增量明显，属于近期走热的视频逆向分析工具；无证据确定具体外部事件。"
+      }
+    },
+    "kkkkhazix/agent-autoloop": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "KKKKhazix/agent-autoloop",
+      "maturity": "experimental",
+      "problem": "解决命令行 Agent 必须人守终端、关窗即中断的问题，把事件来源、Agent、通知通道做成可插拔插件，实现无人值守的自动闭环。",
+      "recommendation_reason": "与 Agent 自动化编排高度契合，本地零依赖部署成本低，可先试跑验证多轮会话续接与卡片审批流程。",
+      "recommended_action": "try",
+      "relevance_reason": "直接命中 ai_agents 画像：MCP、Claude Code、Codex、agent 调度与自动化工作流，且命中 productivity 的 automation/workflow。",
+      "relevance_score": 95,
+      "summary_zh": "轻量本地自动化中台，让命令行 Agent 后台接活、按规则调度，遇关键决策才推送卡片询问。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "Claude Code",
+        "Codex"
+      ],
+      "use_cases": [
+        "定时任务自动派发给 Codex/Claude Code",
+        "GitHub Issue 自动跟进",
+        "线上告警排查与人工拍板",
+        "多通道通知（飞书/钉钉/Slack）",
+        "PR 自动交付流水线"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "created_at",
+          "pushed_at"
+        ],
+        "summary": "创建仅约 10 天即获近 5000 Star，24 小时新增 376，属于早期快速增长，但无证据确定具体外部驱动事件。"
+      }
+    },
+    "modelflare-ai/anymodelbot": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "modelflare-ai/AnyModelBot",
+      "maturity": "growing",
+      "problem": "让用户在自有设备上运行带记忆、可后台执行任务的多模型个人 AI 代理，避免绑定单一厂商。",
+      "recommendation_reason": "功能方向契合，但依赖商业网关服务，建议观察其开源部分与本地能力边界。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 computer use、tool use 与多模型代理场景。",
+      "relevance_score": 72,
+      "summary_zh": "本地优先的多模型 AI 机器人桌面应用，可接入微信、飞书等渠道并执行命令、操作电脑。",
+      "tech_stack": [
+        "Python",
+        "Electron",
+        "Node.js",
+        "Go",
+        "Docker",
+        "OpenAI 兼容接口"
+      ],
+      "use_cases": [
+        "个人多模型 AI 助手",
+        "接入微信/飞书机器人",
+        "授权后操作桌面与文件",
+        "后台定时任务"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "forks",
+          "open_issues"
+        ],
+        "summary": "Star 数较高但 24 小时增量有限，热度中等；无证据说明具体增长驱动。"
+      }
+    },
+    "morluto/rea": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "morluto/rea",
+      "maturity": "growing",
+      "problem": "解决想理解他人应用功能实现却无源码的问题，通过 MCP 把二进制与运行时分析工具接入 Agent，并输出证据与局限。",
+      "recommendation_reason": "MCP 接入方式对 Agent 工具链有参考价值，但逆向工程用途与用户画像不完全匹配，建议先观察。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 ai_agents 的 MCP 与 Claude Code 集成，但领域为逆向工程与安全，与用户核心兴趣部分重合。",
+      "relevance_score": 78,
+      "summary_zh": "面向 Agent 的逆向工程 MCP，可分析原生二进制、JS/Electron 应用、.NET 程序集与网站。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "Claude Code",
+        "Codex",
+        "Ghidra",
+        "IDA",
+        "Hopper"
+      ],
+      "use_cases": [
+        "分析原生二进制行为",
+        "逆向 JS/Electron 应用",
+        "网站行为分析",
+        "为 Agent 提供逆向工具链",
+        "构建 RL 训练环境"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "delta_7d",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "Star 超 45 万、7 日新增约 2 万、24 小时新增 2439，热度极高且持续更新；但无证据确定具体外部驱动事件。"
+      }
+    },
+    "n8n-io/n8n": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "n8n-io/n8n",
+      "maturity": "mature",
+      "problem": "让用户以可视化加代码的方式搭建自动化与多步 AI 代理工作流，并连接现有系统。",
+      "recommendation_reason": "成熟且通用，但与用户核心的代理与科研方向只是部分重合，按需再深入。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 productivity 的 automation、workflow 以及 MCP、tool use 相关能力。",
+      "relevance_score": 70,
+      "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持可视化编排、自托管与大量集成。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "LangChain",
+        "MCP"
+      ],
+      "use_cases": [
+        "自动化工作流编排",
+        "多步 AI 代理搭建",
+        "系统集成与数据流转",
+        "自托管自动化服务"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "forks"
+        ],
+        "summary": "Star 基数庞大但近期增量平缓，属于成熟项目的常态增长；无证据指向特定事件。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决 Agent 无法从经验中积累技能、跨会话记忆弱、绑定单机的问题，提供学习闭环、定时自动化与多终端后端。",
+      "recommendation_reason": "学习闭环与多后端设计有参考价值，但 open_issues 数量庞大，建议先研究架构再评估落地。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 ai_agents 核心画像（agent framework、tool use、Claude Code/Codex 集成），并涉及 research 相关轨迹生成。",
+      "relevance_score": 90,
+      "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自创建、跨会话记忆与多平台接入能力。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Claude Code",
+        "Codex",
+        "Docker",
+        "SSH"
+      ],
+      "use_cases": [
+        "长期个人助理与跨会话记忆",
+        "Telegram/Discord/Slack 多平台对话",
+        "定时报告与夜间备份",
+        "子 Agent 并行任务",
+        "批量轨迹生成用于训练"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "pushed_at"
+        ],
+        "summary": "Star 规模极大且 7 日新增约 2000，持续更新活跃；但无证据说明具体外部驱动事件。"
+      }
+    },
+    "qwenlm/qwen-code": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "QwenLM/qwen-code",
+      "maturity": "growing",
+      "problem": "提供不锁定厂商的开源编码 Agent，可在终端、IDE、桌面、浏览器与聊天工具中使用，并支持任意第三方或本地模型。",
+      "recommendation_reason": "官方维护、多协议兼容且支持本地模型，适合作为编码 Agent 主力工具试用。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 ai_agents 的 Coding Agent、MCP、agentic coding，且为 developer tools，与画像高度一致。",
+      "relevance_score": 92,
+      "summary_zh": "Qwen 官方开源终端 AI 编码 Agent，支持多协议模型、MCP、子 Agent 与多端接入。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "OpenAI API",
+        "Anthropic API",
+        "Gemini API",
+        "Ollama",
+        "vLLM"
+      ],
+      "use_cases": [
+        "终端内代码理解与修改",
+        "IDE 插件辅助编码",
+        "接入本地模型离线使用",
+        "多 Agent 团队协作",
+        "聊天工具远程编码"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "trending_rank",
+          "stars",
+          "pushed_at",
+          "forks"
+        ],
+        "summary": "Trending 排名第 6，Star 近 3 万且近期仍在推送更新，热度有排名数据支撑，但无证据确定具体驱动事件。"
+      }
+    },
+    "qybaihe/bla": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "qybaihe/bla",
+      "maturity": "growing",
+      "problem": "防止 AI 逆向工程代理快速拆解并克隆软件发布产物中的核心逻辑。",
+      "recommendation_reason": "MCP 集成方式有参考价值，防御效果需自行验证，暂不优先试用。",
+      "recommended_action": "watch",
+      "relevance_reason": "涉及 MCP 与 Claude Code 集成，与 agent 生态相关，但主题是安全防御而非代理本身。",
+      "relevance_score": 60,
+      "summary_zh": "面向 AI 逆向代理的对抗防御工具，通过混淆与资源耗尽保护二进制、Electron、WASM 等产物。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "WebAssembly",
+        "Vite",
+        "Rollup",
+        "Webpack"
+      ],
+      "use_cases": [
+        "发布产物防逆向加固",
+        "为编码代理提供 MCP 防御工具",
+        "JS 打包时混淆与 SourceMap 替换"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "24 小时 Star 增量明显，属于近期走热的 LLM 安全工具；无证据确定具体外部事件。"
+      }
+    }
+  },
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T14:37:38+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 在榜单中占比最高，Agent 工具链与安全分析同步升温",
+    "rising_categories": [
+      "Coding Agent",
+      "Security",
+      "LLM Infrastructure",
+      "Research Tool",
+      "Developer Tool"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 有 6 个项目，是今日最集中的类别。",
+      "hot_today 中 morluto/rea 的 delta_24h 为 2439、heat_score 为 91.65，是当日热度最高的项目。",
+      "new_and_rising 中 janestreet/agent_skills 的 delta_24h 为 1663，storytold/craft-anything 的 delta_24h 为 1517，两者都处于高增长区间。",
+      "for_you 前六名中有五个属于 Coding Agent，且 relevance 在 82 到 95 之间。",
+      "Security 类别有 2 个项目，其中 morluto/rea 与 openai/codex-security 同时出现在 hot_today。"
+    ],
+    "watch_tomorrow": [
+      "Coding Agent 类别能否维持 6 个项目的集中度",
+      "morluto/rea 的高热度是否延续",
+      "new_and_rising 中 janestreet/agent_skills 与 storytold/craft-…",
+      "dsh 相关项目（ccch1mneyyy/dsh-Go、deepseek-ai/deepseek-harness、ki…",
+      "Security 类别是否出现更多新进项目"
+    ]
+  },
+  "usage": {
+    "cache_hits": 5,
+    "completion_tokens": 3670,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 27436,
+    "prompt_tokens": 29868,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 33538
+  }
+}

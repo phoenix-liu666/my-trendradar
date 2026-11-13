@@ -1,0 +1,30 @@
+{
+  "cached_at": "2026-11-13T14:37:38+08:00",
+  "full_name": "QwenLM/qwen-code",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-13T06:33:29Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "提供不锁定厂商的开源编码 Agent，可在终端、IDE、桌面、浏览器与聊天工具中使用，并支持任意第三方或本地模型。",
+    "summary_zh": "Qwen 官方开源终端 AI 编码 Agent，支持多协议模型、MCP、子 Agent 与多端接入。",
+    "tech_stack": [
+      "TypeScript",
+      "Node.js",
+      "MCP",
+      "OpenAI API",
+      "Anthropic API",
+      "Gemini API",
+      "Ollama",
+      "vLLM"
+    ],
+    "use_cases": [
+      "终端内代码理解与修改",
+      "IDE 插件辅助编码",
+      "接入本地模型离线使用",
+      "多 Agent 团队协作",
+      "聊天工具远程编码"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-11-13T14:37:38+08:00",
+  "full_name": "Alishahryar1/free-claude-code",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-12T19:36:16Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "growing",
+    "problem": "解决编码 Agent 的模型与额度绑定问题，通过本地代理在多个 harness 与提供方之间路由，并提供重试、限流与回退。",
+    "summary_zh": "把 Claude Code、Codex 等 12 种编码 harness 路由到 61 家模型提供方的本地代理工具。",
+    "tech_stack": [
+      "Python",
+      "Whisper",
+      "Discord",
+      "Telegram",
+      "VS Code"
+    ],
+    "use_cases": [
+      "Claude Code 接入第三方模型",
+      "多 API Key 自动回退",
+      "手机端通过 Discord/Telegram 编码",
+      "浏览器内原生 Code 会话",
+      "降低 token 消耗"
+    ]
+  }
+}

@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-11-12T15:05:32+08:00",
+  "cached_at": "2026-11-13T14:37:38+08:00",
   "full_name": "n8n-io/n8n",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-12T06:27:17Z",
+  "repo_pushed_at": "2026-11-13T06:29:11Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "mature",
-    "problem": "让非工程团队也能把 AI 模型、工具与既有系统串联成可运维的自动化流程。",
-    "summary_zh": "可视化工作流自动化平台，内置 AI 能力与大量集成，可自托管或云端部署。",
+    "problem": "让用户以可视化加代码的方式搭建自动化与多步 AI 代理工作流，并连接现有系统。",
+    "summary_zh": "带原生 AI 能力的 fair-code 工作流自动化平台，支持可视化编排、自托管与大量集成。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "Docker",
-      "MCP",
-      "LangChain"
+      "LangChain",
+      "MCP"
     ],
     "use_cases": [
-      "搭建多步 AI Agent 工作流",
-      "系统间数据集成与自动化",
-      "人工审批与可观测的 AI 流程",
-      "自托管企业内部自动化"
+      "自动化工作流编排",
+      "多步 AI 代理搭建",
+      "系统集成与数据流转",
+      "自托管自动化服务"
     ]
   }
 }

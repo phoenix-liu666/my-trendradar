@@ -1,28 +1,27 @@
 {
-  "cached_at": "2026-11-12T15:05:32+08:00",
+  "cached_at": "2026-11-13T14:37:38+08:00",
   "full_name": "qybaihe/bla",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-12T07:02:27Z",
+  "repo_pushed_at": "2026-11-13T03:38:17Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "软件发布物容易被 AI 逆向 Agent 快速解包并复刻核心逻辑，该项目通过混淆、诱饵与资源耗尽手段提高逆向成本。",
-    "summary_zh": "面向 AI 逆向工程 Agent 的二进制与前端产物对抗加固工具，提供 CLI 与 MCP 服务。",
+    "problem": "防止 AI 逆向工程代理快速拆解并克隆软件发布产物中的核心逻辑。",
+    "summary_zh": "面向 AI 逆向代理的对抗防御工具，通过混淆与资源耗尽保护二进制、Electron、WASM 等产物。",
     "tech_stack": [
       "TypeScript",
+      "Node.js",
       "MCP",
       "WebAssembly",
       "Vite",
       "Rollup",
-      "Webpack",
-      "esbuild"
+      "Webpack"
     ],
     "use_cases": [
-      "加固 Electron 应用与 asar 包",
-      "保护 JS bundle 与 SourceMap",
-      "保护 Python/原生二进制发布物",
-      "在 Claude Code、Cursor 等 Agent 中调用 MCP 加固流程"
+      "发布产物防逆向加固",
+      "为编码代理提供 MCP 防御工具",
+      "JS 打包时混淆与 SourceMap 替换"
     ]
   }
 }
