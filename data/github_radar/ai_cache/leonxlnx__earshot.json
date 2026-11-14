@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-07T13:54:14+08:00",
+  "cached_at": "2026-11-14T14:14:28+08:00",
   "full_name": "Leonxlnx/earshot",
   "model": "deepseek-v4-flash",
   "repo_pushed_at": "2026-11-06T17:24:16Z",
@@ -7,18 +7,21 @@
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "AI 编码代理无法判断生成视频或游戏中的声音质量，earshot 把声音转成代理可推理的证据。",
-    "summary_zh": "为编码代理提供听觉能力：分析、评价并生成音效，纯 CPU 本地运行，支持 MCP。",
+    "problem": "解决 AI 编码 Agent 能生成视频或游戏代码却无法判断音效质量、同步与真实性的问题，把声音转成可推理的证据。",
+    "summary_zh": "为编码 Agent 提供听觉能力的本地 CPU 工具，可描述、匹配、评估和生成音效。",
     "tech_stack": [
       "Python",
       "MCP",
-      "CLI",
+      "Claude Code",
+      "ffmpeg",
       "CPU 推理"
     ],
     "use_cases": [
-      "代理评估音效与视频配乐",
-      "为代码生成的影片自动配音效",
-      "将录音逆向为可调参数代码"
+      "让 Agent 描述和匹配音效",
+      "检测音效是否为代码合成",
+      "为影片生成同步音效包",
+      "对发布视频做音效评分",
+      "通过 MCP 接入 Claude Code"
     ]
   }
 }

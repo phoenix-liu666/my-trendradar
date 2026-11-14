@@ -1,26 +1,28 @@
 {
-  "cached_at": "2026-11-13T14:37:38+08:00",
+  "cached_at": "2026-11-14T14:14:28+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-13T02:32:02Z",
+  "repo_pushed_at": "2026-11-14T03:37:29Z",
   "schema_version": 1,
   "static": {
-    "category": "Research Tool",
+    "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "帮助创作者和代理理解短视频的镜头构成与制作方式，从而复刻或识别 AI 生成内容。",
-    "summary_zh": "逐镜头逆向分析视频是实拍、AI 生成还是代码制作，并给出复刻方法，输出 VIDEO.md。",
+    "problem": "解决视频创作者和 Agent 难以判断一条视频如何制作、如何复刻的问题，把镜头、字幕、音频、剪辑拆成结构化文档。",
+    "summary_zh": "面向 AI Agent 的视频逆向拆解工具，逐镜头判断拍摄、AI 生成或代码制作并输出 VIDEO.md。",
     "tech_stack": [
       "Python",
       "ffmpeg",
       "Claude Code",
       "Codex",
+      "Remotion",
       "VLM"
     ],
     "use_cases": [
-      "短视频镜头拆解",
-      "AI 生成视频识别",
-      "复刻拍摄与剪辑方案",
-      "生成字幕与剪辑分析"
+      "拆解短视频广告的拍摄与剪辑手法",
+      "判断视频是否为 AI 生成",
+      "生成可复刻的镜头与提示词说明",
+      "导出字幕 SRT/ASS",
+      "为 Agent 提供分层视频文档"
     ]
   }
 }

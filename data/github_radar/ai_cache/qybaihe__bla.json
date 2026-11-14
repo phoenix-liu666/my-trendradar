@@ -1,27 +1,28 @@
 {
-  "cached_at": "2026-11-13T14:37:38+08:00",
+  "cached_at": "2026-11-14T14:14:28+08:00",
   "full_name": "qybaihe/bla",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-13T03:38:17Z",
+  "repo_pushed_at": "2026-11-13T18:28:35Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "防止 AI 逆向工程代理快速拆解并克隆软件发布产物中的核心逻辑。",
-    "summary_zh": "面向 AI 逆向代理的对抗防御工具，通过混淆与资源耗尽保护二进制、Electron、WASM 等产物。",
+    "problem": "解决软件发布物被 AI 逆向 Agent 快速解包、还原逻辑的问题，通过混淆与诱饵抬高分析成本。",
+    "summary_zh": "面向 AI 逆向工程 Agent 的开源防御 MCP 与 CLI，对多种发布产物做混淆与资源耗尽防护。",
     "tech_stack": [
       "TypeScript",
-      "Node.js",
       "MCP",
-      "WebAssembly",
-      "Vite",
-      "Rollup",
-      "Webpack"
+      "Node.js",
+      "WASM",
+      "Electron",
+      "SQLite"
     ],
     "use_cases": [
-      "发布产物防逆向加固",
-      "为编码代理提供 MCP 防御工具",
-      "JS 打包时混淆与 SourceMap 替换"
+      "JS/TS 产物混淆",
+      "Electron ASAR 保护",
+      "WASM 与原生二进制防护",
+      "模型权重文件保护",
+      "构建插件集成"
     ]
   }
 }

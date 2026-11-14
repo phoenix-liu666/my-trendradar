@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-13T14:37:38+08:00",
+  "cached_at": "2026-11-14T14:14:28+08:00",
   "full_name": "KKKKhazix/agent-autoloop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-13T01:07:32Z",
+  "repo_pushed_at": "2026-11-14T02:01:22Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "experimental",
-    "problem": "解决命令行 Agent 必须人守终端、关窗即中断的问题，把事件来源、Agent、通知通道做成可插拔插件，实现无人值守的自动闭环。",
-    "summary_zh": "轻量本地自动化中台，让命令行 Agent 后台接活、按规则调度，遇关键决策才推送卡片询问。",
+    "maturity": "growing",
+    "problem": "解决命令行 Agent 需人守终端、关窗即断的问题，把事件来源、Agent、通知通道做成可插拔插件，实现无人值守闭环。",
+    "summary_zh": "轻量本地自动化中台，让命令行 Agent 在后台接活并跟进，遇到需决策时推送卡片询问。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
@@ -17,10 +17,10 @@
       "Codex"
     ],
     "use_cases": [
-      "定时任务自动派发给 Codex/Claude Code",
+      "定时任务自动派发给 Agent",
       "GitHub Issue 自动跟进",
-      "线上告警排查与人工拍板",
-      "多通道通知（飞书/钉钉/Slack）",
+      "线上告警排查",
+      "多通道人工审批卡片",
       "PR 自动交付流水线"
     ]
   }

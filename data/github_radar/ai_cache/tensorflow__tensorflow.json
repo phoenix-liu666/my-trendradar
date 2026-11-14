@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-12T15:05:32+08:00",
+  "cached_at": "2026-11-14T14:14:28+08:00",
   "full_name": "tensorflow/tensorflow",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-12T07:02:10Z",
+  "repo_pushed_at": "2026-11-14T05:55:22Z",
   "schema_version": 1,
   "static": {
-    "category": "LLM Infrastructure",
+    "category": "Scientific AI",
     "maturity": "mature",
-    "problem": "为研究与工程提供统一的模型构建、训练与部署基础设施。",
-    "summary_zh": "Google 开源的端到端机器学习框架，提供 Python 与 C++ 等 API。",
+    "problem": "解决研究者和开发者构建、训练与部署机器学习模型需要统一框架和生态的问题。",
+    "summary_zh": "Google 开源的端到端机器学习框架，提供 Python 与 C++ API。",
     "tech_stack": [
       "C++",
       "Python",
@@ -17,10 +17,11 @@
       "XLA"
     ],
     "use_cases": [
-      "深度学习模型训练",
-      "模型部署与推理",
-      "科研机器学习实验",
-      "分布式训练"
+      "训练深度学习模型",
+      "部署机器学习应用",
+      "科研中的神经网络实验",
+      "GPU 加速计算",
+      "跨语言模型服务"
     ]
   }
 }
