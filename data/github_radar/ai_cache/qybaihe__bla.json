@@ -1,28 +1,29 @@
 {
-  "cached_at": "2026-11-14T14:14:28+08:00",
+  "cached_at": "2026-11-15T14:22:34+08:00",
   "full_name": "qybaihe/bla",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-13T18:28:35Z",
+  "repo_pushed_at": "2026-11-14T18:26:35Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "解决软件发布物被 AI 逆向 Agent 快速解包、还原逻辑的问题，通过混淆与诱饵抬高分析成本。",
-    "summary_zh": "面向 AI 逆向工程 Agent 的开源防御 MCP 与 CLI，对多种发布产物做混淆与资源耗尽防护。",
+    "problem": "解决软件发布产物被 AI 逆向 Agent 快速解包、还原源码与克隆业务逻辑的问题，为作者提供防护与验证工具。",
+    "summary_zh": "开源蓝队 MCP 服务与 CLI，通过混淆与资源耗尽手段对抗 AI 逆向工程 Agent。",
     "tech_stack": [
       "TypeScript",
       "MCP",
-      "Node.js",
       "WASM",
-      "Electron",
-      "SQLite"
+      "SQLite",
+      "Vite",
+      "Rollup",
+      "Webpack",
+      "esbuild"
     ],
     "use_cases": [
-      "JS/TS 产物混淆",
-      "Electron ASAR 保护",
-      "WASM 与原生二进制防护",
-      "模型权重文件保护",
-      "构建插件集成"
+      "JS/TS 与 Electron 产物加固",
+      "WASM 与原生二进制保护",
+      "接入编码 Agent 执行加固流程",
+      "构建时自动混淆与 SourceMap 替换"
     ]
   }
 }
