@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-15T14:22:34+08:00",
+  "cached_at": "2026-11-16T14:21:05+08:00",
   "full_name": "backnotprop/plannotator",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-15T06:10:32Z",
+  "repo_pushed_at": "2026-11-16T06:14:45Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决多 Agent 并行工作时人难以跟进、审阅和反馈的问题，把计划、HTML 产物与代码 diff 集中到本地界面批注后一键回传。",
-    "summary_zh": "面向多种编码 Agent 的本地浏览器审阅界面，可批注计划、文档与代码 diff 并回传反馈。",
+    "problem": "编码 Agent 产出计划、文档和代码变更后，人缺少统一的审阅与批注入口，反馈难以结构化地回到 Agent 会话中。",
+    "summary_zh": "面向多种编码 Agent 的本地浏览器审阅界面，可标注计划、文档与代码 diff 并回传反馈。",
     "tech_stack": [
       "TypeScript",
       "MCP",
@@ -17,10 +17,10 @@
       "OpenCode"
     ],
     "use_cases": [
-      "审阅 Agent 生成的计划与规格",
-      "批注 HTML 产物并回传",
-      "本地或远程 PR 代码评审",
-      "多 Agent 消息收件箱统一处理"
+      "审阅 Agent 生成的计划与规格文档",
+      "对本地改动或 PR 做代码评审并回传意见",
+      "通过 Inbox 集中处理多个 Agent 的待决问题",
+      "在 Obsidian 等笔记场景中标注内容"
     ]
   }
 }
