@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-11-16T14:21:05+08:00",
+  "cached_at": "2026-11-17T15:50:47+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-16T05:24:57Z",
+  "repo_pushed_at": "2026-11-16T16:31:31Z",
   "schema_version": 1,
   "static": {
-    "category": "Other",
+    "category": "Research Tool",
     "maturity": "growing",
-    "problem": "难以判断短视频的制作方式并复刻其镜头、字幕、剪辑与音频设计。",
-    "summary_zh": "逐镜头逆向分析视频是实拍、AI 生成还是代码制作，并给出复刻方法。",
+    "problem": "帮助判断视频是实拍、AI 生成还是代码制作，并给出可执行的复刻拆解。",
+    "summary_zh": "逐镜头逆向分析视频来源与制作方式，并按 VIDEO.md 格式输出复刻方案。",
     "tech_stack": [
       "Python",
-      "ffmpeg",
+      "FFmpeg",
       "Claude Code",
       "Codex",
-      "Remotion",
       "VLM"
     ],
     "use_cases": [
-      "拆解短视频的拍摄与剪辑手法",
-      "判断视频是否为 AI 生成",
-      "生成可复刻的分镜与提示词",
-      "导出字幕与剪辑结构"
+      "短视频逐镜头拆解",
+      "AI 视频与实拍判别",
+      "生成复刻提示词与报告",
+      "字幕与剪辑节奏分析"
     ]
   }
 }

@@ -1,0 +1,756 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T15:50:47+08:00",
+  "repositories": {
+    "BryceYuuu/RUN": {
+      "created_at": "2026-10-29T11:28:43Z",
+      "forks": 343,
+      "language": "Python",
+      "open_issues": 7,
+      "pushed_at": "2026-11-07T08:57:32Z",
+      "stars": 4915
+    },
+    "ChromeDevTools/chrome-devtools-mcp": {
+      "created_at": "2025-09-11T10:39:55Z",
+      "forks": 4857,
+      "language": "TypeScript",
+      "open_issues": 125,
+      "pushed_at": "2026-11-17T07:13:28Z",
+      "stars": 57840,
+      "trending_rank": 13,
+      "trending_stars_today": 841
+    },
+    "DeanChensj/jiangshan-map": {
+      "created_at": "2026-07-23T22:44:35Z",
+      "forks": 878,
+      "language": "JavaScript",
+      "open_issues": 13,
+      "pushed_at": "2026-11-16T11:59:10Z",
+      "stars": 7327,
+      "trending_rank": 7,
+      "trending_stars_today": 288
+    },
+    "Eglantine-Community/Eglantine": {
+      "created_at": "2026-10-29T00:25:18Z",
+      "forks": 661,
+      "language": "C++",
+      "open_issues": 358,
+      "pushed_at": "2026-11-17T03:00:24Z",
+      "stars": 6058
+    },
+    "Jakeschincariol/day-trader-skill": {
+      "created_at": "2026-10-20T14:17:54Z",
+      "forks": 1977,
+      "language": "Python",
+      "open_issues": 61,
+      "pushed_at": "2026-10-20T14:18:00Z",
+      "stars": 8250
+    },
+    "JenkinWoo/sheeridVerify": {
+      "created_at": "2026-11-06T09:28:09Z",
+      "forks": 1590,
+      "language": "JavaScript",
+      "open_issues": 0,
+      "pushed_at": "2026-11-06T09:54:37Z",
+      "stars": 3389
+    },
+    "JoasASantos/REA-Prompts": {
+      "created_at": "2026-10-19T22:20:47Z",
+      "forks": 730,
+      "language": "Batchfile",
+      "open_issues": 1,
+      "pushed_at": "2026-11-05T12:58:38Z",
+      "stars": 4154
+    },
+    "JuneYaooo/rea-video": {
+      "created_at": "2026-10-29T16:15:01Z",
+      "forks": 1455,
+      "language": "Python",
+      "open_issues": 6,
+      "pushed_at": "2026-11-16T16:31:31Z",
+      "stars": 9892
+    },
+    "JustAResearcher/gpu-unlock-ada": {
+      "created_at": "2026-10-23T21:00:53Z",
+      "forks": 644,
+      "language": "C",
+      "open_issues": 86,
+      "pushed_at": "2026-10-26T04:24:46Z",
+      "stars": 4922
+    },
+    "KKKKhazix/agent-autoloop": {
+      "created_at": "2026-11-03T08:02:11Z",
+      "forks": 1059,
+      "language": "TypeScript",
+      "open_issues": 2,
+      "pushed_at": "2026-11-17T01:20:39Z",
+      "stars": 5732
+    },
+    "LNPANDY/NX2Apple": {
+      "created_at": "2026-10-20T18:16:07Z",
+      "forks": 923,
+      "language": "Swift",
+      "open_issues": 234,
+      "pushed_at": "2026-11-17T04:49:08Z",
+      "stars": 7503
+    },
+    "Lee-xeo/Claude-Cage": {
+      "created_at": "2026-10-31T15:07:08Z",
+      "forks": 715,
+      "language": "Go",
+      "open_issues": 193,
+      "pushed_at": "2026-11-17T07:32:36Z",
+      "stars": 6193
+    },
+    "Minireel/HGhub": {
+      "created_at": "2026-11-03T14:04:27Z",
+      "forks": 8062,
+      "language": "Rust",
+      "open_issues": 6,
+      "pushed_at": "2026-11-16T11:59:11Z",
+      "stars": 9641
+    },
+    "NVIDIA/SkillEvaluator": {
+      "created_at": "2026-06-24T02:32:26Z",
+      "forks": 430,
+      "language": "Python",
+      "open_issues": 60,
+      "pushed_at": "2026-11-17T07:12:30Z",
+      "stars": 3013,
+      "trending_rank": 10,
+      "trending_stars_today": 873
+    },
+    "NousResearch/hermes-agent": {
+      "created_at": "2025-07-22T22:22:28Z",
+      "forks": 59545,
+      "language": "Python",
+      "open_issues": 53470,
+      "pushed_at": "2026-11-17T07:50:03Z",
+      "stars": 264019
+    },
+    "RoutineMiku/apkstart": {
+      "created_at": "2026-10-29T13:44:03Z",
+      "forks": 646,
+      "language": "JavaScript",
+      "open_issues": 90,
+      "pushed_at": "2026-11-17T07:15:12Z",
+      "stars": 6889
+    },
+    "Significant-Gravitas/AutoGPT": {
+      "created_at": "2023-03-16T09:21:07Z",
+      "forks": 45856,
+      "language": "Python",
+      "open_issues": 696,
+      "pushed_at": "2026-11-17T07:26:15Z",
+      "stars": 188071
+    },
+    "Verlintas/NOIR": {
+      "created_at": "2026-10-31T21:34:39Z",
+      "forks": 319,
+      "language": "Kotlin",
+      "open_issues": 1,
+      "pushed_at": "2026-11-16T03:43:17Z",
+      "stars": 3610
+    },
+    "Zagitta/gpu-unlock": {
+      "created_at": "2026-10-18T01:28:31Z",
+      "forks": 2100,
+      "language": "C",
+      "open_issues": 141,
+      "pushed_at": "2026-11-17T02:41:59Z",
+      "stars": 20081
+    },
+    "affaan-m/ECC": {
+      "created_at": "2026-01-18T00:51:51Z",
+      "forks": 44888,
+      "language": "JavaScript",
+      "open_issues": 144,
+      "pushed_at": "2026-11-17T06:41:46Z",
+      "stars": 304833
+    },
+    "ag-ui-protocol/ag-ui": {
+      "created_at": "2025-05-07T12:49:37Z",
+      "forks": 2020,
+      "language": "TypeScript",
+      "open_issues": 591,
+      "pushed_at": "2026-11-17T04:12:28Z",
+      "stars": 19514,
+      "trending_rank": 1,
+      "trending_stars_today": 791
+    },
+    "alibaba/open-code-review": {
+      "created_at": "2026-05-18T02:16:36Z",
+      "forks": 4361,
+      "language": "Go",
+      "open_issues": 352,
+      "pushed_at": "2026-11-17T06:20:18Z",
+      "stars": 53212,
+      "trending_rank": 11,
+      "trending_stars_today": 951
+    },
+    "anefzaoui/misterdownloadmanager": {
+      "created_at": "2026-10-29T01:25:19Z",
+      "forks": 950,
+      "language": "Rust",
+      "open_issues": 54,
+      "pushed_at": "2026-11-17T07:19:21Z",
+      "stars": 11356
+    },
+    "anhao/ai-pose-gallery-zh": {
+      "created_at": "2026-10-27T12:24:37Z",
+      "forks": 1813,
+      "language": "TypeScript",
+      "open_issues": 18,
+      "pushed_at": "2026-11-04T08:09:10Z",
+      "stars": 7128
+    },
+    "anomalyco/opencode": {
+      "created_at": "2025-04-30T20:08:00Z",
+      "forks": 30814,
+      "language": "TypeScript",
+      "open_issues": 4034,
+      "pushed_at": "2026-11-17T07:48:35Z",
+      "stars": 227409
+    },
+    "anomalyco/rune": {
+      "created_at": "2026-10-22T05:51:40Z",
+      "forks": 298,
+      "language": "Rust",
+      "open_issues": 466,
+      "pushed_at": "2026-11-17T07:45:14Z",
+      "stars": 7370
+    },
+    "anthropics/skills": {
+      "created_at": "2025-09-22T15:53:31Z",
+      "forks": 23035,
+      "language": "Python",
+      "open_issues": 1549,
+      "pushed_at": "2026-11-16T14:22:50Z",
+      "stars": 196265
+    },
+    "avelino/awesome-go": {
+      "created_at": "2014-07-06T13:42:15Z",
+      "forks": 13757,
+      "language": "Go",
+      "open_issues": 116,
+      "pushed_at": "2026-11-16T23:58:31Z",
+      "stars": 194349
+    },
+    "awesome-selfhosted/awesome-selfhosted": {
+      "created_at": "2015-06-01T02:33:17Z",
+      "forks": 15868,
+      "open_issues": 0,
+      "pushed_at": "2026-11-16T20:39:05Z",
+      "stars": 337824
+    },
+    "backnotprop/plannotator": {
+      "created_at": "2025-12-28T02:09:40Z",
+      "forks": 1271,
+      "language": "TypeScript",
+      "open_issues": 186,
+      "pushed_at": "2026-11-17T07:38:09Z",
+      "stars": 12799,
+      "trending_rank": 2,
+      "trending_stars_today": 696
+    },
+    "benjitaylor/skills": {
+      "created_at": "2026-10-26T06:08:56Z",
+      "forks": 238,
+      "language": "TypeScript",
+      "open_issues": 0,
+      "pushed_at": "2026-11-05T03:34:26Z",
+      "stars": 3489
+    },
+    "ccch1mneyyy/dsh-Go": {
+      "created_at": "2026-10-25T08:09:52Z",
+      "forks": 1210,
+      "language": "Dart",
+      "open_issues": 677,
+      "pushed_at": "2026-11-17T07:40:51Z",
+      "stars": 25241
+    },
+    "codecrafters-io/build-your-own-x": {
+      "created_at": "2018-05-09T12:03:18Z",
+      "forks": 52699,
+      "language": "Markdown",
+      "open_issues": 666,
+      "pushed_at": "2026-11-17T07:15:08Z",
+      "stars": 563248
+    },
+    "deepseek-ai/chat-demo": {
+      "created_at": "2026-11-12T08:08:19Z",
+      "forks": 916,
+      "language": "TypeScript",
+      "open_issues": 1,
+      "pushed_at": "2026-11-13T14:33:08Z",
+      "stars": 4287
+    },
+    "deepseek-ai/dsh-superagent-prototype": {
+      "created_at": "2026-10-31T09:32:46Z",
+      "forks": 2898,
+      "language": "TypeScript",
+      "open_issues": 0,
+      "pushed_at": "2026-11-03T09:29:14Z",
+      "stars": 23569
+    },
+    "designfuchen/word-atlas": {
+      "created_at": "2026-10-25T08:27:22Z",
+      "forks": 1051,
+      "language": "TypeScript",
+      "open_issues": 60,
+      "pushed_at": "2026-11-13T10:36:13Z",
+      "stars": 4951
+    },
+    "dream-num/univer": {
+      "created_at": "2022-09-29T12:09:14Z",
+      "forks": 2567,
+      "language": "TypeScript",
+      "open_issues": 212,
+      "pushed_at": "2026-11-17T07:43:28Z",
+      "stars": 28479,
+      "trending_rank": 3,
+      "trending_stars_today": 1828
+    },
+    "elementalsouls/Claude-BugHunter": {
+      "created_at": "2026-05-05T11:22:32Z",
+      "forks": 1215,
+      "language": "Python",
+      "open_issues": 6,
+      "pushed_at": "2026-11-16T23:40:07Z",
+      "stars": 7787,
+      "trending_rank": 5,
+      "trending_stars_today": 1094
+    },
+    "elvarofficial/teardown": {
+      "created_at": "2026-10-30T09:29:01Z",
+      "forks": 544,
+      "language": "JavaScript",
+      "open_issues": 9,
+      "pushed_at": "2026-10-31T14:01:06Z",
+      "stars": 3654
+    },
+    "expo/exact": {
+      "created_at": "2026-11-02T01:29:01Z",
+      "forks": 119,
+      "language": "Rust",
+      "open_issues": 82,
+      "pushed_at": "2026-11-17T07:50:32Z",
+      "stars": 4526
+    },
+    "firecrawl/firecrawl": {
+      "created_at": "2024-04-15T21:02:29Z",
+      "forks": 10604,
+      "language": "TypeScript",
+      "open_issues": 809,
+      "pushed_at": "2026-11-17T05:41:22Z",
+      "stars": 202432
+    },
+    "flutter/flutter": {
+      "created_at": "2015-03-06T22:54:58Z",
+      "forks": 32153,
+      "language": "Dart",
+      "open_issues": 13588,
+      "pushed_at": "2026-11-17T07:23:43Z",
+      "stars": 181277
+    },
+    "freeCodeCamp/freeCodeCamp": {
+      "created_at": "2014-12-24T17:49:19Z",
+      "forks": 47471,
+      "language": "TypeScript",
+      "open_issues": 188,
+      "pushed_at": "2026-11-17T06:17:00Z",
+      "stars": 459239
+    },
+    "getarcaneapp/arcane": {
+      "created_at": "2025-04-19T00:43:29Z",
+      "forks": 461,
+      "language": "Go",
+      "open_issues": 8,
+      "pushed_at": "2026-11-17T05:32:06Z",
+      "stars": 8932,
+      "trending_rank": 6,
+      "trending_stars_today": 46
+    },
+    "google-labs-code/stitch-skills": {
+      "created_at": "2026-01-16T17:17:17Z",
+      "forks": 1279,
+      "language": "TypeScript",
+      "open_issues": 20,
+      "pushed_at": "2026-08-17T20:20:23Z",
+      "stars": 9844,
+      "trending_rank": 8,
+      "trending_stars_today": 529
+    },
+    "google-research/paper-orchestra": {
+      "created_at": "2026-05-01T18:07:52Z",
+      "forks": 300,
+      "language": "Python",
+      "open_issues": 35,
+      "pushed_at": "2026-11-15T18:08:08Z",
+      "stars": 1870,
+      "trending_rank": 12,
+      "trending_stars_today": 313
+    },
+    "haydenschmitty/floorplan": {
+      "created_at": "2026-10-27T12:03:01Z",
+      "forks": 382,
+      "language": "JavaScript",
+      "open_issues": 32,
+      "pushed_at": "2026-11-16T16:57:59Z",
+      "stars": 4653
+    },
+    "heydamir/unslop": {
+      "created_at": "2026-10-29T15:41:21Z",
+      "forks": 1012,
+      "language": "JavaScript",
+      "open_issues": 5,
+      "pushed_at": "2026-11-15T00:55:20Z",
+      "stars": 17398
+    },
+    "huamidev/GestaltX": {
+      "created_at": "2026-11-09T05:15:48Z",
+      "forks": 2683,
+      "language": "Swift",
+      "open_issues": 97,
+      "pushed_at": "2026-11-17T02:00:13Z",
+      "stars": 7954
+    },
+    "interplains/Zero-Breach-Toolkit": {
+      "created_at": "2026-10-25T14:41:34Z",
+      "forks": 535,
+      "language": "Python",
+      "open_issues": 1,
+      "pushed_at": "2026-11-17T01:51:37Z",
+      "stars": 5157
+    },
+    "janestreet/agent_skills": {
+      "created_at": "2026-11-03T16:50:21Z",
+      "forks": 658,
+      "open_issues": 14,
+      "pushed_at": "2026-11-03T18:14:13Z",
+      "stars": 9686
+    },
+    "jhaizhou-ops/S2Arm": {
+      "created_at": "2026-11-08T05:49:46Z",
+      "forks": 583,
+      "language": "C#",
+      "open_issues": 528,
+      "pushed_at": "2026-11-17T07:45:26Z",
+      "stars": 3409
+    },
+    "kajisho5/ffmpeg-skill": {
+      "created_at": "2026-09-03T14:33:38Z",
+      "forks": 656,
+      "language": "Python",
+      "open_issues": 34,
+      "pushed_at": "2026-11-16T01:08:43Z",
+      "stars": 7243,
+      "trending_rank": 15,
+      "trending_stars_today": 367
+    },
+    "l0ng-ai/openidea": {
+      "created_at": "2026-10-21T12:23:14Z",
+      "forks": 847,
+      "language": "TypeScript",
+      "open_issues": 164,
+      "pushed_at": "2026-11-17T07:10:58Z",
+      "stars": 9217
+    },
+    "libracoder/kiri": {
+      "created_at": "2026-11-02T16:11:30Z",
+      "forks": 418,
+      "language": "Rust",
+      "open_issues": 177,
+      "pushed_at": "2026-11-17T07:21:49Z",
+      "stars": 9356
+    },
+    "microsoft/vscode": {
+      "created_at": "2015-09-03T20:23:38Z",
+      "forks": 43862,
+      "language": "TypeScript",
+      "open_issues": 21600,
+      "pushed_at": "2026-11-17T07:29:37Z",
+      "stars": 195518
+    },
+    "modelflare-ai/AnyModelBot": {
+      "created_at": "2026-10-27T08:51:18Z",
+      "forks": 107,
+      "language": "Python",
+      "open_issues": 3,
+      "pushed_at": "2026-11-16T16:16:28Z",
+      "stars": 4334
+    },
+    "morluto/rea": {
+      "created_at": "2026-04-14T00:51:32Z",
+      "forks": 113793,
+      "language": "TypeScript",
+      "open_issues": 1551,
+      "pushed_at": "2026-11-17T06:33:40Z",
+      "stars": 464811
+    },
+    "mromidev/claude-animated-shorts": {
+      "created_at": "2026-11-01T05:50:38Z",
+      "forks": 803,
+      "language": "TypeScript",
+      "open_issues": 18,
+      "pushed_at": "2026-11-01T05:57:14Z",
+      "stars": 3809
+    },
+    "mvanhorn/last30days-skill": {
+      "created_at": "2026-01-23T20:37:37Z",
+      "forks": 6084,
+      "language": "Python",
+      "open_issues": 35,
+      "pushed_at": "2026-11-17T02:38:27Z",
+      "stars": 68390,
+      "trending_rank": 9,
+      "trending_stars_today": 135
+    },
+    "n8n-io/n8n": {
+      "created_at": "2019-06-22T09:24:21Z",
+      "forks": 61532,
+      "language": "TypeScript",
+      "open_issues": 1290,
+      "pushed_at": "2026-11-17T07:49:11Z",
+      "stars": 210701
+    },
+    "nilbuild/developer-roadmap": {
+      "created_at": "2017-03-15T13:45:52Z",
+      "forks": 46501,
+      "language": "TypeScript",
+      "open_issues": 1,
+      "pushed_at": "2026-11-16T18:38:13Z",
+      "stars": 372197
+    },
+    "ohmyzsh/ohmyzsh": {
+      "created_at": "2009-08-28T18:15:37Z",
+      "forks": 27278,
+      "language": "Shell",
+      "open_issues": 310,
+      "pushed_at": "2026-11-16T12:08:14Z",
+      "stars": 190641
+    },
+    "ollama/ollama": {
+      "created_at": "2023-06-26T19:39:32Z",
+      "forks": 19119,
+      "language": "Go",
+      "open_issues": 4666,
+      "pushed_at": "2026-11-17T04:54:35Z",
+      "stars": 187310
+    },
+    "openclaw/openclaw": {
+      "created_at": "2025-11-24T10:16:47Z",
+      "forks": 82911,
+      "language": "TypeScript",
+      "open_issues": 8253,
+      "pushed_at": "2026-11-17T07:50:19Z",
+      "stars": 394613
+    },
+    "patch-gg/pixelfx": {
+      "created_at": "2026-10-30T06:43:25Z",
+      "forks": 1029,
+      "language": "JavaScript",
+      "open_issues": 14,
+      "pushed_at": "2026-11-13T08:43:39Z",
+      "stars": 7849
+    },
+    "pengchujin/aerial-tv": {
+      "created_at": "2026-10-20T09:13:06Z",
+      "forks": 1066,
+      "language": "Kotlin",
+      "open_issues": 395,
+      "pushed_at": "2026-11-17T07:35:29Z",
+      "stars": 12246
+    },
+    "practical-tutorials/project-based-learning": {
+      "created_at": "2017-04-12T05:07:46Z",
+      "forks": 36839,
+      "language": "Python",
+      "open_issues": 212,
+      "pushed_at": "2026-11-16T06:44:31Z",
+      "stars": 289883
+    },
+    "public-apis/public-apis": {
+      "created_at": "2016-03-20T23:49:42Z",
+      "forks": 56026,
+      "language": "Python",
+      "open_issues": 2743,
+      "pushed_at": "2026-11-15T18:53:24Z",
+      "stars": 499688
+    },
+    "qybaihe/bla": {
+      "created_at": "2026-10-25T05:25:45Z",
+      "forks": 739,
+      "language": "TypeScript",
+      "open_issues": 0,
+      "pushed_at": "2026-11-17T06:43:37Z",
+      "stars": 5988
+    },
+    "rddmwmddr/android-ad-cleaner": {
+      "created_at": "2026-10-24T05:35:47Z",
+      "forks": 714,
+      "language": "Python",
+      "open_issues": 214,
+      "pushed_at": "2026-11-16T17:40:20Z",
+      "stars": 8235
+    },
+    "react/react": {
+      "created_at": "2013-05-24T16:15:54Z",
+      "forks": 52821,
+      "language": "JavaScript",
+      "open_issues": 1546,
+      "pushed_at": "2026-11-17T01:20:56Z",
+      "stars": 252725
+    },
+    "shanselman/gputaskman": {
+      "created_at": "2026-11-03T00:49:34Z",
+      "forks": 170,
+      "language": "Python",
+      "open_issues": 13,
+      "pushed_at": "2026-11-16T04:41:51Z",
+      "stars": 3443
+    },
+    "simbasjungles/free-my-tv": {
+      "created_at": "2026-10-19T19:29:01Z",
+      "forks": 1152,
+      "language": "Java",
+      "open_issues": 117,
+      "pushed_at": "2026-11-13T02:31:41Z",
+      "stars": 6464
+    },
+    "storytold/craft-anything": {
+      "created_at": "2026-10-31T14:50:00Z",
+      "forks": 7084,
+      "language": "Rust",
+      "open_issues": 386,
+      "pushed_at": "2026-11-17T06:49:16Z",
+      "stars": 35109
+    },
+    "sveltejs/svelte": {
+      "created_at": "2016-11-20T18:13:05Z",
+      "forks": 6139,
+      "language": "JavaScript",
+      "open_issues": 1313,
+      "pushed_at": "2026-11-16T14:08:15Z",
+      "stars": 89122,
+      "trending_rank": 14,
+      "trending_stars_today": 115
+    },
+    "t3dotgg/tstack": {
+      "created_at": "2026-10-24T05:00:20Z",
+      "forks": 311,
+      "language": "Python",
+      "open_issues": 17,
+      "pushed_at": "2026-11-11T11:33:03Z",
+      "stars": 4074
+    },
+    "tangerineturtle1/NX2navi": {
+      "created_at": "2026-11-07T10:01:23Z",
+      "forks": 346,
+      "language": "C",
+      "open_issues": 789,
+      "pushed_at": "2026-11-16T02:02:29Z",
+      "stars": 4289
+    },
+    "tensorflow/tensorflow": {
+      "created_at": "2015-11-07T01:19:20Z",
+      "forks": 77968,
+      "language": "C++",
+      "open_issues": 3440,
+      "pushed_at": "2026-11-17T07:47:17Z",
+      "stars": 201614
+    },
+    "torvalds/linux": {
+      "created_at": "2011-09-04T22:48:12Z",
+      "forks": 67516,
+      "language": "C",
+      "open_issues": 3,
+      "pushed_at": "2026-11-17T01:16:59Z",
+      "stars": 255977
+    },
+    "tradermonty/claude-trading-skills": {
+      "created_at": "2025-10-19T16:37:29Z",
+      "forks": 1378,
+      "language": "Python",
+      "open_issues": 54,
+      "pushed_at": "2026-11-17T07:23:54Z",
+      "stars": 6577,
+      "trending_rank": 4,
+      "trending_stars_today": 837
+    },
+    "unclebob/ub-mode": {
+      "created_at": "2026-10-25T16:04:09Z",
+      "forks": 460,
+      "open_issues": 12,
+      "pushed_at": "2026-11-02T15:08:31Z",
+      "stars": 8074
+    },
+    "valentderah/totk-pc-recomp": {
+      "created_at": "2026-10-29T12:32:46Z",
+      "forks": 606,
+      "language": "C",
+      "open_issues": 376,
+      "pushed_at": "2026-11-16T17:44:14Z",
+      "stars": 7542
+    },
+    "vercel-labs/ui": {
+      "created_at": "2026-10-26T17:39:27Z",
+      "forks": 176,
+      "language": "TypeScript",
+      "open_issues": 130,
+      "pushed_at": "2026-11-17T04:49:08Z",
+      "stars": 5377
+    },
+    "vinta/awesome-python": {
+      "created_at": "2014-06-27T21:00:06Z",
+      "forks": 29113,
+      "language": "Python",
+      "open_issues": 20,
+      "pushed_at": "2026-11-17T03:46:02Z",
+      "stars": 335321
+    },
+    "wangzan101/Mika": {
+      "created_at": "2026-10-29T14:34:07Z",
+      "forks": 2022,
+      "language": "Kotlin",
+      "open_issues": 133,
+      "pushed_at": "2026-11-17T06:36:09Z",
+      "stars": 8904
+    },
+    "wesbos/3d-model-anything": {
+      "created_at": "2026-10-21T19:38:50Z",
+      "forks": 456,
+      "language": "Swift",
+      "open_issues": 24,
+      "pushed_at": "2026-10-27T15:08:22Z",
+      "stars": 3040
+    },
+    "xiaoyang111222/cn-math-taxonomy": {
+      "created_at": "2026-10-18T09:04:43Z",
+      "forks": 2241,
+      "language": "Python",
+      "open_issues": 34,
+      "pushed_at": "2026-11-16T06:11:34Z",
+      "stars": 8346
+    },
+    "yt-dlp/yt-dlp": {
+      "created_at": "2020-10-26T04:22:55Z",
+      "forks": 18387,
+      "language": "Python",
+      "open_issues": 2788,
+      "pushed_at": "2026-11-17T06:51:01Z",
+      "stars": 208510
+    },
+    "zortos293/Lichii": {
+      "created_at": "2026-10-31T14:17:26Z",
+      "forks": 1533,
+      "language": "C++",
+      "open_issues": 530,
+      "pushed_at": "2026-11-17T07:45:41Z",
+      "stars": 9537
+    }
+  },
+  "repository_count": 90,
+  "schema_version": 1,
+  "timezone": "Asia/Shanghai"
+}

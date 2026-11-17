@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-16T14:21:05+08:00",
+  "cached_at": "2026-11-17T15:50:47+08:00",
   "full_name": "ccch1mneyyy/dsh-Go",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-16T05:52:57Z",
+  "repo_pushed_at": "2026-11-17T07:40:51Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "在手机上使用编码 Agent 不便，需要移动端本机运行环境与远程接管电脑的能力。",
-    "summary_zh": "把 DeepSeek Harness 装进手机的 Flutter 应用，可本机运行并遥控电脑。",
+    "problem": "让用户在手机上运行编码 Agent 环境，并远程接管电脑上的会话。",
+    "summary_zh": "把 DeepSeek Harness 装进手机的移动端应用，可本机运行并遥控电脑。",
     "tech_stack": [
       "Dart",
       "Flutter",
@@ -16,9 +16,9 @@
       "DeepSeek"
     ],
     "use_cases": [
-      "在手机上运行编码 Agent",
-      "远程接管电脑上的会话",
-      "分享对话回放与分享卡"
+      "手机端运行编码 Agent",
+      "远程切换电脑会话",
+      "移动端对话与分享"
     ]
   }
 }

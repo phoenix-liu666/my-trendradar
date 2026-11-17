@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-17T15:50:47+08:00",
+  "full_name": "kajisho5/ffmpeg-skill",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-16T01:08:43Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Coding Agent",
+    "maturity": "growing",
+    "problem": "让 Claude Code、Cursor、Codex 等 Agent 能在本地完成剪辑、字幕、重构图、响度归一与导出，无需云端和 API Key。",
+    "summary_zh": "面向编码 Agent 的本地 FFmpeg 视频编辑技能，提供 42 个工具与 MCP 服务。",
+    "tech_stack": [
+      "Python",
+      "FFmpeg",
+      "MCP",
+      "Agent Skill"
+    ],
+    "use_cases": [
+      "Agent 自动剪辑视频",
+      "批量生成字幕与卡拉OK样式",
+      "横竖屏重构图与平台导出",
+      "响度归一与交付检查"
+    ]
+  }
+}

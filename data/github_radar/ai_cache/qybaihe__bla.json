@@ -1,26 +1,23 @@
 {
-  "cached_at": "2026-11-16T14:21:05+08:00",
+  "cached_at": "2026-11-17T15:50:47+08:00",
   "full_name": "qybaihe/bla",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-16T02:06:14Z",
+  "repo_pushed_at": "2026-11-17T06:43:37Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "AI 逆向工程 Agent 可快速解包 ASAR、还原 SourceMap、分析 WASM 与模型文件，导致软件发布产物中的业务逻辑易被克隆。",
-    "summary_zh": "面向 AI 逆向工程 Agent 的蓝队防护 MCP 服务与 CLI，对多种发布产物做加固与验证。",
+    "problem": "解决软件发布产物被 AI 逆向 Agent 快速解包、还原源码与克隆业务逻辑的问题。",
+    "summary_zh": "开源蓝队 MCP 服务与 CLI，通过混淆与资源耗尽手段对抗 AI 逆向工程 Agent。",
     "tech_stack": [
       "TypeScript",
       "MCP",
-      "Node.js",
-      "WASM",
-      "SQLite"
+      "WASM"
     ],
     "use_cases": [
-      "对 JS/TS 与 Electron 产物做发布前加固",
-      "为 WASM、原生二进制与模型文件增加分析成本",
-      "通过 MCP 让编码 Agent 编排加固与验证流程",
-      "在 Vite、Rollup 等构建流程中集成保护插件"
+      "加固 JS/TS 与 Electron 产物",
+      "保护 WASM、SQLite 与模型文件",
+      "在构建流程中接入混淆插件"
     ]
   }
 }
