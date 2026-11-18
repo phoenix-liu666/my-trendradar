@@ -1,27 +1,26 @@
 {
-  "cached_at": "2026-11-16T14:21:05+08:00",
+  "cached_at": "2026-11-18T15:21:17+08:00",
   "full_name": "Tencent/LoopForge",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-16T05:16:53Z",
+  "repo_pushed_at": "2026-11-18T07:19:04Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "直接用编码 Agent 修 bug 或交付需求时流程不可重复、角色不分、缺少审批与可观测性，难以团队化落地。",
-    "summary_zh": "自托管的编码 Agent 交付工作流平台，用 SOP、沙箱和人工审批门编排多个 Agent CLI。",
+    "problem": "解决编码 Agent 单次运行结果不可复现、缺少角色分工与人工审批、难以在团队内标准化交付的问题。",
+    "summary_zh": "腾讯开源的自托管编码 Agent 工作流平台，用 SOP 编排 Codex、Claude Code 等并设人工审批门。",
     "tech_stack": [
       "Go",
       "Docker",
       "MCP",
-      "Claude Code",
-      "Codex",
-      "OpenCode"
+      "Python",
+      "npm"
     ],
     "use_cases": [
-      "把需求交付固化为可复用的 SOP 流程",
-      "在 Docker 沙箱中运行多角色编码 Agent",
+      "用固定 SOP 让编码 Agent 重复交付需求",
+      "在 Docker 沙箱中让 Agent 检出仓库并开 PR",
       "在关键节点设置人工审批与回退",
-      "对 Agent 执行过程做日志与产物追踪"
+      "为规划、实现、评审、测试分配不同 Agent 角色"
     ]
   }
 }

@@ -1,22 +1,26 @@
 {
-  "cached_at": "2026-11-17T15:50:47+08:00",
+  "cached_at": "2026-11-18T15:21:17+08:00",
   "full_name": "backnotprop/plannotator",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-17T07:38:09Z",
+  "repo_pushed_at": "2026-11-18T06:59:33Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决多 Agent 并行工作时人难以审阅计划、产物与代码变更、反馈难以回传的问题。",
-    "summary_zh": "面向编码 Agent 的本地浏览器审阅工作区，可标注计划、文档与代码 diff 并把反馈回传给 Agent。",
+    "problem": "解决多 Agent 并行工作时人类难以审阅计划、原型与代码变更、反馈链路断裂的问题。",
+    "summary_zh": "面向编码 Agent 的本地浏览器审阅工作台，可标注计划、文档与代码 diff 并回传反馈。",
     "tech_stack": [
       "TypeScript",
-      "MCP"
+      "MCP",
+      "Git",
+      "GitHub",
+      "GitLab"
     ],
     "use_cases": [
-      "标注 Agent 生成的计划与规格",
-      "审阅本地 diff 与远程 PR",
-      "把审阅意见一键回传 Agent"
+      "标注 Agent 生成的计划与规格并回传意见",
+      "审阅本地改动或远程 PR 的 diff",
+      "用 Inbox 汇总多个 Agent 的提问与产物",
+      "在终端内对 Markdown 与 Agent 回复做批注"
     ]
   }
 }

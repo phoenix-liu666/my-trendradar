@@ -1,23 +1,26 @@
 {
-  "cached_at": "2026-11-17T15:50:47+08:00",
+  "cached_at": "2026-11-18T15:21:17+08:00",
   "full_name": "KKKKhazix/agent-autoloop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-17T01:20:39Z",
+  "repo_pushed_at": "2026-11-18T01:23:27Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决命令行 Agent 必须人守终端、关窗即中断、无法后台持续跟进任务的问题。",
-    "summary_zh": "轻量自动化中台，让命令行 Agent 在后台接活、跟进任务，遇到需决策时推送卡片询问。",
+    "problem": "解决命令行 Agent 必须人守终端、关窗即断、无法事件驱动自动跟进的问题。",
+    "summary_zh": "轻量自动化中台，让命令行 Agent 后台接活并在需要拍板时推送卡片询问。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "MCP"
+      "MCP",
+      "GitHub Webhook",
+      "GitLab Webhook"
     ],
     "use_cases": [
-      "定时任务自动派发给 Agent",
-      "GitHub Issue 自动跟进",
-      "线上告警排查与人工拍板"
+      "定时任务自动交给 Codex 或 Claude Code 执行",
+      "GitHub Issue 触发 Agent 本地改代码",
+      "线上告警触发排查并在重启前发卡片确认",
+      "通过飞书、钉钉、Slack 等通道远程拍板"
     ]
   }
 }

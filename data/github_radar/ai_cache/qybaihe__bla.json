@@ -1,23 +1,29 @@
 {
-  "cached_at": "2026-11-17T15:50:47+08:00",
+  "cached_at": "2026-11-18T15:21:17+08:00",
   "full_name": "qybaihe/bla",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-17T06:43:37Z",
+  "repo_pushed_at": "2026-11-18T04:28:09Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "解决软件发布产物被 AI 逆向 Agent 快速解包、还原源码与克隆业务逻辑的问题。",
+    "problem": "解决软件发布物被 AI 逆向 Agent 快速解包、还原源码与克隆业务逻辑的问题。",
     "summary_zh": "开源蓝队 MCP 服务与 CLI，通过混淆与资源耗尽手段对抗 AI 逆向工程 Agent。",
     "tech_stack": [
       "TypeScript",
       "MCP",
-      "WASM"
+      "WASM",
+      "SQLite",
+      "Vite",
+      "Rollup",
+      "Webpack",
+      "esbuild"
     ],
     "use_cases": [
-      "加固 JS/TS 与 Electron 产物",
-      "保护 WASM、SQLite 与模型文件",
-      "在构建流程中接入混淆插件"
+      "对 JS/TS、Electron ASAR、WASM 等产物做加固",
+      "在构建流程中接入 Vite/Rollup 插件保护代码",
+      "通过 MCP 让编码 Agent 自动执行加固与校验",
+      "对 Python、原生二进制、GGUF 等格式做防护"
     ]
   }
 }

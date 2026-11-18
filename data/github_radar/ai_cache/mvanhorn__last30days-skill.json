@@ -1,0 +1,25 @@
+{
+  "cached_at": "2026-11-18T15:21:17+08:00",
+  "full_name": "mvanhorn/last30days-skill",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-17T22:37:11Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Research Tool",
+    "maturity": "growing",
+    "problem": "解决单一搜索引擎无法覆盖多个封闭平台近期真实讨论的问题，由代理并行检索并打分汇总。",
+    "summary_zh": "AI 代理技能，跨 Reddit、X、YouTube、HN、Polymarket 等平台检索近 30 天信息并综合成简报。",
+    "tech_stack": [
+      "Python",
+      "Claude Code",
+      "Agent Skills",
+      "npx"
+    ],
+    "use_cases": [
+      "人物与公司近期动态调研",
+      "话题趋势追踪",
+      "会前背景调查",
+      "跨平台舆情汇总"
+    ]
+  }
+}
