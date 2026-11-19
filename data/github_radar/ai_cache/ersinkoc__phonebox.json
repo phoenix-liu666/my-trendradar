@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-11-19T15:18:57+08:00",
+  "full_name": "ersinkoc/phonebox",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-19T00:28:47Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "解决旧安卓手机闲置问题，将其改造为可自定义的桌面副屏，用于查看电脑状态、AI 编码会话和进行触控操作。",
+    "summary_zh": "把旧安卓手机变成电脑桌面控制面板与触控副屏，支持系统监控和 AI 编码会话。",
+    "tech_stack": [
+      "C#",
+      ".NET 10",
+      "Android",
+      "USB",
+      "Wi-Fi",
+      "Tailscale"
+    ],
+    "use_cases": [
+      "监控电脑 CPU/GPU/内存",
+      "查看 Claude Code/Codex 会话与配额",
+      "手机端触控快捷键与宏",
+      "接入 Home Assistant 与 Webhook 自动化"
+    ]
+  }
+}

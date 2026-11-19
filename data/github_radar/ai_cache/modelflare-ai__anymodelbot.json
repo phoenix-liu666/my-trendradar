@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-11-17T15:50:47+08:00",
+  "cached_at": "2026-11-19T15:18:57+08:00",
   "full_name": "modelflare-ai/AnyModelBot",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-16T16:16:28Z",
+  "repo_pushed_at": "2026-11-18T07:50:50Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "让用户在自己设备上运行带记忆、可执行命令和操作桌面的多模型 AI 助手。",
-    "summary_zh": "本地优先的多模型 AI 机器人桌面应用，支持微信、飞书等渠道与电脑操作。",
+    "problem": "解决在自有设备上运行多模型 AI 助手并接入微信、飞书等渠道的需求，数据本地留存。",
+    "summary_zh": "本地优先的多模型 AI 机器人桌面应用，支持命令执行与电脑操作。",
     "tech_stack": [
       "Python",
       "Electron",
-      "OpenAI 兼容接口",
-      "Docker"
+      "Docker",
+      "OpenAI 兼容 API"
     ],
     "use_cases": [
-      "本地个人 AI 助手",
-      "多模型统一接入",
-      "接入微信与飞书",
-      "授权后操作桌面与文件"
+      "本地运行多模型 AI 助手",
+      "接入微信/飞书/Telegram",
+      "授权后执行命令与操作桌面",
+      "后台任务与定时规则"
     ]
   }
 }

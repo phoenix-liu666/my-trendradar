@@ -1,21 +1,28 @@
 {
-  "cached_at": "2026-11-17T15:50:47+08:00",
+  "cached_at": "2026-11-19T15:18:57+08:00",
   "full_name": "NVIDIA/SkillEvaluator",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-17T07:12:30Z",
+  "repo_pushed_at": "2026-11-19T07:03:07Z",
   "schema_version": 1,
   "static": {
-    "category": "Coding Agent",
+    "category": "LLM Infrastructure",
     "maturity": "growing",
-    "problem": "解决 Agent 技能与插件缺少质量门禁、安全扫描和效果度量的问题，并检测技能间的语义重叠。",
-    "summary_zh": "NVIDIA 出品的多层级框架，用于评估 AI Agent 技能与插件的质量、安全、重叠与真实影响。",
+    "problem": "解决 Agent 技能缺乏统一质量与安全评估的问题，提供静态规则、去重与真实 Agent 效果测量。",
+    "summary_zh": "NVIDIA 的多层框架，用于评估 AI Agent 技能与插件的质量、安全、兼容性与实际效果。",
     "tech_stack": [
-      "Python"
+      "Python",
+      "PyPI",
+      "CI 模板",
+      "Gitleaks",
+      "Bandit",
+      "Semgrep"
     ],
     "use_cases": [
-      "校验 Agent 技能质量",
-      "在 CI 中检查技能变更",
-      "评估技能对 Agent 行为的实际影响"
+      "技能质量与安全检查",
+      "CI 中技能变更门禁",
+      "技能语义重叠检测",
+      "Agent 技能效果对比评估",
+      "合成评估数据集生成"
     ]
   }
 }

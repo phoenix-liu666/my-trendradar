@@ -1,0 +1,29 @@
+{
+  "cached_at": "2026-11-19T15:18:57+08:00",
+  "full_name": "erkamyaman/rust-anything",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-19T06:53:40Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Developer Tool",
+    "maturity": "experimental",
+    "problem": "解决大型应用迁移到 Rust 时难以保证行为一致的问题，通过录制回放逐块验证。",
+    "summary_zh": "按记录行为逐步将多语言应用重写为 Rust 的迁移工具，每步对照原实现校验。",
+    "tech_stack": [
+      "Rust",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "FFI",
+      "napi",
+      "pyo3",
+      "MCP"
+    ],
+    "use_cases": [
+      "TypeScript/Python 应用迁移 Rust",
+      "热点路径性能优化",
+      "CLI 与 HTTP 服务重写",
+      "库级 FFI 桥接"
+    ]
+  }
+}
