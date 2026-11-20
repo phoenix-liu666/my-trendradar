@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-11-19T15:18:57+08:00",
+  "cached_at": "2026-11-20T15:08:08+08:00",
   "full_name": "qybaihe/bla",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-19T06:41:34Z",
+  "repo_pushed_at": "2026-11-19T18:10:14Z",
   "schema_version": 1,
   "static": {
     "category": "Security",
     "maturity": "growing",
-    "problem": "解决软件发布物被 AI 逆向 Agent 快速解包、还原逻辑的问题，为作者提供防护手段。",
-    "summary_zh": "开源蓝队 MCP 服务器与 CLI，通过混淆与资源耗尽手段对抗 AI 逆向工程 Agent。",
+    "problem": "AI 逆向工程 Agent 可快速解包并还原软件逻辑；该项目为发布产物增加防护，提高自动化逆向的成本。",
+    "summary_zh": "开源 MCP 服务与 CLI，通过混淆与资源消耗手段对抗 AI 逆向工程 Agent。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
       "MCP",
-      "WASM",
+      "WebAssembly",
       "SQLite"
     ],
     "use_cases": [
-      "JS/TS 与 Electron ASAR 保护",
-      "WASM 与原生二进制加固",
-      "Python 与 Android DEX 保护",
-      "接入 Claude Code/Cursor 等 Agent 做闭环加固"
+      "保护 Electron ASAR 与 JS 构建产物",
+      "为 WASM、原生二进制增加逆向成本",
+      "在编码 Agent 中集成防护流程",
+      "发布前审计并校验防护效果"
     ]
   }
 }

@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-19T15:18:57+08:00",
+  "cached_at": "2026-11-20T15:08:08+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-19T02:21:17Z",
+  "repo_pushed_at": "2026-11-20T06:30:28Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "解决视频创作中难以判断素材来源与复刻方法的问题，输出结构化 VIDEO.md 拆解报告。",
-    "summary_zh": "用 Agent 逐镜头逆向分析视频，判断拍摄、AI 生成或代码制作并给出复刻方法。",
+    "problem": "解决视频创作中难以判断素材来源与复刻方法的问题，输出结构化 VIDEO.md 供 Agent 逐层读取。",
+    "summary_zh": "逐镜头逆向分析视频是实拍、AI 生成还是代码制作，并给出复刻方案。",
     "tech_stack": [
       "Python",
       "ffmpeg",
@@ -18,10 +18,11 @@
       "VLM"
     ],
     "use_cases": [
-      "拆解短视频广告镜头",
-      "判断 AI 生成与实拍素材",
-      "逆向生成提示词",
-      "导出字幕与剪辑分析"
+      "拆解短视频广告制作方式",
+      "判断 AI 生成视频证据",
+      "生成复刻提示词",
+      "导出字幕 SRT/ASS",
+      "分析剪辑与音频节奏"
     ]
   }
 }

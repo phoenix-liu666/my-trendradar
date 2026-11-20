@@ -1,27 +1,27 @@
 {
-  "cached_at": "2026-11-19T15:18:57+08:00",
+  "cached_at": "2026-11-20T15:08:08+08:00",
   "full_name": "mdiri-ai/SoduWork",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-19T07:17:34Z",
+  "repo_pushed_at": "2026-11-20T07:07:57Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决团队中 AI 任务缺乏验收标准、治理与审计的问题，以请求签收制组织人机协作。",
-    "summary_zh": "面向团队的自托管 AI 原生引擎，支持多 harness、多 Agent 协作与人工验收。",
+    "problem": "团队使用多个命令行 Agent 时缺少统一调度、评审、权限治理与验收闭环；该项目提供自托管中台来编排与审计。",
+    "summary_zh": "自托管的多 Agent 协作引擎，支持多 harness 调度、AI 互审与人工验收。",
     "tech_stack": [
       "JavaScript",
-      "Python",
-      "FastAPI",
       "Electron",
-      "MCP",
-      "Node.js"
+      "FastAPI",
+      "Python",
+      "Node.js",
+      "MCP"
     ],
     "use_cases": [
-      "多 Agent 分工与交叉评审",
-      "团队请求派发与验收",
-      "聊天沉淀为可复用插件",
-      "模型与成本治理审计"
+      "团队内多 Agent 分工与交叉评审",
+      "为任务设定验收标准并人工签核",
+      "将个人经验沉淀为团队可复用插件",
+      "自托管部署并审计 AI 使用与成本"
     ]
   }
 }
