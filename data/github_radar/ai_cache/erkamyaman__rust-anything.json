@@ -1,29 +1,29 @@
 {
-  "cached_at": "2026-11-20T15:08:08+08:00",
+  "cached_at": "2026-11-21T14:59:54+08:00",
   "full_name": "erkamyaman/rust-anything",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-20T06:51:54Z",
+  "repo_pushed_at": "2026-11-21T03:19:03Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "跨语言迁移到 Rust 时难以保证行为不变；该项目先录制原程序输入输出，再对 Rust 重写逐例回放比对，降低迁移风险。",
-    "summary_zh": "记录原应用行为，逐步把 TypeScript、Python、Go 等代码重写为 Rust 并逐例校验一致性。",
+    "problem": "解决跨语言迁移到 Rust 时难以保证行为一致的问题，通过录制-重放-比对来证明重写正确。",
+    "summary_zh": "借助编码 Agent 将应用逐块重写为 Rust，并用录制行为逐步校验等价性。",
     "tech_stack": [
       "Rust",
       "TypeScript",
       "Python",
       "Go",
-      "Ruby",
       "Java",
+      "Ruby",
       "FFI",
       "MCP"
     ],
     "use_cases": [
-      "将 Node.js 服务逐步迁移到 Rust",
-      "把 Python 或 Go 库重写为 Rust 并验证等价性",
-      "用编码 Agent 辅助大规模代码移植",
-      "定位性能热点并局部替换为 Rust"
+      "TypeScript/Python 等代码迁移到 Rust",
+      "CLI 与 HTTP 服务重写验证",
+      "为编码 Agent 提供迁移校验闭环",
+      "性能敏感模块替换"
     ]
   }
 }

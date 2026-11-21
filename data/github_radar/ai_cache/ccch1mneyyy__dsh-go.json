@@ -1,25 +1,26 @@
 {
-  "cached_at": "2026-11-20T15:08:08+08:00",
+  "cached_at": "2026-11-21T14:59:54+08:00",
   "full_name": "ccch1mneyyy/dsh-Go",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-20T06:53:59Z",
+  "repo_pushed_at": "2026-11-21T06:53:23Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决在手机上使用 DeepSeek Harness 编码 Agent 的需求，内置 Linux 环境，免 Root、免 Termux。",
-    "summary_zh": "DeepSeek Harness 的安卓手机应用，本机运行并可远程控制电脑。",
+    "problem": "让用户在手机上运行编码 Agent，并远程接管电脑上的会话，内置免 Root 的 Linux 环境。",
+    "summary_zh": "把 DeepSeek Harness 装进手机的 Flutter 应用，可本机运行并遥控电脑。",
     "tech_stack": [
       "Dart",
       "Flutter",
       "Android",
-      "Linux"
+      "DeepSeek",
+      "LLM"
     ],
     "use_cases": [
       "手机端运行编码 Agent",
-      "远程切换电脑上的 DSH 会话",
-      "对话分享与回放",
-      "横屏与平板使用"
+      "远程控制电脑上的 Agent 会话",
+      "移动端对话与分享",
+      "平板横屏使用"
     ]
   }
 }

@@ -1,28 +1,24 @@
 {
-  "cached_at": "2026-11-20T15:08:08+08:00",
+  "cached_at": "2026-11-21T14:59:54+08:00",
   "full_name": "ersinkoc/phonebox",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-19T16:28:11Z",
+  "repo_pushed_at": "2026-11-20T22:47:12Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决旧安卓手机闲置浪费的问题，将其改造为 Windows、Linux、macOS 的桌面副屏与触控控制台，无需云端。",
-    "summary_zh": "把旧安卓手机变成电脑桌面控制面板，支持系统监控、AI 编码会话和触控操作。",
+    "problem": "解决旧手机闲置与桌面缺少实体控制面板的问题，提供无需云端的 USB/Wi-Fi 触控副屏。",
+    "summary_zh": "把旧安卓手机变成桌面控制面板，显示系统状态、AI 编码会话与媒体控制。",
     "tech_stack": [
       "C#",
-      ".NET 10",
-      "Android",
-      "USB",
-      "Wi-Fi",
-      "Tailscale"
+      ".NET",
+      "Android"
     ],
     "use_cases": [
-      "监控电脑 CPU/GPU/内存",
-      "查看 Claude Code 与 Codex 会话配额",
-      "手机远程批准 AI 编码权限提示",
-      "触控宏与媒体控制",
-      "Home Assistant 自动化"
+      "PC 系统状态监控",
+      "Claude Code/Codex 会话与配额查看",
+      "手机端审批 Agent 权限提示",
+      "媒体与 Home Assistant 控制"
     ]
   }
 }

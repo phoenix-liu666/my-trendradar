@@ -1,0 +1,471 @@
+{
+  "analyses": {
+    "anomalyco/opencode": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "anomalyco/opencode",
+      "maturity": "mature",
+      "problem": "为开发者提供可本地运行的开源编码 Agent，支持构建与只读规划两种工作模式。",
+      "recommendation_reason": "是 Coding Agent 领域代表性开源项目，值得深入研究其 Agent 架构与工作流。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 OpenCode、Coding Agent、agentic coding 等核心关键词。",
+      "relevance_score": 95,
+      "summary_zh": "开源 AI 编码 Agent，提供终端界面、桌面应用与多 Agent 模式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "Bun",
+        "npm",
+        "Homebrew",
+        "Nix"
+      ],
+      "use_cases": [
+        "终端内 AI 编码",
+        "代码库探索与规划",
+        "多步任务子 Agent 调用",
+        "桌面端编码辅助"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "Star 规模很大且近期仍在增长与更新，具体外部驱动事件无证据。"
+      }
+    },
+    "ccch1mneyyy/dsh-go": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "ccch1mneyyy/dsh-Go",
+      "maturity": "growing",
+      "problem": "让用户在手机上运行编码 Agent，并远程接管电脑上的会话，内置免 Root 的 Linux 环境。",
+      "recommendation_reason": "移动端 Agent 交互形态值得关注，但当前与核心研究方向关联有限。",
+      "recommended_action": "watch",
+      "relevance_reason": "属于 Coding Agent 移动端形态，命中 ai_agents，但偏客户端应用而非 Agent 框架。",
+      "relevance_score": 72,
+      "summary_zh": "把 DeepSeek Harness 装进手机的 Flutter 应用，可本机运行并遥控电脑。",
+      "tech_stack": [
+        "Dart",
+        "Flutter",
+        "Android",
+        "DeepSeek",
+        "LLM"
+      ],
+      "use_cases": [
+        "手机端运行编码 Agent",
+        "远程控制电脑上的 Agent 会话",
+        "移动端对话与分享",
+        "平板横屏使用"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks"
+        ],
+        "summary": "近期 Star 增长明显，README 自称曾登 Trendshift 日榜第一，但指标中无对应字段可验证。"
+      }
+    },
+    "erkamyaman/rust-anything": {
+      "category": "Developer Tool",
+      "from_cache": false,
+      "full_name": "erkamyaman/rust-anything",
+      "maturity": "growing",
+      "problem": "解决跨语言迁移到 Rust 时难以保证行为一致的问题，通过录制-重放-比对来证明重写正确。",
+      "recommendation_reason": "其录制-重放校验思路对 Agent 驱动的代码迁移有参考价值，可先研究再决定是否试用。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 Coding Agent、MCP、Claude Code、Codex 关键词，属于 Agent 辅助开发工具。",
+      "relevance_score": 85,
+      "summary_zh": "借助编码 Agent 将应用逐块重写为 Rust，并用录制行为逐步校验等价性。",
+      "tech_stack": [
+        "Rust",
+        "TypeScript",
+        "Python",
+        "Go",
+        "Java",
+        "Ruby",
+        "FFI",
+        "MCP"
+      ],
+      "use_cases": [
+        "TypeScript/Python 等代码迁移到 Rust",
+        "CLI 与 HTTP 服务重写验证",
+        "为编码 Agent 提供迁移校验闭环",
+        "性能敏感模块替换"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建约一周即达约 6850 Star，24 小时新增 1241，热度高；README 自称登上 Trendshift 日榜，但无独立外部事件证据。"
+      }
+    },
+    "ersinkoc/phonebox": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "ersinkoc/phonebox",
+      "maturity": "growing",
+      "problem": "解决旧手机闲置与桌面缺少实体控制面板的问题，提供无需云端的 USB/Wi-Fi 触控副屏。",
+      "recommendation_reason": "与核心兴趣关联较弱，但若关注编码 Agent 的桌面监控可留意。",
+      "recommended_action": "watch",
+      "relevance_reason": "仅通过 Claude Code、Codex 会话展示与 automation 间接关联，主体为硬件副屏工具。",
+      "relevance_score": 45,
+      "summary_zh": "把旧安卓手机变成桌面控制面板，显示系统状态、AI 编码会话与媒体控制。",
+      "tech_stack": [
+        "C#",
+        ".NET",
+        "Android"
+      ],
+      "use_cases": [
+        "PC 系统状态监控",
+        "Claude Code/Codex 会话与配额查看",
+        "手机端审批 Agent 权限提示",
+        "媒体与 Home Assistant 控制"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建约两周获约 4320 Star，24 小时新增 373，热度中等；具体外部驱动无证据。"
+      }
+    },
+    "juneyaooo/rea-video": {
+      "category": "Computer Vision",
+      "from_cache": false,
+      "full_name": "JuneYaooo/rea-video",
+      "maturity": "growing",
+      "problem": "帮助判断视频是实拍、AI 生成还是代码制作，并给出可执行的复刻与重制方案。",
+      "recommendation_reason": "Agent Skill 的封装方式有参考价值，但视频领域与用户核心兴趣偏离。",
+      "recommended_action": "watch",
+      "relevance_reason": "以 Agent Skill 形式运行于 Claude Code/Codex，命中 ai_agents，同时涉及视频视觉分析。",
+      "relevance_score": 70,
+      "summary_zh": "用 Agent 逐镜头逆向分析视频来源并给出复刻方案，输出 VIDEO.md。",
+      "tech_stack": [
+        "Python",
+        "ffmpeg",
+        "Claude Code",
+        "Codex",
+        "VLM",
+        "Remotion"
+      ],
+      "use_cases": [
+        "短视频镜头拆解",
+        "AI 生成视频识别",
+        "复刻方案生成",
+        "字幕与剪辑节奏分析",
+        "视频提示词反推"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "Star 与 Fork 增长较快且近期持续更新，具体外部驱动事件无证据。"
+      }
+    },
+    "kkkkhazix/agent-autoloop": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "KKKKhazix/agent-autoloop",
+      "maturity": "growing",
+      "problem": "解决命令行 Agent 必须人守终端、离开即中断的问题，通过事件驱动调度与人工确认卡片实现无人值守。",
+      "recommendation_reason": "本地零依赖部署、接入成本低，适合直接试用其事件驱动 Agent 闭环。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 MCP、Claude Code、Codex、automation、workflow，属于 Agent 自动化编排。",
+      "relevance_score": 88,
+      "summary_zh": "轻量本地中台，让命令行 Agent 后台接活、自动跟进，遇决策点推送卡片确认。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP"
+      ],
+      "use_cases": [
+        "定时早报与周报生成",
+        "GitHub Issue 自动跟进",
+        "线上告警排查",
+        "PR 自动交付流水线",
+        "多通道人工确认"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建约两周获约 6140 Star，7 天新增 959，热度中等；具体外部驱动无证据。"
+      }
+    },
+    "mdiri-ai/soduwork": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "mdiri-ai/SoduWork",
+      "maturity": "growing",
+      "problem": "解决团队使用命令行 Agent 时缺乏编排、评审、权限治理与交付验收的问题，把一次对话变成可签核的请求。",
+      "recommendation_reason": "与 Agent 编排和 agentic coding 兴趣高度契合，可本地自托管试用；注意仍处公测阶段。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 AI Agent、MCP、Claude Code、Codex、OpenCode 等核心兴趣关键词，且为多 Agent 编排框架。",
+      "relevance_score": 92,
+      "summary_zh": "自托管的多 harness、多 Agent 协作引擎，带验收标准与人工签核流程。",
+      "tech_stack": [
+        "JavaScript",
+        "Python",
+        "Electron",
+        "FastAPI",
+        "MCP"
+      ],
+      "use_cases": [
+        "多 Agent 分工与交叉评审",
+        "团队内 Agent 请求派发与签核",
+        "自托管 AI 工作流治理",
+        "把成功对话沉淀为可复用插件"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_24h",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建不足一个月即获约 6100 Star，24 小时新增 1678，热度较高；具体外部驱动事件无证据。"
+      }
+    },
+    "morluto/rea": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "morluto/rea",
+      "maturity": "growing",
+      "problem": "帮助开发者在没有源码的情况下理解应用功能实现，覆盖原生二进制、Electron、.NET 与网站分析。",
+      "recommendation_reason": "MCP 工具集成方式对构建 Agent 工具链有参考价值，可研究其架构。",
+      "recommended_action": "study",
+      "relevance_reason": "命中 MCP、Claude Code、Codex 等 Agent 工具链关键词，与 ai_agents 兴趣高度相关。",
+      "relevance_score": 88,
+      "summary_zh": "通过 MCP 让 AI Agent 逆向分析二进制、应用与运行时行为的工具集。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "Gemini CLI"
+      ],
+      "use_cases": [
+        "逆向分析原生二进制",
+        "分析 Electron/JS 应用",
+        "分析 .NET 程序集",
+        "网站行为分析",
+        "为 Agent 提供逆向工程工具"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "delta_24h",
+          "forks",
+          "pushed_at"
+        ],
+        "summary": "Star 与 Fork 规模极大且近期仍在快速增长，但现有指标无法确定具体外部驱动事件。"
+      }
+    },
+    "mvanhorn/last30days-skill": {
+      "category": "Research Tool",
+      "from_cache": false,
+      "full_name": "mvanhorn/last30days-skill",
+      "maturity": "growing",
+      "problem": "解决单一搜索引擎无法覆盖多个封闭平台的问题，由 Agent 并行检索并按真实互动排序。",
+      "recommendation_reason": "与 Agent 与调研自动化兴趣高度契合，安装成本低，可直接试用。",
+      "recommended_action": "try",
+      "relevance_reason": "命中 AI Agent、Claude Code、Codex 关键词，且属于 research agent 类信息检索自动化。",
+      "relevance_score": 90,
+      "summary_zh": "跨 Reddit、X、YouTube、HN 等平台检索近 30 天信息并综合成简报的 Agent Skill。",
+      "tech_stack": [
+        "Python",
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "Gemini CLI",
+        "Agent Skills"
+      ],
+      "use_cases": [
+        "人物近况调研",
+        "话题趋势追踪",
+        "会前背景调查",
+        "跨平台舆情汇总"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "delta_24h",
+          "stars",
+          "forks"
+        ],
+        "summary": "进入 Trending 榜单且 24 小时 Star 增长明显，具体外部驱动事件无证据。"
+      }
+    },
+    "nousresearch/hermes-agent": {
+      "category": "Coding Agent",
+      "from_cache": false,
+      "full_name": "NousResearch/hermes-agent",
+      "maturity": "growing",
+      "problem": "解决通用 Agent 缺乏跨会话记忆、技能积累与多终端常驻运行的问题。",
+      "recommendation_reason": "功能覆盖面广、生态成熟度高，值得研究其技能自改进与记忆机制；open_issues 数量极大需注意。",
+      "recommended_action": "study",
+      "relevance_reason": "直接命中 AI Agent、Claude Code、Codex 等核心兴趣，且为完整 Agent 框架。",
+      "relevance_score": 90,
+      "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自生成、记忆与多平台接入。",
+      "tech_stack": [
+        "Python",
+        "MCP",
+        "Docker",
+        "SSH"
+      ],
+      "use_cases": [
+        "长期常驻的个人 AI Agent",
+        "跨 Telegram/Discord/Slack 交互",
+        "定时自动化任务",
+        "子 Agent 并行任务",
+        "工具调用轨迹数据生成"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "pushed_at",
+          "heat_score"
+        ],
+        "summary": "Star 规模极大（约 26.5 万），7 天新增 1787，仍在活跃更新；具体增长驱动无证据。"
+      }
+    },
+    "qybaihe/bla": {
+      "category": "Security",
+      "from_cache": false,
+      "full_name": "qybaihe/bla",
+      "maturity": "growing",
+      "problem": "解决发布产物被 AI 逆向 Agent 快速解包、还原逻辑的问题，通过混淆与资源消耗策略提高逆向成本。",
+      "recommendation_reason": "作为 MCP 安全侧案例可关注，与用户主要兴趣方向关联有限。",
+      "recommended_action": "watch",
+      "relevance_reason": "命中 MCP、Claude Code、Codex 关键词，但主题为软件保护与逆向对抗，与核心兴趣仅部分重合。",
+      "relevance_score": 55,
+      "summary_zh": "面向软件发布方的反 AI 逆向工程防护 MCP 服务与 CLI，覆盖多种产物格式。",
+      "tech_stack": [
+        "TypeScript",
+        "Node.js",
+        "MCP",
+        "WebAssembly"
+      ],
+      "use_cases": [
+        "Electron ASAR 与 JS 产物加固",
+        "WASM/SQLite/模型文件保护",
+        "接入 Claude Code、Codex 等 Agent 的防护流程",
+        "发布前审计与校验"
+      ],
+      "why_hot": {
+        "confidence": "medium",
+        "evidence": [
+          "stars",
+          "delta_7d",
+          "heat_score",
+          "created_at"
+        ],
+        "summary": "创建约一个月获约 6340 Star，7 天新增 754，热度中等偏高；README 自称 GitHub Trending 第 5，但无独立证据。"
+      }
+    },
+    "zhouxiaoka/autoclip": {
+      "category": "Productivity",
+      "from_cache": false,
+      "full_name": "zhouxiaoka/autoclip",
+      "maturity": "growing",
+      "problem": "将播客、访谈、课程等长视频自动切分为适配各平台的短视频，降低内容再创作成本。",
+      "recommendation_reason": "与用户关注的 Agent、科研与光学方向关联度低。",
+      "recommended_action": "skip",
+      "relevance_reason": "提供 MCP 接口并涉及 AI Agent，但主体是视频剪辑生产力工具，与核心兴趣关联较弱。",
+      "relevance_score": 45,
+      "summary_zh": "开源 AI 视频剪辑桌面工具，把长视频自动剪成短视频并生成字幕封面文案。",
+      "tech_stack": [
+        "Python",
+        "Tauri",
+        "MCP",
+        "CLI"
+      ],
+      "use_cases": [
+        "长视频自动切片",
+        "字幕与封面生成",
+        "发布文案生成",
+        "多平台短视频适配"
+      ],
+      "why_hot": {
+        "confidence": "low",
+        "evidence": [
+          "trending_rank",
+          "delta_24h",
+          "stars",
+          "pushed_at"
+        ],
+        "summary": "进入 Trending 榜单且 24 小时 Star 增长明显，具体外部驱动事件无证据。"
+      }
+    }
+  },
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T14:59:54+08:00",
+  "model": "deepseek-v4-flash",
+  "schema_version": 1,
+  "synthesis": {
+    "headline": "Coding Agent 项目在榜单中占比最高，Agent 与逆向分析类工具热度上升",
+    "rising_categories": [
+      "Coding Agent",
+      "Security",
+      "Developer Tool",
+      "Productivity"
+    ],
+    "signals": [
+      "category_distribution 中 Coding Agent 有 5 个项目，是今日数量最多的类别",
+      "hot_today 中 mdiri-ai/SoduWork 的 delta_24h 为 1678，是当日增量最高的项目之一",
+      "morluto/rea 的 heat_score 为 89.14，在 hot_today 中排名靠前，类别为 Security",
+      "new_and_rising 中 Rust 相关项目有 3 个（rust-anything、craft-anything、kiri），形成小范围聚集",
+      "for_you 中 Coding Agent 占 5 个，与类别分布一致"
+    ],
+    "watch_tomorrow": [
+      "mdiri-ai/SoduWork 的增量能否持续",
+      "morluto/rea 在 Security 类别的热度走势",
+      "erkamyaman/rust-anything 代表的 Rust 重写方向",
+      "ccch1mneyyy/dsh-Go 的移动端 Agent 形态",
+      "JuneYaooo/rea-video 的视频逆向分析方向"
+    ]
+  },
+  "usage": {
+    "cache_hits": 4,
+    "completion_tokens": 3383,
+    "failed_requests": 0,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 28924,
+    "prompt_tokens": 31228,
+    "repositories_analyzed": 12,
+    "requests": 3,
+    "successful_requests": 3,
+    "total_tokens": 34611
+  }
+}

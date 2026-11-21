@@ -1,22 +1,24 @@
 {
-  "cached_at": "2026-11-18T15:21:17+08:00",
+  "cached_at": "2026-11-21T14:59:54+08:00",
   "full_name": "mvanhorn/last30days-skill",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-17T22:37:11Z",
+  "repo_pushed_at": "2026-11-20T05:45:47Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "解决单一搜索引擎无法覆盖多个封闭平台近期真实讨论的问题，由代理并行检索并打分汇总。",
-    "summary_zh": "AI 代理技能，跨 Reddit、X、YouTube、HN、Polymarket 等平台检索近 30 天信息并综合成简报。",
+    "problem": "解决单一搜索引擎无法覆盖多个封闭平台的问题，由 Agent 并行检索并按真实互动排序。",
+    "summary_zh": "跨 Reddit、X、YouTube、HN 等平台检索近 30 天信息并综合成简报的 Agent Skill。",
     "tech_stack": [
       "Python",
       "Claude Code",
-      "Agent Skills",
-      "npx"
+      "Codex",
+      "Cursor",
+      "Gemini CLI",
+      "Agent Skills"
     ],
     "use_cases": [
-      "人物与公司近期动态调研",
+      "人物近况调研",
       "话题趋势追踪",
       "会前背景调查",
       "跨平台舆情汇总"
