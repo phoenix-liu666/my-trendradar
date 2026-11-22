@@ -1,29 +1,28 @@
 {
-  "cached_at": "2026-11-21T14:59:54+08:00",
+  "cached_at": "2026-11-22T14:40:56+08:00",
   "full_name": "erkamyaman/rust-anything",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-21T03:19:03Z",
+  "repo_pushed_at": "2026-11-21T21:59:29Z",
   "schema_version": 1,
   "static": {
-    "category": "Developer Tool",
-    "maturity": "growing",
-    "problem": "解决跨语言迁移到 Rust 时难以保证行为一致的问题，通过录制-重放-比对来证明重写正确。",
-    "summary_zh": "借助编码 Agent 将应用逐块重写为 Rust，并用录制行为逐步校验等价性。",
+    "category": "Coding Agent",
+    "maturity": "experimental",
+    "problem": "解决跨语言重写（TypeScript、Python、Go 等转 Rust）时难以验证行为等价的问题：先录制原程序行为，再逐块移植并回放比对。",
+    "summary_zh": "用录制-回放验证的方式，让编码 Agent 把应用逐块重写为 Rust，并保证行为一致。",
     "tech_stack": [
       "Rust",
       "TypeScript",
       "Python",
       "Go",
-      "Java",
       "Ruby",
-      "FFI",
-      "MCP"
+      "Java",
+      "MCP",
+      "FFI"
     ],
     "use_cases": [
-      "TypeScript/Python 等代码迁移到 Rust",
-      "CLI 与 HTTP 服务重写验证",
-      "为编码 Agent 提供迁移校验闭环",
-      "性能敏感模块替换"
+      "将 CLI 工具逐步迁移到 Rust",
+      "将 HTTP 服务重写为 Rust 并验证行为",
+      "为编码 Agent 提供可验证的移植工作流"
     ]
   }
 }

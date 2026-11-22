@@ -1,26 +1,27 @@
 {
-  "cached_at": "2026-11-21T14:59:54+08:00",
+  "cached_at": "2026-11-22T14:40:56+08:00",
   "full_name": "NousResearch/hermes-agent",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-21T06:44:41Z",
+  "repo_pushed_at": "2026-11-22T06:30:09Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决通用 Agent 缺乏跨会话记忆、技能积累与多终端常驻运行的问题。",
-    "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自生成、记忆与多平台接入。",
+    "problem": "解决 Agent 无法积累经验、跨会话遗忘、只能绑定本机运行的问题：内置学习闭环、会话检索与多种远程运行后端。",
+    "summary_zh": "Nous Research 出品的自改进 AI Agent，具备技能自学习、跨会话记忆与多平台接入。",
     "tech_stack": [
       "Python",
-      "MCP",
+      "Node.js",
       "Docker",
-      "SSH"
+      "SSH",
+      "Modal",
+      "Daytona",
+      "FTS5"
     ],
     "use_cases": [
-      "长期常驻的个人 AI Agent",
-      "跨 Telegram/Discord/Slack 交互",
-      "定时自动化任务",
-      "子 Agent 并行任务",
-      "工具调用轨迹数据生成"
+      "长期运行的个人 AI 助手",
+      "定时自动化任务与报告",
+      "批量生成 Agent 轨迹用于训练"
     ]
   }
 }

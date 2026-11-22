@@ -1,29 +1,26 @@
 {
-  "cached_at": "2026-11-20T15:08:08+08:00",
+  "cached_at": "2026-11-22T14:40:56+08:00",
   "full_name": "cathrynlavery/diagram-design",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-19T00:17:05Z",
+  "repo_pushed_at": "2026-11-22T01:44:54Z",
   "schema_version": 1,
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "解决 Agent 生成图表样式粗糙的问题，提供 51 种图表类型与品牌化、可导入导出的设计规范。",
+    "problem": "解决 Agent 生成图表样式粗糙的问题，提供 45+ 图表类型与品牌化输出。",
     "summary_zh": "面向 Agent 的图表设计技能，输出自包含 HTML+SVG 的编辑级图表。",
     "tech_stack": [
       "HTML",
       "SVG",
       "Claude Code",
       "Codex",
-      "Cursor",
-      "Mermaid",
-      "draw.io"
+      "Agent Skills"
     ],
     "use_cases": [
-      "生成架构图",
+      "让 Agent 生成架构图",
       "生成象限图与序列图",
-      "导入 Mermaid/draw.io",
-      "导出 PNG/SVG",
-      "匹配品牌配色字体"
+      "按品牌配色出图",
+      "导入 Mermaid/draw.io"
     ]
   }
 }

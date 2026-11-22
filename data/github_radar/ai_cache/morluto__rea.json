@@ -1,29 +1,25 @@
 {
-  "cached_at": "2026-11-21T14:59:54+08:00",
+  "cached_at": "2026-11-22T14:40:56+08:00",
   "full_name": "morluto/rea",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-21T06:59:30Z",
+  "repo_pushed_at": "2026-11-22T05:40:00Z",
   "schema_version": 1,
   "static": {
-    "category": "Security",
+    "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "帮助开发者在没有源码的情况下理解应用功能实现，覆盖原生二进制、Electron、.NET 与网站分析。",
-    "summary_zh": "通过 MCP 让 AI Agent 逆向分析二进制、应用与运行时行为的工具集。",
+    "problem": "帮助开发者在没有源码的情况下理解应用功能实现，覆盖原生二进制、JS/Electron、.NET 与网站，并给出证据。",
+    "summary_zh": "通过 MCP 让 Agent 逆向分析二进制、应用与运行时行为的工具。",
     "tech_stack": [
       "TypeScript",
-      "Node.js",
       "MCP",
-      "Claude Code",
-      "Codex",
-      "Cursor",
-      "Gemini CLI"
+      "Node.js",
+      "CLI"
     ],
     "use_cases": [
       "逆向分析原生二进制",
       "分析 Electron/JS 应用",
-      "分析 .NET 程序集",
-      "网站行为分析",
-      "为 Agent 提供逆向工程工具"
+      "让 Agent 调研竞品功能实现",
+      "本地安全分析"
     ]
   }
 }
