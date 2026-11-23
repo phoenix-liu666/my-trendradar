@@ -1,24 +1,24 @@
 {
-  "cached_at": "2026-11-22T14:40:56+08:00",
+  "cached_at": "2026-11-23T15:29:40+08:00",
   "full_name": "ersinkoc/phonebox",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-21T23:29:33Z",
+  "repo_pushed_at": "2026-11-22T22:57:09Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决旧手机闲置与桌面缺少可定制控制面板的问题：通过 USB 或 Wi-Fi 连接桌面 Agent，无需云服务。",
-    "summary_zh": "把旧 Android 手机变成桌面控制面板，显示系统状态、AI 编码会话并支持触控操作。",
+    "problem": "解决旧手机闲置与桌面缺少可定制触控面板的问题，提供本地无云端的监控与控制。",
+    "summary_zh": "把旧安卓手机变成桌面控制面板，展示系统状态、AI 编码会话与媒体控制。",
     "tech_stack": [
       "JavaScript",
       ".NET",
-      "Android",
-      "Webhook"
+      "Android"
     ],
     "use_cases": [
       "监控 CPU/GPU 等系统状态",
-      "查看并响应 Claude Code、Codex 权限提示",
-      "作为触控快捷键与媒体控制面板"
+      "查看 Claude Code/Codex 会话与配额",
+      "手机端审批 Agent 权限提示",
+      "Home Assistant 与 Webhook 控制"
     ]
   }
 }

@@ -1,25 +1,25 @@
 {
-  "cached_at": "2026-11-22T14:40:56+08:00",
+  "cached_at": "2026-11-23T15:29:40+08:00",
   "full_name": "zhouxiaoka/autoclip",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-22T05:49:14Z",
+  "repo_pushed_at": "2026-11-23T07:28:32Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决播客、访谈、课程等长视频转短视频的剪辑与多平台适配成本问题。",
+    "problem": "将播客、访谈、课程等长视频自动切分为适配各平台的短视频素材。",
     "summary_zh": "开源 AI 视频剪辑桌面工具，把长视频自动剪成短视频并生成字幕封面文案。",
     "tech_stack": [
       "Python",
       "Tauri",
       "MCP",
-      "CLI"
+      "ffmpeg"
     ],
     "use_cases": [
       "长视频自动切片",
       "生成字幕与封面",
-      "多平台短视频发布",
-      "MCP 集成剪辑流程"
+      "生成发布文案",
+      "多平台短视频适配"
     ]
   }
 }

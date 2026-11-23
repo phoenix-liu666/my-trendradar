@@ -1,28 +1,28 @@
 {
-  "cached_at": "2026-11-22T14:40:56+08:00",
+  "cached_at": "2026-11-23T15:29:40+08:00",
   "full_name": "erkamyaman/rust-anything",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-21T21:59:29Z",
+  "repo_pushed_at": "2026-11-23T07:22:35Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
-    "maturity": "experimental",
-    "problem": "解决跨语言重写（TypeScript、Python、Go 等转 Rust）时难以验证行为等价的问题：先录制原程序行为，再逐块移植并回放比对。",
-    "summary_zh": "用录制-回放验证的方式，让编码 Agent 把应用逐块重写为 Rust，并保证行为一致。",
+    "maturity": "growing",
+    "problem": "解决跨语言重写难以验证行为一致的问题，通过录制原程序行为对每块 Rust 实现做回归比对。",
+    "summary_zh": "借助编码 Agent 将应用逐块重写为 Rust，并用原程序录制行为逐步校验一致性。",
     "tech_stack": [
       "Rust",
       "TypeScript",
       "Python",
       "Go",
-      "Ruby",
       "Java",
-      "MCP",
-      "FFI"
+      "Ruby",
+      "MCP"
     ],
     "use_cases": [
-      "将 CLI 工具逐步迁移到 Rust",
-      "将 HTTP 服务重写为 Rust 并验证行为",
-      "为编码 Agent 提供可验证的移植工作流"
+      "TypeScript/Python 服务迁移到 Rust",
+      "CLI 工具重写并验证行为",
+      "库的 FFI 绑定迁移",
+      "借助 Claude Code/Codex 执行迁移"
     ]
   }
 }
