@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-17T15:50:47+08:00",
+  "cached_at": "2026-11-24T17:49:31+08:00",
   "full_name": "haydenschmitty/floorplan",
   "model": "deepseek-v4-flash",
   "repo_pushed_at": "2026-11-16T16:57:59Z",
@@ -7,19 +7,19 @@
   "static": {
     "category": "Developer Tool",
     "maturity": "growing",
-    "problem": "帮助用 AI 构建应用但不读代码的人理解应用结构、请求链路与改动影响。",
-    "summary_zh": "由 Claude 或 Codex 生成代码库交互式架构地图的开发者工具。",
+    "problem": "帮助用 AI 构建应用但不读代码的人理解应用各部分如何连接、改动会影响什么，并辅助团队上手。",
+    "summary_zh": "由 Claude 或 Codex 读取代码库并生成可交互、通俗命名的应用结构地图。",
     "tech_stack": [
       "JavaScript",
       "Node.js",
-      "Claude Code",
-      "Codex"
+      "Claude Code 插件",
+      "Codex 插件"
     ],
     "use_cases": [
-      "代码库架构可视化",
+      "可视化代码库架构",
       "新人快速上手项目",
-      "查看 AI 改动涉及的部分",
-      "跨仓库前后端请求映射"
+      "查看 AI 改动影响了哪些部分",
+      "跨仓库追踪前后端请求"
     ]
   }
 }

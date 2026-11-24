@@ -1,24 +1,25 @@
 {
-  "cached_at": "2026-11-23T15:29:40+08:00",
+  "cached_at": "2026-11-24T17:49:31+08:00",
   "full_name": "KKKKhazix/agent-autoloop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-23T01:13:36Z",
+  "repo_pushed_at": "2026-11-24T01:35:10Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决命令行 Agent 必须人工守候、离开终端任务即中断的问题，提供事件驱动的自动调度。",
-    "summary_zh": "让命令行 Agent 在后台自动接活并跟进，遇到需决策时通过卡片向人请示。",
+    "problem": "解决 Claude Code、Codex 等命令行 Agent 必须有人守着终端、离开即中断的问题。",
+    "summary_zh": "让命令行 Agent 在后台自动接活并跟进，遇到关键决策才推送卡片确认。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "MCP"
+      "MCP",
+      "Claude Code",
+      "Codex"
     ],
     "use_cases": [
-      "定时任务自动交给 Codex/Claude Code",
-      "GitHub Issue 自动跟进",
-      "线上告警排查",
-      "飞书/钉钉卡片式人工审批"
+      "定时任务自动派发给命令行 Agent",
+      "GitHub Issue 自动跟进与本地修复",
+      "线上告警排查并推送审批卡片"
     ]
   }
 }

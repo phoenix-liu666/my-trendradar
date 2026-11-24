@@ -1,0 +1,24 @@
+{
+  "cached_at": "2026-11-24T17:49:31+08:00",
+  "full_name": "XinaTian/MROffice",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-23T21:58:48Z",
+  "schema_version": 1,
+  "static": {
+    "category": "Productivity",
+    "maturity": "growing",
+    "problem": "在浏览器中编辑真实的 Word、Excel、PowerPoint 和 PDF 文件，并让 AI 直接修改文件对象而非聊天文本，同时支持嵌入自有应用。",
+    "summary_zh": "开源 AI 办公套件编辑器，支持文档、表格、演示、PDF 与代码，内置 Copilot 和 MCP 服务。",
+    "tech_stack": [
+      "TypeScript",
+      "MCP",
+      "npm SDK"
+    ],
+    "use_cases": [
+      "浏览器内编辑 Office 文件",
+      "AI 辅助修改文档表格",
+      "通过 MCP 让 Claude/ChatGPT 操作文件",
+      "在自有应用中嵌入编辑器"
+    ]
+  }
+}
