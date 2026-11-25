@@ -1,24 +1,27 @@
 {
-  "cached_at": "2026-11-24T17:49:31+08:00",
+  "cached_at": "2026-11-25T16:25:24+08:00",
   "full_name": "ersinkoc/phonebox",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-24T09:46:23Z",
+  "repo_pushed_at": "2026-11-24T23:58:56Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "复用闲置安卓手机作为电脑副屏与控制台，无需云服务即可监控系统、管理 AI 编码会话和自动化。",
-    "summary_zh": "把旧 Android 手机变成桌面控制面板，显示系统状态、AI 编码会话并支持触控操作。",
+    "problem": "解决旧安卓手机闲置浪费的问题，将其改造为可自定义的桌面副屏与触控面板，用于查看系统状态、AI 编码配额并远程响应权限提示。",
+    "summary_zh": "把旧安卓手机变成电脑桌面控制面板，支持系统监控、AI 编码会话与触控操作。",
     "tech_stack": [
       "JavaScript",
       ".NET 10",
-      "Android"
+      "Android",
+      "USB",
+      "Wi-Fi"
     ],
     "use_cases": [
-      "监控 CPU/GPU 等系统指标",
-      "查看 Claude Code/Codex 会话与配额",
-      "手机端审批 AI 权限提示",
-      "触控宏与 Home Assistant 自动化"
+      "旧手机改造成桌面监控面板",
+      "在手机上查看 Claude Code/Codex 会话与配额",
+      "远程批准 AI 编码权限提示",
+      "触控宏与媒体控制",
+      "Home Assistant 与 Webhook 自动化"
     ]
   }
 }

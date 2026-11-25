@@ -1,25 +1,28 @@
 {
-  "cached_at": "2026-11-24T17:49:31+08:00",
+  "cached_at": "2026-11-25T16:25:24+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-24T08:15:03Z",
+  "repo_pushed_at": "2026-11-25T05:22:31Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "帮助理解任意视频如何拍摄或生成，并以开放的 VIDEO.md 格式输出可供 Agent 分层读取的拆解结果。",
-    "summary_zh": "逐镜头逆向分析视频，判断实拍、AI 生成或代码制作，并给出复刻方案。",
+    "problem": "解决难以判断视频如何制作、如何复刻的问题，按镜头拆解来源并输出结构化 VIDEO.md 与报告。",
+    "summary_zh": "逐镜头逆向分析视频，判断拍摄、AI 生成或代码制作并给出复刻方案。",
     "tech_stack": [
       "Python",
       "ffmpeg",
-      "Claude Code 插件",
-      "Codex 插件"
+      "Claude Code",
+      "Codex",
+      "Remotion",
+      "VLM"
     ],
     "use_cases": [
-      "拆解短视频镜头构成",
-      "判断视频是否 AI 生成",
-      "生成视频复刻提示词",
-      "输出结构化 VIDEO.md 供 Agent 使用"
+      "拆解短视频广告制作方式",
+      "判断视频是否为 AI 生成",
+      "生成逐镜头复刻提示词",
+      "分析直播与口播视频布光",
+      "输出结构化 VIDEO.md 供 agent 读取"
     ]
   }
 }
