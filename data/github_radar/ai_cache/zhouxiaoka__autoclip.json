@@ -1,28 +1,26 @@
 {
-  "cached_at": "2026-11-25T16:25:24+08:00",
+  "cached_at": "2026-11-26T16:10:03+08:00",
   "full_name": "zhouxiaoka/autoclip",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-25T06:33:35Z",
+  "repo_pushed_at": "2026-11-26T03:01:29Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "解决播客、访谈、直播等长视频转短视频的繁琐剪辑问题，本地完成切片、字幕、封面与发布文案生成。",
-    "summary_zh": "开源本地 AI 视频剪辑桌面工具，把长视频自动剪成短视频并生成字幕封面。",
+    "problem": "把播客、访谈、直播等长视频自动剪成适配各平台的短视频，并生成字幕、封面与文案。",
+    "summary_zh": "本地优先的开源 AI 视频剪辑桌面工具，长视频自动切成短视频。",
     "tech_stack": [
       "Python",
       "Tauri",
       "MCP",
       "Ollama",
-      "Whisper",
-      "SenseVoice"
+      "Whisper"
     ],
     "use_cases": [
-      "播客与访谈切片",
-      "直播回放高光剪辑",
-      "自动生成字幕与封面",
-      "多平台短视频适配",
-      "本地离线剪辑"
+      "播客切片",
+      "直播回放剪辑",
+      "短视频多平台分发",
+      "自动字幕生成"
     ]
   }
 }

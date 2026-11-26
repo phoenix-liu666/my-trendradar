@@ -1,14 +1,14 @@
 {
-  "cached_at": "2026-11-25T16:25:24+08:00",
+  "cached_at": "2026-11-26T16:10:03+08:00",
   "full_name": "KKKKhazix/agent-autoloop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-25T02:00:44Z",
+  "repo_pushed_at": "2026-11-26T01:12:28Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "解决命令行 Agent 需人守终端、离开即中断的问题，实现事件驱动与人工介入的闭环。",
-    "summary_zh": "轻量自动化中台，让命令行 Agent 后台接活、自动跟进，遇关键决策时推送卡片请人拍板。",
+    "problem": "命令行 Agent 需人守着终端，人离开后任务中断，缺乏事件驱动与人工审批机制。",
+    "summary_zh": "让命令行 Agent 在后台自动接活并跟进，遇到需决策时推送卡片确认。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
@@ -17,10 +17,9 @@
       "Codex"
     ],
     "use_cases": [
-      "定时任务自动执行",
+      "定时任务自动交给 Agent 执行",
       "GitHub Issue 自动跟进",
-      "线上告警排查",
-      "多通道人工审批"
+      "线上告警排查与人工拍板"
     ]
   }
 }
