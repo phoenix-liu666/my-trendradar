@@ -1,24 +1,23 @@
 {
-  "cached_at": "2026-11-26T16:10:03+08:00",
+  "cached_at": "2026-11-27T16:21:23+08:00",
   "full_name": "ersinkoc/phonebox",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-25T20:49:59Z",
+  "repo_pushed_at": "2026-11-27T00:20:15Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "缺少低成本、无需云服务的桌面副屏与触控控制台，用于监控电脑与 AI 编码状态。",
-    "summary_zh": "把旧 Android 手机变成桌面控制面板，可监控系统与 AI 编码会话。",
+    "problem": "解决旧手机闲置与桌面缺少低成本副屏控制台的问题，可远程查看并批准 Claude Code、Codex 等会话权限。",
+    "summary_zh": "把旧安卓手机变成桌面控制面板，显示系统状态、AI 编码会话并支持触控操作。",
     "tech_stack": [
       "JavaScript",
-      ".NET",
-      "Android",
-      "Webhooks"
+      ".NET 10",
+      "Android"
     ],
     "use_cases": [
-      "监控 CPU/GPU 与系统状态",
-      "查看 Claude Code/Codex 会话与配额",
-      "手机端审批 Agent 权限提示"
+      "监控 CPU/GPU/内存等系统指标",
+      "在手机上查看并批准 AI 编码会话权限",
+      "作为 Stream Deck 式触控快捷键面板"
     ]
   }
 }

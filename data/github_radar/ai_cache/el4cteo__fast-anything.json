@@ -1,28 +1,29 @@
 {
-  "cached_at": "2026-11-26T16:10:03+08:00",
+  "cached_at": "2026-11-27T16:21:23+08:00",
   "full_name": "EL4CTEO/fast-anything",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-25T16:23:36Z",
+  "repo_pushed_at": "2026-11-26T22:46:32Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "全量重写 Rust 成本高；多数耗时集中在少数函数，需要低风险、可回滚的热点优化方案。",
-    "summary_zh": "用编码 Agent 只把性能热点函数移植到 Rust，并验证行为一致后替换。",
+    "problem": "全量重写 Rust 代价大；该项目定位性能瓶颈函数，局部移植并验证等价性，兼顾提速与风险控制。",
+    "summary_zh": "用编码 Agent 只把性能热点函数移植到 Rust，并通过回放真实调用验证结果一致。",
     "tech_stack": [
       "Rust",
       "Python",
       "Node.js",
       "TypeScript",
       "Ruby",
-      "Java",
-      "Go",
-      "MCP"
+      "MCP",
+      "napi-rs",
+      "pyo3"
     ],
     "use_cases": [
-      "Python/Node 应用热点函数加速",
+      "Python/Node/Ruby 应用性能热点优化",
       "用 Claude Code/Codex 自动生成 Rust 移植",
-      "对移植结果做录制调用回放验证"
+      "移植结果等价性验证",
+      "性能基准对比报告"
     ]
   }
 }

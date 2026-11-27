@@ -1,26 +1,25 @@
 {
-  "cached_at": "2026-11-26T16:10:03+08:00",
+  "cached_at": "2026-11-27T16:21:23+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-25T09:34:34Z",
+  "repo_pushed_at": "2026-11-26T12:39:13Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "解决视频内容拆解与复刻难题：判断镜头是实拍、AI 生成还是代码制作，并给出重制路径。",
-    "summary_zh": "用 Agent 逐镜头逆向分析视频来源并给出复刻方案，输出 VIDEO.md。",
+    "problem": "解决难以判断短视频制作方式与复刻路径的问题，输出结构化 VIDEO.md 与可读报告。",
+    "summary_zh": "用 Agent 逐镜头逆向分析视频，判断拍摄、AI 生成或代码制作，并给出复刻方案。",
     "tech_stack": [
       "Python",
       "ffmpeg",
       "Claude Code",
       "Codex",
-      "VLM"
+      "Remotion"
     ],
     "use_cases": [
-      "短视频拆解与复刻",
-      "AI 生成内容识别",
-      "广告与竞品视频分析",
-      "Remotion 项目重建"
+      "拆解短视频镜头与拍摄手法",
+      "识别 AI 生成视频并反推提示词",
+      "生成视频复刻与重制方案"
     ]
   }
 }

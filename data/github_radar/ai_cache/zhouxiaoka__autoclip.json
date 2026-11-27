@@ -1,26 +1,26 @@
 {
-  "cached_at": "2026-11-26T16:10:03+08:00",
+  "cached_at": "2026-11-27T16:21:23+08:00",
   "full_name": "zhouxiaoka/autoclip",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-26T03:01:29Z",
+  "repo_pushed_at": "2026-11-27T07:24:56Z",
   "schema_version": 1,
   "static": {
     "category": "Productivity",
     "maturity": "growing",
-    "problem": "把播客、访谈、直播等长视频自动剪成适配各平台的短视频，并生成字幕、封面与文案。",
-    "summary_zh": "本地优先的开源 AI 视频剪辑桌面工具，长视频自动切成短视频。",
+    "problem": "长视频转短视频剪辑耗时且订阅成本高；该项目本地完成剪辑渲染，并提供 MCP 供 Agent 调用。",
+    "summary_zh": "本地优先的开源 AI 视频剪辑工具，把长视频自动剪成短视频并生成字幕封面文案。",
     "tech_stack": [
       "Python",
       "Tauri",
-      "MCP",
+      "Whisper",
       "Ollama",
-      "Whisper"
+      "MCP"
     ],
     "use_cases": [
-      "播客切片",
-      "直播回放剪辑",
-      "短视频多平台分发",
-      "自动字幕生成"
+      "播客/访谈切片",
+      "直播回放高光剪辑",
+      "短视频字幕与封面生成",
+      "通过 MCP 让 Agent 调用剪辑能力"
     ]
   }
 }
