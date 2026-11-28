@@ -1,0 +1,27 @@
+{
+  "cached_at": "2026-11-28T15:41:32+08:00",
+  "full_name": "openvinotoolkit/openvino",
+  "model": "deepseek-v4-flash",
+  "repo_pushed_at": "2026-11-28T00:58:40Z",
+  "schema_version": 1,
+  "static": {
+    "category": "LLM Infrastructure",
+    "maturity": "mature",
+    "problem": "解决将 PyTorch、TensorFlow、ONNX 等模型高效转换并部署到从边缘到云端多种硬件的问题。",
+    "summary_zh": "开源深度学习模型优化与推理部署工具包，覆盖 CPU、GPU 与 NPU。",
+    "tech_stack": [
+      "C++",
+      "Python",
+      "ONNX",
+      "PyTorch",
+      "TensorFlow",
+      "OpenVINO"
+    ],
+    "use_cases": [
+      "在 Intel CPU、GPU、NPU 上部署推理",
+      "优化 YOLO 等计算机视觉模型",
+      "部署 LLM 与扩散模型推理",
+      "转换 Hugging Face 模型并本地运行"
+    ]
+  }
+}

@@ -1,25 +1,26 @@
 {
-  "cached_at": "2026-11-27T16:21:23+08:00",
+  "cached_at": "2026-11-28T15:41:32+08:00",
   "full_name": "KKKKhazix/agent-autoloop",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-27T01:22:19Z",
+  "repo_pushed_at": "2026-11-28T01:07:00Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "命令行 Agent 需人守着终端，人离开任务即中断；该项目用事件驱动调度与人工审批卡片实现无人值守闭环。",
-    "summary_zh": "轻量自动化中台，让命令行 Agent 后台接活、按规则跟进，遇到需决策时推送卡片询问。",
+    "problem": "解决命令行 Agent 必须人守终端的问题：以事件驱动调度 Agent，仅在需决策时打扰用户。",
+    "summary_zh": "让命令行 Agent 在后台自动接活跟进，遇关键决策时推送卡片请人拍板。",
     "tech_stack": [
       "TypeScript",
       "Node.js",
-      "MCP"
+      "MCP",
+      "Claude Code",
+      "Codex"
     ],
     "use_cases": [
-      "定时早报与巡检任务",
-      "GitHub Issue 自动跟进",
-      "线上告警排查",
-      "PR 自动交付流水线",
-      "飞书/钉钉审批通知"
+      "定时任务自动派发给 Agent",
+      "GitHub Issue 自动跟进处理",
+      "线上告警排查并请示重启",
+      "通过飞书/钉钉/Slack 卡片审批"
     ]
   }
 }

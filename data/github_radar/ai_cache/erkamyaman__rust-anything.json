@@ -1,29 +1,29 @@
 {
-  "cached_at": "2026-11-27T16:21:23+08:00",
+  "cached_at": "2026-11-28T15:41:32+08:00",
   "full_name": "erkamyaman/rust-anything",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-27T06:59:50Z",
+  "repo_pushed_at": "2026-11-28T07:26:30Z",
   "schema_version": 1,
   "static": {
     "category": "Coding Agent",
     "maturity": "growing",
-    "problem": "整体重写为 Rust 成本高、风险大；该项目让 Agent 分块迁移并自动校验新旧行为一致，降低迁移风险。",
-    "summary_zh": "借助编码 Agent 把应用逐块迁移到 Rust，并在每一步与原实现做行为比对验证。",
+    "problem": "解决大型代码库迁移到 Rust 时难以保证行为一致的问题：通过记录真实调用、逐函数移植并做门禁校验，降低重写风险。",
+    "summary_zh": "借助编码 Agent 将应用逐步迁移到 Rust，并在每一步用原实现校验行为一致。",
     "tech_stack": [
       "Rust",
       "TypeScript",
+      "JavaScript",
       "Python",
       "Go",
       "Ruby",
       "Java",
-      "MCP",
-      "FFI"
+      "MCP"
     ],
     "use_cases": [
-      "Python/Node 应用渐进式迁移到 Rust",
+      "将 Python/TS 应用逐步迁移到 Rust",
       "用 Claude Code/Codex 驱动代码移植",
-      "跨语言 FFI 绑定生成",
-      "迁移后行为一致性验证"
+      "为迁移结果建立行为回归门禁",
+      "通过 FFI/PyO3/napi 接入 Rust 实现"
     ]
   }
 }

@@ -1,25 +1,26 @@
 {
-  "cached_at": "2026-11-27T16:21:23+08:00",
+  "cached_at": "2026-11-28T15:41:32+08:00",
   "full_name": "JuneYaooo/rea-video",
   "model": "deepseek-v4-flash",
-  "repo_pushed_at": "2026-11-26T12:39:13Z",
+  "repo_pushed_at": "2026-11-28T01:46:42Z",
   "schema_version": 1,
   "static": {
     "category": "Research Tool",
     "maturity": "growing",
-    "problem": "解决难以判断短视频制作方式与复刻路径的问题，输出结构化 VIDEO.md 与可读报告。",
-    "summary_zh": "用 Agent 逐镜头逆向分析视频，判断拍摄、AI 生成或代码制作，并给出复刻方案。",
+    "problem": "解决难以判断视频制作方式与复刻路径的问题，输出结构化 VIDEO.md 与报告供人和 Agent 使用。",
+    "summary_zh": "逐镜头逆向分析视频是实拍、AI 生成还是代码制作，并给出复刻方案。",
     "tech_stack": [
       "Python",
       "ffmpeg",
       "Claude Code",
       "Codex",
-      "Remotion"
+      "VLM"
     ],
     "use_cases": [
-      "拆解短视频镜头与拍摄手法",
+      "拆解短视频广告的拍摄与剪辑手法",
       "识别 AI 生成视频并反推提示词",
-      "生成视频复刻与重制方案"
+      "为 Remotion 代码视频生成重建方案",
+      "作为 Agent 插件批量分析视频"
     ]
   }
 }
